@@ -1,0 +1,67 @@
+name: 연구과제 공고 수집 및 Pages 배포
+
+on:
+  schedule:
+    # UTC 기준: 0, 6, 12, 18시 → KST 9, 15, 21, 3시
+    - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch:  # GitHub UI에서 수동 실행 가능
+
+permissions:
+  contents: write   # docs/data/ JSON 커밋 권한
+
+jobs:
+  scrape-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 체크아웃 ─────────────────────────────────────────────────────────────
+      - name: 코드 체크아웃
+        uses: actions/checkout@v4
+
+      # ── SQLite DB 캐시 복원 (실행 간 상태 유지) ──────────────────────────────
+      # 이전 실행의 DB를 캐시에서 복원해 중복 알림을 방지한다.
+      # 캐시 미스(최초 실행 등)인 경우 DB 없이 시작하며 init_db()가 자동 생성한다.
+      - name: DB 캐시 복원
+        uses: actions/cache@v4
+        with:
+          path: data/
+          key: db-${{ github.run_id }}
+          restore-keys: |
+            db-
+
+      - name: data/ 디렉토리 확인
+        run: mkdir -p data
+
+      # ── Python 설정 ──────────────────────────────────────────────────────────
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      - name: Playwright 브라우저 설치
+        run: playwright install chromium --with-deps
+
+      # ── 스크래핑 실행 ────────────────────────────────────────────────────────
+      - name: 스크래핑 및 JSON 내보내기
+        env:
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/run_scrape.py
+
+      # ── 결과 커밋 및 푸시 ───────────────────────────────────────────────────
+      - name: 변경된 데이터 커밋 및 푸시
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/
+          # 변경이 없으면 커밋 건너뜀 (exit 0 유지)
+          git diff --staged --quiet && echo "변경 없음 — 커밋 건너뜀" || (
+            git commit -m "chore: update announcements $(date -u +'%Y-%m-%d %H:%MZ')" &&
+            git push
+          )

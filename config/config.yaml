@@ -1,0 +1,27 @@
+scraping:
+  interval_hours: 6
+  sites:
+    nrf: true
+    ntis: true
+    iris: true
+
+filters:
+  keywords: ["AI", "인공지능", "바이오", "데이터"]
+  categories: ["공학", "자연과학", "ICT"]
+
+notifications:
+  email:
+    enabled: true
+    smtp_host: "smtp.gmail.com"
+    smtp_port: 587
+    sender: "tirano1019@gmail.com"
+    password: ""  # .env 파일의 EMAIL_PASSWORD 환경변수로 자동 주입됨
+    recipients:
+      - "tirano1019@gmail.com"
+  telegram:
+    enabled: false
+    bot_token: ""  # 이후 추가 예정
+    chat_id: ""
+
+database:
+  path: "data/announcements.db"

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연구과제 알림 시스템</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', '맑은 고딕', sans-serif; background: #f5f7fa; color: #333; }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a5f, #2d6a9f);
+            color: white; padding: 24px 32px;
+        }
+        .header h1 { font-size: 1.5rem; margin-bottom: 4px; }
+        .header p { font-size: 0.85rem; opacity: 0.8; }
+
+        .container { max-width: 1260px; margin: 0 auto; padding: 24px; }
+
+        /* 검색 영역 */
+        .search-box {
+            background: white; border-radius: 8px; padding: 16px 20px;
+            margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .search-row {
+            display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+        }
+        .search-row label { font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
+        .search-row select {
+            padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.9rem;
+        }
+        .keyword-wrap { position: relative; flex: 1; min-width: 240px; }
+        .keyword-wrap input {
+            width: 100%; padding: 8px 12px; border: 1px solid #ddd;
+            border-radius: 6px; font-size: 0.9rem;
+        }
+        .keyword-wrap input:focus { outline: none; border-color: #2d6a9f; box-shadow: 0 0 0 2px rgba(45,106,159,0.15); }
+        .search-row .btn-search {
+            padding: 8px 22px; background: #2d6a9f; color: white;
+            border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; white-space: nowrap;
+        }
+        .search-row .btn-search:hover { background: #1e3a5f; }
+        .btn-scrape {
+            margin-left: auto; padding: 8px 16px; background: #28a745; color: white;
+            border: none; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap;
+        }
+        .btn-scrape:hover { background: #218838; }
+        .btn-reset {
+            padding: 8px 14px; background: #f8f9fa; color: #666;
+            border: 1px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 0.85rem;
+            text-decoration: none; display: inline-block;
+        }
+        .btn-reset:hover { background: #e9ecef; }
+
+        /* 동의어 힌트 */
+        .synonym-hint {
+            margin-top: 8px; padding: 8px 12px;
+            background: #f0f7ff; border-radius: 6px; border-left: 3px solid #2d6a9f;
+            font-size: 0.82rem; color: #555; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+        }
+        .synonym-hint .hint-label { font-weight: 600; color: #2d6a9f; white-space: nowrap; }
+        .synonym-tag {
+            background: #dbeafe; color: #1e40af; padding: 2px 8px;
+            border-radius: 10px; font-size: 0.78rem;
+        }
+
+        /* 통계 바 */
+        .stats-bar {
+            display: flex; align-items: center; gap: 8px;
+            margin-bottom: 14px; font-size: 0.85rem; color: #666; flex-wrap: wrap;
+        }
+        .stats-bar .badge {
+            background: #e9ecef; padding: 4px 10px; border-radius: 12px;
+        }
+        .stats-bar .badge.active { background: #dbeafe; color: #1e40af; }
+
+        /* 관련도 범례 */
+        .relevance-legend {
+            margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: #888;
+        }
+        .rel-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 3px; }
+        .rel-high { background: #16a34a; }
+        .rel-mid  { background: #ea580c; }
+        .rel-low  { background: #94a3b8; }
+
+        /* 테이블 */
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        thead { background: #f8f9fa; }
+        th { padding: 11px 14px; text-align: left; font-size: 0.78rem; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+        td { padding: 11px 14px; border-top: 1px solid #eee; font-size: 0.88rem; vertical-align: middle; }
+        tr:hover td { background: #fafbfc; }
+
+        /* 출처 배지 */
+        .source-badge {
+            display: inline-block; padding: 2px 8px; border-radius: 4px;
+            font-size: 0.73rem; font-weight: 700; color: white; white-space: nowrap;
+        }
+        .source-nrf  { background: #1d4ed8; }
+        .source-ntis { background: #7c3aed; }
+        .source-iris { background: #ea580c; }
+
+        /* 관련도 배지 */
+        .score-badge {
+            display: inline-flex; align-items: center; gap: 4px;
+            padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600;
+            white-space: nowrap;
+        }
+        .score-high { background: #dcfce7; color: #16a34a; }
+        .score-mid  { background: #ffedd5; color: #ea580c; }
+        .score-low  { background: #f1f5f9; color: #64748b; }
+
+        /* 매칭 키워드 태그 */
+        .match-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+        .match-tag {
+            padding: 1px 6px; border-radius: 4px; font-size: 0.72rem;
+        }
+        .match-direct   { background: #dbeafe; color: #1d4ed8; }   /* 직접 매칭 */
+        .match-synonym  { background: #fef9c3; color: #854d0e; }   /* 동의어 매칭 */
+
+        /* 마감일 */
+        .deadline { font-size: 0.83rem; white-space: nowrap; }
+        .deadline.expired { color: #9ca3af; text-decoration: line-through; }
+        .deadline.urgent  { color: #dc2626; font-weight: 700; }
+        .deadline.soon    { color: #ea580c; font-weight: 600; }
+        .dday { font-size: 0.75rem; margin-left: 4px; }
+
+        /* 리마인더 뱃지 */
+        .reminder-badges { display: flex; gap: 3px; flex-wrap: wrap; }
+        .rbadge {
+            padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+        }
+        .rbadge-new { background: #dbeafe; color: #1d4ed8; }
+        .rbadge-d7  { background: #fef9c3; color: #a16207; }
+        .rbadge-d3  { background: #ffedd5; color: #ea580c; }
+        .rbadge-d1  { background: #fee2e2; color: #dc2626; }
+
+        a { color: #2d6a9f; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* 페이지네이션 */
+        .pagination {
+            display: flex; justify-content: center; gap: 6px; margin-top: 20px;
+        }
+        .pagination a, .pagination span {
+            padding: 7px 13px; border-radius: 6px; font-size: 0.83rem;
+        }
+        .pagination a { background: white; border: 1px solid #ddd; color: #333; }
+        .pagination a:hover { background: #e9ecef; text-decoration: none; }
+        .pagination .current { background: #2d6a9f; color: white; border: none; }
+        .pagination .ellipsis { color: #999; padding: 7px 4px; }
+
+        .empty { text-align: center; padding: 60px; color: #999; }
+        .empty p { margin-top: 8px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>연구과제 자동 알림 시스템</h1>
+        <p>한국연구재단 / NTIS / IRIS 공고 모니터링</p>
+    </div>
+
+    <div class="container">
+
+        <!-- 검색 영역 -->
+        <div class="search-box">
+            <form class="search-row" method="get" action="/">
+                <label>출처</label>
+                <select name="source">
+                    <option value="">전체</option>
+                    <option value="nrf"  {% if source == 'nrf'  %}selected{% endif %}>한국연구재단</option>
+                    <option value="ntis" {% if source == 'ntis' %}selected{% endif %}>NTIS</option>
+                    <option value="iris" {% if source == 'iris' %}selected{% endif %}>IRIS</option>
+                </select>
+
+                <label>키워드</label>
+                <div class="keyword-wrap">
+                    <input type="text" name="keyword" value="{{ keyword }}"
+                           placeholder="검색어 입력 (공백으로 여러 개 구분, 예: 인문사회 기초연구)">
+                </div>
+
+                <button type="submit" class="btn-search">검색</button>
+                {% if keyword or source %}
+                <a href="/" class="btn-reset">초기화</a>
+                {% endif %}
+                <button type="button" class="btn-scrape" onclick="triggerScrape()">수동 수집</button>
+            </form>
+
+            <!-- 동의어 확장 힌트 -->
+            {% if has_keyword and expanded_hints %}
+            <div class="synonym-hint">
+                <span class="hint-label">동의어 검색 포함:</span>
+                {% for hint in expanded_hints %}
+                <span class="synonym-tag">{{ hint }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- 통계 바 -->
+        <div class="stats-bar">
+            <span class="badge {% if has_keyword %}active{% endif %}">
+                {% if has_keyword %}검색 결과 {{ total }}건{% else %}전체 {{ total }}건{% endif %}
+            </span>
+            <span class="badge">{{ page }} / {{ total_pages }} 페이지</span>
+
+            {% if has_keyword %}
+            <div class="relevance-legend">
+                관련도:
+                <span><span class="rel-dot rel-high"></span>높음 (2개↑ 키워드 매칭)</span>
+                <span><span class="rel-dot rel-mid"></span>보통 (1개 매칭)</span>
+                <span><span class="rel-dot rel-low"></span>동의어 매칭</span>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- 공고 테이블 -->
+        {% if results %}
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:70px;">출처</th>
+                    <th>제목</th>
+                    <th style="width:110px;">분야</th>
+                    {% if has_keyword %}
+                    <th style="width:120px;">관련도</th>
+                    {% endif %}
+                    <th style="width:100px;">공고일</th>
+                    <th style="width:130px;">마감일</th>
+                    <th style="width:90px;">알림</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                {% set ann = result.announcement %}
+                <tr>
+                    <td>
+                        <span class="source-badge source-{{ ann.source }}">
+                            {% if ann.source == 'nrf' %}NRF
+                            {% elif ann.source == 'ntis' %}NTIS
+                            {% else %}IRIS{% endif %}
+                        </span>
+                    </td>
+                    <td>
+                        <a href="{{ ann.url }}" target="_blank">{{ ann.title }}</a>
+                        {% if ann.description %}
+                        <div style="color:#888;font-size:0.78rem;margin-top:3px;line-height:1.4;">
+                            {{ ann.description[:120] }}{% if ann.description|length > 120 %}…{% endif %}
+                        </div>
+                        {% endif %}
+                        {% if ann.budget %}
+                        <div style="color:#2d7a2d;font-size:0.76rem;margin-top:2px;">
+                            지원규모: {{ ann.budget[:80] }}
+                        </div>
+                        {% endif %}
+                        {% if has_keyword and result.matched_terms %}
+                        <div class="match-tags">
+                            {% for kw in result.matched_keywords %}
+                                {% if kw.lower() in result.matched_terms %}
+                                <span class="match-tag match-direct">{{ kw }}</span>
+                                {% else %}
+                                <span class="match-tag match-synonym">~{{ kw }}</span>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </td>
+                    <td style="color:#666; font-size:0.83rem;">{{ ann.category or '-' }}</td>
+
+                    {% if has_keyword %}
+                    <td>
+                        {% if result.score >= 2 %}
+                        <span class="score-badge score-high">●● {{ result.score }}개 매칭</span>
+                        {% elif result.score == 1 %}
+                            {% if result.direct_score >= 1 %}
+                            <span class="score-badge score-mid">● 직접 매칭</span>
+                            {% else %}
+                            <span class="score-badge score-low">○ 동의어 매칭</span>
+                            {% endif %}
+                        {% endif %}
+                    </td>
+                    {% endif %}
+
+                    <td style="color:#888; font-size:0.83rem;">
+                        {{ ann.posted_date.strftime('%Y-%m-%d') if ann.posted_date else '-' }}
+                    </td>
+                    <td>
+                        {% if ann.deadline %}
+                            {% set days = (ann.deadline - today).days %}
+                            {% if days < 0 %}
+                                <span class="deadline expired">{{ ann.deadline.strftime('%Y-%m-%d') }}</span>
+                            {% elif days <= 1 %}
+                                <span class="deadline urgent">
+                                    {{ ann.deadline.strftime('%Y-%m-%d') }}
+                                    <span class="dday">내일 마감</span>
+                                </span>
+                            {% elif days <= 3 %}
+                                <span class="deadline urgent">
+                                    {{ ann.deadline.strftime('%Y-%m-%d') }}
+                                    <span class="dday">D-{{ days }}</span>
+                                </span>
+                            {% elif days <= 7 %}
+                                <span class="deadline soon">
+                                    {{ ann.deadline.strftime('%Y-%m-%d') }}
+                                    <span class="dday">D-{{ days }}</span>
+                                </span>
+                            {% else %}
+                                <span class="deadline">
+                                    {{ ann.deadline.strftime('%Y-%m-%d') }}
+                                    <span class="dday" style="color:#94a3b8;">D-{{ days }}</span>
+                                </span>
+                            {% endif %}
+                        {% else %}
+                            <span style="color:#ccc;">-</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% set logs = reminder_logs.get(ann.id, []) %}
+                        {% if logs %}
+                        <div class="reminder-badges">
+                            {% if 'new' in logs %}<span class="rbadge rbadge-new">신규</span>{% endif %}
+                            {% if 'd7'  in logs %}<span class="rbadge rbadge-d7">D-7</span>{% endif %}
+                            {% if 'd3'  in logs %}<span class="rbadge rbadge-d3">D-3</span>{% endif %}
+                            {% if 'd1'  in logs %}<span class="rbadge rbadge-d1">D-1</span>{% endif %}
+                        </div>
+                        {% else %}
+                            <span style="color:#ddd; font-size:0.78rem;">-</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- 페이지네이션 -->
+        {% if total_pages > 1 %}
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="/?source={{ source }}&keyword={{ keyword }}&page={{ page - 1 }}">이전</a>
+            {% endif %}
+            {% for p in range(1, total_pages + 1) %}
+                {% if p == page %}
+                    <span class="current">{{ p }}</span>
+                {% elif p <= 2 or p > total_pages - 2 or (p >= page - 1 and p <= page + 1) %}
+                    <a href="/?source={{ source }}&keyword={{ keyword }}&page={{ p }}">{{ p }}</a>
+                {% elif p == 3 or p == total_pages - 2 %}
+                    <span class="ellipsis">…</span>
+                {% endif %}
+            {% endfor %}
+            {% if page < total_pages %}
+                <a href="/?source={{ source }}&keyword={{ keyword }}&page={{ page + 1 }}">다음</a>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        {% else %}
+        <div class="empty">
+            {% if has_keyword %}
+            <p>검색 결과가 없습니다.</p>
+            <p>다른 키워드로 시도하거나 수동 수집을 실행해 보세요.</p>
+            {% else %}
+            <p>등록된 공고가 없습니다.</p>
+            <p>수동 수집 버튼을 눌러 공고를 가져오세요.</p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        async function triggerScrape() {
+            const btn = document.querySelector('.btn-scrape');
+            btn.textContent = '수집 중...';
+            btn.disabled = true;
+            try {
+                const res = await fetch('/api/scrape', { method: 'POST' });
+                const data = await res.json();
+                alert(data.message || '완료');
+                location.reload();
+            } catch (e) {
+                alert('스크래핑 실패: ' + e.message);
+            } finally {
+                btn.textContent = '수동 수집';
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
