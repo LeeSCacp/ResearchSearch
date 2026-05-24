@@ -102,6 +102,11 @@
           "event": "d7",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d3",
+          "channel": "email",
+          "success": true
         }
       ]
     },
@@ -136,6 +141,11 @@
           "event": "d7",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d3",
+          "channel": "email",
+          "success": true
         }
       ]
     },
@@ -162,6 +172,11 @@
         },
         {
           "event": "d7",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d3",
           "channel": "email",
           "success": true
         }
