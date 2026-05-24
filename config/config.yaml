@@ -25,5 +25,9 @@ notifications:
     bot_token: ""         # 환경변수로 주입
     chat_id: ""           # 환경변수로 주입
 
+  google_calendar:
+    enabled: true         # GitHub Secret GOOGLE_CALENDAR_CREDENTIALS / GOOGLE_CALENDAR_ID 필요
+    calendar_id: ""       # 환경변수 GOOGLE_CALENDAR_ID로 주입
+
 database:
   path: "data/announcements.db"

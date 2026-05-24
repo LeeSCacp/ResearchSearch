@@ -27,6 +27,12 @@ def load_config(path: Path = CONFIG_PATH) -> dict:
     if os.getenv("TELEGRAM_CHAT_ID"):
         tg_cfg["chat_id"] = os.getenv("TELEGRAM_CHAT_ID")
 
+    # Google Calendar 설정 (환경변수 오버라이드)
+    cal_cfg = config.get("notifications", {}).get("google_calendar", {})
+    if os.getenv("GOOGLE_CALENDAR_ID"):
+        cal_cfg["calendar_id"] = os.getenv("GOOGLE_CALENDAR_ID")
+    # GOOGLE_CALENDAR_CREDENTIALS 는 CalendarNotifier 내부에서 직접 읽음
+
     # DB 경로를 절대 경로로 변환
     db_path = config.get("database", {}).get("path", "data/announcements.db")
     if not os.path.isabs(db_path):

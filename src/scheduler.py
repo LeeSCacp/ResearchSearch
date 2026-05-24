@@ -19,6 +19,7 @@ from src.scrapers.iris import IRISScraper
 from src.filters.engine import FilterEngine
 from src.notifiers.email import EmailNotifier, REMINDER_THRESHOLDS
 from src.notifiers.telegram import TelegramNotifier
+from src.notifiers.calendar import CalendarNotifier
 
 logger = logging.getLogger(__name__)
 
@@ -85,6 +86,10 @@ async def run_scraping_cycle():
         # 4. 알림 발송 + 로그 기록
         notif_cfg = config.get("notifications", {})
         await _send_new_notifications(session, notif_cfg, filtered)
+
+        # 5. Google Calendar 마감일 등록 (필터 통과 공고만)
+        cal_cfg = notif_cfg.get("google_calendar", {})
+        await _add_calendar_events(session, cal_cfg, filtered)
 
     except Exception as e:
         logger.error(f"스크래핑 사이클 오류: {e}")
@@ -313,3 +318,22 @@ async def _send_reminders(session: Session, notif_cfg: dict,
     # 텔레그램 (추후 확장)
     # tg_cfg = notif_cfg.get("telegram", {})
     # if tg_cfg.get("enabled"): ...
+
+
+async def _add_calendar_events(session: Session, cal_cfg: dict,
+                                announcements: list[Announcement]):
+    """신규 공고 마감일을 Google Calendar에 종일 이벤트로 등록."""
+    if not cal_cfg.get("enabled"):
+        return
+
+    notifier = CalendarNotifier(cal_cfg)
+    # 마감일이 있는 공고만 추려서 등록
+    has_deadline = [a for a in announcements if a.deadline]
+    if not has_deadline:
+        logger.info("[Calendar] 마감일이 있는 신규 공고 없음 — 캘린더 등록 생략")
+        return
+
+    results = notifier.add_deadline_events(has_deadline)
+    for ann in has_deadline:
+        ok, err = results.get(ann.id, (False, "결과 없음"))
+        _log_notification(session, ann.id, "calendar", "new", ok, err)

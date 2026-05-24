@@ -37,3 +37,9 @@ Thumbs.db
 # docs/data/ 의 JSON 파일은 Actions이 생성 — 초기 placeholder는 커밋 포함
 # (아래 주석 처리로 JSON 추적 허용)
 # docs/data/*.json
+
+# Google 서비스 계정 키 파일 (절대 커밋 금지)
+researchsearch-*.json
+*-service-account*.json
+*serviceaccount*.json
+service_account*.json
