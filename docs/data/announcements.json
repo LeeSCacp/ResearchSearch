@@ -16,7 +16,14 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.825230",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        }
+      ]
     },
     {
       "id": 3,
@@ -32,7 +39,14 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.822016",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        }
+      ]
     },
     {
       "id": 5,
@@ -48,7 +62,14 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.823264",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        }
+      ]
     },
     {
       "id": 7,
@@ -64,7 +85,25 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.824284",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": false,
+          "error": "이메일 비활성화 또는 설정 불완전"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ]
     },
     {
       "id": 6,
@@ -80,7 +119,25 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.823772",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": false,
+          "error": "이메일 비활성화 또는 설정 불완전"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ]
     },
     {
       "id": 4,
@@ -96,7 +153,19 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.822697",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": false,
+          "error": "이메일 비활성화 또는 설정 불완전"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ]
     },
     {
       "id": 16,
@@ -112,7 +181,25 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.828519",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": false,
+          "error": "이메일 비활성화 또는 설정 불완전"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ]
     },
     {
       "id": 15,
@@ -128,7 +215,14 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.828023",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        }
+      ]
     },
     {
       "id": 10,
@@ -144,7 +238,14 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.825683",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        }
+      ]
     },
     {
       "id": 2,
@@ -160,7 +261,14 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.821382",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        }
+      ]
     },
     {
       "id": 1,
@@ -176,7 +284,14 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.820250",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        }
+      ]
     },
     {
       "id": 8,
@@ -192,7 +307,14 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.824753",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        }
+      ]
     },
     {
       "id": 20,
@@ -224,7 +346,14 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.829897",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        }
+      ]
     },
     {
       "id": 18,
@@ -240,7 +369,14 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T08:14:47.829423",
-      "notification_logs": []
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": false,
+          "error": "발송 실패"
+        }
+      ]
     },
     {
       "id": 17,
