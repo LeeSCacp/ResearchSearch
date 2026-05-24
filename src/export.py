@@ -38,19 +38,25 @@ def export_announcements(
             .all()
         )
 
-        # 알림 이력 매핑 {announcement_id: [event_types]}
+        # 알림 이력 매핑 {announcement_id: [{event, channel, success, error?}]}
+        # 성공·실패 모두 포함 — 대시보드에서 발송 시도 여부를 확인할 수 있도록
         all_ids = [a.id for a in announcements]
-        log_map: dict[int, list[str]] = {}
+        log_map: dict[int, list[dict]] = {}
         if all_ids:
             for log in (
                 session.query(NotificationLog)
-                .filter(
-                    NotificationLog.announcement_id.in_(all_ids),
-                    NotificationLog.success.is_(True),
-                )
+                .filter(NotificationLog.announcement_id.in_(all_ids))
+                .order_by(NotificationLog.sent_at.asc())
                 .all()
             ):
-                log_map.setdefault(log.announcement_id, []).append(log.event_type)
+                entry: dict = {
+                    "event":   log.event_type,
+                    "channel": log.channel,
+                    "success": log.success,
+                }
+                if not log.success and log.error_message:
+                    entry["error"] = log.error_message
+                log_map.setdefault(log.announcement_id, []).append(entry)
 
         data = {
             "updated_at": date.today().isoformat(),

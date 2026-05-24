@@ -121,10 +121,21 @@
     /* 리마인더 배지 */
     .reminder-badges { display: flex; gap: 3px; flex-wrap: wrap; }
     .rbadge { padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
-    .rbadge-new { background: #dbeafe; color: #1d4ed8; }
-    .rbadge-d7  { background: #fef9c3; color: #a16207; }
-    .rbadge-d3  { background: #ffedd5; color: #ea580c; }
-    .rbadge-d1  { background: #fee2e2; color: #dc2626; }
+    .rbadge-new  { background: #dbeafe; color: #1d4ed8; }
+    .rbadge-d7   { background: #fef9c3; color: #a16207; }
+    .rbadge-d3   { background: #ffedd5; color: #ea580c; }
+    .rbadge-d1   { background: #fee2e2; color: #dc2626; }
+    .rbadge-fail { background: #f3f4f6; color: #9ca3af; border: 1px dashed #d1d5db; }
+
+    /* 접수 중만 보기 토글 */
+    .active-only-label {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 0.85rem; white-space: nowrap; cursor: pointer;
+      padding: 8px 12px; border-radius: 6px; border: 1px solid #ddd;
+      background: #f8f9fa; color: #555; user-select: none;
+    }
+    .active-only-label:hover { background: #e9ecef; }
+    .active-only-label input { cursor: pointer; accent-color: #2d6a9f; }
 
     a { color: #2d6a9f; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -172,6 +183,10 @@
 
       <button class="btn-search" onclick="doSearch()">검색</button>
       <button class="btn-reset"  onclick="resetSearch()">초기화</button>
+      <label class="active-only-label">
+        <input type="checkbox" id="active-only" onchange="doSearch()">
+        접수 중만 보기
+      </label>
     </div>
     <div id="synonym-hint" class="synonym-hint" style="display:none;"></div>
   </div>
@@ -230,8 +245,9 @@ async function init() {
 
     // URL 파라미터 복원 (뒤로가기/공유 지원)
     const p = new URLSearchParams(location.search);
-    if (p.get('source'))  document.getElementById('source-filter').value = p.get('source');
-    if (p.get('keyword')) document.getElementById('keyword-input').value  = p.get('keyword');
+    if (p.get('source'))   document.getElementById('source-filter').value = p.get('source');
+    if (p.get('keyword'))  document.getElementById('keyword-input').value  = p.get('keyword');
+    if (p.get('active') === '1') document.getElementById('active-only').checked = true;
     currentPage = parseInt(p.get('page')) || 1;
 
     render();
@@ -253,6 +269,7 @@ function doSearch() {
 function resetSearch() {
   document.getElementById('source-filter').value = '';
   document.getElementById('keyword-input').value  = '';
+  document.getElementById('active-only').checked  = false;
   currentPage = 1;
   render();
   pushURL();
@@ -266,12 +283,14 @@ function goPage(p) {
 }
 
 function pushURL() {
-  const source  = document.getElementById('source-filter').value;
-  const keyword = document.getElementById('keyword-input').value.trim();
-  const params  = new URLSearchParams();
-  if (source)       params.set('source',  source);
-  if (keyword)      params.set('keyword', keyword);
-  if (currentPage > 1) params.set('page', currentPage);
+  const source     = document.getElementById('source-filter').value;
+  const keyword    = document.getElementById('keyword-input').value.trim();
+  const activeOnly = document.getElementById('active-only').checked;
+  const params     = new URLSearchParams();
+  if (source)          params.set('source',  source);
+  if (keyword)         params.set('keyword', keyword);
+  if (activeOnly)      params.set('active',  '1');
+  if (currentPage > 1) params.set('page',    currentPage);
   const qs = params.toString();
   history.replaceState(null, '', qs ? '?' + qs : location.pathname);
 }
@@ -286,9 +305,11 @@ function expandKw(kw) {
 // ─────────────────────────────────────────────────────────────────────────────
 // 검색 + 스코어링
 // ─────────────────────────────────────────────────────────────────────────────
-function searchItems(items, keywords, source) {
-  let pool = source ? items.filter(i => i.source === source) : items;
-
+function searchItems(items, keywords, source, activeOnly = false) {
+  // 접수 중만 보기: 마감일 없거나 D-day >= 0인 항목만
+  let pool = activeOnly
+    ? items.filter(i => !i.deadline || dday(i.deadline) >= 0)
+    : items;
   if (!keywords.length) {
     return pool.map(item => ({ item, score: 0, directScore: 0, matchedKws: [], matchedTerms: [] }));
   }
@@ -427,13 +448,26 @@ function renderTable(rows, hasKw) {
       else                      scoreCol = `<td><span class="score-badge score-low">○ 동의어 매칭</span></td>`;
     }
 
+    // 알림 이력: [{event, channel, success, error?}] 형식
+    // 같은 event에 성공 이력이 하나라도 있으면 성공으로 표시
     const logs = a.notification_logs || [];
-    const reminderHtml = logs.length
+    const evtMap = {};
+    for (const l of logs) {
+      if (!(l.event in evtMap) || l.success) evtMap[l.event] = l.success;
+    }
+    const mkBadge = (event, label, cls) => {
+      if (!(event in evtMap)) return '';
+      return evtMap[event]
+        ? `<span class="rbadge ${cls}">${label}</span>`
+        : `<span class="rbadge rbadge-fail" title="발송 실패">${label} ✗</span>`;
+    };
+    const hasLogs = Object.keys(evtMap).length > 0;
+    const reminderHtml = hasLogs
       ? `<div class="reminder-badges">
-          ${logs.includes('new') ? '<span class="rbadge rbadge-new">신규</span>' : ''}
-          ${logs.includes('d7')  ? '<span class="rbadge rbadge-d7">D-7</span>'  : ''}
-          ${logs.includes('d3')  ? '<span class="rbadge rbadge-d3">D-3</span>'  : ''}
-          ${logs.includes('d1')  ? '<span class="rbadge rbadge-d1">D-1</span>'  : ''}
+          ${mkBadge('new','신규','rbadge-new')}
+          ${mkBadge('d7','D-7','rbadge-d7')}
+          ${mkBadge('d3','D-3','rbadge-d3')}
+          ${mkBadge('d1','D-1','rbadge-d1')}
         </div>`
       : '<span style="color:#ddd;font-size:0.78rem;">-</span>';
 
@@ -484,14 +518,15 @@ function renderPagination(total, page, totalPages) {
 }
 
 function render() {
-  const source   = document.getElementById('source-filter').value;
-  const keyword  = document.getElementById('keyword-input').value.trim();
-  const keywords = keyword ? keyword.split(/\s+/).filter(Boolean) : [];
-  const hasKw    = keywords.length > 0;
+  const source     = document.getElementById('source-filter').value;
+  const keyword    = document.getElementById('keyword-input').value.trim();
+  const activeOnly = document.getElementById('active-only')?.checked ?? false;
+  const keywords   = keyword ? keyword.split(/\s+/).filter(Boolean) : [];
+  const hasKw      = keywords.length > 0;
 
   renderSynonymHint(keywords);
 
-  const results    = searchItems(allItems, keywords, source);
+  const results    = searchItems(allItems, keywords, source, activeOnly);
   const total      = results.length;
   const totalPages = Math.max(1, Math.ceil(total / PER_PAGE));
   const page       = Math.min(currentPage, totalPages);

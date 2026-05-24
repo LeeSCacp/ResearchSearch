@@ -20,12 +20,15 @@ REMINDER_THRESHOLDS = [
 
 class EmailNotifier:
     def __init__(self, config: dict):
-        self.enabled    = config.get("enabled", False)
-        self.smtp_host  = config.get("smtp_host", "smtp.gmail.com")
-        self.smtp_port  = config.get("smtp_port", 587)
-        self.sender     = config.get("sender", "")
-        self.password   = config.get("password", "")
-        self.recipients = config.get("recipients", [])
+        self.enabled       = config.get("enabled", False)
+        self.smtp_host     = config.get("smtp_host", "smtp.gmail.com")
+        self.smtp_port     = config.get("smtp_port", 587)
+        self.sender        = config.get("sender", "")
+        self.password      = config.get("password", "")
+        self.recipients    = config.get("recipients", [])
+        self.dashboard_url = config.get(
+            "dashboard_url", "https://leescacp.github.io/ResearchSearch/"
+        )
 
     # ------------------------------------------------------------------
     # 연결 테스트
@@ -73,7 +76,7 @@ class EmailNotifier:
             return False
 
         subject = f"[연구과제 알림] 새 공고 {len(announcements)}건"
-        msg = self._make_message(subject, self._build_new_html(announcements))
+        msg = self._make_message(subject, self._build_new_html(announcements))  # instance method
         ok, err = self._send(msg)
         if ok:
             logger.info(f"신규 공고 이메일 발송 완료: {len(announcements)}건")
@@ -108,7 +111,7 @@ class EmailNotifier:
         reminders_sorted = sorted(reminders, key=lambda x: order.get(x[1], 9))
 
         subject = self._reminder_subject(reminders_sorted)
-        html    = self._build_reminder_html(reminders_sorted)
+        html    = self._build_reminder_html(reminders_sorted)  # instance method
         msg     = self._make_message(subject, html)
 
         ok, err = self._send(msg)
@@ -208,14 +211,13 @@ class EmailNotifier:
         <div class="footer"><p>본 메일은 ResearchProjAssist 자동 알림 시스템에서 발송되었습니다.</p></div>
         </body></html>"""
 
-    @classmethod
-    def _build_new_html(cls, announcements: list[Announcement]) -> str:
+    def _build_new_html(self, announcements: list[Announcement]) -> str:
         today = date.today()
         source_names = {"nrf": "NRF", "ntis": "NTIS", "iris": "IRIS"}
         rows = ""
         for ann in announcements:
             src   = source_names.get(ann.source, ann.source)
-            badge = cls._deadline_badge(ann.deadline, today)
+            badge = self._deadline_badge(ann.deadline, today)
             rows += f"""<tr>
                 <td><span class="source src-{ann.source}">{src}</span></td>
                 <td><a href="{ann.url}">{ann.title}</a></td>
@@ -223,7 +225,7 @@ class EmailNotifier:
                 <td>{badge}</td>
             </tr>"""
 
-        return f"""<html><head><style>{cls._STYLE}</style></head><body>
+        return f"""<html><head><style>{self._STYLE}</style></head><body>
         <div class="header" style="background:#1d4ed8;">
             <h2>새 연구과제 공고 알림</h2>
             <p>총 {len(announcements)}건의 새 공고가 등록되었습니다.</p>
@@ -237,13 +239,12 @@ class EmailNotifier:
             </table>
         </div>
         <div class="footer">
-            <p>대시보드: <a href="http://localhost:8000">ResearchProjAssist</a> &nbsp;|&nbsp;
+            <p>대시보드: <a href="{self.dashboard_url}">ResearchProjAssist</a> &nbsp;|&nbsp;
                본 메일은 자동 알림 시스템에서 발송되었습니다.</p>
         </div>
         </body></html>"""
 
-    @classmethod
-    def _build_reminder_html(cls, reminders: list[tuple]) -> str:
+    def _build_reminder_html(self, reminders: list[tuple]) -> str:
         today = date.today()
         source_names = {"nrf": "NRF", "ntis": "NTIS", "iris": "IRIS"}
 
@@ -281,7 +282,7 @@ class EmailNotifier:
                 <td><span class="dday {dday_class}">{dday_label}</span></td>
             </tr>"""
 
-        return f"""<html><head><style>{cls._STYLE}</style></head><body>
+        return f"""<html><head><style>{self._STYLE}</style></head><body>
         <div class="header" style="background:{header_color};">
             <h2>마감 임박 리마인더 — {header_label}</h2>
             <p>아래 {len(reminders)}건의 공고 마감이 임박했습니다.</p>
@@ -295,7 +296,7 @@ class EmailNotifier:
             </table>
         </div>
         <div class="footer">
-            <p>대시보드: <a href="http://localhost:8000">ResearchProjAssist</a> &nbsp;|&nbsp;
+            <p>대시보드: <a href="{self.dashboard_url}">ResearchProjAssist</a> &nbsp;|&nbsp;
                본 메일은 자동 알림 시스템에서 발송되었습니다.</p>
         </div>
         </body></html>"""

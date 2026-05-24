@@ -66,10 +66,20 @@ async def run_scraping_cycle():
         filtered_dtos = filter_engine.filter_items(dto_items)
         filtered_urls = {d.url for d in filtered_dtos}
         filtered = [a for a in new_announcements if a.url in filtered_urls]
-        logger.info(f"필터 통과: {len(filtered)}건")
 
-        if not filtered:
-            logger.info("필터 통과 공고 없음, 알림 생략")
+        logger.info(
+            f"필터 통과: {len(filtered)}건 / 전체 신규: {len(new_announcements)}건 "
+            f"(키워드: {filter_cfg.get('keywords', [])})"
+        )
+        if filtered:
+            for a in filtered:
+                logger.info(f"  → 알림 대상: [{a.source}] {a.title[:50]}")
+        else:
+            # 필터 미통과 이유 확인용 로그
+            logger.info("필터 통과 공고 없음 — 아래 공고들의 키워드/카테고리 매칭 실패:")
+            for a in new_announcements[:5]:
+                logger.info(f"  ✗ [{a.source}] {a.title[:50]} | cat={a.category}")
+            logger.info("알림 생략")
             return
 
         # 4. 알림 발송 + 로그 기록

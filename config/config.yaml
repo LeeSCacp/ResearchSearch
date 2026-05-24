@@ -15,13 +15,15 @@ notifications:
     smtp_host: "smtp.gmail.com"
     smtp_port: 587
     sender: "tirano1019@gmail.com"
-    password: ""  # .env 파일의 EMAIL_PASSWORD 환경변수로 자동 주입됨
+    password: ""          # .env 또는 GitHub Secret EMAIL_PASSWORD로 주입
     recipients:
       - "tirano1019@gmail.com"
+    dashboard_url: "https://leescacp.github.io/ResearchSearch/"
+
   telegram:
-    enabled: false
-    bot_token: ""  # 이후 추가 예정
-    chat_id: ""
+    enabled: true         # GitHub Secret TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID 필요
+    bot_token: ""         # 환경변수로 주입
+    chat_id: ""           # 환경변수로 주입
 
 database:
   path: "data/announcements.db"
