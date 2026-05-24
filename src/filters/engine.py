@@ -83,16 +83,19 @@ class FilterEngine:
     """동의어 확장 기반 검색 + 관련도 스코어링 엔진."""
 
     def __init__(self, synonyms_path: Path = SYNONYMS_PATH,
-                 keywords: list[str] = None, categories: list[str] = None):
+                 keywords: list[str] = None, categories: list[str] = None,
+                 exclude_keywords: list[str] = None):
         """
         Args:
             synonyms_path: 동의어 사전 YAML 경로
             keywords: 스케줄러용 기본 키워드 (config에서 주입)
             categories: 스케줄러용 기본 카테고리 (config에서 주입)
+            exclude_keywords: 제외 키워드 — 매칭 시 포함 조건 무관하게 차단
         """
         self._synonym_map = _load_synonym_map(synonyms_path)
         self._default_keywords = [kw.strip() for kw in (keywords or []) if kw.strip()]
         self._default_categories = [c.strip() for c in (categories or []) if c.strip()]
+        self._default_exclude_keywords = [kw.strip() for kw in (exclude_keywords or []) if kw.strip()]
 
     def expand(self, keyword: str) -> list[str]:
         """키워드를 동의어 포함 전체 목록으로 확장.
@@ -184,19 +187,35 @@ class FilterEngine:
 
     def matches(self, item: AnnouncementData,
                 keywords: list[str] = None,
-                categories: list[str] = None) -> bool:
+                categories: list[str] = None,
+                exclude_keywords: list[str] = None) -> bool:
         """공고가 필터 조건에 부합하는지 확인.
 
-        keywords/categories 미전달 시 생성자에서 받은 기본값 사용.
-        둘 다 비어있으면 True (전체 통과).
-        """
-        kws = keywords if keywords is not None else self._default_keywords
-        cats = categories if categories is not None else self._default_categories
+        평가 순서:
+          1. 제외 키워드 확인 → 매칭되면 즉시 False (차단)
+          2. 포함 키워드/카테고리 확인 → 하나라도 매칭되면 True
 
-        if not kws and not cats:
-            return True
+        keywords/categories/exclude_keywords 미전달 시 생성자 기본값 사용.
+        포함 조건이 모두 비어있으면 True (전체 통과).
+        """
+        kws   = keywords         if keywords         is not None else self._default_keywords
+        cats  = categories       if categories       is not None else self._default_categories
+        excls = exclude_keywords if exclude_keywords is not None else self._default_exclude_keywords
 
         text = self._searchable_text(item)
+
+        # ── 1. 제외 키워드 (포함 조건보다 먼저 평가) ──────────────────────
+        for excl in excls:
+            expanded = self.expand(excl.lower())
+            if any(t in text for t in expanded):
+                logger.debug(
+                    f"제외 키워드 매칭 [{excl}]: {getattr(item, 'title', '')[:40]}"
+                )
+                return False
+
+        # ── 2. 포함 키워드/카테고리 ──────────────────────────────────────
+        if not kws and not cats:
+            return True
 
         # 키워드 OR 매칭 (동의어 포함)
         for kw in kws:
@@ -214,6 +233,7 @@ class FilterEngine:
 
     def filter_items(self, items: list[AnnouncementData],
                      keywords: list[str] = None,
-                     categories: list[str] = None) -> list[AnnouncementData]:
+                     categories: list[str] = None,
+                     exclude_keywords: list[str] = None) -> list[AnnouncementData]:
         """AnnouncementData 리스트를 필터링하여 반환 (스케줄러용)."""
-        return [item for item in items if self.matches(item, keywords, categories)]
+        return [item for item in items if self.matches(item, keywords, categories, exclude_keywords)]

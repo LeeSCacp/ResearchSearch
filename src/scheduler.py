@@ -55,6 +55,7 @@ async def run_scraping_cycle():
         filter_engine = FilterEngine(
             keywords=filter_cfg.get("keywords", []),
             categories=filter_cfg.get("categories", []),
+            exclude_keywords=filter_cfg.get("exclude_keywords", []),
         )
         dto_items = [
             AnnouncementData(
