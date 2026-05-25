@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24",
+  "updated_at": "2026-05-25",
   "total": 28,
   "items": [
     {
@@ -107,6 +107,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ]
     },
@@ -146,6 +151,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ]
     },
@@ -179,6 +189,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ]
     },
@@ -199,6 +214,11 @@
       "notification_logs": [
         {
           "event": "d7",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d3",
           "channel": "email",
           "success": true
         }
@@ -235,6 +255,11 @@
           "event": "d7",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d3",
+          "channel": "email",
+          "success": true
         }
       ]
     },
@@ -258,6 +283,11 @@
           "channel": "email",
           "success": false,
           "error": "발송 실패"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
         }
       ]
     },
@@ -281,6 +311,11 @@
           "channel": "email",
           "success": false,
           "error": "발송 실패"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
         }
       ]
     },
@@ -304,6 +339,11 @@
           "channel": "email",
           "success": false,
           "error": "발송 실패"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
         }
       ]
     },
@@ -327,6 +367,11 @@
           "channel": "email",
           "success": false,
           "error": "발송 실패"
+        },
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
         }
       ]
     },
