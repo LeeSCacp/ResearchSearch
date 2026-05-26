@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-25",
-  "total": 29,
+  "updated_at": "2026-05-26",
+  "total": 31,
   "items": [
     {
       "id": 9,
@@ -508,6 +508,38 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.449134",
+      "notification_logs": []
+    },
+    {
+      "id": 31,
+      "title": "2026년도 2차 신재생에너지R&D(수소·연료전지) 신규지원대상 연구개발과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021674",
+      "source": "iris",
+      "category": "기후에너지환경부 > 한국에너지기술평가원",
+      "deadline": null,
+      "posted_date": "2026-05-18",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-05-26T01:58:13.194167",
+      "notification_logs": []
+    },
+    {
+      "id": 30,
+      "title": "2026년도 중소기업기술혁신개발사업 글로벌협력형R&D(예비연구형) 재공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021776",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": null,
+      "posted_date": "2026-05-19",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-05-26T01:58:13.193165",
       "notification_logs": []
     },
     {
