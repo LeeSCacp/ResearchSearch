@@ -225,9 +225,11 @@ const PER_PAGE = 20;
 // ─────────────────────────────────────────────────────────────────────────────
 async function init() {
   try {
+    // ?t= 파라미터로 브라우저 캐시 우회 (Actions가 갱신할 때마다 최신 데이터 로드)
+    const bust = Date.now();
     const [dataRes, synRes] = await Promise.all([
-      fetch('./data/announcements.json'),
-      fetch('./data/synonyms.json'),
+      fetch(`./data/announcements.json?t=${bust}`),
+      fetch(`./data/synonyms.json?t=${bust}`),
     ]);
 
     if (!dataRes.ok) throw new Error(`announcements.json 로드 실패 (HTTP ${dataRes.status})`);
@@ -240,7 +242,7 @@ async function init() {
     // 마지막 업데이트 시각 표시
     if (data.updated_at) {
       document.getElementById('updated-at').textContent =
-        `마지막 업데이트: ${data.updated_at}  |  6시간마다 자동 갱신`;
+        `마지막 업데이트: ${data.updated_at} (UTC)  |  6시간마다 자동 갱신`;
     }
 
     // URL 파라미터 복원 (뒤로가기/공유 지원)

@@ -42,5 +42,8 @@ class BaseScraper(ABC):
     def log_info(self, msg: str):
         logger.info(f"[{self.source_name}] {msg}")
 
+    def log_warning(self, msg: str):
+        logger.warning(f"[{self.source_name}] {msg}")
+
     def log_error(self, msg: str):
         logger.error(f"[{self.source_name}] {msg}")

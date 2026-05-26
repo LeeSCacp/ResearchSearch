@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import json
 import logging
-from datetime import date
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
@@ -59,7 +59,7 @@ def export_announcements(
                 log_map.setdefault(log.announcement_id, []).append(entry)
 
         data = {
-            "updated_at": date.today().isoformat(),
+            "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
             "total": len(announcements),
             "items": [
                 {**a.to_dict(), "notification_logs": log_map.get(a.id, [])}

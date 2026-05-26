@@ -43,7 +43,11 @@ class TestEmailNotifier:
 
     def test_html_build(self):
         ann = _make_announcement()
-        html = EmailNotifier._build_new_html([ann])
+        notifier = EmailNotifier({
+            "enabled": True, "sender": "a@b.com",
+            "password": "pw", "recipients": ["c@d.com"],
+        })
+        html = notifier._build_new_html([ann])
         assert "테스트 공고" in html
         assert "NRF" in html
         assert "2026-12-31" in html

@@ -36,6 +36,8 @@ class NRFScraper(BaseScraper):
 
     async def _scrape_list(self) -> list[AnnouncementData]:
         from playwright.async_api import async_playwright
+        from bs4 import BeautifulSoup
+
         results = []
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=True)
@@ -53,7 +55,10 @@ class NRFScraper(BaseScraper):
                 }
             }""")
             await page.wait_for_timeout(1500)
-            await page.evaluate("() => { var btn = document.querySelector('.searchBizQueryBtn'); if (btn) btn.click(); }")
+            await page.evaluate("""() => {
+                var btn = document.querySelector('.searchBizQueryBtn');
+                if (btn) btn.click();
+            }""")
             await page.wait_for_timeout(3000)
             await page.wait_for_load_state("networkidle")
 
@@ -68,47 +73,108 @@ class NRFScraper(BaseScraper):
 
             self.log_info(f"NRF 검색 결과: {total}건")
 
-            links = await page.query_selector_all("a")
-            for link in links:
-                try:
-                    ann = await self._parse_link(link)
-                    if ann:
-                        results.append(ann)
-                except Exception as e:
-                    self.log_error(f"항목 파싱 실패: {e}")
-
+            # HTML 파싱으로 공고 목록 추출 (SPA 대응)
+            content = await page.content()
             await browser.close()
+
+        soup = BeautifulSoup(content, "lxml")
+        results = self._parse_list_html(soup)
+        self.log_info(f"목록 파싱: {len(results)}건 추출")
         return results
 
-    async def _parse_link(self, link) -> AnnouncementData | None:
-        href  = await link.get_attribute("href") or ""
-        title = (await link.inner_text()).strip()
+    def _parse_list_html(self, soup) -> list[AnnouncementData]:
+        """BeautifulSoup으로 NRF 공고 목록 파싱."""
+        results = []
 
-        if len(title) < 15:
+        # NRF 공고 목록: table 또는 ul 기반 구조 탐색
+        # 우선 table > tbody > tr 시도
+        for tr in soup.select("table tbody tr"):
+            ann = self._parse_row(tr)
+            if ann:
+                results.append(ann)
+
+        # table 방식으로 수집 못 한 경우 li 기반 시도
+        if not results:
+            for li in soup.select("ul.board-list li, ul.list-type li, .bbs-list li"):
+                ann = self._parse_li(li)
+                if ann:
+                    results.append(ann)
+
+        return results
+
+    def _parse_row(self, tr) -> AnnouncementData | None:
+        """table tr 행에서 공고 정보 추출."""
+        cells = tr.find_all("td")
+        if len(cells) < 2:
             return None
-        skip = ["로그인", "회원가입", "마이페이지", "HOME", "검색", "FAQ"]
-        if any(k in title for k in skip):
+
+        # 제목 셀에서 링크 찾기
+        title_td = None
+        for td in cells:
+            a = td.find("a")
+            if a and len(a.get_text(strip=True)) > 15:
+                title_td = td
+                break
+        if not title_td:
             return None
 
-        url = NRF_NOTICE_URL
-        if href and href.startswith("http"):
-            url = href
-        elif href and not href.startswith("javascript") and not href.startswith("#"):
-            url = NRF_BASE_URL + href
+        a_tag = title_td.find("a")
+        title = a_tag.get_text(strip=True)
+        url   = self._extract_url_from_tag(a_tag)
 
-        parent = await link.evaluate_handle(
-            'el => el.closest("li") || el.closest("tr") || el.parentElement'
-        )
-        parent_text = (await parent.as_element().inner_text()).strip()
-        dates = re.findall(r"(\d{4}[-./]\d{2}[-./]\d{2})", parent_text)
-
-        posted_date = self._parse_date(dates[0]) if dates else None
-        deadline    = self._parse_date(dates[1]) if len(dates) > 1 else None
+        # 행 전체 텍스트에서 날짜 추출
+        row_text = tr.get_text()
+        dates = re.findall(r"(\d{4}[-./]\d{2}[-./]\d{2})", row_text)
 
         return AnnouncementData(
             title=title, url=url, source="nrf",
-            posted_date=posted_date, deadline=deadline,
+            posted_date=self._parse_date(dates[0]) if dates else None,
+            deadline=self._parse_date(dates[-1]) if len(dates) > 1 else None,
         )
+
+    def _parse_li(self, li) -> AnnouncementData | None:
+        """list item에서 공고 정보 추출."""
+        a_tag = li.find("a")
+        if not a_tag:
+            return None
+        title = a_tag.get_text(strip=True)
+        if len(title) < 15:
+            return None
+
+        url     = self._extract_url_from_tag(a_tag)
+        li_text = li.get_text()
+        dates   = re.findall(r"(\d{4}[-./]\d{2}[-./]\d{2})", li_text)
+
+        return AnnouncementData(
+            title=title, url=url, source="nrf",
+            posted_date=self._parse_date(dates[0]) if dates else None,
+            deadline=self._parse_date(dates[-1]) if len(dates) > 1 else None,
+        )
+
+    def _extract_url_from_tag(self, a_tag) -> str:
+        """<a> 태그에서 URL 추출. SPA onclick/href 패턴 모두 처리."""
+        href    = (a_tag.get("href") or "").strip()
+        onclick = (a_tag.get("onclick") or "").strip()
+
+        # 1. href가 실제 경로인 경우
+        if href and not href.startswith(("javascript", "#")):
+            return href if href.startswith("http") else NRF_BASE_URL + href
+
+        # 2. onclick 또는 href의 javascript: 에서 notiSn / ID 추출
+        #    패턴 예: goView('12345'), fn_detail(12345), location.href='...notiSn=12345'
+        for text in (onclick, href):
+            # URL 내 notiSn 파라미터
+            m = re.search(r"notiSn[='\"\s,]+(\d+)", text)
+            if m:
+                return f"{NRF_BASE_URL}/biz/info/notice/view?menuNo=1&notiSn={m.group(1)}"
+            # 함수 호출 첫 번째 숫자 인자
+            m = re.search(r"\(\s*['\"]?(\d{4,})['\"]?", text)
+            if m:
+                return f"{NRF_BASE_URL}/biz/info/notice/view?menuNo=1&notiSn={m.group(1)}"
+
+        # 3. 추출 실패 → 목록 URL (상세 수집 불가)
+        self.log_warning(f"URL 추출 실패 (href={href!r}, onclick={onclick!r})")
+        return NRF_NOTICE_URL
 
     # ------------------------------------------------------------------
     # 상세 수집
