@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-26 19:53 UTC",
-  "total": 32,
+  "updated_at": "2026-05-27 02:08 UTC",
+  "total": 33,
   "items": [
     {
       "id": 9,
@@ -221,6 +221,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ]
     },
@@ -258,6 +263,11 @@
         },
         {
           "event": "d3",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d1",
           "channel": "email",
           "success": true
         }
@@ -508,6 +518,22 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.449134",
+      "notification_logs": []
+    },
+    {
+      "id": 33,
+      "title": "2026년도 선진원자로산업기술연구조합 세부과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021954",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-05-27",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-05-27T02:07:05.839818",
       "notification_logs": []
     },
     {
