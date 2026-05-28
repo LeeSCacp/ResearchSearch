@@ -127,7 +127,7 @@
     .rbadge-d1   { background: #fee2e2; color: #dc2626; }
     .rbadge-fail { background: #f3f4f6; color: #9ca3af; border: 1px dashed #d1d5db; }
 
-    /* 접수 중만 보기 토글 */
+    /* 접수 중만 / 관련 공고만 토글 */
     .active-only-label {
       display: flex; align-items: center; gap: 5px;
       font-size: 0.85rem; white-space: nowrap; cursor: pointer;
@@ -136,6 +136,24 @@
     }
     .active-only-label:hover { background: #e9ecef; }
     .active-only-label input { cursor: pointer; accent-color: #2d6a9f; }
+    .relevant-label {
+      border-color: #bfdbfe; background: #eff6ff; color: #1e40af;
+    }
+    .relevant-label:hover { background: #dbeafe; }
+    .relevant-label input { accent-color: #1d4ed8; }
+
+    /* 만료 공고 행 흐리게 */
+    tr.row-expired td { opacity: 0.38; }
+    tr.row-expired:hover td { opacity: 0.6; background: #f9fafb; }
+
+    /* 0건 fallback 배너 */
+    .fallback-banner {
+      background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px;
+      padding: 14px 18px; margin-bottom: 16px; font-size: 0.875rem; color: #92400e;
+      line-height: 1.6;
+    }
+    .fallback-banner strong { color: #78350f; }
+    .fallback-table { opacity: 0.7; }
 
     a { color: #2d6a9f; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -186,6 +204,10 @@
       <label class="active-only-label">
         <input type="checkbox" id="active-only" onchange="doSearch()">
         접수 중만 보기
+      </label>
+      <label class="active-only-label relevant-label">
+        <input type="checkbox" id="relevant-only" onchange="doSearch()">
+        관련 공고만
       </label>
     </div>
     <div id="synonym-hint" class="synonym-hint" style="display:none;"></div>
@@ -239,17 +261,37 @@ async function init() {
     // 동의어 사전 (로드 실패해도 검색은 작동)
     if (synRes.ok) synonymMap = await synRes.json();
 
-    // 마지막 업데이트 시각 표시
+    // 마지막 업데이트 시각 표시 — UTC → KST 변환
     if (data.updated_at) {
+      let displayTime = data.updated_at;
+      const m = data.updated_at.match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}) UTC/);
+      if (m) {
+        const utcMs = Date.UTC(+m[1], +m[2]-1, +m[3], +m[4], +m[5]);
+        const kst   = new Date(utcMs + 9 * 3600000);
+        const pad   = n => String(n).padStart(2, '0');
+        displayTime = `${kst.getFullYear()}-${pad(kst.getMonth()+1)}-${pad(kst.getDate())} `
+                    + `${pad(kst.getHours())}:${pad(kst.getMinutes())} KST`;
+      }
       document.getElementById('updated-at').textContent =
-        `마지막 업데이트: ${data.updated_at} (UTC)  |  6시간마다 자동 갱신`;
+        `마지막 업데이트: ${displayTime}  |  6시간마다 자동 갱신`;
     }
+
+    // 소스 드롭다운에 건수 동적 표시 (NRF 0건 등 즉시 파악 가능)
+    const srcCounts = {};
+    allItems.forEach(i => { srcCounts[i.source] = (srcCounts[i.source] || 0) + 1; });
+    document.querySelectorAll('#source-filter option').forEach(opt => {
+      if (!opt.value) return;
+      const cnt = srcCounts[opt.value] || 0;
+      opt.textContent = `${opt.textContent.replace(/ \(\d+건\)$/, '')} (${cnt}건)`;
+      opt.style.color = cnt === 0 ? '#bbb' : '';
+    });
 
     // URL 파라미터 복원 (뒤로가기/공유 지원)
     const p = new URLSearchParams(location.search);
-    if (p.get('source'))   document.getElementById('source-filter').value = p.get('source');
-    if (p.get('keyword'))  document.getElementById('keyword-input').value  = p.get('keyword');
-    if (p.get('active') === '1') document.getElementById('active-only').checked = true;
+    if (p.get('source'))           document.getElementById('source-filter').value = p.get('source');
+    if (p.get('keyword'))          document.getElementById('keyword-input').value  = p.get('keyword');
+    if (p.get('active')    === '1') document.getElementById('active-only').checked    = true;
+    if (p.get('relevant')  === '1') document.getElementById('relevant-only').checked  = true;
     currentPage = parseInt(p.get('page')) || 1;
 
     render();
@@ -269,9 +311,10 @@ function doSearch() {
 }
 
 function resetSearch() {
-  document.getElementById('source-filter').value = '';
-  document.getElementById('keyword-input').value  = '';
-  document.getElementById('active-only').checked  = false;
+  document.getElementById('source-filter').value  = '';
+  document.getElementById('keyword-input').value   = '';
+  document.getElementById('active-only').checked   = false;
+  document.getElementById('relevant-only').checked = false;
   currentPage = 1;
   render();
   pushURL();
@@ -285,14 +328,16 @@ function goPage(p) {
 }
 
 function pushURL() {
-  const source     = document.getElementById('source-filter').value;
-  const keyword    = document.getElementById('keyword-input').value.trim();
-  const activeOnly = document.getElementById('active-only').checked;
-  const params     = new URLSearchParams();
-  if (source)          params.set('source',  source);
-  if (keyword)         params.set('keyword', keyword);
-  if (activeOnly)      params.set('active',  '1');
-  if (currentPage > 1) params.set('page',    currentPage);
+  const source       = document.getElementById('source-filter').value;
+  const keyword      = document.getElementById('keyword-input').value.trim();
+  const activeOnly   = document.getElementById('active-only').checked;
+  const relevantOnly = document.getElementById('relevant-only').checked;
+  const params       = new URLSearchParams();
+  if (source)          params.set('source',   source);
+  if (keyword)         params.set('keyword',  keyword);
+  if (activeOnly)      params.set('active',   '1');
+  if (relevantOnly)    params.set('relevant', '1');
+  if (currentPage > 1) params.set('page',     currentPage);
   const qs = params.toString();
   history.replaceState(null, '', qs ? '?' + qs : location.pathname);
 }
@@ -307,11 +352,15 @@ function expandKw(kw) {
 // ─────────────────────────────────────────────────────────────────────────────
 // 검색 + 스코어링
 // ─────────────────────────────────────────────────────────────────────────────
-function searchItems(items, keywords, source, activeOnly = false) {
+function searchItems(items, keywords, source, activeOnly = false, relevantOnly = false) {
+  let pool = items;
+  // 소스 필터
+  if (source)       pool = pool.filter(i => i.source === source);
+  // 관련 공고만 (is_relevant 필드 기반)
+  if (relevantOnly) pool = pool.filter(i => i.is_relevant === true);
   // 접수 중만 보기: 마감일 없거나 D-day >= 0인 항목만
-  let pool = activeOnly
-    ? items.filter(i => !i.deadline || dday(i.deadline) >= 0)
-    : items;
+  if (activeOnly)   pool = pool.filter(i => !i.deadline || dday(i.deadline) >= 0);
+
   if (!keywords.length) {
     return pool.map(item => ({ item, score: 0, directScore: 0, matchedKws: [], matchedTerms: [] }));
   }
@@ -473,7 +522,8 @@ function renderTable(rows, hasKw) {
         </div>`
       : '<span style="color:#ddd;font-size:0.78rem;">-</span>';
 
-    return `<tr>
+    const isExpired = a.deadline && dday(a.deadline) < 0;
+    return `<tr${isExpired ? ' class="row-expired"' : ''}>
       <td>${srcBadge}</td>
       <td>
         <a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a>
@@ -520,15 +570,17 @@ function renderPagination(total, page, totalPages) {
 }
 
 function render() {
-  const source     = document.getElementById('source-filter').value;
-  const keyword    = document.getElementById('keyword-input').value.trim();
-  const activeOnly = document.getElementById('active-only')?.checked ?? false;
-  const keywords   = keyword ? keyword.split(/\s+/).filter(Boolean) : [];
-  const hasKw      = keywords.length > 0;
+  const source       = document.getElementById('source-filter').value;
+  const keyword      = document.getElementById('keyword-input').value.trim();
+  const activeOnly   = document.getElementById('active-only')?.checked   ?? false;
+  const relevantOnly = document.getElementById('relevant-only')?.checked ?? false;
+  const keywords     = keyword ? keyword.split(/\s+/).filter(Boolean) : [];
+  const hasKw        = keywords.length > 0;
+  const hasFilter    = hasKw || source || activeOnly || relevantOnly;
 
   renderSynonymHint(keywords);
 
-  const results    = searchItems(allItems, keywords, source, activeOnly);
+  const results    = searchItems(allItems, keywords, source, activeOnly, relevantOnly);
   const total      = results.length;
   const totalPages = Math.max(1, Math.ceil(total / PER_PAGE));
   const page       = Math.min(currentPage, totalPages);
@@ -536,11 +588,42 @@ function render() {
 
   // 통계 바
   const statsEl = document.getElementById('stats-total');
-  statsEl.textContent = hasKw ? `검색 결과 ${total}건` : `전체 ${total}건`;
   statsEl.className = 'badge' + (hasKw ? ' active' : '');
-  document.getElementById('stats-page').textContent = `${page} / ${totalPages} 페이지`;
-  document.getElementById('relevance-legend').style.display = hasKw ? 'flex' : 'none';
+  document.getElementById('relevance-legend').style.display = hasKw && total > 0 ? 'flex' : 'none';
 
+  // 0건 + 필터 있음 → 참고용 fallback 표시
+  if (total === 0 && hasFilter) {
+    statsEl.textContent = '매칭 결과 없음';
+    document.getElementById('stats-page').textContent = '';
+
+    // 이유 메시지
+    let reason = '선택한 조건에 해당하는 공고가 없습니다.';
+    if (relevantOnly && !hasKw && !source)
+      reason = '아직 관련 분야(심리·인지·발달 등) 공고가 수집되지 않았습니다.';
+    else if (hasKw)
+      reason = `"${keywords.join(', ')}" 키워드와 매칭되는 공고가 없습니다.`;
+
+    // fallback: 접수 중 우선, 없으면 전체 — 최대 PER_PAGE건
+    const fallbackPool = allItems
+      .filter(i => !i.deadline || dday(i.deadline) >= 0);
+    const fallbackSrc  = (fallbackPool.length > 0 ? fallbackPool : allItems)
+      .slice(0, PER_PAGE)
+      .map(i => ({ item: i, score: 0, directScore: 0, matchedKws: [], matchedTerms: [] }));
+
+    document.getElementById('table-container').innerHTML =
+      `<div class="fallback-banner">
+        <strong>검색 결과 없음 —</strong> ${reason}<br>
+        <span style="font-size:0.82rem;opacity:0.85;">
+          시스템은 정상 작동 중입니다. 아래는 참고용 최근 수집 공고입니다.
+        </span>
+      </div>
+      <div class="fallback-table">${renderTable(fallbackSrc, false)}</div>`;
+    document.getElementById('pagination').innerHTML = '';
+    return;
+  }
+
+  statsEl.textContent = hasKw ? `검색 결과 ${total}건` : `전체 ${total}건`;
+  document.getElementById('stats-page').textContent = `${page} / ${totalPages} 페이지`;
   document.getElementById('table-container').innerHTML = renderTable(paged, hasKw);
   document.getElementById('pagination').innerHTML      = renderPagination(total, page, totalPages);
 }

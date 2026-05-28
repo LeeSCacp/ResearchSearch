@@ -15,6 +15,8 @@ import yaml
 
 from src.config import load_config
 from src.models.announcement import Announcement, NotificationLog, init_db, get_session
+from src.scrapers.base import AnnouncementData
+from src.filters.engine import FilterEngine
 
 logger = logging.getLogger(__name__)
 
@@ -58,11 +60,31 @@ def export_announcements(
                     entry["error"] = log.error_message
                 log_map.setdefault(log.announcement_id, []).append(entry)
 
+        # FilterEngine으로 각 공고의 관련성 계산 (프론트 '관련 공고만' 토글용)
+        filter_cfg = config.get("filters", {})
+        filter_engine = FilterEngine(
+            keywords=filter_cfg.get("keywords", []),
+            categories=filter_cfg.get("categories", []),
+            exclude_keywords=filter_cfg.get("exclude_keywords", []),
+        )
+
+        def _is_relevant(ann: Announcement) -> bool:
+            dto = AnnouncementData(
+                title=ann.title or "", url=ann.url or "", source=ann.source or "",
+                category=ann.category or "", deadline=ann.deadline,
+                posted_date=ann.posted_date, description=ann.description or "",
+            )
+            return filter_engine.matches(dto)
+
         data = {
             "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
             "total": len(announcements),
             "items": [
-                {**a.to_dict(), "notification_logs": log_map.get(a.id, [])}
+                {
+                    **a.to_dict(),
+                    "notification_logs": log_map.get(a.id, []),
+                    "is_relevant": _is_relevant(a),
+                }
                 for a in announcements
             ],
         }
