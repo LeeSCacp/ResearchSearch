@@ -168,17 +168,23 @@ class IRISScraper(BaseScraper):
         return item
 
     @staticmethod
+    def _clean_text(text: str) -> str:
+        """HTML span 분리로 인한 불필요한 공백 제거 (예: '2 026' → '2026')."""
+        text = re.sub(r'(?<=\d)\s+(?=\d)', '', text)
+        text = re.sub(r' {2,}', ' ', text)
+        return text.strip()
+
+    @staticmethod
     def _extract_description(soup) -> str:
         """공고문 본문: div.se-contents (IRIS/NTIS 공통 에디터 영역)."""
         sc = soup.find("div", class_="se-contents")
         if sc:
-            text = sc.get_text(separator=" ", strip=True)
+            text = IRISScraper._clean_text(sc.get_text(separator=" ", strip=True))
             if len(text) > 10:
                 return text[:1000]
-        # fallback: tb_contents 전체
         tb = soup.find("div", class_="tb_contents")
         if tb:
-            text = tb.get_text(separator=" ", strip=True)
+            text = IRISScraper._clean_text(tb.get_text(separator=" ", strip=True))
             if len(text) > 10:
                 return text[:1000]
         return ""

@@ -114,16 +114,21 @@ class NTISScraper(BaseScraper):
         return item
 
     @staticmethod
+    def _clean_text(text: str) -> str:
+        """HTML span 분리로 인한 불필요한 공백 제거 (예: '2 026' → '2026')."""
+        text = re.sub(r'(?<=\d)\s+(?=\d)', '', text)   # 숫자 사이 공백
+        text = re.sub(r' {2,}', ' ', text)               # 연속 공백 정리
+        return text.strip()
+
+    @staticmethod
     def _extract_description(soup: BeautifulSoup) -> str:
         """NTIS 공고 본문(se-contents) 추출."""
-        # NTIS 상세 페이지 본문: div.se-contents
         sc = soup.find("div", class_="se-contents")
         if sc:
-            return sc.get_text(separator=" ", strip=True)[:1000]
-        # fallback: notice_cont
+            return NTISScraper._clean_text(sc.get_text(separator=" ", strip=True))[:1000]
         nc = soup.find("div", class_="notice_cont")
         if nc:
-            return nc.get_text(separator=" ", strip=True)[:1000]
+            return NTISScraper._clean_text(nc.get_text(separator=" ", strip=True))[:1000]
         return ""
 
     @staticmethod

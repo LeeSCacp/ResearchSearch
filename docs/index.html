@@ -18,17 +18,15 @@
 
     .container { max-width: 1260px; margin: 0 auto; padding: 24px; }
 
-    /* 검색 영역 */
-    .search-box {
-      background: white; border-radius: 8px; padding: 16px 20px;
-      margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    /* ── 검색 영역 ── */
+    .search-section {
+      background: white;
+      border-radius: 8px 8px 0 0;
+      padding: 14px 20px 12px;
+      border-bottom: 1px solid #f0f0f0;
     }
     .search-row {
       display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
-    }
-    .search-row label { font-weight: 600; font-size: 0.85rem; white-space: nowrap; }
-    .search-row select {
-      padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.9rem;
     }
     .keyword-wrap { position: relative; flex: 1; min-width: 240px; }
     .keyword-wrap input {
@@ -62,15 +60,75 @@
       border-radius: 10px; font-size: 0.78rem;
     }
 
-    /* 통계 바 */
+    /* ── 탭 바 ── */
+    .tab-bar {
+      background: white;
+      border-bottom: 2px solid #e5e7eb;
+      display: flex; gap: 0;
+      padding: 0 20px;
+    }
+    .tab-btn {
+      padding: 10px 18px; border: none; background: none;
+      cursor: pointer; font-size: 0.88rem; color: #6b7280;
+      border-bottom: 2px solid transparent; margin-bottom: -2px;
+      transition: color 0.15s, background 0.15s; white-space: nowrap;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .tab-btn:hover { color: #374151; background: #f9fafb; }
+    .tab-btn.active { color: #2d6a9f; border-bottom-color: #2d6a9f; font-weight: 600; }
+    .tab-count {
+      background: #f3f4f6; color: #6b7280;
+      padding: 1px 7px; border-radius: 10px; font-size: 0.73rem; font-weight: 600;
+    }
+    .tab-btn.active .tab-count { background: #dbeafe; color: #1d4ed8; }
+    .tab-count.zero { opacity: 0.45; }
+
+    /* ── 필터 행 ── */
+    .filter-row {
+      background: white;
+      border-radius: 0 0 8px 8px;
+      padding: 10px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    }
+    .filter-label {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 0.85rem; white-space: nowrap; cursor: pointer;
+      padding: 6px 12px; border-radius: 6px; border: 1px solid #ddd;
+      background: #f8f9fa; color: #555; user-select: none;
+    }
+    .filter-label:hover { background: #e9ecef; }
+    .filter-label input { cursor: pointer; accent-color: #2d6a9f; }
+    .filter-label.relevant-label {
+      border-color: #bfdbfe; background: #eff6ff; color: #1e40af;
+    }
+    .filter-label.relevant-label:hover { background: #dbeafe; }
+    .filter-label.relevant-label input { accent-color: #1d4ed8; }
+
+    /* 툴팁 */
+    .tooltip-wrap { position: relative; display: inline-flex; align-items: center; }
+    .tooltip-icon {
+      width: 15px; height: 15px; background: #bfdbfe; color: #1e40af;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-size: 0.65rem; font-weight: 700; cursor: help; margin-left: 3px; flex-shrink: 0;
+    }
+    .tooltip-text {
+      visibility: hidden; background: #1f2937; color: white;
+      font-size: 0.75rem; padding: 6px 10px; border-radius: 6px;
+      position: absolute; bottom: 130%; left: 50%; transform: translateX(-50%);
+      white-space: nowrap; z-index: 10; opacity: 0; transition: opacity 0.15s;
+      pointer-events: none;
+    }
+    .tooltip-wrap:hover .tooltip-text { visibility: visible; opacity: 1; }
+
+    /* ── 통계 바 ── */
     .stats-bar {
       display: flex; align-items: center; gap: 8px;
       margin-bottom: 14px; font-size: 0.85rem; color: #666; flex-wrap: wrap;
     }
     .stats-bar .badge { background: #e9ecef; padding: 4px 10px; border-radius: 12px; }
     .stats-bar .badge.active { background: #dbeafe; color: #1e40af; }
-
-    /* 관련도 범례 */
     .relevance-legend {
       margin-left: auto; display: flex; align-items: center; gap: 10px;
       font-size: 0.8rem; color: #888;
@@ -80,7 +138,14 @@
     .rel-mid  { background: #ea580c; }
     .rel-low  { background: #94a3b8; }
 
-    /* 테이블 */
+    /* ── 검색 모드 배너 ── */
+    .search-banner {
+      background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px;
+      padding: 10px 16px; margin-bottom: 12px; font-size: 0.85rem; color: #1e40af;
+    }
+    .search-banner strong { color: #1e3a8a; }
+
+    /* ── 테이블 ── */
     table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
     thead { background: #f8f9fa; }
     th { padding: 11px 14px; text-align: left; font-size: 0.78rem; color: #666; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -95,6 +160,7 @@
     .source-nrf  { background: #1d4ed8; }
     .source-ntis { background: #7c3aed; }
     .source-iris { background: #ea580c; }
+    .source-wrap { display: flex; flex-direction: column; gap: 3px; }
 
     /* 관련도 배지 */
     .score-badge {
@@ -118,42 +184,30 @@
     .deadline.soon    { color: #ea580c; font-weight: 600; }
     .dday { font-size: 0.75rem; margin-left: 4px; }
 
-    /* 리마인더 배지 */
-    .reminder-badges { display: flex; gap: 3px; flex-wrap: wrap; }
-    .rbadge { padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
-    .rbadge-new  { background: #dbeafe; color: #1d4ed8; }
-    .rbadge-d7   { background: #fef9c3; color: #a16207; }
-    .rbadge-d3   { background: #ffedd5; color: #ea580c; }
-    .rbadge-d1   { background: #fee2e2; color: #dc2626; }
-    .rbadge-fail { background: #f3f4f6; color: #9ca3af; border: 1px dashed #d1d5db; }
+    /* 발송상태 배지 */
+    .notif-sent    { background: #dcfce7; color: #16a34a; padding: 2px 8px; border-radius: 4px; font-size: 0.74rem; font-weight: 600; white-space: nowrap; }
+    .notif-pending { background: #f3f4f6; color: #9ca3af; padding: 2px 8px; border-radius: 4px; font-size: 0.74rem; white-space: nowrap; }
 
-    /* 접수 중만 / 관련 공고만 토글 */
-    .active-only-label {
-      display: flex; align-items: center; gap: 5px;
-      font-size: 0.85rem; white-space: nowrap; cursor: pointer;
-      padding: 8px 12px; border-radius: 6px; border: 1px solid #ddd;
-      background: #f8f9fa; color: #555; user-select: none;
-    }
-    .active-only-label:hover { background: #e9ecef; }
-    .active-only-label input { cursor: pointer; accent-color: #2d6a9f; }
-    .relevant-label {
-      border-color: #bfdbfe; background: #eff6ff; color: #1e40af;
-    }
-    .relevant-label:hover { background: #dbeafe; }
-    .relevant-label input { accent-color: #1d4ed8; }
-
-    /* 만료 공고 행 흐리게 */
+    /* 만료 공고 흐리게 */
     tr.row-expired td { opacity: 0.38; }
     tr.row-expired:hover td { opacity: 0.6; background: #f9fafb; }
 
-    /* 0건 fallback 배너 */
+    /* 0건 fallback */
     .fallback-banner {
       background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px;
-      padding: 14px 18px; margin-bottom: 16px; font-size: 0.875rem; color: #92400e;
-      line-height: 1.6;
+      padding: 14px 18px; margin-bottom: 16px; font-size: 0.875rem; color: #92400e; line-height: 1.6;
     }
     .fallback-banner strong { color: #78350f; }
     .fallback-table { opacity: 0.7; }
+
+    /* NRF 빈 상태 */
+    .empty-source {
+      background: white; border-radius: 8px; padding: 60px 20px;
+      text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .empty-source .es-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .empty-source h3 { color: #374151; font-size: 1rem; margin-bottom: 8px; }
+    .empty-source p { color: #9ca3af; font-size: 0.85rem; line-height: 1.7; }
 
     a { color: #2d6a9f; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -168,7 +222,6 @@
 
     .empty { text-align: center; padding: 60px; color: #999; background: white; border-radius: 8px; }
     .empty p { margin-top: 8px; }
-
     .loading { text-align: center; padding: 40px; color: #aaa; }
   </style>
 </head>
@@ -183,34 +236,48 @@
 <div class="container">
 
   <!-- 검색 영역 -->
-  <div class="search-box">
+  <div class="search-section">
     <div class="search-row">
-      <label>출처</label>
-      <select id="source-filter">
-        <option value="">전체</option>
-        <option value="nrf">한국연구재단</option>
-        <option value="ntis">NTIS</option>
-        <option value="iris">IRIS</option>
-      </select>
-
-      <label>키워드</label>
       <div class="keyword-wrap">
         <input type="text" id="keyword-input"
-               placeholder="검색어 입력 (공백으로 여러 개 구분, 예: 인문사회 기초연구)">
+               placeholder="검색어 입력 (공백으로 여러 개 구분, 예: 심리 인지 발달)">
       </div>
-
       <button class="btn-search" onclick="doSearch()">검색</button>
       <button class="btn-reset"  onclick="resetSearch()">초기화</button>
-      <label class="active-only-label">
-        <input type="checkbox" id="active-only" onchange="doSearch()">
-        접수 중만 보기
-      </label>
-      <label class="active-only-label relevant-label">
-        <input type="checkbox" id="relevant-only" onchange="doSearch()">
-        관련 공고만
-      </label>
     </div>
     <div id="synonym-hint" class="synonym-hint" style="display:none;"></div>
+  </div>
+
+  <!-- 탭 바 -->
+  <div class="tab-bar">
+    <button class="tab-btn active" id="tab-all"  onclick="switchTab('all')">
+      전체 요약 <span class="tab-count" id="tc-all">0</span>
+    </button>
+    <button class="tab-btn" id="tab-nrf"  onclick="switchTab('nrf')">
+      NRF <span class="tab-count" id="tc-nrf">0</span>
+    </button>
+    <button class="tab-btn" id="tab-ntis" onclick="switchTab('ntis')">
+      NTIS <span class="tab-count" id="tc-ntis">0</span>
+    </button>
+    <button class="tab-btn" id="tab-iris" onclick="switchTab('iris')">
+      IRIS <span class="tab-count" id="tc-iris">0</span>
+    </button>
+  </div>
+
+  <!-- 필터 행 -->
+  <div class="filter-row">
+    <label class="filter-label">
+      <input type="checkbox" id="active-only" onchange="onFilterChange()">
+      접수 중만 보기
+    </label>
+    <label class="filter-label relevant-label">
+      <input type="checkbox" id="relevant-only" onchange="onFilterChange()">
+      내 분야 공고만
+      <span class="tooltip-wrap">
+        <span class="tooltip-icon">?</span>
+        <span class="tooltip-text">설정된 키워드(심리, 인지, 발달 등)에 해당하는 공고만 표시합니다</span>
+      </span>
+    </label>
   </div>
 
   <!-- 통계 바 -->
@@ -219,9 +286,9 @@
     <span id="stats-page"  class="badge"></span>
     <div id="relevance-legend" class="relevance-legend" style="display:none;">
       관련도:
-      <span><span class="rel-dot rel-high"></span>높음 (2개↑ 키워드 매칭)</span>
-      <span><span class="rel-dot rel-mid"></span>보통 (1개 매칭)</span>
-      <span><span class="rel-dot rel-low"></span>동의어 매칭</span>
+      <span><span class="rel-dot rel-high"></span>높음</span>
+      <span><span class="rel-dot rel-mid"></span>보통</span>
+      <span><span class="rel-dot rel-low"></span>동의어</span>
     </div>
   </div>
 
@@ -237,17 +304,25 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // 상태
 // ─────────────────────────────────────────────────────────────────────────────
-let allItems = [];
-let synonymMap = {};   // { "term_lower": ["동의어1", "동의어2", ...] }
+let allItems   = [];
+let synonymMap = {};
+let currentTab = 'all';
 let currentPage = 1;
 const PER_PAGE = 20;
+
+// 탭별 기본 필터 상태
+const tabState = {
+  all:  { activeOnly: true,  relevantOnly: true  },
+  nrf:  { activeOnly: true,  relevantOnly: false },
+  ntis: { activeOnly: true,  relevantOnly: false },
+  iris: { activeOnly: true,  relevantOnly: false },
+};
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 초기화
 // ─────────────────────────────────────────────────────────────────────────────
 async function init() {
   try {
-    // ?t= 파라미터로 브라우저 캐시 우회 (Actions가 갱신할 때마다 최신 데이터 로드)
     const bust = Date.now();
     const [dataRes, synRes] = await Promise.all([
       fetch(`./data/announcements.json?t=${bust}`),
@@ -258,10 +333,9 @@ async function init() {
     const data = await dataRes.json();
     allItems = data.items || [];
 
-    // 동의어 사전 (로드 실패해도 검색은 작동)
     if (synRes.ok) synonymMap = await synRes.json();
 
-    // 마지막 업데이트 시각 표시 — UTC → KST 변환
+    // UTC → KST 변환
     if (data.updated_at) {
       let displayTime = data.updated_at;
       const m = data.updated_at.match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}) UTC/);
@@ -276,24 +350,20 @@ async function init() {
         `마지막 업데이트: ${displayTime}  |  6시간마다 자동 갱신`;
     }
 
-    // 소스 드롭다운에 건수 동적 표시 (NRF 0건 등 즉시 파악 가능)
-    const srcCounts = {};
-    allItems.forEach(i => { srcCounts[i.source] = (srcCounts[i.source] || 0) + 1; });
-    document.querySelectorAll('#source-filter option').forEach(opt => {
-      if (!opt.value) return;
-      const cnt = srcCounts[opt.value] || 0;
-      opt.textContent = `${opt.textContent.replace(/ \(\d+건\)$/, '')} (${cnt}건)`;
-      opt.style.color = cnt === 0 ? '#bbb' : '';
-    });
-
-    // URL 파라미터 복원 (뒤로가기/공유 지원)
+    // URL 파라미터 복원
     const p = new URLSearchParams(location.search);
-    if (p.get('source'))           document.getElementById('source-filter').value = p.get('source');
-    if (p.get('keyword'))          document.getElementById('keyword-input').value  = p.get('keyword');
-    if (p.get('active')    === '1') document.getElementById('active-only').checked    = true;
-    if (p.get('relevant')  === '1') document.getElementById('relevant-only').checked  = true;
+    const tabParam = p.get('tab');
+    if (tabParam && tabState[tabParam]) {
+      currentTab = tabParam;
+    }
+    if (p.get('keyword')) document.getElementById('keyword-input').value = p.get('keyword');
+    if (p.get('active')   !== null) tabState[currentTab].activeOnly   = p.get('active')   === '1';
+    if (p.get('relevant') !== null) tabState[currentTab].relevantOnly = p.get('relevant') === '1';
     currentPage = parseInt(p.get('page')) || 1;
 
+    setActiveTab(currentTab);
+    syncCheckboxes();
+    updateTabCounts();
     render();
   } catch (e) {
     document.getElementById('table-container').innerHTML =
@@ -302,7 +372,40 @@ async function init() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 검색 / 필터 액션
+// 탭 전환
+// ─────────────────────────────────────────────────────────────────────────────
+function switchTab(tab) {
+  currentTab = tab;
+  currentPage = 1;
+  setActiveTab(tab);
+  syncCheckboxes();
+  render();
+  pushURL();
+}
+
+function setActiveTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById('tab-' + tab);
+  if (btn) btn.classList.add('active');
+}
+
+function syncCheckboxes() {
+  const s = tabState[currentTab];
+  document.getElementById('active-only').checked   = s.activeOnly;
+  document.getElementById('relevant-only').checked = s.relevantOnly;
+}
+
+function onFilterChange() {
+  tabState[currentTab].activeOnly   = document.getElementById('active-only').checked;
+  tabState[currentTab].relevantOnly = document.getElementById('relevant-only').checked;
+  currentPage = 1;
+  updateTabCounts();
+  render();
+  pushURL();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 검색
 // ─────────────────────────────────────────────────────────────────────────────
 function doSearch() {
   currentPage = 1;
@@ -311,10 +414,7 @@ function doSearch() {
 }
 
 function resetSearch() {
-  document.getElementById('source-filter').value  = '';
-  document.getElementById('keyword-input').value   = '';
-  document.getElementById('active-only').checked   = false;
-  document.getElementById('relevant-only').checked = false;
+  document.getElementById('keyword-input').value = '';
   currentPage = 1;
   render();
   pushURL();
@@ -328,73 +428,95 @@ function goPage(p) {
 }
 
 function pushURL() {
-  const source       = document.getElementById('source-filter').value;
-  const keyword      = document.getElementById('keyword-input').value.trim();
-  const activeOnly   = document.getElementById('active-only').checked;
-  const relevantOnly = document.getElementById('relevant-only').checked;
-  const params       = new URLSearchParams();
-  if (source)          params.set('source',   source);
-  if (keyword)         params.set('keyword',  keyword);
-  if (activeOnly)      params.set('active',   '1');
-  if (relevantOnly)    params.set('relevant', '1');
-  if (currentPage > 1) params.set('page',     currentPage);
+  const keyword = document.getElementById('keyword-input').value.trim();
+  const s       = tabState[currentTab];
+  const params  = new URLSearchParams();
+  if (currentTab !== 'all') params.set('tab', currentTab);
+  if (keyword)              params.set('keyword', keyword);
+  if (s.activeOnly)         params.set('active',   '1');
+  if (s.relevantOnly)       params.set('relevant', '1');
+  if (currentPage > 1)      params.set('page', currentPage);
   const qs = params.toString();
   history.replaceState(null, '', qs ? '?' + qs : location.pathname);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 동의어 확장
+// 탭 카운트
+// ─────────────────────────────────────────────────────────────────────────────
+function updateTabCounts(searchResults) {
+  const tabs = ['all', 'nrf', 'ntis', 'iris'];
+  if (!searchResults) {
+    tabs.forEach(tab => {
+      const count = getTabFilteredItems(tab).length;
+      const el = document.getElementById('tc-' + tab);
+      if (el) { el.textContent = count; el.className = 'tab-count' + (count === 0 ? ' zero' : ''); }
+    });
+  } else {
+    const srchCounts = { all: searchResults.length, nrf: 0, ntis: 0, iris: 0 };
+    searchResults.forEach(r => {
+      const srcs = r.item.extra_sources && r.item.extra_sources.length
+        ? r.item.extra_sources : [r.item.source];
+      srcs.forEach(s => { if (srchCounts[s] !== undefined) srchCounts[s]++; });
+    });
+    tabs.forEach(tab => {
+      const count = srchCounts[tab] || 0;
+      const el = document.getElementById('tc-' + tab);
+      if (el) { el.textContent = count; el.className = 'tab-count' + (count === 0 ? ' zero' : ''); }
+    });
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 항목 필터링
+// ─────────────────────────────────────────────────────────────────────────────
+function getTabFilteredItems(tab) {
+  const s = tabState[tab] || tabState['all'];
+  let pool = allItems;
+
+  if (tab !== 'all') {
+    pool = pool.filter(i => {
+      const srcs = (i.extra_sources && i.extra_sources.length) ? i.extra_sources : [i.source];
+      return srcs.includes(tab);
+    });
+  }
+
+  if (s.activeOnly)   pool = pool.filter(i => !i.deadline || dday(i.deadline) >= 0);
+  if (s.relevantOnly) pool = pool.filter(i => i.is_relevant === true);
+  return pool;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 동의어 확장 + 검색 스코어링
 // ─────────────────────────────────────────────────────────────────────────────
 function expandKw(kw) {
   return synonymMap[kw.toLowerCase()] || [kw.toLowerCase()];
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 검색 + 스코어링
-// ─────────────────────────────────────────────────────────────────────────────
-function searchItems(items, keywords, source, activeOnly = false, relevantOnly = false) {
-  let pool = items;
-  // 소스 필터
-  if (source)       pool = pool.filter(i => i.source === source);
-  // 관련 공고만 (is_relevant 필드 기반)
-  if (relevantOnly) pool = pool.filter(i => i.is_relevant === true);
-  // 접수 중만 보기: 마감일 없거나 D-day >= 0인 항목만
-  if (activeOnly)   pool = pool.filter(i => !i.deadline || dday(i.deadline) >= 0);
-
-  if (!keywords.length) {
-    return pool.map(item => ({ item, score: 0, directScore: 0, matchedKws: [], matchedTerms: [] }));
-  }
-
+function searchItems(pool, keywords) {
   const kwGroups = keywords.map(kw => ({ orig: kw, expanded: expandKw(kw) }));
+  const results  = [];
 
-  const results = [];
   for (const item of pool) {
     const text = [item.title, item.category, item.description]
       .filter(Boolean).join(' ').toLowerCase();
 
     let score = 0, directScore = 0;
-    const matchedKws   = [];
-    const matchedTerms = [];
+    const matchedKws = [], matchedTerms = [];
 
     for (const { orig, expanded } of kwGroups) {
       const origL = orig.toLowerCase();
       if (text.includes(origL)) {
         score++; directScore++;
-        matchedKws.push(orig);
-        matchedTerms.push(origL);
+        matchedKws.push(orig); matchedTerms.push(origL);
       } else {
         const syn = expanded.find(s => s !== origL && text.includes(s));
-        if (syn) {
-          score++;
-          matchedKws.push(orig);   // 원본 키워드 표시 (동의어 태그로 구분)
-        }
+        if (syn) { score++; matchedKws.push(orig); }
       }
     }
 
     if (score > 0) results.push({ item, score, directScore, matchedKws, matchedTerms });
   }
 
-  // 정렬: score DESC → directScore DESC → deadline ASC(nulls last)
   results.sort((a, b) => {
     if (b.score !== a.score) return b.score - a.score;
     if (b.directScore !== a.directScore) return b.directScore - a.directScore;
@@ -406,13 +528,12 @@ function searchItems(items, keywords, source, activeOnly = false, relevantOnly =
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// D-day 계산
+// D-day / 마감일 포맷
 // ─────────────────────────────────────────────────────────────────────────────
 function dday(deadlineStr) {
   if (!deadlineStr) return null;
   const today = new Date(); today.setHours(0,0,0,0);
-  const dl    = new Date(deadlineStr);
-  return Math.floor((dl - today) / 86400000);
+  return Math.floor((new Date(deadlineStr) - today) / 86400000);
 }
 
 function fmtDeadline(deadlineStr) {
@@ -426,54 +547,58 @@ function fmtDeadline(deadlineStr) {
   return `<span class="deadline">${s} <span class="dday" style="color:#94a3b8;">D-${d}</span></span>`;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// HTML 이스케이프
-// ─────────────────────────────────────────────────────────────────────────────
 function esc(s) {
   if (!s) return '';
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 렌더링
+// 발송상태 렌더링
+// ─────────────────────────────────────────────────────────────────────────────
+function renderNotif(item) {
+  if (item.is_notified) return '<span class="notif-sent">발송 ✓</span>';
+  return '<span class="notif-pending">미발송</span>';
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 동의어 힌트
 // ─────────────────────────────────────────────────────────────────────────────
 function renderSynonymHint(keywords) {
   const el = document.getElementById('synonym-hint');
   if (!keywords.length) { el.style.display = 'none'; return; }
-
   const syns = [];
   for (const kw of keywords) {
-    const exp = expandKw(kw);
-    for (const s of exp) {
+    for (const s of expandKw(kw)) {
       if (s !== kw.toLowerCase() && !syns.includes(s)) syns.push(s);
     }
   }
   if (!syns.length) { el.style.display = 'none'; return; }
-
   el.innerHTML = `<span class="hint-label">동의어 검색 포함:</span>` +
     syns.slice(0, 8).map(s => `<span class="synonym-tag">${esc(s)}</span>`).join('');
   el.style.display = 'flex';
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// 테이블 렌더링
+// ─────────────────────────────────────────────────────────────────────────────
 function renderTable(rows, hasKw) {
-  if (!rows.length) {
-    return `<div class="empty">
-      ${hasKw
-        ? '<p>검색 결과가 없습니다.</p><p>다른 키워드로 시도하거나 동의어를 확인해 보세요.</p>'
-        : '<p>등록된 공고가 없습니다.</p><p>GitHub Actions가 6시간마다 자동 수집합니다.</p>'}
-    </div>`;
-  }
+  if (!rows.length) return `<div class="empty"><p>등록된 공고가 없습니다.</p><p>GitHub Actions가 6시간마다 자동 수집합니다.</p></div>`;
 
-  const scoreHeader = hasKw ? '<th style="width:120px;">관련도</th>' : '';
+  const scoreHeader = hasKw ? '<th style="width:100px;">관련도</th>' : '';
 
   const trs = rows.map(r => {
     const { item: a, score, directScore, matchedKws, matchedTerms } = r;
 
-    const srcBadge = {
+    // 출처 배지 (중복 병합 항목 포함)
+    const srcs = (a.extra_sources && a.extra_sources.length) ? a.extra_sources : [a.source];
+    const badgeMap = {
       nrf:  '<span class="source-badge source-nrf">NRF</span>',
       ntis: '<span class="source-badge source-ntis">NTIS</span>',
       iris: '<span class="source-badge source-iris">IRIS</span>',
-    }[a.source] || esc(a.source);
+    };
+    const srcHtml = srcs.length > 1
+      ? `<div class="source-wrap">${srcs.map(s => badgeMap[s] || esc(s)).join('')}</div>`
+      : (badgeMap[srcs[0]] || esc(srcs[0]));
 
     const descHtml = a.description
       ? `<div style="color:#888;font-size:0.78rem;margin-top:3px;line-height:1.4;">${esc(a.description.slice(0,120))}${a.description.length>120?'…':''}</div>`
@@ -483,48 +608,24 @@ function renderTable(rows, hasKw) {
       : '';
 
     let matchTagsHtml = '';
-    if (hasKw && matchedKws.length) {
+    if (hasKw && matchedKws && matchedKws.length) {
       matchTagsHtml = '<div class="match-tags">' +
         matchedKws.map(kw => {
-          const isDirect = matchedTerms.includes(kw.toLowerCase());
+          const isDirect = matchedTerms && matchedTerms.includes(kw.toLowerCase());
           return `<span class="match-tag ${isDirect ? 'match-direct' : 'match-synonym'}">${isDirect ? '' : '~'}${esc(kw)}</span>`;
-        }).join('') +
-        '</div>';
+        }).join('') + '</div>';
     }
 
     let scoreCol = '';
     if (hasKw) {
-      if      (score >= 2)      scoreCol = `<td><span class="score-badge score-high">●● ${score}개 매칭</span></td>`;
+      if (score >= 2)           scoreCol = `<td><span class="score-badge score-high">●● ${score}개 매칭</span></td>`;
       else if (directScore >= 1) scoreCol = `<td><span class="score-badge score-mid">● 직접 매칭</span></td>`;
-      else                      scoreCol = `<td><span class="score-badge score-low">○ 동의어 매칭</span></td>`;
+      else                       scoreCol = `<td><span class="score-badge score-low">○ 동의어</span></td>`;
     }
 
-    // 알림 이력: [{event, channel, success, error?}] 형식
-    // 같은 event에 성공 이력이 하나라도 있으면 성공으로 표시
-    const logs = a.notification_logs || [];
-    const evtMap = {};
-    for (const l of logs) {
-      if (!(l.event in evtMap) || l.success) evtMap[l.event] = l.success;
-    }
-    const mkBadge = (event, label, cls) => {
-      if (!(event in evtMap)) return '';
-      return evtMap[event]
-        ? `<span class="rbadge ${cls}">${label}</span>`
-        : `<span class="rbadge rbadge-fail" title="발송 실패">${label} ✗</span>`;
-    };
-    const hasLogs = Object.keys(evtMap).length > 0;
-    const reminderHtml = hasLogs
-      ? `<div class="reminder-badges">
-          ${mkBadge('new','신규','rbadge-new')}
-          ${mkBadge('d7','D-7','rbadge-d7')}
-          ${mkBadge('d3','D-3','rbadge-d3')}
-          ${mkBadge('d1','D-1','rbadge-d1')}
-        </div>`
-      : '<span style="color:#ddd;font-size:0.78rem;">-</span>';
-
-    const isExpired = a.deadline && dday(a.deadline) < 0;
-    return `<tr${isExpired ? ' class="row-expired"' : ''}>
-      <td>${srcBadge}</td>
+    const isExpiredRow = a.deadline && dday(a.deadline) < 0;
+    return `<tr${isExpiredRow ? ' class="row-expired"' : ''}>
+      <td>${srcHtml}</td>
       <td>
         <a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a>
         ${descHtml}${budgetHtml}${matchTagsHtml}
@@ -533,26 +634,29 @@ function renderTable(rows, hasKw) {
       ${scoreCol}
       <td style="color:#888;font-size:0.83rem;">${esc(a.posted_date || '-')}</td>
       <td>${fmtDeadline(a.deadline)}</td>
-      <td>${reminderHtml}</td>
+      <td>${renderNotif(a)}</td>
     </tr>`;
   }).join('');
 
   return `<table>
     <thead>
       <tr>
-        <th style="width:70px;">출처</th>
+        <th style="width:80px;">출처</th>
         <th>제목</th>
-        <th style="width:110px;">분야</th>
+        <th style="width:130px;">주관부처</th>
         ${scoreHeader}
         <th style="width:100px;">공고일</th>
         <th style="width:130px;">마감일</th>
-        <th style="width:90px;">알림</th>
+        <th style="width:80px;">발송상태</th>
       </tr>
     </thead>
     <tbody>${trs}</tbody>
   </table>`;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// 페이지네이션
+// ─────────────────────────────────────────────────────────────────────────────
 function renderPagination(total, page, totalPages) {
   if (totalPages <= 1) return '';
   let html = '';
@@ -569,43 +673,72 @@ function renderPagination(total, page, totalPages) {
   return html;
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// 메인 렌더
+// ─────────────────────────────────────────────────────────────────────────────
 function render() {
-  const source       = document.getElementById('source-filter').value;
-  const keyword      = document.getElementById('keyword-input').value.trim();
-  const activeOnly   = document.getElementById('active-only')?.checked   ?? false;
-  const relevantOnly = document.getElementById('relevant-only')?.checked ?? false;
-  const keywords     = keyword ? keyword.split(/\s+/).filter(Boolean) : [];
-  const hasKw        = keywords.length > 0;
-  const hasFilter    = hasKw || source || activeOnly || relevantOnly;
+  const keyword  = document.getElementById('keyword-input').value.trim();
+  const keywords = keyword ? keyword.split(/\s+/).filter(Boolean) : [];
+  const hasKw    = keywords.length > 0;
 
   renderSynonymHint(keywords);
 
-  const results    = searchItems(allItems, keywords, source, activeOnly, relevantOnly);
+  let results;
+  const isSearchMode = hasKw;
+
+  if (isSearchMode) {
+    // 검색 모드: 전체 항목에서 현재 필터 적용 후 키워드 검색
+    const s = tabState[currentTab];
+    let pool = allItems;
+    if (s.activeOnly)   pool = pool.filter(i => !i.deadline || dday(i.deadline) >= 0);
+    if (s.relevantOnly) pool = pool.filter(i => i.is_relevant === true);
+    results = searchItems(pool, keywords);
+    updateTabCounts(results);
+  } else {
+    // 탭 모드: 현재 탭 필터 항목
+    const pool = getTabFilteredItems(currentTab);
+    results = pool.map(i => ({ item: i, score: 0, directScore: 0, matchedKws: [], matchedTerms: [] }));
+    updateTabCounts();
+  }
+
   const total      = results.length;
   const totalPages = Math.max(1, Math.ceil(total / PER_PAGE));
   const page       = Math.min(currentPage, totalPages);
   const paged      = results.slice((page-1)*PER_PAGE, page*PER_PAGE);
 
-  // 통계 바
   const statsEl = document.getElementById('stats-total');
   statsEl.className = 'badge' + (hasKw ? ' active' : '');
   document.getElementById('relevance-legend').style.display = hasKw && total > 0 ? 'flex' : 'none';
 
-  // 0건 + 필터 있음 → 참고용 fallback 표시
+  // NRF 탭 0건 — 전용 안내 메시지
+  if (!isSearchMode && currentTab === 'nrf' && total === 0) {
+    statsEl.textContent = '';
+    document.getElementById('stats-page').textContent = '';
+    document.getElementById('table-container').innerHTML = `
+      <div class="empty-source">
+        <div class="es-icon">📭</div>
+        <h3>한국연구재단 신규 공모 없음</h3>
+        <p>현재 접수 중인 NRF 사업공고가 없습니다.<br>
+        다음 수집 시 자동으로 업데이트됩니다. (6시간 간격)<br>
+        <span style="font-size:0.8rem;">NRF는 공모 시기가 집중되어 있어 비활성 기간이 길 수 있습니다.</span></p>
+      </div>`;
+    document.getElementById('pagination').innerHTML = '';
+    return;
+  }
+
+  // 0건 + 필터 있음 → fallback
+  const hasFilter = hasKw || tabState[currentTab].activeOnly || tabState[currentTab].relevantOnly;
   if (total === 0 && hasFilter) {
     statsEl.textContent = '매칭 결과 없음';
     document.getElementById('stats-page').textContent = '';
 
-    // 이유 메시지
     let reason = '선택한 조건에 해당하는 공고가 없습니다.';
-    if (relevantOnly && !hasKw && !source)
-      reason = '아직 관련 분야(심리·인지·발달 등) 공고가 수집되지 않았습니다.';
+    if (tabState[currentTab].relevantOnly && !hasKw)
+      reason = '현재 수집된 공고 중 내 분야(심리·인지·발달 등) 관련 공고가 없습니다.';
     else if (hasKw)
       reason = `"${keywords.join(', ')}" 키워드와 매칭되는 공고가 없습니다.`;
 
-    // fallback: 접수 중 우선, 없으면 전체 — 최대 PER_PAGE건
-    const fallbackPool = allItems
-      .filter(i => !i.deadline || dday(i.deadline) >= 0);
+    const fallbackPool = allItems.filter(i => !i.deadline || dday(i.deadline) >= 0);
     const fallbackSrc  = (fallbackPool.length > 0 ? fallbackPool : allItems)
       .slice(0, PER_PAGE)
       .map(i => ({ item: i, score: 0, directScore: 0, matchedKws: [], matchedTerms: [] }));
@@ -613,19 +746,21 @@ function render() {
     document.getElementById('table-container').innerHTML =
       `<div class="fallback-banner">
         <strong>검색 결과 없음 —</strong> ${reason}<br>
-        <span style="font-size:0.82rem;opacity:0.85;">
-          시스템은 정상 작동 중입니다. 아래는 참고용 최근 수집 공고입니다.
-        </span>
+        <span style="font-size:0.82rem;opacity:0.85;">시스템은 정상 작동 중입니다. 아래는 참고용 최근 수집 공고입니다.</span>
       </div>
       <div class="fallback-table">${renderTable(fallbackSrc, false)}</div>`;
     document.getElementById('pagination').innerHTML = '';
     return;
   }
 
-  statsEl.textContent = hasKw ? `검색 결과 ${total}건` : `전체 ${total}건`;
-  document.getElementById('stats-page').textContent = `${page} / ${totalPages} 페이지`;
+  if (isSearchMode) {
+    statsEl.textContent = `통합 검색 결과 ${total}건`;
+  } else {
+    statsEl.textContent = `전체 ${total}건`;
+  }
+  document.getElementById('stats-page').textContent = total > 0 ? `${page} / ${totalPages} 페이지` : '';
   document.getElementById('table-container').innerHTML = renderTable(paged, hasKw);
-  document.getElementById('pagination').innerHTML      = renderPagination(total, page, totalPages);
+  document.getElementById('pagination').innerHTML = renderPagination(total, page, totalPages);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
