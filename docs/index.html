@@ -311,8 +311,9 @@ let currentPage = 1;
 const PER_PAGE = 20;
 
 // 탭별 기본 필터 상태
+// all 탭: relevantOnly=false — 대신 is_excluded 제거가 기본 적용됨 (getTabFilteredItems 참고)
 const tabState = {
-  all:  { activeOnly: true,  relevantOnly: true  },
+  all:  { activeOnly: true,  relevantOnly: false },
   nrf:  { activeOnly: true,  relevantOnly: false },
   ntis: { activeOnly: true,  relevantOnly: false },
   iris: { activeOnly: true,  relevantOnly: false },
@@ -474,10 +475,15 @@ function getTabFilteredItems(tab) {
   let pool = allItems;
 
   if (tab !== 'all') {
+    // 소스별 탭: 해당 출처 항목만
     pool = pool.filter(i => {
       const srcs = (i.extra_sources && i.extra_sources.length) ? i.extra_sources : [i.source];
       return srcs.includes(tab);
     });
+  } else {
+    // 전체 요약 탭: 명백히 무관한 분야 공고를 항상 제거
+    // (is_excluded = 반도체·나노·소재·우주·항공·양자 등 제외 키워드 매칭)
+    pool = pool.filter(i => !i.is_excluded);
   }
 
   if (s.activeOnly)   pool = pool.filter(i => !i.deadline || dday(i.deadline) >= 0);
@@ -734,12 +740,18 @@ function render() {
 
     let reason = '선택한 조건에 해당하는 공고가 없습니다.';
     if (tabState[currentTab].relevantOnly && !hasKw)
-      reason = '현재 수집된 공고 중 내 분야(심리·인지·발달 등) 관련 공고가 없습니다.';
+      reason = '현재 수집된 공고 중 내 분야(심리·인지·발달 등) 공고가 없습니다.';
     else if (hasKw)
       reason = `"${keywords.join(', ')}" 키워드와 매칭되는 공고가 없습니다.`;
+    else if (currentTab === 'all' && !hasKw)
+      reason = '현재 접수 중인 잠재 유관 공고가 없습니다. (분야 무관 공고는 각 소스 탭에서 확인 가능)';
 
-    const fallbackPool = allItems.filter(i => !i.deadline || dday(i.deadline) >= 0);
-    const fallbackSrc  = (fallbackPool.length > 0 ? fallbackPool : allItems)
+    // fallback: 전체 요약 탭이면 is_excluded 제거한 풀, 아니면 접수 중 전체
+    const baseFallback = currentTab === 'all'
+      ? allItems.filter(i => !i.is_excluded)
+      : allItems.filter(i => !i.deadline || dday(i.deadline) >= 0);
+    const fallbackPool = baseFallback.filter(i => !i.deadline || dday(i.deadline) >= 0);
+    const fallbackSrc  = (fallbackPool.length > 0 ? fallbackPool : baseFallback)
       .slice(0, PER_PAGE)
       .map(i => ({ item: i, score: 0, directScore: 0, matchedKws: [], matchedTerms: [] }));
 

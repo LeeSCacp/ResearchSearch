@@ -61,13 +61,21 @@ def export_announcements(
                     entry["error"] = log.error_message
                 log_map.setdefault(log.announcement_id, []).append(entry)
 
-        # FilterEngine으로 각 공고의 관련성 계산 (프론트 '관련 공고만' 토글용)
+        # FilterEngine으로 각 공고의 관련성 계산 (프론트 '내 분야 공고만' 토글용)
         filter_cfg = config.get("filters", {})
         filter_engine = FilterEngine(
             keywords=filter_cfg.get("keywords", []),
             categories=filter_cfg.get("categories", []),
             exclude_keywords=filter_cfg.get("exclude_keywords", []),
         )
+
+        # 제외 키워드 목록을 개별 단어로 평탄화
+        _excl_kws = [
+            kw.strip().lower()
+            for raw_kw in filter_cfg.get("exclude_keywords", [])
+            for kw in str(raw_kw).split(",")
+            if kw.strip()
+        ]
 
         def _is_relevant(ann: Announcement) -> bool:
             dto = AnnouncementData(
@@ -76,6 +84,12 @@ def export_announcements(
                 posted_date=ann.posted_date, description=ann.description or "",
             )
             return filter_engine.matches(dto)
+
+        def _is_excluded(ann: Announcement) -> bool:
+            """제목·카테고리에 제외 키워드가 포함되면 True.
+            대시보드 '전체 요약' 탭에서 명백히 무관한 분야 공고를 숨기는 데 사용."""
+            text = f"{ann.title or ''} {ann.category or ''}".lower()
+            return any(kw in text for kw in _excl_kws)
 
         def _norm_title(title: str) -> str:
             """제목 정규화: 공백·특수문자 제거, 소문자 — 중복 감지용."""
@@ -89,6 +103,7 @@ def export_announcements(
                 **a.to_dict(),
                 "notification_logs": log_map.get(a.id, []),
                 "is_relevant": _is_relevant(a),
+                "is_excluded": _is_excluded(a),
             }
             key = _norm_title(a.title)
             if key and key in seen_keys:
