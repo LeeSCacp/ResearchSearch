@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-28 17:34 UTC",
-  "total": 34,
+  "updated_at": "2026-05-28 19:30 UTC",
+  "total": 27,
   "items": [
     {
       "id": 9,
@@ -201,7 +201,11 @@
           "success": true
         }
       ],
-      "is_relevant": false
+      "is_relevant": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 28,
@@ -234,52 +238,11 @@
           "success": true
         }
       ],
-      "is_relevant": false
-    },
-    {
-      "id": 16,
-      "title": "2026년도 반도체첨단세라믹소재부품공정혁신기술개발사업 신규과제 재공모",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021834",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 한국연구재단",
-      "deadline": "2026-05-28",
-      "posted_date": "2026-05-19",
-      "description": "과학기술정보통신부 공고 제 2026 - 0623호 2026년도 반도체첨단세라믹소재부품공정혁신기술개발사업 신규과제 재공모 과학기술정보통신부에서는 2026년도 반도체첨단세라믹소재부품공정혁신기술개발 사업의 신규과제를 아래와 같이 재공모하오니 연구자분들의 많은 관심과 참여 바랍니다. 2026년 5월 19일 <주무부처> 부총리 겸 과학기술정보통신부  장관  배 경 훈 <전문기관>                      한국연구재단  이사장   홍 원 화 ※ 본 공고는 한국과학기술기획평가원(KISTEP)이 운영하는 IRIS(https://www.iris.go.kr)를 통해 과제신청, 평가 및 관리업무를 진행합니다.",
-      "budget": null,
-      "attachments": "작성서식.hwp (352.5KB)\n서식.hwp (106.5KB)",
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-05-24T08:14:47.828519",
-      "notification_logs": [
-        {
-          "event": "new",
-          "channel": "email",
-          "success": false,
-          "error": "발송 실패"
-        },
-        {
-          "event": "d7",
-          "channel": "email",
-          "success": false,
-          "error": "이메일 비활성화 또는 설정 불완전"
-        },
-        {
-          "event": "d7",
-          "channel": "email",
-          "success": true
-        },
-        {
-          "event": "d3",
-          "channel": "email",
-          "success": true
-        },
-        {
-          "event": "d1",
-          "channel": "email",
-          "success": true
-        }
-      ],
-      "is_relevant": false
+      "is_relevant": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 15,
@@ -453,7 +416,11 @@
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.451812",
       "notification_logs": [],
-      "is_relevant": false
+      "is_relevant": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 25,
@@ -470,7 +437,11 @@
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.451392",
       "notification_logs": [],
-      "is_relevant": false
+      "is_relevant": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 24,
@@ -487,7 +458,11 @@
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.450984",
       "notification_logs": [],
-      "is_relevant": false
+      "is_relevant": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 23,
@@ -504,7 +479,11 @@
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.450521",
       "notification_logs": [],
-      "is_relevant": false
+      "is_relevant": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 22,
@@ -538,24 +517,11 @@
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.449134",
       "notification_logs": [],
-      "is_relevant": false
-    },
-    {
-      "id": 34,
-      "title": "2026년도 제2차 디지털혁신기술국제공동연구 신규지원 대상과제 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021874",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 정보통신기획평가원",
-      "deadline": null,
-      "posted_date": "2026-05-22",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-05-28T15:02:36.262754",
-      "notification_logs": [],
-      "is_relevant": false
+      "is_relevant": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 33,
@@ -705,91 +671,6 @@
           "error": "발송 실패"
         }
       ],
-      "is_relevant": false
-    },
-    {
-      "id": 17,
-      "title": "2026년도 지속가능 열가소성 항공기 부품 핵심기술개발 사업 신규과제 3차 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021734",
-      "source": "iris",
-      "category": "우주항공청 > 우주항공청",
-      "deadline": null,
-      "posted_date": "2026-05-15",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-05-24T08:14:47.828987",
-      "notification_logs": [],
-      "is_relevant": false
-    },
-    {
-      "id": 14,
-      "title": "2026년도 제2차 산업기술R&D연구기획사업 신규지원 대상과제 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021655",
-      "source": "iris",
-      "category": "산업통상부 > 한국산업기술기획평가원",
-      "deadline": null,
-      "posted_date": "2026-05-22",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-05-24T08:14:47.827569",
-      "notification_logs": [],
-      "is_relevant": false
-    },
-    {
-      "id": 13,
-      "title": "2026년도 신규프로젝트 탐색연구(인공위성부문) 신규기획과제 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021718",
-      "source": "iris",
-      "category": "우주항공청 > 우주항공청",
-      "deadline": null,
-      "posted_date": "2026-05-22",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-05-24T08:14:47.827127",
-      "notification_logs": [],
-      "is_relevant": false
-    },
-    {
-      "id": 12,
-      "title": "2026년도 「양자컴퓨팅기반양자이득도전연구」사업 신규과제 공모",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021876",
-      "source": "iris",
-      "category": "분야공모",
-      "deadline": null,
-      "posted_date": "2026-05-22",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-05-24T08:14:47.826654",
-      "notification_logs": [],
-      "is_relevant": false
-    },
-    {
-      "id": 11,
-      "title": "2026년도 첨단소재공정고도화 및 기술역량확보기술개발사업 신규지원 대상과제 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021878",
-      "source": "iris",
-      "category": "산업통상부 > 한국산업기술기획평가원",
-      "deadline": null,
-      "posted_date": "2026-05-22",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-05-24T08:14:47.826181",
-      "notification_logs": [],
       "is_relevant": false
     }
   ]
