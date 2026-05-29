@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-29 02:02 UTC",
-  "total": 30,
+  "updated_at": "2026-05-29 09:34 UTC",
+  "total": 34,
   "items": [
     {
       "id": 9,
@@ -417,6 +417,24 @@
       "is_excluded": false
     },
     {
+      "id": 38,
+      "title": "[대구경북지원] 2026년 산학연 연계 중소벤처 RBD 지원사업(STEP 4) 재공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1268726&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-06-19",
+      "posted_date": "2026-05-29",
+      "description": "공고내용 자세한 지원 내용은 공고문을 참고해 주시기 바랍니다. 접수링크: https://astinet.kr/boards/asti-biz/43 최종 수정일 : 2026-05-29",
+      "budget": "0억원",
+      "attachments": "2026년 산학연 연계 핵심 R&D (STEP 4) 신청서.hwp\n[재공고문]2026년 산학연 연계 핵심 R&D(STEP 4).hwp",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-05-29T09:31:39.418257",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
       "id": 27,
       "title": "2026년도 미래국방혁신기술개발사업 신규과제 공모",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1267599&flag=rndList",
@@ -561,6 +579,60 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 41,
+      "title": "2026년도 지식서비스산업기술개발사업(서비스핵심기술개발) 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022056",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-05-29",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-05-29T09:31:39.422757",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 40,
+      "title": "2026년도 첨단산업용시스템엔지니어링설계모델링기술개발사업 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022075",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-05-29",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-05-29T09:31:39.422246",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 39,
+      "title": "2026년도 지식서비스산업기술개발사업(서비스산업융합고도화) 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022076",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-05-29",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-05-29T09:31:39.421659",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 37,
