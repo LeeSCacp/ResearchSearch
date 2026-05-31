@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-31 02:08 UTC",
+  "updated_at": "2026-05-31 08:33 UTC",
   "total": 34,
   "items": [
     {
@@ -24,7 +24,7 @@
           "error": "발송 실패"
         }
       ],
-      "is_relevant": false,
+      "is_relevant": true,
       "is_excluded": false
     },
     {
