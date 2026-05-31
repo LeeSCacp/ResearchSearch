@@ -205,9 +205,9 @@ class FilterEngine:
         text = self._searchable_text(item)
 
         # ── 1. 제외 키워드 (포함 조건보다 먼저 평가) ──────────────────────
+        # 동의어 확장 없이 정확한 부분 문자열 매칭 (확장 시 일반 단어가 과잉 차단됨)
         for excl in excls:
-            expanded = self.expand(excl.lower())
-            if any(t in text for t in expanded):
+            if excl.lower() in text:
                 logger.debug(
                     f"제외 키워드 매칭 [{excl}]: {getattr(item, 'title', '')[:40]}"
                 )
@@ -217,10 +217,10 @@ class FilterEngine:
         if not kws and not cats:
             return True
 
-        # 키워드 OR 매칭 (동의어 포함)
+        # 키워드 OR 매칭 — 동의어 확장 없이 정확한 부분 문자열 매칭
+        # (search()는 동의어 확장을 사용하지만, 알림 필터는 precision 우선)
         for kw in kws:
-            expanded = self.expand(kw.lower())
-            if any(t in text for t in expanded):
+            if kw.lower() in text:
                 return True
 
         # 카테고리 OR 매칭

@@ -4,6 +4,16 @@
 
 ---
 
+## 프로젝트 경로 이력
+
+| 구분 | 경로 |
+|------|------|
+| 변경 전 | `D:\ResearchProjAssist` |
+| 현재 | `D:\ClaudeCodeProj\ResearchProjAssist` |
+| 변경일 | 2026-05-30 |
+
+---
+
 ## 프로젝트 개요
 
 한국연구재단(NRF), NTIS, IRIS에서 연구과제 공고를 자동 수집하고,
@@ -79,14 +89,43 @@
 - [x] `scheduler.py` `_enrich_new_items()` 추가 — 신규 공고 저장 직후 상세 자동 수집
 - [x] `scripts/test_detail.py` — 수동 테스트 스크립트
 
+### Phase 7 — GitHub Pages + Actions 구조 전환 (완료)
+- [x] GitHub Actions 워크플로 (`scrape.yml`): 6시간 주기 자동 스크래핑 + JSON 내보내기 + main 브랜치 커밋
+- [x] `scripts/run_scrape.py` 진입점 생성 (스크래핑 → 리마인더 → export 순서)
+- [x] `src/export.py`: DB → `docs/data/announcements.json` + `docs/data/synonyms.json` 내보내기
+- [x] `docs/index.html`: GitHub Pages 정적 대시보드 (JSON 직접 소비)
+- [x] DB 캐시 (actions/cache): 실행 간 상태 유지로 중복 알림 방지
+
+### Phase 8 — 텔레그램 활성화 + 이메일 버그 수정 (완료)
+- [x] 텔레그램 알림 `enabled: true` 전환 (GitHub Secret TELEGRAM_BOT_TOKEN/CHAT_ID 필요)
+- [x] 이메일 버그 수정 (접수 중 토글 + 발송 실패 처리 개선)
+
+### Phase 9 — Google Calendar 연동 (완료)
+- [x] `src/notifiers/calendar.py` — 서비스 계정 인증, 마감일 종일 이벤트 등록
+- [x] `scheduler.py` `_add_calendar_events()` — 필터 통과 신규 공고만 캘린더 등록
+- [x] 인증 우선순위: 환경변수 GOOGLE_CALENDAR_CREDENTIALS(Actions) → 로컬 JSON 파일
+- [x] GitHub Secret: GOOGLE_CALENDAR_CREDENTIALS, GOOGLE_CALENDAR_ID
+
+### Phase 10 — 필터 재설계 (완료)
+- [x] 심리학 전공 맞춤 키워드 재구성 (심리, 인지, 발달, 노년, 노화, 치매, 고령, AI, 인공지능)
+- [x] 제외 키워드 기능 추가 (우주, 항공, 방산, 반도체, 나노, 소재 등 20개+)
+- [x] `config.yaml` `exclude_keywords` 섹션 신설
+- [x] FilterEngine.matches()에 제외 키워드 우선 평가 로직 추가
+
+### Phase 11 — 대시보드 전면 재설계 (완료)
+- [x] 탭 레이아웃 (전체 공고 / 내 분야만 / 전체 요약)
+- [x] 중복 공고 병합 (동일 제목 NTIS+IRIS 동시 게재 처리)
+- [x] 전체 요약 탭: is_excluded 기반 소프트 필터 — 명백히 무관 분야 공고 숨김
+- [x] UX 개선: 접수 중 토글, D-day 색상 배지, 관련도 표시
+
 ---
 
 ## 남은 작업 (우선순위 순)
 
 | # | 항목 | 난이도 | 메모 |
 |---|------|--------|------|
-| 1 | **텔레그램 알림 연결** | ⭐ | .env에 TELEGRAM_BOT_TOKEN/CHAT_ID 입력 후 활성화 |
-| 2 | **Google Calendar 연동** | ⭐⭐ | 마감일 → 캘린더 자동 등록 |
+| 1 | ~~categories에 "인문학", "사회과학" 추가~~ | ⭐ | ✅ 완료 (2026-05-30) |
+| 2 | **이메일 알림 실패 원인 확인** | ⭐ | GitHub Actions에서 14건 `발송 실패` — Secret 설정 점검 필요 |
 | 3 | **과거 데이터 패턴 분석** | ⭐⭐⭐ | 부처별 트렌드, 분야별 통계 시각화 |
 
 ---
@@ -110,9 +149,19 @@
 | `src/filters/synonyms.yaml` | 동의어 사전 (사용자 직접 편집 가능) |
 | `.claude/launch.json` | 서버 실행 설정 |
 
-## 현재 수집 현황 (마지막 확인: 2026-04-24)
+## 현재 수집 현황 (마지막 확인: 2026-05-30)
 
-- NTIS: 10건 정상 수집 (상세: 개요+예산+첨부 모두 수집)
-- IRIS: 10건 정상 수집 (상세: 개요+마감일+첨부 모두 수집)
+- NTIS: 10건 (로컬 DB 기준)
+- IRIS: 10건 (로컬 DB 기준)
 - NRF: 0건 (현재 신규 공모 없음 — 정상)
-- 총 DB: 20건 (전체 detail_fetched = True)
+- 총 로컬 DB: 20건 (전체 detail_fetched = True)
+- GitHub Actions DB(캐시): 약 27건 (docs/data/announcements.json 기준, 2026-05-28 19:30Z)
+- 알림 이력: 14건 이메일 발송 시도 → 전부 실패 (GitHub Actions Secret 미설정 추정)
+- is_relevant=0: 현재 수집된 공고가 과학기술/에너지 분야 → 필터 정상, 단 관련 공고 미수집 상태
+
+## 이메일 알림 실패 분석
+
+- 14건 모두 `success: False, error: '발송 실패'`
+- 원인 추정: GitHub Actions에서 `EMAIL_PASSWORD` Secret이 없거나 만료됨
+- 확인 방법: GitHub 저장소 Settings → Secrets → `EMAIL_PASSWORD` 존재 여부 확인
+- 참고: 로컬 `.env`에는 비밀번호가 설정되어 있어 로컬 실행은 정상
