@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-31 19:00 UTC",
-  "total": 34,
+  "updated_at": "2026-06-01 01:26 UTC",
+  "total": 35,
   "items": [
     {
       "id": 9,
@@ -599,6 +599,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 42,
+      "title": "6G 인터넷 VR 가상현실 개발을 위한 연구 공모 _&TEST",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021914",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국과학기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-05-26",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-01T01:25:12.826185",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 41,
