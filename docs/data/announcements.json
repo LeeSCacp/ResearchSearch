@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-01 02:16 UTC",
-  "total": 35,
+  "updated_at": "2026-06-01 11:07 UTC",
+  "total": 36,
   "items": [
     {
       "id": 9,
@@ -599,6 +599,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 43,
+      "title": "2026년도 바이오·의료기술개발 사업 제4차 신규과제 재공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022094",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-06-01",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-01T11:06:19.729702",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 42,
