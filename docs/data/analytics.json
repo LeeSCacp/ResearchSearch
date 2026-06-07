@@ -1,127 +1,48 @@
 {
-  "generated_at": "2026-06-06 07:33 UTC",
+  "generated_at": "2026-06-07 05:57 UTC",
   "labels": {
-    "all": {
-      "label_kr": "전체",
+    "interest": {
+      "label_kr": "관심 분야 통합",
       "seasonality": {
-        "total": 1719,
+        "total": 188,
         "monthly": [
-          194,
-          311,
-          282,
-          211,
-          183,
-          155,
-          96,
-          61,
-          51,
-          50,
-          54,
-          71
+          9,
+          38,
+          48,
+          22,
+          15,
+          24,
+          12,
+          4,
+          4,
+          2,
+          4,
+          6
         ],
-        "peak_month": 2,
-        "peak_count": 311,
+        "peak_month": 3,
+        "peak_count": 48,
         "low_month": 10,
-        "low_count": 50,
-        "avg_per_month": 143.2
+        "low_count": 2,
+        "avg_per_month": 15.7,
+        "chi_square": 153.23,
+        "seasonality_strength": "strong",
+        "cumulative_pct": [
+          4.8,
+          25.0,
+          50.5,
+          62.2,
+          70.2,
+          83.0,
+          89.4,
+          91.5,
+          93.6,
+          94.7,
+          96.8,
+          100.0
+        ],
+        "peak_window_pct": 57.4
       },
       "recurring": [
-        {
-          "title_sample": "2025년도 나노 및 소재기술개발사업 신규과제 선정계획 8차 공고(연구기반혁신)",
-          "title_normalized": "나노 및 소재기술개발사업 선정계획",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 23,
-          "first_posted": "2024-02-05",
-          "last_posted": "2025-06-05",
-          "peak_month": 5,
-          "avg_interval_days": 22.0,
-          "stdev_interval_days": 43.0,
-          "next_predicted": "2025-06-27"
-        },
-        {
-          "title_sample": "2025년 제1차 과학기술분야 연구기획과제 주관연구책임자 공모",
-          "title_normalized": "제 과학기술분야 연구기획과제 주관연구책임자",
-          "category": "과학기술분야 연구기획과제 > 과학기술분야 연구기획과제",
-          "occurrences": 13,
-          "first_posted": "2022-04-01",
-          "last_posted": "2025-02-20",
-          "peak_month": 2,
-          "avg_interval_days": 88,
-          "stdev_interval_days": 27.0,
-          "next_predicted": "2025-05-19"
-        },
-        {
-          "title_sample": "2026년도 이공분야 학술연구지원사업(박사후국내연수) 신규과제 공모(공고문)",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > 박사후국내·외연수",
-          "occurrences": 13,
-          "first_posted": "2021-02-17",
-          "last_posted": "2026-04-07",
-          "peak_month": 2,
-          "avg_interval_days": 156.0,
-          "stdev_interval_days": 104.0,
-          "next_predicted": "2026-09-10"
-        },
-        {
-          "title_sample": "2025년도 나노 및 소재기술개발사업 신규과제 선정계획 8차 재공고(연구기반혁신)",
-          "title_normalized": "나노 및 소재기술개발사업 선정계획 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 13,
-          "first_posted": "2024-03-11",
-          "last_posted": "2025-07-09",
-          "peak_month": 6,
-          "avg_interval_days": 40.0,
-          "stdev_interval_days": 77.0,
-          "next_predicted": "2025-08-18"
-        },
-        {
-          "title_sample": " 2024년도 제5차 과학기술분야 연구기획과제 주관연구책임자 재공모",
-          "title_normalized": "제 과학기술분야 연구기획과제 주관연구책임자 재",
-          "category": "과학기술분야 연구기획과제 > 과학기술분야 연구기획과제",
-          "occurrences": 11,
-          "first_posted": "2022-04-18",
-          "last_posted": "2024-12-11",
-          "peak_month": 12,
-          "avg_interval_days": 97.0,
-          "stdev_interval_days": 53.0,
-          "next_predicted": "2025-03-18"
-        },
-        {
-          "title_sample": "2023년 제2차 국민생활안전 긴급대응연구사업 신규과제 공모",
-          "title_normalized": "제 국민생활안전 긴급대응연구사업",
-          "category": "사회문제해결 > 종료사업 > 국민생활안전긴급대응연구",
-          "occurrences": 8,
-          "first_posted": "2022-06-20",
-          "last_posted": "2023-07-10",
-          "peak_month": 6,
-          "avg_interval_days": 55,
-          "stdev_interval_days": 52.0,
-          "next_predicted": "2023-09-03"
-        },
-        {
-          "title_sample": "2026년도 바이오·의료기술개발 사업 제1차 신규과제 3차 재공모",
-          "title_normalized": "바이오 의료기술개발 사업 제 재",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 8,
-          "first_posted": "2025-02-12",
-          "last_posted": "2026-04-28",
-          "peak_month": 2,
-          "avg_interval_days": 63.0,
-          "stdev_interval_days": 80.0,
-          "next_predicted": "2026-06-30"
-        },
-        {
-          "title_sample": "2026년 World Friends Korea 과학기술지원단(Techno Peace Corps, TPC) 1차 모집 공고",
-          "title_normalized": "world friends korea 과학기술지원단 모집",
-          "category": "국제협력사업 > 과학기술 ODA > WFK과학기술지원단(TPC)파견사업",
-          "occurrences": 7,
-          "first_posted": "2023-01-16",
-          "last_posted": "2026-01-09",
-          "peak_month": 1,
-          "avg_interval_days": 182.0,
-          "stdev_interval_days": 32.0,
-          "next_predicted": "2026-07-10"
-        },
         {
           "title_sample": "(연구계획서 양식 및 FAQ 수정)2026년 사회과학연구지원사업 신규과제 신청요강 공고",
           "title_normalized": "사회과학연구지원사업",
@@ -132,223 +53,10 @@
           "peak_month": 6,
           "avg_interval_days": 291.0,
           "stdev_interval_days": 131.0,
-          "next_predicted": "2027-01-01"
-        },
-        {
-          "title_sample": "2026년도 이공분야 학술연구지원사업(박사과정생연구장려금지원) 신규과제 공모(공고문)",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > 박사과정생 연구장려금지원",
-          "occurrences": 7,
-          "first_posted": "2021-02-17",
-          "last_posted": "2026-04-06",
-          "peak_month": 2,
-          "avg_interval_days": 312.0,
-          "stdev_interval_days": 169.0,
-          "next_predicted": "2027-02-12"
-        },
-        {
-          "title_sample": "2024년도 바이오‧의료기술개발사업(GloPID-R 기반 감염병 국제협력 연구) 신규과제(세부과제) 공모",
-          "title_normalized": "바이오‧의료기술개발사업",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 7,
-          "first_posted": "2021-12-30",
-          "last_posted": "2024-01-24",
-          "peak_month": 1,
-          "avg_interval_days": 126.0,
-          "stdev_interval_days": 109.0,
-          "next_predicted": "2024-05-29"
-        },
-        {
-          "title_sample": "2024년도 바이오·의료기술개발사업 신규과제 5차 공모",
-          "title_normalized": "바이오 의료기술개발사업",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 7,
-          "first_posted": "2021-04-16",
-          "last_posted": "2024-08-20",
-          "peak_month": 4,
-          "avg_interval_days": 204.0,
-          "stdev_interval_days": 200.0,
-          "next_predicted": "2025-03-12"
-        },
-        {
-          "title_sample": "2024년도 차세대지능형반도체기술개발(소자)사업(신개념기초기술) 신규과제 공모",
-          "title_normalized": "차세대지능형반도체기술개발사업",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 차세대 지능형 반도체기술개발",
-          "occurrences": 7,
-          "first_posted": "2021-01-14",
-          "last_posted": "2024-02-14",
-          "peak_month": 2,
-          "avg_interval_days": 188.0,
-          "stdev_interval_days": 160.0,
-          "next_predicted": "2024-08-20"
-        },
-        {
-          "title_sample": "2023년도 제2차 범부처전주기의료기기연구개발사업 신규지원 대상과제 공고",
-          "title_normalized": "제 범부처전주기의료기기연구개발사업 대상과제",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 7,
-          "first_posted": "2021-02-09",
-          "last_posted": "2023-02-23",
-          "peak_month": 2,
-          "avg_interval_days": 124,
-          "stdev_interval_days": 99.0,
-          "next_predicted": "2023-06-27"
-        },
-        {
-          "title_sample": "2026년도 바이오·의료기술개발 사업 신규과제 제4차 공모",
-          "title_normalized": "바이오 의료기술개발 사업 제",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 7,
-          "first_posted": "2025-01-10",
-          "last_posted": "2026-04-29",
-          "peak_month": 1,
-          "avg_interval_days": 79,
-          "stdev_interval_days": 79.0,
-          "next_predicted": "2026-07-17"
-        },
-        {
-          "title_sample": "2026년도 양자연구교류지원사업(대만, 베트남, 벨기에, 이태리, 체코, 튀르키예, 프랑스) 신규과제 공모",
-          "title_normalized": "양자연구교류지원사업",
-          "category": "국제협력사업 > 글로벌연구협력지원 > 양자 연구교류지원사업(세부국가안내)",
-          "occurrences": 6,
-          "first_posted": "2021-05-01",
-          "last_posted": "2025-04-07",
-          "peak_month": 5,
-          "avg_interval_days": 287.0,
-          "stdev_interval_days": 98.0,
-          "next_predicted": "2026-01-19"
-        },
-        {
-          "title_sample": "2024년도 우주개발기반조성 및 성과확산사업 신규과제 공모",
-          "title_normalized": "우주개발기반조성 및 성과확산사업",
-          "category": "",
-          "occurrences": 6,
-          "first_posted": "2021-02-25",
-          "last_posted": "2024-02-29",
-          "peak_month": 2,
-          "avg_interval_days": 220.0,
-          "stdev_interval_days": 156.0,
-          "next_predicted": "2024-10-06"
-        },
-        {
-          "title_sample": "2026년도 미래국방혁신기술개발사업 신규과제 공고",
-          "title_normalized": "미래국방혁신기술개발사업",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 미래국방혁신기술개발",
-          "occurrences": 6,
-          "first_posted": "2021-04-23",
-          "last_posted": "2026-06-05",
-          "peak_month": 6,
-          "avg_interval_days": 374.0,
-          "stdev_interval_days": 244.0,
-          "next_predicted": "2027-06-14"
-        },
-        {
-          "title_sample": "2025년도 원자력국제공동연구지원사업(한-아·태 원자력 공동연구)신규과제 공모",
-          "title_normalized": "원자력국제공동연구지원사업",
-          "category": "원자력진흥 > 원자력평화적이용체제구축사업 > 원자력 국제공동연구지원사업",
-          "occurrences": 6,
-          "first_posted": "2022-01-27",
-          "last_posted": "2025-06-30",
-          "peak_month": 6,
-          "avg_interval_days": 250,
-          "stdev_interval_days": 182.0,
-          "next_predicted": "2026-03-07"
-        },
-        {
-          "title_sample": "2025년 한-캐나다 산학연 공동연구사업 신규과제 공모",
-          "title_normalized": "한 캐나다 산학연 공동연구사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 6,
-          "first_posted": "2021-04-14",
-          "last_posted": "2025-03-07",
-          "peak_month": 3,
-          "avg_interval_days": 285.0,
-          "stdev_interval_days": 118.0,
-          "next_predicted": "2025-12-17"
-        },
-        {
-          "title_sample": "2022년도 제1차 국민생활안전 긴급대응연구 신규과제 공모",
-          "title_normalized": "제 국민생활안전 긴급대응연구",
-          "category": "사회문제해결 > 종료사업 > 국민생활안전긴급대응연구",
-          "occurrences": 6,
-          "first_posted": "2021-06-01",
-          "last_posted": "2022-04-28",
-          "peak_month": 6,
-          "avg_interval_days": 66.0,
-          "stdev_interval_days": 59.0,
-          "next_predicted": "2022-07-03"
-        },
-        {
-          "title_sample": "해외우수과학자유치사업 (Brain Pool / Brain Pool+) 2025년도 신규과제 공고('25.5.16. 수정 게시)",
-          "title_normalized": "해외우수과학자유치사업",
-          "category": "교육·인력양성사업 > 해외우수과학자유치사업 > 해외우수과학자유치사업(BP/ BP+)",
-          "occurrences": 5,
-          "first_posted": "2021-02-15",
-          "last_posted": "2025-02-13",
-          "peak_month": 2,
-          "avg_interval_days": 365.0,
-          "stdev_interval_days": 34.0,
-          "next_predicted": "2026-02-13"
-        },
-        {
-          "title_sample": "2026년도 과학기술정보통신부 기초연구사업(선도연구센터) 1차 신규과제 공모",
-          "title_normalized": "과학기술정보통신부 기초연구사업",
-          "category": "과학기술분야 기초연구사업 > 집단연구사업 > 선도연구센터",
-          "occurrences": 5,
-          "first_posted": "2022-01-17",
-          "last_posted": "2026-01-14",
-          "peak_month": 1,
-          "avg_interval_days": 364.0,
-          "stdev_interval_days": 31.0,
-          "next_predicted": "2027-01-13"
-        },
-        {
-          "title_sample": "2026년도 과학기술정보통신부 기초연구사업(기초연구실) 1차 신규과제 공모",
-          "title_normalized": "과학기술정보통신부 기초연구사업",
-          "category": "과학기술분야 기초연구사업 > 집단연구사업 > 기초연구실",
-          "occurrences": 5,
-          "first_posted": "2022-01-17",
-          "last_posted": "2026-01-14",
-          "peak_month": 1,
-          "avg_interval_days": 364.0,
-          "stdev_interval_days": 31.0,
-          "next_predicted": "2027-01-13"
-        },
-        {
-          "title_sample": "2025년도 한-중(NSFC) 협력사업(협력연구, 공동세미나) 신규과제 공모",
-          "title_normalized": "한 중 협력사업",
-          "category": "국제협력사업 > NRF 특별협력사업 > 한중일 특별협력사업",
-          "occurrences": 5,
-          "first_posted": "2021-02-01",
-          "last_posted": "2025-01-15",
-          "peak_month": 1,
-          "avg_interval_days": 361,
-          "stdev_interval_days": 13.0,
-          "next_predicted": "2026-01-11"
-        },
-        {
-          "title_sample": "2025년도 기후기술국제협력촉진사업(CTCN 기술지원) 신규과제 공모",
-          "title_normalized": "기후기술국제협력촉진사업",
-          "category": "미래유망원천기술개발 > 에너지환경기술개발사업 > 기후기술국제협력촉진",
-          "occurrences": 5,
-          "first_posted": "2022-03-31",
-          "last_posted": "2025-04-29",
-          "peak_month": 4,
-          "avg_interval_days": 281.0,
-          "stdev_interval_days": 229.0,
-          "next_predicted": "2026-02-04"
-        },
-        {
-          "title_sample": "2024년도 핵융합선도기술개발사업(융합연구) 신규과제 공고",
-          "title_normalized": "핵융합선도기술개발사업",
-          "category": "미래유망원천기술개발 > 에너지환경기술개발사업 > 핵융합선도기술개발사업",
-          "occurrences": 5,
-          "first_posted": "2021-05-11",
-          "last_posted": "2024-05-02",
-          "peak_month": 5,
-          "avg_interval_days": 272.0,
-          "stdev_interval_days": 110.0,
-          "next_predicted": "2025-01-29"
+          "next_predicted": "2027-01-01",
+          "next_window_low": "2026-08-23",
+          "next_window_high": "2027-05-12",
+          "confidence": "low"
         },
         {
           "title_sample": "2026년도 인문도시지원사업 신규과제 공고",
@@ -360,31 +68,10 @@
           "peak_month": 4,
           "avg_interval_days": 445,
           "stdev_interval_days": 192.0,
-          "next_predicted": "2027-05-24"
-        },
-        {
-          "title_sample": "2025년 하반기 <이달의 과학기술인상> 선정 계획 공고",
-          "title_normalized": "하반기 <이달의 과학기술인상> 선정 계획",
-          "category": "교육·인력양성사업 > 우수과학자포상",
-          "occurrences": 5,
-          "first_posted": "2021-03-19",
-          "last_posted": "2025-03-13",
-          "peak_month": 3,
-          "avg_interval_days": 364.0,
-          "stdev_interval_days": 4.0,
-          "next_predicted": "2026-03-12"
-        },
-        {
-          "title_sample": "2026년도 한-프랑스 협력기반조성사업(STAR) 신규과제 공모",
-          "title_normalized": "한 프랑스 협력기반조성사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 5,
-          "first_posted": "2021-01-04",
-          "last_posted": "2026-03-13",
-          "peak_month": 3,
-          "avg_interval_days": 474.0,
-          "stdev_interval_days": 208.0,
-          "next_predicted": "2027-06-30"
+          "next_predicted": "2027-05-24",
+          "next_window_low": "2026-11-13",
+          "next_window_high": "2027-12-02",
+          "confidence": "low"
         },
         {
           "title_sample": "2026년도 인문사회분야 학술연구지원사업 신규과제 공고",
@@ -396,67 +83,10 @@
           "peak_month": 2,
           "avg_interval_days": 362.0,
           "stdev_interval_days": 17.0,
-          "next_predicted": "2027-01-30"
-        },
-        {
-          "title_sample": "2025년 글로벌교육지원사업(ODA) 신규과제 공모",
-          "title_normalized": "글로벌교육지원사업",
-          "category": "국제협력사업 > 국제교육협력증진사업 > 글로벌교육지원사업",
-          "occurrences": 5,
-          "first_posted": "2021-02-15",
-          "last_posted": "2025-03-10",
-          "peak_month": 2,
-          "avg_interval_days": 371,
-          "stdev_interval_days": 11.0,
-          "next_predicted": "2026-03-16"
-        },
-        {
-          "title_sample": "2026년도 이공분야 학술연구지원사업(보호연구) 신규과제 공모(공고문)",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > 보호연구",
-          "occurrences": 5,
-          "first_posted": "2021-02-24",
-          "last_posted": "2026-04-07",
-          "peak_month": 2,
-          "avg_interval_days": 467,
-          "stdev_interval_days": 480.0,
-          "next_predicted": "2027-07-18"
-        },
-        {
-          "title_sample": "2025년도 PIM인공지능반도체핵심기술개발(소자)사업 (신구조/신재료PIM소자, 신개념PIM기초) 신규과제 공모",
-          "title_normalized": "pim인공지능반도체핵심기술개발사업",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > PIM인공지능반도체핵심기술개발사업(소자)",
-          "occurrences": 5,
-          "first_posted": "2022-02-03",
-          "last_posted": "2025-03-07",
-          "peak_month": 2,
-          "avg_interval_days": 282,
-          "stdev_interval_days": 176.0,
-          "next_predicted": "2025-12-14"
-        },
-        {
-          "title_sample": "2025년도 바이오·의료기술개발사업 신규과제 제3차 공모",
-          "title_normalized": "바이오 의료기술개발사업 제",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 5,
-          "first_posted": "2024-01-16",
-          "last_posted": "2025-04-11",
-          "peak_month": 4,
-          "avg_interval_days": 113.0,
-          "stdev_interval_days": 97.0,
-          "next_predicted": "2025-08-02"
-        },
-        {
-          "title_sample": "2026년 이공분야 학술연구지원사업(석사과정생연구장려금지원) 신규과제 공모(공고문)",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > 석사과정생연구장려금지원",
-          "occurrences": 5,
-          "first_posted": "2024-01-25",
-          "last_posted": "2026-04-06",
-          "peak_month": 4,
-          "avg_interval_days": 200.0,
-          "stdev_interval_days": 159.0,
-          "next_predicted": "2026-10-23"
+          "next_predicted": "2027-01-30",
+          "next_window_low": "2027-01-13",
+          "next_window_high": "2027-02-16",
+          "confidence": "high"
         },
         {
           "title_sample": "2026년도 글로벌인문사회융합연구지원사업 신규과제 신청요강 공고(수정 2026.3.10.)",
@@ -468,163 +98,10 @@
           "peak_month": 5,
           "avg_interval_days": 164.0,
           "stdev_interval_days": 116.0,
-          "next_predicted": "2026-08-27"
-        },
-        {
-          "title_sample": "2026년 2차 국민생활안전 긴급대응연구(2단계) 기술개발 및 실증 신규과제 공모",
-          "title_normalized": "국민생활안전 긴급대응연구 기술개발 및 실증",
-          "category": "사회문제해결 > 종료사업 > 국민생활안전긴급대응연구(2단계)(통합이관)",
-          "occurrences": 5,
-          "first_posted": "2025-04-24",
-          "last_posted": "2026-05-18",
-          "peak_month": 4,
-          "avg_interval_days": 97.0,
-          "stdev_interval_days": 67.0,
-          "next_predicted": "2026-08-23"
-        },
-        {
-          "title_sample": "2025년도 A3 Foresight Program 신규과제 공모",
-          "title_normalized": "a3 foresight program",
-          "category": "국제협력사업 > NRF 특별협력사업 > 한중일 특별협력사업",
-          "occurrences": 4,
-          "first_posted": "2022-01-14",
-          "last_posted": "2025-01-15",
-          "peak_month": 1,
-          "avg_interval_days": 366.0,
-          "stdev_interval_days": 10.0,
-          "next_predicted": "2026-01-16"
-        },
-        {
-          "title_sample": "2023년도 「공공연구성과 기술사업화 기획⋅성과관리사업」 제2차 정책연구용역과제 공고",
-          "title_normalized": "「공공연구성과 기술사업화 기획⋅성과관리사업」 제 정책연구용역과제",
-          "category": "교육·인력양성사업 > 공공연구성과 기술사업화 기획․성과관리(종료)",
-          "occurrences": 4,
-          "first_posted": "2022-07-11",
-          "last_posted": "2023-12-13",
-          "peak_month": 7,
-          "avg_interval_days": 173.0,
-          "stdev_interval_days": 40.0,
-          "next_predicted": "2024-06-03"
-        },
-        {
-          "title_sample": "2023년도 스페이스챌린지사업(우주발사체 사이언스 콤플렉스) 신규과제 공모",
-          "title_normalized": "스페이스챌린지사업",
-          "category": "",
-          "occurrences": 4,
-          "first_posted": "2021-02-22",
-          "last_posted": "2023-09-21",
-          "peak_month": 2,
-          "avg_interval_days": 314.0,
-          "stdev_interval_days": 100.0,
-          "next_predicted": "2024-07-31"
-        },
-        {
-          "title_sample": "2025년 상반기 <이달의 과학기술인상> 선정 계획 공고",
-          "title_normalized": "상반기 <이달의 과학기술인상> 선정 계획",
-          "category": "교육·인력양성사업 > 우수과학자포상",
-          "occurrences": 4,
-          "first_posted": "2021-08-17",
-          "last_posted": "2024-08-06",
-          "peak_month": 8,
-          "avg_interval_days": 362.0,
-          "stdev_interval_days": 34.0,
-          "next_predicted": "2025-08-03"
-        },
-        {
-          "title_sample": "2024년도 양자정보과학 인적기반 조성사업 신규과제 공모(2차)",
-          "title_normalized": "양자정보과학 인적기반 조성사업",
-          "category": "과학기술인력양성 > 창의적 인재육성 > 과학기술혁신인재양성(양자정보과학 인적기반 조성)",
-          "occurrences": 4,
-          "first_posted": "2023-02-14",
-          "last_posted": "2024-01-29",
-          "peak_month": 1,
-          "avg_interval_days": 116.0,
-          "stdev_interval_days": 84.0,
-          "next_predicted": "2024-05-24"
-        },
-        {
-          "title_sample": "2024년 <제28회 젊은과학자상> 선정 계획 공고",
-          "title_normalized": "<제 젊은과학자상> 선정 계획",
-          "category": "교육·인력양성사업 > 우수과학자포상",
-          "occurrences": 4,
-          "first_posted": "2021-07-02",
-          "last_posted": "2024-07-19",
-          "peak_month": 7,
-          "avg_interval_days": 371,
-          "stdev_interval_days": 30.0,
-          "next_predicted": "2025-07-25"
-        },
-        {
-          "title_sample": "2025년도 한-EU 협력진흥사업 신규과제 공모",
-          "title_normalized": "한 eu 협력진흥사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 4,
-          "first_posted": "2023-06-01",
-          "last_posted": "2025-02-14",
-          "peak_month": 6,
-          "avg_interval_days": 208,
-          "stdev_interval_days": 140.0,
-          "next_predicted": "2025-09-10"
-        },
-        {
-          "title_sample": "2025년도 한-EU 공동연구지원사업 신규과제 공모",
-          "title_normalized": "한 eu 공동연구지원사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 4,
-          "first_posted": "2021-06-29",
-          "last_posted": "2025-06-16",
-          "peak_month": 6,
-          "avg_interval_days": 483.0,
-          "stdev_interval_days": 190.0,
-          "next_predicted": "2026-10-12"
-        },
-        {
-          "title_sample": "2023년도 전통문화혁신성장융합연구사업 신규과제 공모",
-          "title_normalized": "전통문화혁신성장융합연구사업",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 전통문화 혁신성장 융합연구",
-          "occurrences": 4,
-          "first_posted": "2022-01-13",
-          "last_posted": "2023-06-21",
-          "peak_month": 6,
-          "avg_interval_days": 175.0,
-          "stdev_interval_days": 79.0,
-          "next_predicted": "2023-12-13"
-        },
-        {
-          "title_sample": "2023년도 우주개발기반조성 및 성과확산사업(우주기술 Spin-Off 지원) 신규과제 재공모",
-          "title_normalized": "우주개발기반조성 및 성과확산사업 재",
-          "category": "",
-          "occurrences": 4,
-          "first_posted": "2021-03-23",
-          "last_posted": "2023-07-06",
-          "peak_month": 3,
-          "avg_interval_days": 278.0,
-          "stdev_interval_days": 223.0,
-          "next_predicted": "2024-04-09"
-        },
-        {
-          "title_sample": "2025년도 미래국방혁신기술개발사업 신규과제 재공고",
-          "title_normalized": "미래국방혁신기술개발사업 재",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 미래국방혁신기술개발",
-          "occurrences": 4,
-          "first_posted": "2021-06-28",
-          "last_posted": "2025-09-03",
-          "peak_month": 6,
-          "avg_interval_days": 509.0,
-          "stdev_interval_days": 198.0,
-          "next_predicted": "2027-01-25"
-        },
-        {
-          "title_sample": "2024년도 미래원자력기술시설장비구축활용사업 신규과제 공고",
-          "title_normalized": "미래원자력기술시설장비구축활용사업",
-          "category": "원자력진흥 > 종료사업 > 미래원자력기술시설장비구축활용사업(통합이관)",
-          "occurrences": 4,
-          "first_posted": "2021-01-29",
-          "last_posted": "2024-02-14",
-          "peak_month": 2,
-          "avg_interval_days": 370.0,
-          "stdev_interval_days": 325.0,
-          "next_predicted": "2025-02-18"
+          "next_predicted": "2026-08-27",
+          "next_window_low": "2026-05-03",
+          "next_window_high": "2026-12-21",
+          "confidence": "low"
         },
         {
           "title_sample": "2024년도 학술지평가 해외DB학술지 평가 공고",
@@ -636,7 +113,10 @@
           "peak_month": 4,
           "avg_interval_days": 382,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2025-06-22"
+          "next_predicted": "2025-06-22",
+          "next_window_low": "2025-05-23",
+          "next_window_high": "2025-07-22",
+          "confidence": "high"
         },
         {
           "title_sample": "2024년도 학술지평가 신규평가 공고",
@@ -648,55 +128,10 @@
           "peak_month": 4,
           "avg_interval_days": 382,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2025-06-22"
-        },
-        {
-          "title_sample": "2025년도 한-스위스 양자연구교류지원사업(파견) 신규 공모",
-          "title_normalized": "한 스위스 양자연구교류지원사업 신규",
-          "category": "국제협력사업 > 글로벌연구협력지원 > 양자 연구교류지원사업(세부국가안내)",
-          "occurrences": 4,
-          "first_posted": "2022-05-02",
-          "last_posted": "2025-04-30",
-          "peak_month": 5,
-          "avg_interval_days": 365.0,
-          "stdev_interval_days": 1.0,
-          "next_predicted": "2026-04-30"
-        },
-        {
-          "title_sample": "2025년도 양자기술연구개발선도(양자컴퓨팅) 사업 신규과제 공모",
-          "title_normalized": "양자기술연구개발선도 사업",
-          "category": "미래유망원천기술개발 > 차세대정보·컴퓨팅기술개발사업 > 양자기술연구개발선도(양자컴퓨팅)",
-          "occurrences": 4,
-          "first_posted": "2023-06-01",
-          "last_posted": "2025-02-07",
-          "peak_month": 2,
-          "avg_interval_days": 206.0,
-          "stdev_interval_days": 183.0,
-          "next_predicted": "2025-09-01"
-        },
-        {
-          "title_sample": "2024년도 국제협력 네트워크 전략강화사업 신규과제 재공모",
-          "title_normalized": "국제협력 네트워크 전략강화사업 재",
-          "category": "국제협력사업 > 동북아 R&D 허브 기반구축 > 국제협력 네트워크 전략강화사업",
-          "occurrences": 4,
-          "first_posted": "2022-07-21",
-          "last_posted": "2024-05-27",
-          "peak_month": 5,
-          "avg_interval_days": 225.0,
-          "stdev_interval_days": 168.0,
-          "next_predicted": "2025-01-07"
-        },
-        {
-          "title_sample": "2024년도 한국 이공계 여성대학원생 미국 연수프로그램 신규 공모",
-          "title_normalized": "한국 이공계 여성대학원생 미국 연수프로그램 신규",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 4,
-          "first_posted": "2022-03-02",
-          "last_posted": "2024-05-03",
-          "peak_month": 3,
-          "avg_interval_days": 264.0,
-          "stdev_interval_days": 98.0,
-          "next_predicted": "2025-01-22"
+          "next_predicted": "2025-06-22",
+          "next_window_low": "2025-05-23",
+          "next_window_high": "2025-07-22",
+          "confidence": "high"
         },
         {
           "title_sample": "2025년도 연구윤리활동지원사업 신규과제 공모",
@@ -708,223 +143,10 @@
           "peak_month": 5,
           "avg_interval_days": 353.0,
           "stdev_interval_days": 49.0,
-          "next_predicted": "2026-04-30"
-        },
-        {
-          "title_sample": "2024년도 국제협력 네트워크 전략강화사업 신규과제 공모",
-          "title_normalized": "국제협력 네트워크 전략강화사업",
-          "category": "국제협력사업 > 동북아 R&D 허브 기반구축 > 국제협력 네트워크 전략강화사업",
-          "occurrences": 4,
-          "first_posted": "2022-06-13",
-          "last_posted": "2024-04-23",
-          "peak_month": 4,
-          "avg_interval_days": 227.0,
-          "stdev_interval_days": 166.0,
-          "next_predicted": "2024-12-06"
-        },
-        {
-          "title_sample": "2024년도 차세대지능형반도체기술개발(소자)사업(신소자원천) 신규과제 재공모",
-          "title_normalized": "차세대지능형반도체기술개발사업 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 차세대 지능형 반도체기술개발",
-          "occurrences": 4,
-          "first_posted": "2021-02-18",
-          "last_posted": "2024-03-06",
-          "peak_month": 3,
-          "avg_interval_days": 371.0,
-          "stdev_interval_days": 26.0,
-          "next_predicted": "2025-03-12"
-        },
-        {
-          "title_sample": "2023년도 한-독 특별협력사업 신규과제 공모",
-          "title_normalized": "한 독 특별협력사업",
-          "category": "국제협력사업 > NRF 특별협력사업 > 한-독특별협력사업",
-          "occurrences": 4,
-          "first_posted": "2021-05-03",
-          "last_posted": "2023-03-06",
-          "peak_month": 5,
-          "avg_interval_days": 224,
-          "stdev_interval_days": 195.0,
-          "next_predicted": "2023-10-16"
-        },
-        {
-          "title_sample": "2025년도 실험실 특화형 창업선도대학 사업 신규 공고(주관기관)",
-          "title_normalized": "실험실 특화형 창업선도대학 사업 신규",
-          "category": "교육·인력양성사업 > 공공기술 기반 시장연계 창업탐색 지원사업",
-          "occurrences": 4,
-          "first_posted": "2023-02-02",
-          "last_posted": "2025-02-05",
-          "peak_month": 2,
-          "avg_interval_days": 245.0,
-          "stdev_interval_days": 407.0,
-          "next_predicted": "2025-10-08"
-        },
-        {
-          "title_sample": "2024년도 다부처 국가생명연구자원 선진화사업 신규과제 3차 공모",
-          "title_normalized": "다부처 국가생명연구자원 선진화사업",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 4,
-          "first_posted": "2023-01-27",
-          "last_posted": "2024-08-20",
-          "peak_month": 1,
-          "avg_interval_days": 190.0,
-          "stdev_interval_days": 226.0,
-          "next_predicted": "2025-02-26"
-        },
-        {
-          "title_sample": "2025년 바이오·의료기술개발사업 제2차 신규과제 2차 재공모",
-          "title_normalized": "바이오 의료기술개발사업 제 재",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 4,
-          "first_posted": "2023-02-14",
-          "last_posted": "2025-07-29",
-          "peak_month": 2,
-          "avg_interval_days": 299.0,
-          "stdev_interval_days": 164.0,
-          "next_predicted": "2026-05-24"
-        },
-        {
-          "title_sample": "2023년도 스페이스파이오니어사업 신규과제 재공모",
-          "title_normalized": "스페이스파이오니어사업 재",
-          "category": "",
-          "occurrences": 4,
-          "first_posted": "2021-05-14",
-          "last_posted": "2023-01-25",
-          "peak_month": 5,
-          "avg_interval_days": 207,
-          "stdev_interval_days": 130.0,
-          "next_predicted": "2023-08-20"
-        },
-        {
-          "title_sample": "2022년도 「공공연구성과 기술사업화 기획⋅성과관리사업」신규 정책연구용역과제 공고",
-          "title_normalized": "「공공연구성과 기술사업화 기획⋅성과관리사업」신규 정책연구용역과제",
-          "category": "교육·인력양성사업 > 공공기술 기반 시장연계 창업탐색 지원사업",
-          "occurrences": 4,
-          "first_posted": "2021-04-13",
-          "last_posted": "2022-03-15",
-          "peak_month": 4,
-          "avg_interval_days": 112,
-          "stdev_interval_days": 84.0,
-          "next_predicted": "2022-07-05"
-        },
-        {
-          "title_sample": "2021년도 무인이동체 미래선도 핵심기술개발사업 (433MHz 기반 드론 응용 통신기술 개발 및 실증) 신규과제 3차 공고",
-          "title_normalized": "무인이동체 미래선도 핵심기술개발사업",
-          "category": "",
-          "occurrences": 4,
-          "first_posted": "2021-02-03",
-          "last_posted": "2021-09-28",
-          "peak_month": 2,
-          "avg_interval_days": 79,
-          "stdev_interval_days": 34.0,
-          "next_predicted": "2021-12-16"
-        },
-        {
-          "title_sample": "2026년도 한-일(JSPS) 협력사업(협력연구 및 공동세미나) 신규과제 공모",
-          "title_normalized": "한 일 협력사업",
-          "category": "국제협력사업 > NRF 특별협력사업 > 한중일 특별협력사업",
-          "occurrences": 4,
-          "first_posted": "2021-08-26",
-          "last_posted": "2025-06-04",
-          "peak_month": 8,
-          "avg_interval_days": 459.0,
-          "stdev_interval_days": 228.0,
-          "next_predicted": "2026-09-06"
-        },
-        {
-          "title_sample": "2022년도 국가생명연구자원 선진화사업 신규과제 2차 재공모",
-          "title_normalized": "국가생명연구자원 선진화사업 재",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 4,
-          "first_posted": "2021-08-06",
-          "last_posted": "2022-06-15",
-          "peak_month": 8,
-          "avg_interval_days": 104.0,
-          "stdev_interval_days": 163.0,
-          "next_predicted": "2022-09-27"
-        },
-        {
-          "title_sample": "2025년도 한-EU 교육협력진흥사업 신규과제 공모",
-          "title_normalized": "한 eu 교육협력진흥사업",
-          "category": "국제협력사업 > 국제교육협력증진사업 > 한-EU 교육협력사업",
-          "occurrences": 4,
-          "first_posted": "2021-03-03",
-          "last_posted": "2025-01-31",
-          "peak_month": 3,
-          "avg_interval_days": 477.0,
-          "stdev_interval_days": 213.0,
-          "next_predicted": "2026-05-23"
-        },
-        {
-          "title_sample": "2024년도 바이오·의료기술개발사업 신규과제 3차 공모 재공고",
-          "title_normalized": "바이오 의료기술개발사업 재",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 4,
-          "first_posted": "2021-01-29",
-          "last_posted": "2024-05-21",
-          "peak_month": 1,
-          "avg_interval_days": 403.0,
-          "stdev_interval_days": 341.0,
-          "next_predicted": "2025-06-28"
-        },
-        {
-          "title_sample": "2025년도 과학기술정보통신부 기초연구사업 신규과제 공모 (개인연구-글로벌 매칭형(영국))",
-          "title_normalized": "과학기술정보통신부 기초연구사업 )",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 글로벌매칭형",
-          "occurrences": 4,
-          "first_posted": "2024-02-27",
-          "last_posted": "2025-01-23",
-          "peak_month": 3,
-          "avg_interval_days": 110.0,
-          "stdev_interval_days": 174.0,
-          "next_predicted": "2025-05-13"
-        },
-        {
-          "title_sample": "2026년도 제2차 과학기술분야 연구기획과제 공모",
-          "title_normalized": "제 과학기술분야 연구기획과제",
-          "category": "과학기술분야 연구기획과제",
-          "occurrences": 4,
-          "first_posted": "2025-09-19",
-          "last_posted": "2026-04-30",
-          "peak_month": 9,
-          "avg_interval_days": 74.0,
-          "stdev_interval_days": 33.0,
-          "next_predicted": "2026-07-13"
-        },
-        {
-          "title_sample": "2026년 나노소재기술개발사업 신규과제 5차 공고",
-          "title_normalized": "나노소재기술개발사업",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 4,
-          "first_posted": "2026-02-09",
-          "last_posted": "2026-04-27",
-          "peak_month": 4,
-          "avg_interval_days": 26.0,
-          "stdev_interval_days": 30.0,
-          "next_predicted": "2026-05-23"
-        },
-        {
-          "title_sample": "2025년 지식재산 활용 과학기술 지원사업 신규과제 공모",
-          "title_normalized": "지식재산 활용 과학기술 지원사업",
-          "category": "국제협력사업 > 과학기술 ODA > 지식재산 활용 과학기술지원사업",
-          "occurrences": 3,
-          "first_posted": "2024-01-18",
-          "last_posted": "2025-01-16",
-          "peak_month": 1,
-          "avg_interval_days": 182,
-          "stdev_interval_days": 257.0,
-          "next_predicted": "2025-07-17"
-        },
-        {
-          "title_sample": "2026년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모(세종과학펠로우십(국내트랙/국외연수트랙/복귀·유치트랙))",
-          "title_normalized": "과학기술정보통신부 기초연구사업 )",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 세종과학펠로우십(국내)",
-          "occurrences": 3,
-          "first_posted": "2024-01-19",
-          "last_posted": "2025-12-03",
-          "peak_month": 1,
-          "avg_interval_days": 342,
-          "stdev_interval_days": 44.0,
-          "next_predicted": "2026-11-10"
+          "next_predicted": "2026-04-30",
+          "next_window_low": "2026-03-12",
+          "next_window_high": "2026-06-18",
+          "confidence": "high"
         },
         {
           "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모 (중견연구)",
@@ -936,31 +158,10 @@
           "peak_month": 1,
           "avg_interval_days": 156.0,
           "stdev_interval_days": 26.0,
-          "next_predicted": "2025-04-30"
-        },
-        {
-          "title_sample": "국제협력선도대학육성지원사업(ODA) 2025년 선정계획 및 신규 사업단 공모(수정) 안내",
-          "title_normalized": "국제협력선도대학육성지원사업 선정계획 및 신규 사업단 안내",
-          "category": "국제협력사업 > 국제협력선도대학사업",
-          "occurrences": 3,
-          "first_posted": "2022-11-25",
-          "last_posted": "2023-12-29",
-          "peak_month": 12,
-          "avg_interval_days": 200.0,
-          "stdev_interval_days": 262.0,
-          "next_predicted": "2024-07-16"
-        },
-        {
-          "title_sample": "2026년도 「유럽핵입자물리연구소(CERN) 협력사업」이론물리 대학원생 CERN 파견 공고",
-          "title_normalized": "「유럽핵입자물리연구소 협력사업」이론물리 대학원생 cern 파견",
-          "category": "과학기술분야 기초연구사업 > 기반구축사업 > 유럽핵입자물리연구소(CERN)협력",
-          "occurrences": 3,
-          "first_posted": "2023-12-18",
-          "last_posted": "2025-11-11",
-          "peak_month": 11,
-          "avg_interval_days": 347,
-          "stdev_interval_days": 25.0,
-          "next_predicted": "2026-10-24"
+          "next_predicted": "2025-04-30",
+          "next_window_low": "2025-04-04",
+          "next_window_high": "2025-05-26",
+          "confidence": "medium"
         },
         {
           "title_sample": "2025년 온라인 논문투고 심사시스템(JAMS) 신청요강 공고",
@@ -972,79 +173,10 @@
           "peak_month": 2,
           "avg_interval_days": 370.0,
           "stdev_interval_days": 5.0,
-          "next_predicted": "2026-03-05"
-        },
-        {
-          "title_sample": "2026년도 전반기 전문경력인사초빙활용지원사업 신규과제 공모",
-          "title_normalized": "전반기 전문경력인사초빙활용지원사업",
-          "category": "교육·인력양성사업 > 전문경력인사 초빙활용지원사업",
-          "occurrences": 3,
-          "first_posted": "2023-10-17",
-          "last_posted": "2025-10-13",
-          "peak_month": 10,
-          "avg_interval_days": 364.0,
-          "stdev_interval_days": 6.0,
-          "next_predicted": "2026-10-12"
-        },
-        {
-          "title_sample": "2025년도 후기 자연계 대학원 전문연구요원 편입대상자 선발 공고 안내(수정)",
-          "title_normalized": "후기 자연계 대학원 전문연구요원 편입대상자 선발 안내",
-          "category": "교육·인력양성사업 > 대학연구기관 전문연구요원지원사업",
-          "occurrences": 3,
-          "first_posted": "2023-09-20",
-          "last_posted": "2025-09-22",
-          "peak_month": 9,
-          "avg_interval_days": 366.0,
-          "stdev_interval_days": 4.0,
-          "next_predicted": "2026-09-23"
-        },
-        {
-          "title_sample": "2025년도 한-베트남 협력기반조성사업(공동연구) 신규과제 공모",
-          "title_normalized": "한 베트남 협력기반조성사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 3,
-          "first_posted": "2021-03-26",
-          "last_posted": "2025-02-14",
-          "peak_month": 3,
-          "avg_interval_days": 710.0,
-          "stdev_interval_days": 180.0,
-          "next_predicted": "2027-01-25"
-        },
-        {
-          "title_sample": "2026년도 한-핀란드 공동연구사업 신규과제 공모",
-          "title_normalized": "한 핀란드 공동연구사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 3,
-          "first_posted": "2023-07-28",
-          "last_posted": "2026-03-05",
-          "peak_month": 7,
-          "avg_interval_days": 476.0,
-          "stdev_interval_days": 230.0,
-          "next_predicted": "2027-06-24"
-        },
-        {
-          "title_sample": "2025년도 한중핵심공동연구사업(Key Joint Research Program) 신규과제 공모",
-          "title_normalized": "한중핵심공동연구사업",
-          "category": "국제협력사업 > NRF 특별협력사업 > 한중일 특별협력사업",
-          "occurrences": 3,
-          "first_posted": "2023-07-21",
-          "last_posted": "2025-07-22",
-          "peak_month": 7,
-          "avg_interval_days": 366,
-          "stdev_interval_days": 3.0,
-          "next_predicted": "2026-07-23"
-        },
-        {
-          "title_sample": "(미래유망융합기술파이오니어 전략형)2024년도 STEAM연구사업 하반기 신규과제 공고",
-          "title_normalized": "steam연구사업 하반기",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 미래개척융합과학기술개발 > 미래유망융합기술파",
-          "occurrences": 3,
-          "first_posted": "2022-05-25",
-          "last_posted": "2024-05-21",
-          "peak_month": 5,
-          "avg_interval_days": 364.0,
-          "stdev_interval_days": 70.0,
-          "next_predicted": "2025-05-20"
+          "next_predicted": "2026-03-05",
+          "next_window_low": "2026-02-28",
+          "next_window_high": "2026-03-10",
+          "confidence": "high"
         },
         {
           "title_sample": "2023년도 인문한국플러스(HK⁺)지원사업(2유형) 신청요강 공고",
@@ -1056,43 +188,10 @@
           "peak_month": 7,
           "avg_interval_days": 364,
           "stdev_interval_days": 0.0,
-          "next_predicted": "2024-07-18"
-        },
-        {
-          "title_sample": "2025년도 NRF 인터내셔널 모빌리티 신규과제 공모",
-          "title_normalized": "nrf 인터내셔널 모빌리티",
-          "category": "국제협력사업 > 글로벌연구협력지원 > 일반연구교류지원사업",
-          "occurrences": 3,
-          "first_posted": "2023-06-01",
-          "last_posted": "2025-07-25",
-          "peak_month": 6,
-          "avg_interval_days": 392.0,
-          "stdev_interval_days": 33.0,
-          "next_predicted": "2026-08-21"
-        },
-        {
-          "title_sample": "2023년 해양-육상-대기 탄소순환시스템 연구사업 신규과제 재공모",
-          "title_normalized": "해양 육상 대기 탄소순환시스템 연구사업 재",
-          "category": "미래유망원천기술개발 > 종료사업 > 해양-육상-대기 탄소순환시스템연구",
-          "occurrences": 3,
-          "first_posted": "2021-06-11",
-          "last_posted": "2023-07-03",
-          "peak_month": 6,
-          "avg_interval_days": 376,
-          "stdev_interval_days": 20.0,
-          "next_predicted": "2024-07-13"
-        },
-        {
-          "title_sample": "2025년 해외대형연구시설활용연구지원사업 신규과제 모집공고",
-          "title_normalized": "해외대형연구시설활용연구지원사업 모집",
-          "category": "기초연구진흥(방사선분야 등) > 기초연구기반구축사업(방사선 분야 등) > 기초연구기반구축(",
-          "occurrences": 3,
-          "first_posted": "2022-07-08",
-          "last_posted": "2025-01-24",
-          "peak_month": 7,
-          "avg_interval_days": 466.0,
-          "stdev_interval_days": 194.0,
-          "next_predicted": "2026-05-05"
+          "next_predicted": "2024-07-18",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": "high"
         },
         {
           "title_sample": "2023년도 학술지 지원사업 신규과제 공모",
@@ -1104,43 +203,10 @@
           "peak_month": 7,
           "avg_interval_days": 358,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2024-06-15"
-        },
-        {
-          "title_sample": "2025년도 한-영국 과학기술협력창구사업 신규과제 공모",
-          "title_normalized": "한 영국 과학기술협력창구사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 3,
-          "first_posted": "2021-06-09",
-          "last_posted": "2025-04-18",
-          "peak_month": 6,
-          "avg_interval_days": 704.0,
-          "stdev_interval_days": 9.0,
-          "next_predicted": "2027-03-23"
-        },
-        {
-          "title_sample": "2023년도 이공분야 학술연구지원사업 신규과제 공모(이공분야 대학중점연구소)",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 기반구축사업 > 대학중점연구소",
-          "occurrences": 3,
-          "first_posted": "2021-02-17",
-          "last_posted": "2023-05-25",
-          "peak_month": 2,
-          "avg_interval_days": 414.0,
-          "stdev_interval_days": 69.0,
-          "next_predicted": "2024-07-12"
-        },
-        {
-          "title_sample": "2023년 글로벌교육지원사업 신규과제 재공고(교육 ODA 기반강화)",
-          "title_normalized": "글로벌교육지원사업 재",
-          "category": "국제협력사업 > 국제교육협력증진사업 > 글로벌교육지원사업",
-          "occurrences": 3,
-          "first_posted": "2021-03-22",
-          "last_posted": "2023-05-16",
-          "peak_month": 3,
-          "avg_interval_days": 392.0,
-          "stdev_interval_days": 25.0,
-          "next_predicted": "2024-06-11"
+          "next_predicted": "2024-06-15",
+          "next_window_low": "2024-05-16",
+          "next_window_high": "2024-07-15",
+          "confidence": "high"
         },
         {
           "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
@@ -1152,79 +218,10 @@
           "peak_month": 4,
           "avg_interval_days": 333,
           "stdev_interval_days": 6.0,
-          "next_predicted": "2026-01-04"
-        },
-        {
-          "title_sample": "2023년 후반기 전문경력인사 초빙활용지원사업 공고",
-          "title_normalized": "후반기 전문경력인사 초빙활용지원사업",
-          "category": "교육·인력양성사업 > 전문경력인사 초빙활용지원사업",
-          "occurrences": 3,
-          "first_posted": "2021-03-30",
-          "last_posted": "2023-04-14",
-          "peak_month": 3,
-          "avg_interval_days": 372.0,
-          "stdev_interval_days": 11.0,
-          "next_predicted": "2024-04-20"
-        },
-        {
-          "title_sample": "2025년도 한-EU 교육협력사업 신규과제 공모",
-          "title_normalized": "한 eu 교육협력사업",
-          "category": "국제협력사업 > 국제교육협력증진사업 > 한-EU 교육협력사업",
-          "occurrences": 3,
-          "first_posted": "2023-03-29",
-          "last_posted": "2025-01-31",
-          "peak_month": 3,
-          "avg_interval_days": 337,
-          "stdev_interval_days": 40.0,
-          "next_predicted": "2026-01-03"
-        },
-        {
-          "title_sample": "2025년도 한-필리핀 협력기반조성사업(공동연구) 신규과제 공모",
-          "title_normalized": "한 필리핀 협력기반조성사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 3,
-          "first_posted": "2022-06-08",
-          "last_posted": "2025-04-07",
-          "peak_month": 6,
-          "avg_interval_days": 517,
-          "stdev_interval_days": 328.0,
-          "next_predicted": "2026-09-06"
-        },
-        {
-          "title_sample": "2023년도 우주국제협력기반조성사업 신규과제 공모",
-          "title_normalized": "우주국제협력기반조성사업",
-          "category": "",
-          "occurrences": 3,
-          "first_posted": "2021-05-31",
-          "last_posted": "2023-03-17",
-          "peak_month": 5,
-          "avg_interval_days": 328.0,
-          "stdev_interval_days": 32.0,
-          "next_predicted": "2024-02-08"
-        },
-        {
-          "title_sample": "2026년도 한반도 과학기술협력사업 신규과제 공모",
-          "title_normalized": "한반도 과학기술협력사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업-한반도협력사업",
-          "occurrences": 3,
-          "first_posted": "2023-02-22",
-          "last_posted": "2026-04-20",
-          "peak_month": 4,
-          "avg_interval_days": 576.0,
-          "stdev_interval_days": 272.0,
-          "next_predicted": "2027-11-17"
-        },
-        {
-          "title_sample": "2023년도 미래원자력기술 시설ㆍ장비구축활용사업 신규과제(1차) 재공고",
-          "title_normalized": "미래원자력기술 시설ㆍ장비구축활용사업 재",
-          "category": "원자력진흥 > 종료사업 > 미래원자력기술시설장비구축활용사업(통합이관)",
-          "occurrences": 3,
-          "first_posted": "2021-03-05",
-          "last_posted": "2023-03-10",
-          "peak_month": 3,
-          "avg_interval_days": 368.0,
-          "stdev_interval_days": 5.0,
-          "next_predicted": "2024-03-12"
+          "next_predicted": "2026-01-04",
+          "next_window_low": "2025-12-29",
+          "next_window_high": "2026-01-10",
+          "confidence": "high"
         },
         {
           "title_sample": "2023년도 학술대회지원사업 신규과제 공모",
@@ -1236,175 +233,10 @@
           "peak_month": 3,
           "avg_interval_days": 364.0,
           "stdev_interval_days": 11.0,
-          "next_predicted": "2024-03-08"
-        },
-        {
-          "title_sample": "2023년도 핵융합선도기술개발사업 신규과제(융합연구 분야) 재공모",
-          "title_normalized": "핵융합선도기술개발사업 재",
-          "category": "미래유망원천기술개발 > 에너지환경기술개발사업 > 핵융합선도기술개발사업",
-          "occurrences": 3,
-          "first_posted": "2021-06-16",
-          "last_posted": "2023-03-02",
-          "peak_month": 6,
-          "avg_interval_days": 312,
-          "stdev_interval_days": 14.0,
-          "next_predicted": "2024-01-08"
-        },
-        {
-          "title_sample": "2024년도 한중신진과학자교류사업(한국인 중국 파견) 신규과제 공모(수정)",
-          "title_normalized": "한중신진과학자교류사업",
-          "category": "국제협력사업 > NRF 특별협력사업 > 한중일 특별협력사업",
-          "occurrences": 3,
-          "first_posted": "2022-02-08",
-          "last_posted": "2024-03-04",
-          "peak_month": 2,
-          "avg_interval_days": 378.0,
-          "stdev_interval_days": 18.0,
-          "next_predicted": "2025-03-17"
-        },
-        {
-          "title_sample": "2023년 원자력기초연구지원사업 신규과제 공모",
-          "title_normalized": "원자력기초연구지원사업",
-          "category": "원자력진흥 > 종료사업 > 원자력기초연구지원사업(통합이관)",
-          "occurrences": 3,
-          "first_posted": "2021-01-29",
-          "last_posted": "2023-02-06",
-          "peak_month": 1,
-          "avg_interval_days": 369,
-          "stdev_interval_days": 8.0,
-          "next_predicted": "2024-02-10"
-        },
-        {
-          "title_sample": "2025년도 「기관형 과학기술인 협동조합 지원사업」신규과제 공고",
-          "title_normalized": "「기관형 과학기술인 협동조합 지원사업」",
-          "category": "교육·인력양성사업 > 과학기술협동조합 육성·지원사업",
-          "occurrences": 3,
-          "first_posted": "2023-03-02",
-          "last_posted": "2025-03-13",
-          "peak_month": 3,
-          "avg_interval_days": 371,
-          "stdev_interval_days": 4.0,
-          "next_predicted": "2026-03-19"
-        },
-        {
-          "title_sample": "2023년도 이공분야 학술연구지원사업 신규과제 공모(학문균형발전지원-지역대학우수과학자)",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > 지역대학우수과학자",
-          "occurrences": 3,
-          "first_posted": "2021-02-24",
-          "last_posted": "2023-02-22",
-          "peak_month": 2,
-          "avg_interval_days": 364,
-          "stdev_interval_days": 0.0,
-          "next_predicted": "2024-02-21"
-        },
-        {
-          "title_sample": "2023년도 이공분야 학술연구지원사업 신규과제 공모(학문균형발전지원사업-학제간융합연구)",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > 학제간 융합연구",
-          "occurrences": 3,
-          "first_posted": "2021-02-24",
-          "last_posted": "2023-02-22",
-          "peak_month": 2,
-          "avg_interval_days": 364,
-          "stdev_interval_days": 0.0,
-          "next_predicted": "2024-02-21"
-        },
-        {
-          "title_sample": "2023년도 이공분야 학술연구지원사업 신규과제 공모(학문균형발전지원사업-창의도전연구기반지원)",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > 창의·도전연구 기반지원",
-          "occurrences": 3,
-          "first_posted": "2021-02-24",
-          "last_posted": "2023-02-22",
-          "peak_month": 2,
-          "avg_interval_days": 364,
-          "stdev_interval_days": 0.0,
-          "next_predicted": "2024-02-21"
-        },
-        {
-          "title_sample": "2023년 지자체-대학 협력기반 지역혁신 사업 공고",
-          "title_normalized": "지자체 대학 협력기반 지역혁신 사업",
-          "category": "교육·인력양성사업 > 지자체-대학 협력기반 지역혁신 사업",
-          "occurrences": 3,
-          "first_posted": "2021-02-09",
-          "last_posted": "2023-02-02",
-          "peak_month": 2,
-          "avg_interval_days": 362.0,
-          "stdev_interval_days": 12.0,
-          "next_predicted": "2024-01-30"
-        },
-        {
-          "title_sample": "2023년도 과학기술정보통신부 기초연구사업 상반기 신규과제 공모",
-          "title_normalized": "과학기술정보통신부 기초연구사업 상반기",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 핵심연구(기본연구B) (舊",
-          "occurrences": 3,
-          "first_posted": "2021-02-26",
-          "last_posted": "2023-02-24",
-          "peak_month": 2,
-          "avg_interval_days": 364,
-          "stdev_interval_days": 0.0,
-          "next_predicted": "2024-02-23"
-        },
-        {
-          "title_sample": "(수정)2022년도 1차 원천연구기획평가사업 위탁연구과제 공모",
-          "title_normalized": "원천연구기획평가사업 위탁연구과제",
-          "category": "",
-          "occurrences": 3,
-          "first_posted": "2021-03-17",
-          "last_posted": "2021-12-31",
-          "peak_month": 3,
-          "avg_interval_days": 144.0,
-          "stdev_interval_days": 104.0,
-          "next_predicted": "2022-05-24"
-        },
-        {
-          "title_sample": "2023년도 동북아-지역 연계 초미세먼지 대응 기술개발 사업 신규과제 공고",
-          "title_normalized": "동북아 지역 연계 초미세먼지 대응 기술개발 사업",
-          "category": "사회문제해결 > 종료사업 > 동북아 지역연계 초미세먼지 대응기술개발사업",
-          "occurrences": 3,
-          "first_posted": "2021-01-26",
-          "last_posted": "2022-10-14",
-          "peak_month": 1,
-          "avg_interval_days": 313,
-          "stdev_interval_days": 37.0,
-          "next_predicted": "2023-08-23"
-        },
-        {
-          "title_sample": "2025년 한국 이공계 여성대학원생 미국 연수프로그램 신규과제 공고",
-          "title_normalized": "한국 이공계 여성대학원생 미국 연수프로그램",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 3,
-          "first_posted": "2021-06-28",
-          "last_posted": "2025-04-30",
-          "peak_month": 6,
-          "avg_interval_days": 701,
-          "stdev_interval_days": 841.0,
-          "next_predicted": "2027-04-01"
-        },
-        {
-          "title_sample": "2021년도 나노 및 소재 기술개발사업 국가핵심소재연구단 플랫폼형 신규과제 선정계획 4차 공고",
-          "title_normalized": "나노 및 소재 기술개발사업 국가핵심소재연구단 플랫폼형 선정계획",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 3,
-          "first_posted": "2021-05-04",
-          "last_posted": "2021-08-12",
-          "peak_month": 5,
-          "avg_interval_days": 50,
-          "stdev_interval_days": 23.0,
-          "next_predicted": "2021-10-01"
-        },
-        {
-          "title_sample": "2026년도 한-스위스 박사(박사후)과정생 연수사업 신규과제 공모",
-          "title_normalized": "한 스위스 박사과정생 연수사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 3,
-          "first_posted": "2021-04-07",
-          "last_posted": "2026-04-10",
-          "peak_month": 4,
-          "avg_interval_days": 914.0,
-          "stdev_interval_days": 862.0,
-          "next_predicted": "2028-10-10"
+          "next_predicted": "2024-03-08",
+          "next_window_low": "2024-02-26",
+          "next_window_high": "2024-03-19",
+          "confidence": "high"
         },
         {
           "title_sample": "2021년도 인문사회학술연구교수(성과확산센터) 신청요강 공고(재공고)",
@@ -1416,295 +248,10 @@
           "peak_month": 3,
           "avg_interval_days": 72.0,
           "stdev_interval_days": 43.0,
-          "next_predicted": "2021-10-13"
-        },
-        {
-          "title_sample": "2022년도 국가생명연구자원 선진화사업 신규과제 1차 공모",
-          "title_normalized": "국가생명연구자원 선진화사업",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 3,
-          "first_posted": "2021-07-01",
-          "last_posted": "2022-04-22",
-          "peak_month": 7,
-          "avg_interval_days": 148.0,
-          "stdev_interval_days": 192.0,
-          "next_predicted": "2022-09-17"
-        },
-        {
-          "title_sample": "(수정) 2023년 스페이스파이오니어사업 신규과제 공모",
-          "title_normalized": "스페이스파이오니어사업",
-          "category": "",
-          "occurrences": 3,
-          "first_posted": "2021-04-22",
-          "last_posted": "2022-12-21",
-          "peak_month": 4,
-          "avg_interval_days": 304,
-          "stdev_interval_days": 66.0,
-          "next_predicted": "2023-10-21"
-        },
-        {
-          "title_sample": "2023년도 동북아-지역 연계 초미세먼지 대응 기술개발 사업 신규과제 재공고",
-          "title_normalized": "동북아 지역 연계 초미세먼지 대응 기술개발 사업 재",
-          "category": "사회문제해결 > 종료사업 > 동북아 지역연계 초미세먼지 대응기술개발사업",
-          "occurrences": 3,
-          "first_posted": "2021-03-02",
-          "last_posted": "2022-11-15",
-          "peak_month": 3,
-          "avg_interval_days": 312.0,
-          "stdev_interval_days": 402.0,
-          "next_predicted": "2023-09-23"
-        },
-        {
-          "title_sample": "2024년도 한반도 과학기술협력사업 신규과제 공모 (연장공고 실시)",
-          "title_normalized": "한반도 과학기술협력사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 3,
-          "first_posted": "2021-03-02",
-          "last_posted": "2024-03-25",
-          "peak_month": 3,
-          "avg_interval_days": 560.0,
-          "stdev_interval_days": 313.0,
-          "next_predicted": "2025-10-06"
-        },
-        {
-          "title_sample": "2025년도「유럽핵입자물리연구소(CERN) 협력사업」 파견 대학생 선발 공고",
-          "title_normalized": "「유럽핵입자물리연구소 협력사업」 파견 대학생 선발",
-          "category": "과학기술분야 기초연구사업 > 기반구축사업 > 유럽핵입자물리연구소(CERN)협력",
-          "occurrences": 3,
-          "first_posted": "2022-12-22",
-          "last_posted": "2024-12-02",
-          "peak_month": 12,
-          "avg_interval_days": 356.0,
-          "stdev_interval_days": 57.0,
-          "next_predicted": "2025-11-23"
-        },
-        {
-          "title_sample": "2022년도 제6차 국민생활안전 긴급대응연구 신규과제 재공모",
-          "title_normalized": "제 국민생활안전 긴급대응연구 재",
-          "category": "사회문제해결 > 종료사업 > 국민생활안전긴급대응연구",
-          "occurrences": 3,
-          "first_posted": "2022-05-13",
-          "last_posted": "2022-10-21",
-          "peak_month": 5,
-          "avg_interval_days": 80.0,
-          "stdev_interval_days": 12.0,
-          "next_predicted": "2023-01-09"
-        },
-        {
-          "title_sample": "2026년 제17차 일본 HOPE Meeting 참가자 모집 공고",
-          "title_normalized": "제 일본 hope meeting 참가자 모집",
-          "category": "국제협력사업 > NRF 특별협력사업 > 한중일 특별협력사업",
-          "occurrences": 3,
-          "first_posted": "2022-08-16",
-          "last_posted": "2025-07-09",
-          "peak_month": 7,
-          "avg_interval_days": 529,
-          "stdev_interval_days": 252.0,
-          "next_predicted": "2026-12-20"
-        },
-        {
-          "title_sample": "2024년도 바이오‧의료기술개발사업 신규과제(GloPID-R) 재공모(2차)",
-          "title_normalized": "바이오‧의료기술개발사업 재",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 3,
-          "first_posted": "2022-02-11",
-          "last_posted": "2024-05-22",
-          "peak_month": 5,
-          "avg_interval_days": 416.0,
-          "stdev_interval_days": 559.0,
-          "next_predicted": "2025-07-12"
-        },
-        {
-          "title_sample": "2025년도 한계도전 R&D 프로젝트 신규과제 공모",
-          "title_normalized": "한계도전 r&d 프로젝트",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 한계도전R&D프로젝트",
-          "occurrences": 3,
-          "first_posted": "2024-04-11",
-          "last_posted": "2025-01-07",
-          "peak_month": 4,
-          "avg_interval_days": 136.0,
-          "stdev_interval_days": 57.0,
-          "next_predicted": "2025-05-23"
-        },
-        {
-          "title_sample": "2025년도 다부처 국가생명연구자원 선진화사업 신규과제 재공모",
-          "title_normalized": "다부처 국가생명연구자원 선진화사업 재",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 3,
-          "first_posted": "2024-05-28",
-          "last_posted": "2025-05-12",
-          "peak_month": 5,
-          "avg_interval_days": 174.0,
-          "stdev_interval_days": 77.0,
-          "next_predicted": "2025-11-02"
-        },
-        {
-          "title_sample": "2026년도 바이오·의료기술개발사업 교류연구단 연구개발기관 재공고",
-          "title_normalized": "바이오 의료기술개발사업 교류연구단 연구개발기관 재",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 3,
-          "first_posted": "2024-05-14",
-          "last_posted": "2025-10-01",
-          "peak_month": 5,
-          "avg_interval_days": 252.0,
-          "stdev_interval_days": 288.0,
-          "next_predicted": "2026-06-10"
-        },
-        {
-          "title_sample": "2026년도 미래국방가교기술개발사업 신규과제 공고",
-          "title_normalized": "미래국방가교기술개발사업",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 미래국방가교기술개발",
-          "occurrences": 3,
-          "first_posted": "2024-06-04",
-          "last_posted": "2026-05-22",
-          "peak_month": 6,
-          "avg_interval_days": 358.0,
-          "stdev_interval_days": 18.0,
-          "next_predicted": "2027-05-15"
-        },
-        {
-          "title_sample": "2024년 원천기술국제협력개발사업(반도체 R&D협력센터) 신규과제 공모_[안내사항 추가 공지]",
-          "title_normalized": "원천기술국제협력개발사업",
-          "category": "안내사항 추가 공지",
-          "occurrences": 3,
-          "first_posted": "2024-04-29",
-          "last_posted": "2024-06-18",
-          "peak_month": 4,
-          "avg_interval_days": 25,
-          "stdev_interval_days": 10.0,
-          "next_predicted": "2024-07-13"
-        },
-        {
-          "title_sample": "2026년도 이공분야 학술연구지원사업(Post-Doc. 성장형 연구지원) 신규과제 공모",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > Post-Doc. 성장형 연구지원",
-          "occurrences": 3,
-          "first_posted": "2024-06-18",
-          "last_posted": "2026-02-11",
-          "peak_month": 2,
-          "avg_interval_days": 302.0,
-          "stdev_interval_days": 77.0,
-          "next_predicted": "2026-12-10"
-        },
-        {
-          "title_sample": "2026년도 후반기 전문경력인사초빙활용지원사업 신규과제 공모",
-          "title_normalized": "후반기 전문경력인사초빙활용지원사업",
-          "category": "교육·인력양성사업 > 전문경력인사 초빙활용지원사업",
-          "occurrences": 3,
-          "first_posted": "2024-05-28",
-          "last_posted": "2026-04-14",
-          "peak_month": 4,
-          "avg_interval_days": 343,
-          "stdev_interval_days": 18.0,
-          "next_predicted": "2027-03-23"
-        },
-        {
-          "title_sample": "2026년도 전기 자연계 대학원 전문연구요원 편입대상자 선발 공고 안내",
-          "title_normalized": "전기 자연계 대학원 전문연구요원 편입대상자 선발 안내",
-          "category": "교육·인력양성사업 > 대학연구기관 전문연구요원지원사업",
-          "occurrences": 3,
-          "first_posted": "2024-04-30",
-          "last_posted": "2026-05-11",
-          "peak_month": 5,
-          "avg_interval_days": 370.0,
-          "stdev_interval_days": 4.0,
-          "next_predicted": "2027-05-16"
-        },
-        {
-          "title_sample": "2026년도 이공분야 학술연구지원사업(기초과학연구역량강화사업) 신규과제 공모",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 기반구축사업 > 기초과학연구역량강화",
-          "occurrences": 3,
-          "first_posted": "2024-03-28",
-          "last_posted": "2026-02-11",
-          "peak_month": 2,
-          "avg_interval_days": 342.0,
-          "stdev_interval_days": 33.0,
-          "next_predicted": "2027-01-19"
-        },
-        {
-          "title_sample": "2026년 극한부품 시험입증지원사업(Track형 실증) 신규과제 공모",
-          "title_normalized": "극한부품 시험입증지원사업",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 극한부품 시험입증 지원사업",
-          "occurrences": 3,
-          "first_posted": "2025-07-04",
-          "last_posted": "2026-05-27",
-          "peak_month": 7,
-          "avg_interval_days": 164.0,
-          "stdev_interval_days": 47.0,
-          "next_predicted": "2026-11-07"
-        },
-        {
-          "title_sample": "2026년도 제2차 과학기술분야 연구기획과제 재공모",
-          "title_normalized": "제 과학기술분야 연구기획과제 재",
-          "category": "과학기술분야 연구기획과제",
-          "occurrences": 3,
-          "first_posted": "2025-10-14",
-          "last_posted": "2026-05-15",
-          "peak_month": 10,
-          "avg_interval_days": 106.0,
-          "stdev_interval_days": 62.0,
-          "next_predicted": "2026-08-29"
-        },
-        {
-          "title_sample": "2025년도 차세대광패키징기술개발사업 신규과제 3차 재공모",
-          "title_normalized": "차세대광패키징기술개발사업 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 차세대 광패키징 기술개발사업",
-          "occurrences": 3,
-          "first_posted": "2025-05-12",
-          "last_posted": "2025-06-16",
-          "peak_month": 5,
-          "avg_interval_days": 18.0,
-          "stdev_interval_days": 9.0,
-          "next_predicted": "2025-07-04"
-        },
-        {
-          "title_sample": "2026년도 이공분야 학술연구지원사업(글로컬R&D지원) 신규과제 공모(공고문)",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > 글로컬R&D 지원",
-          "occurrences": 3,
-          "first_posted": "2025-05-19",
-          "last_posted": "2026-04-07",
-          "peak_month": 4,
-          "avg_interval_days": 162.0,
-          "stdev_interval_days": 228.0,
-          "next_predicted": "2026-09-16"
-        },
-        {
-          "title_sample": "2026년 이공분야 학술연구지원사업(미래도전연구지원) 신규과제 공모(공고문)",
-          "title_normalized": "이공분야 학술연구지원사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > 미래도전연구지원",
-          "occurrences": 3,
-          "first_posted": "2025-05-19",
-          "last_posted": "2026-04-07",
-          "peak_month": 4,
-          "avg_interval_days": 162.0,
-          "stdev_interval_days": 228.0,
-          "next_predicted": "2026-09-16"
-        },
-        {
-          "title_sample": "2026년도 글로컬랩 사업 신규과제 공모(공고문)",
-          "title_normalized": "글로컬랩 사업",
-          "category": "과학기술분야 기초연구사업 > 기반구축사업 > 글로컬랩",
-          "occurrences": 3,
-          "first_posted": "2025-05-19",
-          "last_posted": "2026-04-07",
-          "peak_month": 5,
-          "avg_interval_days": 162.0,
-          "stdev_interval_days": 228.0,
-          "next_predicted": "2026-09-16"
-        },
-        {
-          "title_sample": "우수연구자교류지원사업(BrainLink) 해외 연구인력 교류 2024년도 신규과제 공고(수정 '24.2.14.)",
-          "title_normalized": "우수연구자교류지원사업 해외 연구인력 교류",
-          "category": "교육·인력양성사업 > 우수연구자교류지원사업(Brain Link)",
-          "occurrences": 2,
-          "first_posted": "2023-01-16",
-          "last_posted": "2023-12-29",
-          "peak_month": 1,
-          "avg_interval_days": 347,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-12-10"
+          "next_predicted": "2021-10-13",
+          "next_window_low": "2021-08-31",
+          "next_window_high": "2021-11-25",
+          "confidence": "low"
         },
         {
           "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모(우수신진연구)",
@@ -1716,175 +263,10 @@
           "peak_month": 1,
           "avg_interval_days": 311,
           "stdev_interval_days": null,
-          "next_predicted": "2025-10-02"
-        },
-        {
-          "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모 (한우물파기 기초연구)",
-          "title_normalized": "과학기술정보통신부 기초연구사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 핵심연구(한우물파기 기초연",
-          "occurrences": 2,
-          "first_posted": "2024-01-19",
-          "last_posted": "2024-11-25",
-          "peak_month": 1,
-          "avg_interval_days": 311,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-10-02"
-        },
-        {
-          "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모(글로벌 리더연구)",
-          "title_normalized": "과학기술정보통신부 기초연구사업",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 리더연구(유형A) (舊 리",
-          "occurrences": 2,
-          "first_posted": "2024-01-19",
-          "last_posted": "2024-11-25",
-          "peak_month": 1,
-          "avg_interval_days": 311,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-10-02"
-        },
-        {
-          "title_sample": "국가신약개발사업 사업단장 공모",
-          "title_normalized": "국가신약개발사업 사업단장",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-01-19",
-          "last_posted": "2023-12-08",
-          "peak_month": 1,
-          "avg_interval_days": 1053,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-10-26"
-        },
-        {
-          "title_sample": "2024년 바이오·의료기술개발사업(바이오혁신기반조성-첨단바이오 기술·인력 교류 지원) 1차 공고 신규과제 사전공고 및 연구자 의견수렴",
-          "title_normalized": "바이오 의료기술개발사업 사전 및 연구자 의견수렴",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2023-12-22",
-          "last_posted": "2023-12-27",
-          "peak_month": 12,
-          "avg_interval_days": 5,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-01-01"
-        },
-        {
-          "title_sample": "2025년 한-중 공동연구사업 신규과제 공모 (5.15. 중국 측 공고 URL 안내 추가)",
-          "title_normalized": "한 중 공동연구사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2023-11-14",
-          "last_posted": "2025-05-12",
-          "peak_month": 11,
-          "avg_interval_days": 545,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-11-08"
-        },
-        {
-          "title_sample": "2024년도 우주개발기반조성 및 성과확산 사업 신규과제 재공모",
-          "title_normalized": "우주개발기반조성 및 성과확산 사업 재",
-          "category": "",
-          "occurrences": 2,
-          "first_posted": "2023-12-05",
-          "last_posted": "2024-04-02",
-          "peak_month": 12,
-          "avg_interval_days": 119,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-07-30"
-        },
-        {
-          "title_sample": "2024년 STEAM연구사업(미래유망융합기술파이오니어 도전형) 기술수요조사",
-          "title_normalized": "steam연구사업 기술수요조사",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 미래개척융합과학기술개발 > 미래유망융합기술파",
-          "occurrences": 2,
-          "first_posted": "2023-10-11",
-          "last_posted": "2023-10-18",
-          "peak_month": 10,
-          "avg_interval_days": 7,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-10-25"
-        },
-        {
-          "title_sample": "2024년도「유럽핵입자물리연구소(CERN) 협력사업」 이론물리 공동연구 CERN Fellow 선발 공고",
-          "title_normalized": "「유럽핵입자물리연구소 협력사업」 이론물리 공동연구 cern fellow 선발",
-          "category": "과학기술분야 기초연구사업 > 기반구축사업 > 유럽핵입자물리연구소(CERN)협력",
-          "occurrences": 2,
-          "first_posted": "2022-09-19",
-          "last_posted": "2023-09-04",
-          "peak_month": 9,
-          "avg_interval_days": 350,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-08-19"
-        },
-        {
-          "title_sample": "해외우수과학자유치사업 (Brain Pool / Brain Pool+) 2025년도 제2차 신규과제 공고",
-          "title_normalized": "해외우수과학자유치사업 제",
-          "category": "교육·인력양성사업 > 해외우수과학자유치사업 > 해외우수과학자유치사업(BP/ BP+)",
-          "occurrences": 2,
-          "first_posted": "2023-09-06",
-          "last_posted": "2025-05-30",
-          "peak_month": 9,
-          "avg_interval_days": 632,
-          "stdev_interval_days": null,
-          "next_predicted": "2027-02-21"
-        },
-        {
-          "title_sample": "2024년도 NRF International Network Program(국제 세미나 지원사업) 신규과제 공모",
-          "title_normalized": "nrf international network program",
-          "category": "국제협력사업 > 글로벌연구협력지원 > 일반연구교류지원사업",
-          "occurrences": 2,
-          "first_posted": "2023-08-28",
-          "last_posted": "2024-08-01",
-          "peak_month": 8,
-          "avg_interval_days": 339,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-07-06"
-        },
-        {
-          "title_sample": "2023년도 한-영국(MRC) 협력기반조성사업 신규과제 공모",
-          "title_normalized": "한 영국 협력기반조성사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2021-07-26",
-          "last_posted": "2023-07-11",
-          "peak_month": 7,
-          "avg_interval_days": 715,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-06-25"
-        },
-        {
-          "title_sample": "2023년도 전통문화혁신성장융합연구사업 신규과제 재공모",
-          "title_normalized": "전통문화혁신성장융합연구사업 재",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 전통문화 혁신성장 융합연구",
-          "occurrences": 2,
-          "first_posted": "2022-07-15",
-          "last_posted": "2023-07-25",
-          "peak_month": 7,
-          "avg_interval_days": 375,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-08-03"
-        },
-        {
-          "title_sample": "2023년도 나노 및 소재 기술개발사업 나노커넥트 신규과제 선정계획 재공고",
-          "title_normalized": "나노 및 소재 기술개발사업 나노커넥트 선정계획 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-04-05",
-          "last_posted": "2023-07-11",
-          "peak_month": 4,
-          "avg_interval_days": 827,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-10-15"
-        },
-        {
-          "title_sample": "2023년도 원자력국제공동연구지원사업 신규과제(2차) 재공고",
-          "title_normalized": "원자력국제공동연구지원사업 재",
-          "category": "원자력진흥 > 원자력평화적이용체제구축사업 > 원자력 국제공동연구지원사업",
-          "occurrences": 2,
-          "first_posted": "2023-03-10",
-          "last_posted": "2023-07-10",
-          "peak_month": 3,
-          "avg_interval_days": 122,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-11-09"
+          "next_predicted": "2025-10-02",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2024년도 계속평가, 재인증평가 공고",
@@ -1896,415 +278,10 @@
           "peak_month": 6,
           "avg_interval_days": 355,
           "stdev_interval_days": null,
-          "next_predicted": "2025-05-26"
-        },
-        {
-          "title_sample": "2023년도 제3차 국가신약개발사업 신규지원 대상과제 공고",
-          "title_normalized": "제 국가신약개발사업 대상과제",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2023-03-03",
-          "last_posted": "2023-06-01",
-          "peak_month": 3,
-          "avg_interval_days": 90,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-08-30"
-        },
-        {
-          "title_sample": "2023년도 해양-육상-대기 탄소순환시스템 연구사업 신규과제 공모",
-          "title_normalized": "해양 육상 대기 탄소순환시스템 연구사업",
-          "category": "미래유망원천기술개발 > 종료사업 > 해양-육상-대기 탄소순환시스템연구",
-          "occurrences": 2,
-          "first_posted": "2022-05-04",
-          "last_posted": "2023-05-31",
-          "peak_month": 5,
-          "avg_interval_days": 392,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-06-26"
-        },
-        {
-          "title_sample": "2023년도 나노 및 소재 기술개발사업 나노커넥트 신규과제 선정계획 공고",
-          "title_normalized": "나노 및 소재 기술개발사업 나노커넥트 선정계획",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-03-03",
-          "last_posted": "2023-06-09",
-          "peak_month": 3,
-          "avg_interval_days": 828,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-09-14"
-        },
-        {
-          "title_sample": "2023년도 과학기술정보통신부 기초연구사업 하반기 신규과제 공모",
-          "title_normalized": "과학기술정보통신부 기초연구사업 하반기",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 핵심연구(기본연구A) (舊",
-          "occurrences": 2,
-          "first_posted": "2021-06-09",
-          "last_posted": "2023-05-30",
-          "peak_month": 6,
-          "avg_interval_days": 720,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-05-19"
-        },
-        {
-          "title_sample": "2024년도 바이오·의료기술개발사업 제3차 신규과제 선정을 위한 2차 재공고",
-          "title_normalized": "바이오 의료기술개발사업 제 선정을 위한 재",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2023-05-12",
-          "last_posted": "2024-06-03",
-          "peak_month": 5,
-          "avg_interval_days": 388,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-06-26"
-        },
-        {
-          "title_sample": "2023년도 기후기술국제협력촉진사업(CTCN 기술지원) 신규과제 재공고",
-          "title_normalized": "기후기술국제협력촉진사업 재",
-          "category": "미래유망원천기술개발 > 에너지환경기술개발사업 > 기후기술국제협력촉진",
-          "occurrences": 2,
-          "first_posted": "2022-05-03",
-          "last_posted": "2023-05-03",
-          "peak_month": 5,
-          "avg_interval_days": 365,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-05-02"
-        },
-        {
-          "title_sample": "2023년도 국가반도체연구실지원핵심기술개발사업(정책센터) 신규과제 재공고",
-          "title_normalized": "국가반도체연구실지원핵심기술개발사업 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 국가반도체연구실지원핵심기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2023-04-06",
-          "last_posted": "2023-04-28",
-          "peak_month": 4,
-          "avg_interval_days": 22,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-05-20"
-        },
-        {
-          "title_sample": "첨단분야 혁신융합대학사업 컨소시엄 신규 선정 공고",
-          "title_normalized": "첨단분야 혁신융합대학사업 컨소시엄 신규 선정",
-          "category": "교육·인력양성사업 > 첨단분야 혁신융합대학사업",
-          "occurrences": 2,
-          "first_posted": "2023-03-28",
-          "last_posted": "2024-03-19",
-          "peak_month": 3,
-          "avg_interval_days": 357,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-03-11"
-        },
-        {
-          "title_sample": "2023년도 국가반도체연구실지원핵심기술개발사업(정책센터) 신규과제 공고",
-          "title_normalized": "국가반도체연구실지원핵심기술개발사업",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 국가반도체연구실지원핵심기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2023-02-27",
-          "last_posted": "2023-03-22",
-          "peak_month": 2,
-          "avg_interval_days": 23,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-04-14"
-        },
-        {
-          "title_sample": "2023년 고등직업교육거점지구 사업 공고",
-          "title_normalized": "고등직업교육거점지구 사업",
-          "category": "교육·인력양성사업 > 고등직업교육거점지구 사업",
-          "occurrences": 2,
-          "first_posted": "2022-03-23",
-          "last_posted": "2023-02-09",
-          "peak_month": 3,
-          "avg_interval_days": 323,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-12-29"
-        },
-        {
-          "title_sample": "2023년도 미래원자력기술 시설ㆍ장비구축활용사업 신규과제 공고(2차)",
-          "title_normalized": "미래원자력기술 시설ㆍ장비구축활용사업",
-          "category": "원자력진흥 > 종료사업 > 미래원자력기술시설장비구축활용사업(통합이관)",
-          "occurrences": 2,
-          "first_posted": "2022-04-26",
-          "last_posted": "2023-03-20",
-          "peak_month": 4,
-          "avg_interval_days": 328,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-02-11"
-        },
-        {
-          "title_sample": "2023년도 우주국제협력기반조성사업 신규과제 재공모",
-          "title_normalized": "우주국제협력기반조성사업 재",
-          "category": "",
-          "occurrences": 2,
-          "first_posted": "2022-04-19",
-          "last_posted": "2023-04-03",
-          "peak_month": 4,
-          "avg_interval_days": 349,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-03-17"
-        },
-        {
-          "title_sample": "2024년도 혁신형 소형모듈원자로 기술개발사업 신규과제 공고",
-          "title_normalized": "혁신형 소형모듈원자로 기술개발사업",
-          "category": "원자력진흥 > 원자력연구개발사업 > 혁신형 소형모듈원자로(i-SMR) 기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2023-03-03",
-          "last_posted": "2024-01-31",
-          "peak_month": 3,
-          "avg_interval_days": 334,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-12-30"
-        },
-        {
-          "title_sample": "2024년도 한-스위스 박사(박사후)과정생 연수사업 과제 공모",
-          "title_normalized": "한 스위스 박사과정생 연수사업 과제",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2023-03-13",
-          "last_posted": "2024-04-23",
-          "peak_month": 3,
-          "avg_interval_days": 407,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-06-04"
-        },
-        {
-          "title_sample": "2023년도 초고성능컴퓨팅 활용 고도화사업 신규과제 공모",
-          "title_normalized": "초고성능컴퓨팅 활용 고도화사업",
-          "category": "미래유망원천기술개발 > 차세대정보·컴퓨팅기술개발사업 > 초고성능컴퓨팅 활용 고도화",
-          "occurrences": 2,
-          "first_posted": "2022-06-10",
-          "last_posted": "2023-03-08",
-          "peak_month": 6,
-          "avg_interval_days": 271,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-12-04"
-        },
-        {
-          "title_sample": "(수정공고)2024년도 양자컴퓨팅 기반 양자이득 도전연구 사업 신규과제 공모(2024.2.28 수정)",
-          "title_normalized": "양자컴퓨팅 기반 양자이득 도전연구 사업",
-          "category": "미래유망원천기술개발 > 차세대정보·컴퓨팅기술개발사업 > 양자컴퓨팅 기반 양자이득 도전 연구",
-          "occurrences": 2,
-          "first_posted": "2023-02-24",
-          "last_posted": "2024-01-31",
-          "peak_month": 2,
-          "avg_interval_days": 341,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-01-06"
-        },
-        {
-          "title_sample": "2023년도 나노 및 소재 기술개발사업 1차 신규과제 통합공고(전략형) 재공고",
-          "title_normalized": "나노 및 소재 기술개발사업 통합 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-03-08",
-          "last_posted": "2023-03-02",
-          "peak_month": 3,
-          "avg_interval_days": 724,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-02-23"
-        },
-        {
-          "title_sample": "2024년도 국제협력 네트워크 전략강화사업 예비 연구제안서 접수 안내",
-          "title_normalized": "국제협력 네트워크 전략강화사업 예비 연구제안서 접수 안내",
-          "category": "국제협력사업 > 동북아 R&D 허브 기반구축 > 국제협력 네트워크 전략강화사업",
-          "occurrences": 2,
-          "first_posted": "2023-02-07",
-          "last_posted": "2024-02-01",
-          "peak_month": 2,
-          "avg_interval_days": 359,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-01-25"
-        },
-        {
-          "title_sample": "2023년 신산업분야 특화 선도전문대학 지원사업 공고",
-          "title_normalized": "신산업분야 특화 선도전문대학 지원사업",
-          "category": "교육·인력양성사업 > 신산업분야 특화 선도전문대학 지원사업 2.0",
-          "occurrences": 2,
-          "first_posted": "2021-03-05",
-          "last_posted": "2023-02-01",
-          "peak_month": 3,
-          "avg_interval_days": 698,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-12-30"
-        },
-        {
-          "title_sample": "2024년도 차세대 유망 Seed 기술실용화 패스트트랙사업 신규과제 공고(수정)",
-          "title_normalized": "차세대 유망 seed 기술실용화 패스트트랙사업",
-          "category": "공공연구성과활성화사업 > 연구성과기술사업화지원 > 차세대 유망 SEED 기술실용화 패스트트",
-          "occurrences": 2,
-          "first_posted": "2023-02-13",
-          "last_posted": "2024-02-26",
-          "peak_month": 2,
-          "avg_interval_days": 378,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-03-10"
-        },
-        {
-          "title_sample": "2023년도 나노 및 소재 기술개발사업 1차 통합공고",
-          "title_normalized": "나노 및 소재 기술개발사업 통합",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2022-04-14",
-          "last_posted": "2023-01-25",
-          "peak_month": 4,
-          "avg_interval_days": 286,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-11-07"
-        },
-        {
-          "title_sample": "4단계 두뇌한국21 혁신인재 양성사업 지능형반도체(시스템반도체 포함) 분야 교육연구단 추가 선정 공고",
-          "title_normalized": "4단계 두뇌한국21 혁신인재 양성사업 지능형반도체 분야 교육연구단 추가 선정",
-          "category": "교육·인력양성사업 > 4단계 BK21 사업",
-          "occurrences": 2,
-          "first_posted": "2023-02-08",
-          "last_posted": "2024-04-01",
-          "peak_month": 2,
-          "avg_interval_days": 418,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-05-24"
-        },
-        {
-          "title_sample": "2024년도 기후기술국제협력촉진(CTCN 기술지원) 신규과제 공모",
-          "title_normalized": "기후기술국제협력촉진",
-          "category": "미래유망원천기술개발 > 에너지환경기술개발사업 > 기후기술국제협력촉진",
-          "occurrences": 2,
-          "first_posted": "2023-02-01",
-          "last_posted": "2024-01-30",
-          "peak_month": 2,
-          "avg_interval_days": 363,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-01-27"
-        },
-        {
-          "title_sample": "(수정-첨부파일 추가)2023년도 전자약기술개발사업 신규과제 1차 공모",
-          "title_normalized": "전자약기술개발사업",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-12-30",
-          "last_posted": "2023-01-16",
-          "peak_month": 12,
-          "avg_interval_days": 382,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-02-02"
-        },
-        {
-          "title_sample": "2023년 혁신신약 기초기반기술 개발사업 신규과제 공모(2023.1.13 수정)",
-          "title_normalized": "혁신신약 기초기반기술 개발사업",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-12-30",
-          "last_posted": "2023-01-16",
-          "peak_month": 12,
-          "avg_interval_days": 382,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-02-02"
-        },
-        {
-          "title_sample": "2022년도 바이오위해평가 원팀 리노베이션 사업 신규과제 2차 공고",
-          "title_normalized": "바이오위해평가 원팀 리노베이션 사업",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2022-01-03",
-          "last_posted": "2022-02-18",
-          "peak_month": 1,
-          "avg_interval_days": 46,
-          "stdev_interval_days": null,
-          "next_predicted": "2022-04-05"
-        },
-        {
-          "title_sample": "2023년도「유럽핵입자물리연구소(CERN) 협력사업」 이론물리 공동연구 대학원생 파견 공고",
-          "title_normalized": "「유럽핵입자물리연구소 협력사업」 이론물리 공동연구 대학원생 파견",
-          "category": "과학기술분야 기초연구사업 > 기반구축사업 > 유럽핵입자물리연구소(CERN)협력",
-          "occurrences": 2,
-          "first_posted": "2021-12-27",
-          "last_posted": "2022-10-31",
-          "peak_month": 12,
-          "avg_interval_days": 308,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-09-04"
-        },
-        {
-          "title_sample": "(국가신약개발사업단) 2022년 국가신약개발사업 1차 신규과제 접수 공고",
-          "title_normalized": "국가신약개발사업 접수",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-04-06",
-          "last_posted": "2021-12-06",
-          "peak_month": 4,
-          "avg_interval_days": 244,
-          "stdev_interval_days": null,
-          "next_predicted": "2022-08-07"
-        },
-        {
-          "title_sample": "2021년도 2차 원천연구기획평가사업 위탁연구과제 재공모",
-          "title_normalized": "원천연구기획평가사업 위탁연구과제 재",
-          "category": "",
-          "occurrences": 2,
-          "first_posted": "2021-03-30",
-          "last_posted": "2021-12-22",
-          "peak_month": 3,
-          "avg_interval_days": 267,
-          "stdev_interval_days": null,
-          "next_predicted": "2022-09-15"
-        },
-        {
-          "title_sample": "2021년도 제4차 기초원천연구기획과제 주관연구책임자 공모",
-          "title_normalized": "제 기초원천연구기획과제 주관연구책임자",
-          "category": "과학기술분야 연구기획과제 > 과학기술분야 연구기획과제",
-          "occurrences": 2,
-          "first_posted": "2021-02-15",
-          "last_posted": "2021-11-05",
-          "peak_month": 2,
-          "avg_interval_days": 263,
-          "stdev_interval_days": null,
-          "next_predicted": "2022-07-26"
-        },
-        {
-          "title_sample": "2023년 전반기 전문경력인사 초빙활용지원사업 공고",
-          "title_normalized": "전반기 전문경력인사 초빙활용지원사업",
-          "category": "교육·인력양성사업 > 전문경력인사 초빙활용지원사업",
-          "occurrences": 2,
-          "first_posted": "2021-10-13",
-          "last_posted": "2022-10-27",
-          "peak_month": 10,
-          "avg_interval_days": 379,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-11-10"
-        },
-        {
-          "title_sample": "2021년도 ｢공공수요 기반 혁신제품 개발·실증｣ 신규과제 재공모(3차)",
-          "title_normalized": "｢공공수요 기반 혁신제품 개발 실증｣ 재",
-          "category": "사회문제해결 > 종료사업 > 공공조달 연계형 R&D 실증‧사업화 지원",
-          "occurrences": 2,
-          "first_posted": "2021-09-23",
-          "last_posted": "2021-10-18",
-          "peak_month": 9,
-          "avg_interval_days": 25,
-          "stdev_interval_days": null,
-          "next_predicted": "2021-11-12"
-        },
-        {
-          "title_sample": "2022년도 차세대중형위성개발사업 5호 탑재체 개발 신규과제 공모",
-          "title_normalized": "차세대중형위성개발사업 탑재체 개발",
-          "category": "",
-          "occurrences": 2,
-          "first_posted": "2021-04-30",
-          "last_posted": "2021-10-04",
-          "peak_month": 4,
-          "avg_interval_days": 157,
-          "stdev_interval_days": null,
-          "next_predicted": "2022-03-10"
-        },
-        {
-          "title_sample": "2021년 전략형 국제공동연구사업 2차 신규과제 공모",
-          "title_normalized": "전략형 국제공동연구사업",
-          "category": "국제협력사업 > 동북아 R&D 허브 기반구축 > 전략형 국제공동연구사업",
-          "occurrences": 2,
-          "first_posted": "2021-06-24",
-          "last_posted": "2021-09-17",
-          "peak_month": 6,
-          "avg_interval_days": 85,
-          "stdev_interval_days": null,
-          "next_predicted": "2021-12-11"
+          "next_predicted": "2025-05-26",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2021년 인문사회연구소지원사업 신규과제 재공고(성과확산센터)",
@@ -2316,55 +293,10 @@
           "peak_month": 7,
           "avg_interval_days": 91,
           "stdev_interval_days": null,
-          "next_predicted": "2022-01-11"
-        },
-        {
-          "title_sample": "2022년도 국제협력 후속연구 지원 사업(Bridge Program) 신규 공모",
-          "title_normalized": "국제협력 후속연구 지원 사업 신규",
-          "category": "국제협력사업 > 글로벌연구협력지원 > 일반연구교류지원사업",
-          "occurrences": 2,
-          "first_posted": "2021-09-13",
-          "last_posted": "2022-09-13",
-          "peak_month": 9,
-          "avg_interval_days": 365,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-09-13"
-        },
-        {
-          "title_sample": "제11회 싱가포르 Global Young Scientists Summit(GYSS) 한국측 참가자 모집 공고",
-          "title_normalized": "제 싱가포르 global young scientists summit 한국측 참가자 모집",
-          "category": "국제협력사업 > 글로벌연구협력지원 > 양자 연구교류지원사업(세부국가안내)",
-          "occurrences": 2,
-          "first_posted": "2021-07-26",
-          "last_posted": "2022-06-28",
-          "peak_month": 7,
-          "avg_interval_days": 337,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-05-31"
-        },
-        {
-          "title_sample": "BRIDGE융합연구개발사업 브릿지융합지원단 재공모",
-          "title_normalized": "bridge융합연구개발사업 브릿지융합지원단 재",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 미래개척융합과학기술개발 > BRIDGE융합연",
-          "occurrences": 2,
-          "first_posted": "2021-02-10",
-          "last_posted": "2021-06-07",
-          "peak_month": 2,
-          "avg_interval_days": 117,
-          "stdev_interval_days": null,
-          "next_predicted": "2021-10-02"
-        },
-        {
-          "title_sample": "2021년도 무인이동체 미래선도 핵심기술개발사업 (433MHz 기반 드론 응용 통신기술 개발 및 실증) 신규과제 재공고",
-          "title_normalized": "무인이동체 미래선도 핵심기술개발사업 재",
-          "category": "",
-          "occurrences": 2,
-          "first_posted": "2021-02-23",
-          "last_posted": "2021-06-24",
-          "peak_month": 2,
-          "avg_interval_days": 121,
-          "stdev_interval_days": null,
-          "next_predicted": "2021-10-23"
+          "next_predicted": "2022-01-11",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2021년도 연구윤리활동지원사업 상반기 2차 신규과제 공고",
@@ -2376,31 +308,10 @@
           "peak_month": 5,
           "avg_interval_days": 18,
           "stdev_interval_days": null,
-          "next_predicted": "2021-06-19"
-        },
-        {
-          "title_sample": "2022년도 한반도 과학기술협력사업 신규과제 재공모",
-          "title_normalized": "한반도 과학기술협력사업 재",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2021-05-31",
-          "last_posted": "2022-04-12",
-          "peak_month": 5,
-          "avg_interval_days": 316,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-02-22"
-        },
-        {
-          "title_sample": "2022년 재난안전플랫폼기술개발사업 신규과제 공모",
-          "title_normalized": "재난안전플랫폼기술개발사업",
-          "category": "사회문제해결 > 종료사업 > 재난안전플랫폼기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-05-14",
-          "last_posted": "2022-05-18",
-          "peak_month": 5,
-          "avg_interval_days": 369,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-05-22"
+          "next_predicted": "2021-06-19",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2022년도 인문사회연구소지원사업 신청요강(세부시행계획) 공고",
@@ -2412,55 +323,10 @@
           "peak_month": 6,
           "avg_interval_days": 378,
           "stdev_interval_days": null,
-          "next_predicted": "2023-06-27"
-        },
-        {
-          "title_sample": "2021년 국제협력사업 기획연구과제 재공모 (체계적인 국제협력 발전전략 도출을 위한 기획연구)",
-          "title_normalized": "국제협력사업 기획연구과제 재",
-          "category": "국제협력사업 > 글로벌연구협력지원 > 일반연구교류지원사업",
-          "occurrences": 2,
-          "first_posted": "2021-04-29",
-          "last_posted": "2021-05-10",
-          "peak_month": 4,
-          "avg_interval_days": 11,
-          "stdev_interval_days": null,
-          "next_predicted": "2021-05-21"
-        },
-        {
-          "title_sample": "2021년도 해외시장 맞춤형 미래선진원자로 검증기술개발사업 신규과제 2차 공고",
-          "title_normalized": "해외시장 맞춤형 미래선진원자로 검증기술개발사업",
-          "category": "원자력진흥 > 종료사업 > 해외시장 맞춤형 미래선진원자로 검증기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-01-29",
-          "last_posted": "2021-04-15",
-          "peak_month": 1,
-          "avg_interval_days": 76,
-          "stdev_interval_days": null,
-          "next_predicted": "2021-06-30"
-        },
-        {
-          "title_sample": "2021년도 데이터과학기반 차세대 비파괴검사기술개발사업 신규과제 2차 공고",
-          "title_normalized": "데이터과학기반 차세대 비파괴검사기술개발사업",
-          "category": "원자력진흥 > 종료사업 > 데이터과학기반 차세대 비파괴검사기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-01-29",
-          "last_posted": "2021-04-15",
-          "peak_month": 1,
-          "avg_interval_days": 76,
-          "stdev_interval_days": null,
-          "next_predicted": "2021-06-30"
-        },
-        {
-          "title_sample": "미래수소원천기술개발사업 신규과제 공모",
-          "title_normalized": "미래수소원천기술개발사업",
-          "category": "탄소중립기반구축 > 기술개발사업(탄소중립기반구축) > 미래수소원천기술개발",
-          "occurrences": 2,
-          "first_posted": "2021-04-09",
-          "last_posted": "2022-04-01",
-          "peak_month": 4,
-          "avg_interval_days": 357,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-03-24"
+          "next_predicted": "2023-06-27",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2022년도 학술지평가 계속평가, 재인증평가 공고",
@@ -2472,43 +338,10 @@
           "peak_month": 4,
           "avg_interval_days": 377,
           "stdev_interval_days": null,
-          "next_predicted": "2023-05-10"
-        },
-        {
-          "title_sample": "(재공고)2021년도 신‧변종 감염병 대응 플랫폼 핵심기술개발사업 신규과제 공모",
-          "title_normalized": "신‧변종 감염병 대응 플랫폼 핵심기술개발사업",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-04-05",
-          "last_posted": "2021-04-27",
-          "peak_month": 4,
-          "avg_interval_days": 22,
-          "stdev_interval_days": null,
-          "next_predicted": "2021-05-19"
-        },
-        {
-          "title_sample": "2022년도 치안현장 맞춤형 연구개발사업(폴리스랩2.0) 신규과제 선정계획 공고",
-          "title_normalized": "치안현장 맞춤형 연구개발사업 선정계획",
-          "category": "사회문제해결 > 종료사업 > 치안현장 맞춤형 연구개발사업(폴리스랩2.0)",
-          "occurrences": 2,
-          "first_posted": "2021-04-14",
-          "last_posted": "2022-01-17",
-          "peak_month": 4,
-          "avg_interval_days": 278,
-          "stdev_interval_days": null,
-          "next_predicted": "2022-10-22"
-        },
-        {
-          "title_sample": "2022년도 과학기술혁신인재양성사업(우주분야 전문인력양성) 신규과제 재공모",
-          "title_normalized": "과학기술혁신인재양성사업 재",
-          "category": "",
-          "occurrences": 2,
-          "first_posted": "2021-03-29",
-          "last_posted": "2022-03-22",
-          "peak_month": 3,
-          "avg_interval_days": 358,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-03-15"
+          "next_predicted": "2023-05-10",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2022년 온라인 논문투고 심사시스템(JAMS) 신청 공고",
@@ -2520,79 +353,10 @@
           "peak_month": 3,
           "avg_interval_days": 364,
           "stdev_interval_days": null,
-          "next_predicted": "2023-03-20"
-        },
-        {
-          "title_sample": "2022년도「해외우수연구기관 협력허브구축사업」신규과제 공모",
-          "title_normalized": "「해외우수연구기관 협력허브구축사업」",
-          "category": "국제협력사업 > 동북아 R&D 허브 기반구축 > 해외우수연구기관 협력허브 구축사업",
-          "occurrences": 2,
-          "first_posted": "2021-03-02",
-          "last_posted": "2022-03-02",
-          "peak_month": 3,
-          "avg_interval_days": 365,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-03-02"
-        },
-        {
-          "title_sample": "2022년도 과학기술혁신인재양성사업 (우주분야 전문인력양성) 신규과제 공모",
-          "title_normalized": "과학기술혁신인재양성사업",
-          "category": "",
-          "occurrences": 2,
-          "first_posted": "2021-03-08",
-          "last_posted": "2022-03-02",
-          "peak_month": 3,
-          "avg_interval_days": 359,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-02-24"
-        },
-        {
-          "title_sample": "2022년도 미래선진원자로핵심요소기술개발사업 신규과제 재공고",
-          "title_normalized": "미래선진원자로핵심요소기술개발사업 재",
-          "category": "원자력진흥 > 종료사업 > 미래 선진원자로 핵심요소기술 개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-03-05",
-          "last_posted": "2022-03-04",
-          "peak_month": 3,
-          "avg_interval_days": 364,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-03-03"
-        },
-        {
-          "title_sample": "2022년도 원자력안전연구전문인력양성사업 신규과제 재공모",
-          "title_normalized": "원자력안전연구전문인력양성사업 재",
-          "category": "원자력진흥 > 종료사업 > 원자력안전연구전문인력양성사업",
-          "occurrences": 2,
-          "first_posted": "2021-03-05",
-          "last_posted": "2022-03-04",
-          "peak_month": 3,
-          "avg_interval_days": 364,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-03-03"
-        },
-        {
-          "title_sample": "2022년도 소재부품장비 부처협업 R&D 통합공고",
-          "title_normalized": "소재부품장비 부처협업 r&d 통합",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-02-09",
-          "last_posted": "2022-04-14",
-          "peak_month": 2,
-          "avg_interval_days": 429,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-06-17"
-        },
-        {
-          "title_sample": "나노 및 소재 분야 기술개발사업 2022년도 1차 신규과제 통합공고",
-          "title_normalized": "나노 및 소재 분야 기술개발사업 통합",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-02-03",
-          "last_posted": "2022-01-26",
-          "peak_month": 2,
-          "avg_interval_days": 357,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-01-18"
+          "next_predicted": "2023-03-20",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2022년도 인문사회분야 저술출판지원사업 신청요강 공고",
@@ -2604,295 +368,10 @@
           "peak_month": 2,
           "avg_interval_days": 353,
           "stdev_interval_days": null,
-          "next_predicted": "2023-02-02"
-        },
-        {
-          "title_sample": "2022년도 원자력안전연구전문인력양성사업 신규과제 공모",
-          "title_normalized": "원자력안전연구전문인력양성사업",
-          "category": "원자력진흥 > 종료사업 > 원자력안전연구전문인력양성사업",
-          "occurrences": 2,
-          "first_posted": "2021-01-29",
-          "last_posted": "2022-01-27",
-          "peak_month": 1,
-          "avg_interval_days": 363,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-01-25"
-        },
-        {
-          "title_sample": "2022년도 미래선진원자로핵심요소기술개발사업 신규과제 공고",
-          "title_normalized": "미래선진원자로핵심요소기술개발사업",
-          "category": "원자력진흥 > 종료사업 > 미래 선진원자로 핵심요소기술 개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-01-29",
-          "last_posted": "2022-01-27",
-          "peak_month": 1,
-          "avg_interval_days": 363,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-01-25"
-        },
-        {
-          "title_sample": "2022년 양자컴퓨팅기술개발사업 신규과제 공모",
-          "title_normalized": "양자컴퓨팅기술개발사업",
-          "category": "미래유망원천기술개발 > 종료사업 > 양자컴퓨팅기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2021-01-19",
-          "last_posted": "2022-02-14",
-          "peak_month": 1,
-          "avg_interval_days": 391,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-03-12"
-        },
-        {
-          "title_sample": "2023년 STEAM연구사업(미래유망융합기술 파이오니어사업) 기술수요조사 공지",
-          "title_normalized": "steam연구사업 기술수요조사 공지",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 미래개척융합과학기술개발 > 미래유망융합기술파",
-          "occurrences": 2,
-          "first_posted": "2022-09-05",
-          "last_posted": "2022-09-05",
-          "peak_month": 9,
-          "avg_interval_days": 0,
-          "stdev_interval_days": null,
-          "next_predicted": null
-        },
-        {
-          "title_sample": "2022년도 나노 및 소재 기술개발사업 미래기술연구실 신규과제 선정계획 4차 재공고",
-          "title_normalized": "나노 및 소재 기술개발사업 미래기술연구실 선정계획 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2022-03-15",
-          "last_posted": "2022-09-06",
-          "peak_month": 3,
-          "avg_interval_days": 175,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-02-28"
-        },
-        {
-          "title_sample": "2022년도 나노 및 소재 기술개발사업 미래기술연구실 신규과제 선정계획 4차 공고",
-          "title_normalized": "나노 및 소재 기술개발사업 미래기술연구실 선정계획",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2022-02-07",
-          "last_posted": "2022-08-01",
-          "peak_month": 2,
-          "avg_interval_days": 175,
-          "stdev_interval_days": null,
-          "next_predicted": "2023-01-23"
-        },
-        {
-          "title_sample": "2022년도 과학기술 혁신인재양성사업(감염병연구 전문인력양성사업) 신규과제 재공고",
-          "title_normalized": "과학기술 혁신인재양성사업 재",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2022-03-15",
-          "last_posted": "2022-07-22",
-          "peak_month": 3,
-          "avg_interval_days": 129,
-          "stdev_interval_days": null,
-          "next_predicted": "2022-11-28"
-        },
-        {
-          "title_sample": "2024년도 한중신진과학자교류사업(한국인 중국 파견) 신규과제 추가 공모",
-          "title_normalized": "한중신진과학자교류사업 추가",
-          "category": "국제협력사업 > NRF 특별협력사업 > 한중일 특별협력사업",
-          "occurrences": 2,
-          "first_posted": "2022-07-01",
-          "last_posted": "2024-04-29",
-          "peak_month": 7,
-          "avg_interval_days": 668,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-02-26"
-        },
-        {
-          "title_sample": "(미래유망융합기술파이오니어 전략형)2024년도 STEAM연구사업 하반기 신규과제 재공고",
-          "title_normalized": "steam연구사업 하반기 재",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 미래개척융합과학기술개발 > 미래유망융합기술파",
-          "occurrences": 2,
-          "first_posted": "2022-06-28",
-          "last_posted": "2024-06-21",
-          "peak_month": 6,
-          "avg_interval_days": 724,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-06-15"
-        },
-        {
-          "title_sample": "나노 및 소재 분야 기술개발사업 2022년도 3차 신규과제 통합재공고",
-          "title_normalized": "나노 및 소재 분야 기술개발사업 통합재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2022-03-02",
-          "last_posted": "2022-05-17",
-          "peak_month": 3,
-          "avg_interval_days": 76,
-          "stdev_interval_days": null,
-          "next_predicted": "2022-08-01"
-        },
-        {
-          "title_sample": "2025년도 PIM인공지능반도체핵심기술개발(소자)사업 신규과제 재공모",
-          "title_normalized": "pim인공지능반도체핵심기술개발사업 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > PIM인공지능반도체핵심기술개발사업(소자)",
-          "occurrences": 2,
-          "first_posted": "2022-03-25",
-          "last_posted": "2025-03-24",
-          "peak_month": 3,
-          "avg_interval_days": 1095,
-          "stdev_interval_days": null,
-          "next_predicted": "2028-03-23"
-        },
-        {
-          "title_sample": "2025년도 한-오스트리아 협력기반조성사업 신규과제 공모",
-          "title_normalized": "한 오스트리아 협력기반조성사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2022-02-11",
-          "last_posted": "2025-03-04",
-          "peak_month": 2,
-          "avg_interval_days": 1117,
-          "stdev_interval_days": null,
-          "next_predicted": "2028-03-25"
-        },
-        {
-          "title_sample": "우수연구자교류지원사업(BrainLink) 2025년도 신규과제 공고(수정 2025.3.5.)",
-          "title_normalized": "우수연구자교류지원사업",
-          "category": "교육·인력양성사업 > 우수연구자교류지원사업(Brain Link)",
-          "occurrences": 2,
-          "first_posted": "2022-02-21",
-          "last_posted": "2025-02-10",
-          "peak_month": 2,
-          "avg_interval_days": 1085,
-          "stdev_interval_days": null,
-          "next_predicted": "2028-01-31"
-        },
-        {
-          "title_sample": "2026년도 유네스코 협력활동 신규과제 공고",
-          "title_normalized": "유네스코 협력활동",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2022-02-07",
-          "last_posted": "2026-02-19",
-          "peak_month": 2,
-          "avg_interval_days": 1473,
-          "stdev_interval_days": null,
-          "next_predicted": "2030-03-03"
-        },
-        {
-          "title_sample": "2027년 국제협력선도대학육성지원사업 신규 사업단 공모",
-          "title_normalized": "국제협력선도대학육성지원사업 신규 사업단",
-          "category": "국제협력사업 > 국제협력선도대학사업",
-          "occurrences": 2,
-          "first_posted": "2024-12-20",
-          "last_posted": "2025-12-22",
-          "peak_month": 12,
-          "avg_interval_days": 367,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-12-24"
-        },
-        {
-          "title_sample": "[정책연구용역] 재단 해외사무소 운영ㆍ관리 체계화 방안 연구 정책연구용역과제 3차 공모",
-          "title_normalized": "재단 해외사무소 운영ㆍ관리 체계화 방안 연구 정책연구용역과제",
-          "category": "정책연구용역",
-          "occurrences": 2,
-          "first_posted": "2024-10-21",
-          "last_posted": "2024-11-15",
-          "peak_month": 10,
-          "avg_interval_days": 25,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-12-10"
-        },
-        {
-          "title_sample": "2025년도 NCP 활동지원사업 신규과제 2차 공모(연장)",
-          "title_normalized": "ncp 활동지원사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2024-10-23",
-          "last_posted": "2025-06-16",
-          "peak_month": 10,
-          "avg_interval_days": 236,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-02-07"
-        },
-        {
-          "title_sample": "2026년도 「유럽핵입자물리연구소(CERN) 협력사업」이론물리 공동연구 CERN Fellow 선발 공고",
-          "title_normalized": "「유럽핵입자물리연구소 협력사업」이론물리 공동연구 cern fellow 선발",
-          "category": "과학기술분야 기초연구사업 > 기반구축사업 > 유럽핵입자물리연구소(CERN)협력",
-          "occurrences": 2,
-          "first_posted": "2024-09-09",
-          "last_posted": "2025-09-08",
-          "peak_month": 9,
-          "avg_interval_days": 364,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-09-07"
-        },
-        {
-          "title_sample": "2024년 원천기술국제협력개발사업(반도체 R&D협력센터) 신규과제 재공모(3차)",
-          "title_normalized": "원천기술국제협력개발사업 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > (국제공동연구)원천기술 국제협력 개발 사업",
-          "occurrences": 2,
-          "first_posted": "2024-07-05",
-          "last_posted": "2024-07-18",
-          "peak_month": 7,
-          "avg_interval_days": 13,
-          "stdev_interval_days": null,
-          "next_predicted": "2024-07-31"
-        },
-        {
-          "title_sample": "2026년도 한-핀란드(RCF) 공동연구사업 신규과제 공모 사전공고",
-          "title_normalized": "한 핀란드 공동연구사업 사전",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2024-06-01",
-          "last_posted": "2026-01-27",
-          "peak_month": 6,
-          "avg_interval_days": 605,
-          "stdev_interval_days": null,
-          "next_predicted": "2027-09-24"
-        },
-        {
-          "title_sample": "2025년도 제1차 보스턴 코리아 공동연구지원사업 신규지원 대상과제 공고",
-          "title_normalized": "제 보스턴 코리아 공동연구지원사업 대상과제",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2024-07-08",
-          "last_posted": "2025-03-26",
-          "peak_month": 7,
-          "avg_interval_days": 261,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-12-12"
-        },
-        {
-          "title_sample": "2025년도 미래국방가교기술개발사업 신규과제 재공고",
-          "title_normalized": "미래국방가교기술개발사업 재",
-          "category": "미래유망원천기술개발 > 첨단융합기술개발사업 > 미래국방가교기술개발",
-          "occurrences": 2,
-          "first_posted": "2024-07-05",
-          "last_posted": "2025-06-30",
-          "peak_month": 7,
-          "avg_interval_days": 360,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-06-25"
-        },
-        {
-          "title_sample": "2026년도 나노·소재기술개발사업(팹고도화) 고경력 전문인력 기술컨설팅 신규과제 재공모",
-          "title_normalized": "나노 소재기술개발사업 고경력 전문인력 기술컨설팅 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2024-06-26",
-          "last_posted": "2026-03-04",
-          "peak_month": 6,
-          "avg_interval_days": 616,
-          "stdev_interval_days": null,
-          "next_predicted": "2027-11-10"
-        },
-        {
-          "title_sample": "2025년 과학기술혁신인재양성사업(반도체첨단패키징전문인력양성사업) 신규과제 공모",
-          "title_normalized": "과학기술혁신인재양성사업",
-          "category": "과학기술인력양성 > 창의적 인재육성 > 과학기술혁신인재양성(반도체첨단패키징전문인력양성)",
-          "occurrences": 2,
-          "first_posted": "2024-06-18",
-          "last_posted": "2025-04-30",
-          "peak_month": 6,
-          "avg_interval_days": 316,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-03-12"
+          "next_predicted": "2023-02-02",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2025년도 인문학대중화사업(인문사회통합성과확산센터) 신규과제 공모",
@@ -2904,67 +383,10 @@
           "peak_month": 6,
           "avg_interval_days": 398,
           "stdev_interval_days": null,
-          "next_predicted": "2026-08-17"
-        },
-        {
-          "title_sample": "2024년도 한-스웨덴 과학기술 공동연구사업 신규과제 공모",
-          "title_normalized": "한 스웨덴 과학기술 공동연구사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2024-05-08",
-          "last_posted": "2024-05-08",
-          "peak_month": 5,
-          "avg_interval_days": 0,
-          "stdev_interval_days": null,
-          "next_predicted": null
-        },
-        {
-          "title_sample": "2025년도 한-독 특별협력사업 신규 공모",
-          "title_normalized": "한 독 특별협력사업 신규",
-          "category": "국제협력사업 > NRF 특별협력사업 > 한-독특별협력사업",
-          "occurrences": 2,
-          "first_posted": "2024-03-18",
-          "last_posted": "2025-03-14",
-          "peak_month": 3,
-          "avg_interval_days": 361,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-03-10"
-        },
-        {
-          "title_sample": "2026년도 한-일 인력교류사업 신규과제 공모",
-          "title_normalized": "한 일 인력교류사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2024-03-25",
-          "last_posted": "2026-04-20",
-          "peak_month": 3,
-          "avg_interval_days": 756,
-          "stdev_interval_days": null,
-          "next_predicted": "2028-05-15"
-        },
-        {
-          "title_sample": "(수정) 2025년도 과학기술혁신인재양성사업(차세대원자력 전문인력 양성사업) 신규과제 공모",
-          "title_normalized": "과학기술혁신인재양성사업",
-          "category": "과학기술인력양성 > 창의적 인재육성 > 과학기술혁신인재양성(차세대원자력전문인력양성)",
-          "occurrences": 2,
-          "first_posted": "2024-03-18",
-          "last_posted": "2025-02-17",
-          "peak_month": 3,
-          "avg_interval_days": 336,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-01-19"
-        },
-        {
-          "title_sample": "2025년도 차세대반도체장비원천기술개발사업 신규과제 공모",
-          "title_normalized": "차세대반도체장비원천기술개발사업",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 차세대 반도체 장비 원천기술개발",
-          "occurrences": 2,
-          "first_posted": "2024-03-14",
-          "last_posted": "2025-06-05",
-          "peak_month": 3,
-          "avg_interval_days": 448,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-08-27"
+          "next_predicted": "2026-08-17",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2025년도 인문사회분야 학술대회 지원사업 신규 과제 공모(연락처 수정)",
@@ -2976,223 +398,10 @@
           "peak_month": 3,
           "avg_interval_days": 344,
           "stdev_interval_days": null,
-          "next_predicted": "2026-02-05"
-        },
-        {
-          "title_sample": "2026년도 양자연구교류지원사업(태국, 파견) 신규 공모",
-          "title_normalized": "양자연구교류지원사업 신규",
-          "category": "국제협력사업 > 글로벌연구협력지원 > 양자 연구교류지원사업(세부국가안내)",
-          "occurrences": 2,
-          "first_posted": "2025-05-21",
-          "last_posted": "2025-11-13",
-          "peak_month": 5,
-          "avg_interval_days": 176,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-05-08"
-        },
-        {
-          "title_sample": "『(가칭)핵융합 핵심기술 개발 및 첨단 인프라 구축사업』 부지 유치 공고",
-          "title_normalized": "『핵융합 핵심기술 개발 및 첨단 인프라 구축사업』 부지 유치",
-          "category": "과학기술분야 연구기획과제 > 과학기술분야 연구기획과제",
-          "occurrences": 2,
-          "first_posted": "2025-10-15",
-          "last_posted": "2025-10-15",
-          "peak_month": 10,
-          "avg_interval_days": 0,
-          "stdev_interval_days": null,
-          "next_predicted": null
-        },
-        {
-          "title_sample": "2025년도 제2차 과학기술분야 연구기획과제 재공모",
-          "title_normalized": "제 과학기술분야 연구기획과제 재",
-          "category": "과학기술분야 연구기획과제 > 과학기술분야 연구기획과제",
-          "occurrences": 2,
-          "first_posted": "2025-03-11",
-          "last_posted": "2025-07-09",
-          "peak_month": 3,
-          "avg_interval_days": 120,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-11-06"
-        },
-        {
-          "title_sample": "2025년도 양자정보과학 인적기반조성사업 리더급연구역량강화(전략기술형) 신규과제 공고",
-          "title_normalized": "양자정보과학 인적기반조성사업 리더급연구역량강화",
-          "category": "과학기술인력양성 > 창의적 인재육성 > 과학기술혁신인재양성(양자정보과학 인적기반 조성)",
-          "occurrences": 2,
-          "first_posted": "2025-05-22",
-          "last_posted": "2025-05-30",
-          "peak_month": 5,
-          "avg_interval_days": 8,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-06-07"
-        },
-        {
-          "title_sample": "2025년도 리튬기반 배터리 제조(소) 및 저장·취급 시설 안전을 위한 기술개발 신규과제(1과제) 공모(수정)",
-          "title_normalized": "리튬기반 배터리 제조 및 저장 취급 시설 안전을 위한 기술개발",
-          "category": "사회문제해결 > 종료사업 > 리튬기반 배터리 제조 및 저장‧취급 시설 안전을 위한 기술개발",
-          "occurrences": 2,
-          "first_posted": "2025-04-30",
-          "last_posted": "2025-05-07",
-          "peak_month": 4,
-          "avg_interval_days": 7,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-05-14"
-        },
-        {
-          "title_sample": "2026년도 한-프랑스(ANR) 공동연구사업 신규과제 공모",
-          "title_normalized": "한 프랑스 공동연구사업",
-          "category": "국제협력사업 > 국제화기반조성사업 > 국가간협력기반조성사업",
-          "occurrences": 2,
-          "first_posted": "2025-02-13",
-          "last_posted": "2026-05-11",
-          "peak_month": 2,
-          "avg_interval_days": 452,
-          "stdev_interval_days": null,
-          "next_predicted": "2027-08-06"
-        },
-        {
-          "title_sample": "2025년도 차세대지능형반도체기술개발(소자)사업 신소자원천 신규과제(06번 RFP) 재공모",
-          "title_normalized": "차세대지능형반도체기술개발사업 신소자원천 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 차세대 지능형 반도체기술개발",
-          "occurrences": 2,
-          "first_posted": "2025-03-14",
-          "last_posted": "2025-03-24",
-          "peak_month": 3,
-          "avg_interval_days": 10,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-04-03"
-        },
-        {
-          "title_sample": "2025년도 차세대지능형반도체기술개발(소자)사업 신소자원천 신규과제(06번 RFP) 공모",
-          "title_normalized": "차세대지능형반도체기술개발사업 신소자원천",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 차세대 지능형 반도체기술개발",
-          "occurrences": 2,
-          "first_posted": "2025-02-26",
-          "last_posted": "2025-03-07",
-          "peak_month": 2,
-          "avg_interval_days": 9,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-03-16"
-        },
-        {
-          "title_sample": "2025년도 바이오의료기술개발사업 2차 공고 신규과제 사전공고 및 연구자 의견수렴 안내",
-          "title_normalized": "바이오의료기술개발사업 사전 및 연구자 의견수렴 안내",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2025-03-12",
-          "last_posted": "2025-03-13",
-          "peak_month": 3,
-          "avg_interval_days": 1,
-          "stdev_interval_days": null,
-          "next_predicted": "2025-03-14"
-        },
-        {
-          "title_sample": "2026년도 「양자컴퓨팅기반양자이득도전연구」사업 신규과제 공모",
-          "title_normalized": "「양자컴퓨팅기반양자이득도전연구」사업",
-          "category": "미래유망원천기술개발 > 차세대정보·컴퓨팅기술개발사업 > 양자컴퓨팅 기반 양자이득 도전 연구",
-          "occurrences": 2,
-          "first_posted": "2025-02-14",
-          "last_posted": "2026-05-22",
-          "peak_month": 2,
-          "avg_interval_days": 462,
-          "stdev_interval_days": null,
-          "next_predicted": "2027-08-27"
-        },
-        {
-          "title_sample": "2026년도 과학기술정보통신부 기초연구사업 글로벌 매칭형(독일) 신규과제 공모",
-          "title_normalized": "과학기술정보통신부 기초연구사업 글로벌 매칭형",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 글로벌매칭형",
-          "occurrences": 2,
-          "first_posted": "2025-01-24",
-          "last_posted": "2026-01-07",
-          "peak_month": 1,
-          "avg_interval_days": 348,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-12-21"
-        },
-        {
-          "title_sample": "2025년도 차세대 유망 Seed 기술실용화 패스트트랙 신규과제 (유형1) 공고",
-          "title_normalized": "차세대 유망 seed 기술실용화 패스트트랙",
-          "category": "공공연구성과활성화사업 > 연구성과기술사업화지원 > 차세대 유망 SEED 기술실용화 패스트트",
-          "occurrences": 2,
-          "first_posted": "2025-02-14",
-          "last_posted": "2025-02-14",
-          "peak_month": 2,
-          "avg_interval_days": 0,
-          "stdev_interval_days": null,
-          "next_predicted": null
-        },
-        {
-          "title_sample": "2026년도 제2차 범부처 첨단 의료기기 연구개발사업 신규지원 대상과제 공고",
-          "title_normalized": "제 범부처 첨단 의료기기 연구개발사업 대상과제",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 범부처 첨단 의료기기 연구개발 사업",
-          "occurrences": 2,
-          "first_posted": "2026-02-19",
-          "last_posted": "2026-06-09",
-          "peak_month": 2,
-          "avg_interval_days": 110,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-09-27"
-        },
-        {
-          "title_sample": "2026년도 5차 바이오·의료기술개발사업(첨단GW바이오) 신규과제 사전공고 내역 및 연구자의견수렴 안내(차세대바이오단 소관)",
-          "title_normalized": "바이오 의료기술개발사업 사전 내역 및 연구자의견수렴 안내",
-          "category": "미래유망원천기술개발 > 바이오·의료기술개발사업 > 바이오·의료기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2026-04-17",
-          "last_posted": "2026-06-05",
-          "peak_month": 4,
-          "avg_interval_days": 49,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-07-24"
-        },
-        {
-          "title_sample": "2026년도 나노소재기술개발사업 신규과제 4차 재공모",
-          "title_normalized": "나노소재기술개발사업 재",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 나노·소재기술개발사업",
-          "occurrences": 2,
-          "first_posted": "2026-05-13",
-          "last_posted": "2026-05-20",
-          "peak_month": 5,
-          "avg_interval_days": 7,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-05-27"
-        },
-        {
-          "title_sample": "2026년도 첨단소재원천기술성장지원사업 신규과제 2차 공모",
-          "title_normalized": "첨단소재원천기술성장지원사업",
-          "category": "미래유망원천기술개발 > 나노·소재기술개발사업 > 첨단소재원천기술성장지원",
-          "occurrences": 2,
-          "first_posted": "2026-02-23",
-          "last_posted": "2026-04-30",
-          "peak_month": 2,
-          "avg_interval_days": 66,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-07-05"
-        },
-        {
-          "title_sample": "2026년도 이공분야 학술연구지원사업(기본연구B(포용형)) 신규과제 공모(공고문)",
-          "title_normalized": "이공분야 학술연구지원사업)",
-          "category": "과학기술분야 기초연구사업 > 개인연구사업(교육부) > 기본연구B(포용형)",
-          "occurrences": 2,
-          "first_posted": "2026-04-07",
-          "last_posted": "2026-04-07",
-          "peak_month": 4,
-          "avg_interval_days": 0,
-          "stdev_interval_days": null,
-          "next_predicted": null
-        },
-        {
-          "title_sample": "2026년도 국가연구소(NRL2.0) 사업 신규과제 공모",
-          "title_normalized": "국가연구소 사업",
-          "category": "과학기술분야 기초연구사업 > 집단연구사업 > 국가연구소(NRL2.0)",
-          "occurrences": 2,
-          "first_posted": "2025-04-15",
-          "last_posted": "2025-12-16",
-          "peak_month": 4,
-          "avg_interval_days": 245,
-          "stdev_interval_days": null,
-          "next_predicted": "2026-08-18"
+          "next_predicted": "2026-02-05",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         }
       ],
       "trend": {
@@ -3205,55 +414,59 @@
           2026
         ],
         "yearly_counts": [
-          275,
-          283,
-          286,
-          307,
-          327,
-          240
+          29,
+          28,
+          34,
+          35,
+          33,
+          29
         ],
-        "total": 1718,
-        "avg_yearly_change": 13,
+        "total": 188,
+        "avg_yearly_change": 1,
+        "regression_slope": 1.5,
         "current_year_incomplete": true
       },
       "deadline": {
-        "total": 1719,
-        "mean": 22.9,
-        "median": 16,
-        "stdev": 22.2,
-        "min": 0,
+        "total": 188,
+        "mean": 19.8,
+        "median": 10,
+        "q1": 6,
+        "q3": 15,
+        "iqr": 9,
+        "stdev": 44.0,
+        "min": 4,
         "max": 314,
         "bin_size_days": 7,
         "bins": [
-          124,
-          534,
-          281,
-          91,
-          485,
-          65,
-          30,
-          25,
-          34,
-          11,
+          53,
+          68,
+          32,
+          4,
+          16,
           7,
-          10,
-          6,
-          5,
-          0,
           1,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0,
-          1,
-          1,
-          1,
-          0,
-          0,
-          0,
           2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           0,
@@ -3270,8 +483,52 @@
           0,
           3,
           1
-        ]
-      }
+        ],
+        "under_7_pct": 44.1,
+        "under_14_pct": 73.4
+      },
+      "top_types": [
+        {
+          "name": "학술지평가",
+          "count": 14
+        },
+        {
+          "name": "인문사회연구소지원",
+          "count": 12
+        },
+        {
+          "name": "연구윤리활동지원사업",
+          "count": 12
+        },
+        {
+          "name": "핵심연구(유형B) (舊 중견연구(유형1))",
+          "count": 11
+        },
+        {
+          "name": "인문학대중화",
+          "count": 9
+        },
+        {
+          "name": "중견연구자지원",
+          "count": 8
+        },
+        {
+          "name": "한국사회과학연구(SSK)",
+          "count": 7
+        },
+        {
+          "name": "학술대회 지원사업",
+          "count": 6
+        },
+        {
+          "name": "명저번역지원",
+          "count": 6
+        },
+        {
+          "name": "우수학자지원",
+          "count": 6
+        }
+      ]
     },
     "humanities": {
       "label_kr": "인문사회 전반",
@@ -3295,7 +552,24 @@
         "peak_count": 47,
         "low_month": 11,
         "low_count": 0,
-        "avg_per_month": 13.0
+        "avg_per_month": 13.0,
+        "chi_square": 193.69,
+        "seasonality_strength": "strong",
+        "cumulative_pct": [
+          0.6,
+          23.7,
+          53.8,
+          63.5,
+          72.4,
+          85.9,
+          93.6,
+          96.2,
+          98.7,
+          99.4,
+          99.4,
+          100.0
+        ],
+        "peak_window_pct": 62.8
       },
       "recurring": [
         {
@@ -3308,7 +582,10 @@
           "peak_month": 6,
           "avg_interval_days": 291.0,
           "stdev_interval_days": 131.0,
-          "next_predicted": "2027-01-01"
+          "next_predicted": "2027-01-01",
+          "next_window_low": "2026-08-23",
+          "next_window_high": "2027-05-12",
+          "confidence": "low"
         },
         {
           "title_sample": "2026년도 인문도시지원사업 신규과제 공고",
@@ -3320,7 +597,10 @@
           "peak_month": 4,
           "avg_interval_days": 445,
           "stdev_interval_days": 192.0,
-          "next_predicted": "2027-05-24"
+          "next_predicted": "2027-05-24",
+          "next_window_low": "2026-11-13",
+          "next_window_high": "2027-12-02",
+          "confidence": "low"
         },
         {
           "title_sample": "2026년도 인문사회분야 학술연구지원사업 신규과제 공고",
@@ -3332,7 +612,10 @@
           "peak_month": 2,
           "avg_interval_days": 362.0,
           "stdev_interval_days": 17.0,
-          "next_predicted": "2027-01-30"
+          "next_predicted": "2027-01-30",
+          "next_window_low": "2027-01-13",
+          "next_window_high": "2027-02-16",
+          "confidence": "high"
         },
         {
           "title_sample": "2026년도 글로벌인문사회융합연구지원사업 신규과제 신청요강 공고(수정 2026.3.10.)",
@@ -3344,7 +627,10 @@
           "peak_month": 5,
           "avg_interval_days": 164.0,
           "stdev_interval_days": 116.0,
-          "next_predicted": "2026-08-27"
+          "next_predicted": "2026-08-27",
+          "next_window_low": "2026-05-03",
+          "next_window_high": "2026-12-21",
+          "confidence": "low"
         },
         {
           "title_sample": "2024년도 학술지평가 해외DB학술지 평가 공고",
@@ -3356,7 +642,10 @@
           "peak_month": 4,
           "avg_interval_days": 382,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2025-06-22"
+          "next_predicted": "2025-06-22",
+          "next_window_low": "2025-05-23",
+          "next_window_high": "2025-07-22",
+          "confidence": "high"
         },
         {
           "title_sample": "2024년도 학술지평가 신규평가 공고",
@@ -3368,7 +657,10 @@
           "peak_month": 4,
           "avg_interval_days": 382,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2025-06-22"
+          "next_predicted": "2025-06-22",
+          "next_window_low": "2025-05-23",
+          "next_window_high": "2025-07-22",
+          "confidence": "high"
         },
         {
           "title_sample": "2025년도 연구윤리활동지원사업 신규과제 공모",
@@ -3380,7 +672,10 @@
           "peak_month": 5,
           "avg_interval_days": 353.0,
           "stdev_interval_days": 49.0,
-          "next_predicted": "2026-04-30"
+          "next_predicted": "2026-04-30",
+          "next_window_low": "2026-03-12",
+          "next_window_high": "2026-06-18",
+          "confidence": "high"
         },
         {
           "title_sample": "2025년 온라인 논문투고 심사시스템(JAMS) 신청요강 공고",
@@ -3392,7 +687,10 @@
           "peak_month": 2,
           "avg_interval_days": 370.0,
           "stdev_interval_days": 5.0,
-          "next_predicted": "2026-03-05"
+          "next_predicted": "2026-03-05",
+          "next_window_low": "2026-02-28",
+          "next_window_high": "2026-03-10",
+          "confidence": "high"
         },
         {
           "title_sample": "2023년도 인문한국플러스(HK⁺)지원사업(2유형) 신청요강 공고",
@@ -3404,7 +702,10 @@
           "peak_month": 7,
           "avg_interval_days": 364,
           "stdev_interval_days": 0.0,
-          "next_predicted": "2024-07-18"
+          "next_predicted": "2024-07-18",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": "high"
         },
         {
           "title_sample": "2023년도 학술지 지원사업 신규과제 공모",
@@ -3416,7 +717,10 @@
           "peak_month": 7,
           "avg_interval_days": 358,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2024-06-15"
+          "next_predicted": "2024-06-15",
+          "next_window_low": "2024-05-16",
+          "next_window_high": "2024-07-15",
+          "confidence": "high"
         },
         {
           "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
@@ -3428,7 +732,10 @@
           "peak_month": 4,
           "avg_interval_days": 333,
           "stdev_interval_days": 6.0,
-          "next_predicted": "2026-01-04"
+          "next_predicted": "2026-01-04",
+          "next_window_low": "2025-12-29",
+          "next_window_high": "2026-01-10",
+          "confidence": "high"
         },
         {
           "title_sample": "2023년도 학술대회지원사업 신규과제 공모",
@@ -3440,7 +747,10 @@
           "peak_month": 3,
           "avg_interval_days": 364.0,
           "stdev_interval_days": 11.0,
-          "next_predicted": "2024-03-08"
+          "next_predicted": "2024-03-08",
+          "next_window_low": "2024-02-26",
+          "next_window_high": "2024-03-19",
+          "confidence": "high"
         },
         {
           "title_sample": "2021년도 인문사회학술연구교수(성과확산센터) 신청요강 공고(재공고)",
@@ -3452,7 +762,10 @@
           "peak_month": 3,
           "avg_interval_days": 72.0,
           "stdev_interval_days": 43.0,
-          "next_predicted": "2021-10-13"
+          "next_predicted": "2021-10-13",
+          "next_window_low": "2021-08-31",
+          "next_window_high": "2021-11-25",
+          "confidence": "low"
         },
         {
           "title_sample": "2024년도 계속평가, 재인증평가 공고",
@@ -3464,7 +777,10 @@
           "peak_month": 6,
           "avg_interval_days": 355,
           "stdev_interval_days": null,
-          "next_predicted": "2025-05-26"
+          "next_predicted": "2025-05-26",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2021년 인문사회연구소지원사업 신규과제 재공고(성과확산센터)",
@@ -3476,7 +792,10 @@
           "peak_month": 7,
           "avg_interval_days": 91,
           "stdev_interval_days": null,
-          "next_predicted": "2022-01-11"
+          "next_predicted": "2022-01-11",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2021년도 연구윤리활동지원사업 상반기 2차 신규과제 공고",
@@ -3488,7 +807,10 @@
           "peak_month": 5,
           "avg_interval_days": 18,
           "stdev_interval_days": null,
-          "next_predicted": "2021-06-19"
+          "next_predicted": "2021-06-19",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2022년도 인문사회연구소지원사업 신청요강(세부시행계획) 공고",
@@ -3500,7 +822,10 @@
           "peak_month": 6,
           "avg_interval_days": 378,
           "stdev_interval_days": null,
-          "next_predicted": "2023-06-27"
+          "next_predicted": "2023-06-27",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2022년도 학술지평가 계속평가, 재인증평가 공고",
@@ -3512,7 +837,10 @@
           "peak_month": 4,
           "avg_interval_days": 377,
           "stdev_interval_days": null,
-          "next_predicted": "2023-05-10"
+          "next_predicted": "2023-05-10",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2022년 온라인 논문투고 심사시스템(JAMS) 신청 공고",
@@ -3524,7 +852,10 @@
           "peak_month": 3,
           "avg_interval_days": 364,
           "stdev_interval_days": null,
-          "next_predicted": "2023-03-20"
+          "next_predicted": "2023-03-20",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2022년도 인문사회분야 저술출판지원사업 신청요강 공고",
@@ -3536,7 +867,10 @@
           "peak_month": 2,
           "avg_interval_days": 353,
           "stdev_interval_days": null,
-          "next_predicted": "2023-02-02"
+          "next_predicted": "2023-02-02",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2025년도 인문학대중화사업(인문사회통합성과확산센터) 신규과제 공모",
@@ -3548,7 +882,10 @@
           "peak_month": 6,
           "avg_interval_days": 398,
           "stdev_interval_days": null,
-          "next_predicted": "2026-08-17"
+          "next_predicted": "2026-08-17",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         },
         {
           "title_sample": "2025년도 인문사회분야 학술대회 지원사업 신규 과제 공모(연락처 수정)",
@@ -3560,7 +897,10 @@
           "peak_month": 3,
           "avg_interval_days": 344,
           "stdev_interval_days": null,
-          "next_predicted": "2026-02-05"
+          "next_predicted": "2026-02-05",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         }
       ],
       "trend": {
@@ -3582,12 +922,16 @@
         ],
         "total": 156,
         "avg_yearly_change": -0.5,
+        "regression_slope": -0.6,
         "current_year_incomplete": true
       },
       "deadline": {
         "total": 156,
         "mean": 20.3,
         "median": 7,
+        "q1": 6,
+        "q3": 14,
+        "iqr": 8,
         "stdev": 48.2,
         "min": 4,
         "max": 314,
@@ -3638,32 +982,93 @@
           0,
           3,
           1
-        ]
-      }
+        ],
+        "under_7_pct": 53.2,
+        "under_14_pct": 75.6
+      },
+      "top_types": [
+        {
+          "name": "학술지평가",
+          "count": 14
+        },
+        {
+          "name": "인문사회연구소지원",
+          "count": 12
+        },
+        {
+          "name": "연구윤리활동지원사업",
+          "count": 12
+        },
+        {
+          "name": "인문학대중화",
+          "count": 9
+        },
+        {
+          "name": "중견연구자지원",
+          "count": 8
+        },
+        {
+          "name": "한국사회과학연구(SSK)",
+          "count": 7
+        },
+        {
+          "name": "학술대회 지원사업",
+          "count": 6
+        },
+        {
+          "name": "명저번역지원",
+          "count": 6
+        },
+        {
+          "name": "우수학자지원",
+          "count": 6
+        },
+        {
+          "name": "신진연구자지원",
+          "count": 6
+        }
+      ]
     },
     "psychology": {
       "label_kr": "심리학 전반",
       "seasonality": {
-        "total": 10,
+        "total": 78,
         "monthly": [
-          0,
-          0,
+          6,
+          15,
+          16,
+          7,
+          8,
+          10,
+          2,
+          2,
           1,
-          1,
+          2,
           4,
-          3,
-          0,
-          0,
-          0,
-          1,
-          0,
-          0
+          5
         ],
-        "peak_month": 5,
-        "peak_count": 4,
-        "low_month": 1,
-        "low_count": 0,
-        "avg_per_month": 0.8
+        "peak_month": 3,
+        "peak_count": 16,
+        "low_month": 9,
+        "low_count": 1,
+        "avg_per_month": 6.5,
+        "chi_square": 42.62,
+        "seasonality_strength": "strong",
+        "cumulative_pct": [
+          7.7,
+          26.9,
+          47.4,
+          56.4,
+          66.7,
+          79.5,
+          82.1,
+          84.6,
+          85.9,
+          88.5,
+          93.6,
+          100.0
+        ],
+        "peak_window_pct": 48.7
       },
       "recurring": [
         {
@@ -3676,7 +1081,115 @@
           "peak_month": 6,
           "avg_interval_days": 291.0,
           "stdev_interval_days": 131.0,
-          "next_predicted": "2027-01-01"
+          "next_predicted": "2027-01-01",
+          "next_window_low": "2026-08-23",
+          "next_window_high": "2027-05-12",
+          "confidence": "low"
+        },
+        {
+          "title_sample": "2026년도 글로벌인문사회융합연구지원사업 신규과제 신청요강 공고(수정 2026.3.10.)",
+          "title_normalized": "글로벌인문사회융합연구지원사업",
+          "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 글로벌인문사회융합연구지원",
+          "occurrences": 5,
+          "first_posted": "2024-05-27",
+          "last_posted": "2026-03-16",
+          "peak_month": 5,
+          "avg_interval_days": 164.0,
+          "stdev_interval_days": 116.0,
+          "next_predicted": "2026-08-27",
+          "next_window_low": "2026-05-03",
+          "next_window_high": "2026-12-21",
+          "confidence": "low"
+        },
+        {
+          "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모 (중견연구)",
+          "title_normalized": "과학기술정보통신부 기초연구사업",
+          "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 핵심연구(유형B) (舊 중",
+          "occurrences": 3,
+          "first_posted": "2024-01-19",
+          "last_posted": "2024-11-25",
+          "peak_month": 1,
+          "avg_interval_days": 156.0,
+          "stdev_interval_days": 26.0,
+          "next_predicted": "2025-04-30",
+          "next_window_low": "2025-04-04",
+          "next_window_high": "2025-05-26",
+          "confidence": "medium"
+        },
+        {
+          "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
+          "title_normalized": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정",
+          "category": "교육·인력양성사업 > 인문사회 융합인재 양성사업",
+          "occurrences": 3,
+          "first_posted": "2023-04-11",
+          "last_posted": "2025-02-05",
+          "peak_month": 4,
+          "avg_interval_days": 333,
+          "stdev_interval_days": 6.0,
+          "next_predicted": "2026-01-04",
+          "next_window_low": "2025-12-29",
+          "next_window_high": "2026-01-10",
+          "confidence": "high"
+        },
+        {
+          "title_sample": "2021년도 인문사회학술연구교수(성과확산센터) 신청요강 공고(재공고)",
+          "title_normalized": "인문사회학술연구교수",
+          "category": "인문사회분야 학술연구지원사업 > 개인연구군 > 인문사회학술연구교수(A유형)",
+          "occurrences": 3,
+          "first_posted": "2021-03-12",
+          "last_posted": "2021-08-02",
+          "peak_month": 3,
+          "avg_interval_days": 72.0,
+          "stdev_interval_days": 43.0,
+          "next_predicted": "2021-10-13",
+          "next_window_low": "2021-08-31",
+          "next_window_high": "2021-11-25",
+          "confidence": "low"
+        },
+        {
+          "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모(우수신진연구)",
+          "title_normalized": "과학기술정보통신부 기초연구사업",
+          "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 신진연구(유형B) (舊 우",
+          "occurrences": 2,
+          "first_posted": "2024-01-19",
+          "last_posted": "2024-11-25",
+          "peak_month": 1,
+          "avg_interval_days": 311,
+          "stdev_interval_days": null,
+          "next_predicted": "2025-10-02",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
+        },
+        {
+          "title_sample": "2021년 인문사회연구소지원사업 신규과제 재공고(성과확산센터)",
+          "title_normalized": "인문사회연구소지원사업 재",
+          "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 인문사회연구소지원",
+          "occurrences": 2,
+          "first_posted": "2021-07-13",
+          "last_posted": "2021-10-12",
+          "peak_month": 7,
+          "avg_interval_days": 91,
+          "stdev_interval_days": null,
+          "next_predicted": "2022-01-11",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
+        },
+        {
+          "title_sample": "2022년도 인문사회연구소지원사업 신청요강(세부시행계획) 공고",
+          "title_normalized": "인문사회연구소지원사업",
+          "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 인문사회연구소지원",
+          "occurrences": 2,
+          "first_posted": "2021-06-01",
+          "last_posted": "2022-06-14",
+          "peak_month": 6,
+          "avg_interval_days": 378,
+          "stdev_interval_days": null,
+          "next_predicted": "2023-06-27",
+          "next_window_low": null,
+          "next_window_high": null,
+          "confidence": null
         }
       ],
       "trend": {
@@ -3689,34 +1202,88 @@
           2026
         ],
         "yearly_counts": [
-          1,
-          2,
-          3,
-          1,
-          2,
-          1
+          12,
+          9,
+          14,
+          17,
+          17,
+          9
         ],
-        "total": 10,
-        "avg_yearly_change": 0.2,
+        "total": 78,
+        "avg_yearly_change": 1.2,
+        "regression_slope": 1.8,
         "current_year_incomplete": true
       },
       "deadline": {
-        "total": 10,
-        "mean": 14.7,
+        "total": 78,
+        "mean": 13.4,
         "median": 9,
-        "stdev": 12.1,
-        "min": 6,
-        "max": 37,
+        "q1": 6,
+        "q3": 14,
+        "iqr": 8,
+        "stdev": 12.9,
+        "min": 4,
+        "max": 78,
         "bin_size_days": 7,
         "bins": [
+          28,
+          29,
+          11,
+          0,
+          2,
           4,
-          3,
           1,
+          2,
           0,
           0,
-          2
-        ]
-      }
+          0,
+          1
+        ],
+        "under_7_pct": 46.2,
+        "under_14_pct": 80.8
+      },
+      "top_types": [
+        {
+          "name": "인문사회연구소지원",
+          "count": 12
+        },
+        {
+          "name": "핵심연구(유형B) (舊 중견연구(유형1))",
+          "count": 11
+        },
+        {
+          "name": "중견연구자지원",
+          "count": 8
+        },
+        {
+          "name": "한국사회과학연구(SSK)",
+          "count": 7
+        },
+        {
+          "name": "신진연구자지원",
+          "count": 6
+        },
+        {
+          "name": "글로벌인문사회융합연구지원",
+          "count": 6
+        },
+        {
+          "name": "신진연구(유형B) (舊 우수신진연구)",
+          "count": 5
+        },
+        {
+          "name": "인문사회학술연구교수(B유형)",
+          "count": 5
+        },
+        {
+          "name": "인문사회학술연구교수(A유형)",
+          "count": 5
+        },
+        {
+          "name": "바이오·의료기술개발사업",
+          "count": 4
+        }
+      ]
     },
     "aging": {
       "label_kr": "노화/치매/고령",
@@ -3740,7 +1307,24 @@
         "peak_count": 2,
         "low_month": 5,
         "low_count": 0,
-        "avg_per_month": 0.6
+        "avg_per_month": 0.6,
+        "chi_square": null,
+        "seasonality_strength": null,
+        "cumulative_pct": [
+          28.6,
+          42.9,
+          57.1,
+          85.7,
+          85.7,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "peak_window_pct": 42.9
       },
       "recurring": [],
       "trend": {
@@ -3762,12 +1346,16 @@
         ],
         "total": 7,
         "avg_yearly_change": -0.2,
+        "regression_slope": -0.2,
         "current_year_incomplete": true
       },
       "deadline": {
         "total": 7,
         "mean": 27.1,
         "median": 31,
+        "q1": 29,
+        "q3": 31,
+        "iqr": 2,
         "stdev": 8.5,
         "min": 8,
         "max": 31,
@@ -3778,16 +1366,36 @@
           0,
           0,
           6
-        ]
-      }
+        ],
+        "under_7_pct": 0.0,
+        "under_14_pct": 14.3
+      },
+      "top_types": [
+        {
+          "name": "나노·소재기술개발사업",
+          "count": 2
+        },
+        {
+          "name": "바이오·의료기술개발사업, 치매의료기술연구개발사업",
+          "count": 2
+        },
+        {
+          "name": "생체노화 리프로그래밍 원천기술 개발",
+          "count": 2
+        },
+        {
+          "name": "치매의료기술연구개발사업",
+          "count": 1
+        }
+      ]
     },
     "psy_ai": {
       "label_kr": "심리+AI 융합",
       "seasonality": {
-        "total": 0,
+        "total": 1,
         "monthly": [
           0,
-          0,
+          1,
           0,
           0,
           0,
@@ -3799,9 +1407,28 @@
           0,
           0
         ],
-        "peak_month": null,
-        "low_month": null,
-        "avg_per_month": 0
+        "peak_month": 2,
+        "peak_count": 1,
+        "low_month": 1,
+        "low_count": 0,
+        "avg_per_month": 0.1,
+        "chi_square": null,
+        "seasonality_strength": null,
+        "cumulative_pct": [
+          0.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "peak_window_pct": 100.0
       },
       "recurring": [],
       "trend": {
@@ -3816,24 +1443,43 @@
         "yearly_counts": [
           0,
           0,
-          0,
+          1,
           0,
           0,
           0
         ],
-        "total": 0,
-        "avg_yearly_change": null,
+        "total": 1,
+        "avg_yearly_change": 0,
+        "regression_slope": 0.0,
         "current_year_incomplete": true
       },
       "deadline": {
-        "total": 0,
-        "mean": null,
-        "median": null,
+        "total": 1,
+        "mean": 29,
+        "median": 29,
+        "q1": 29,
+        "q3": 29,
+        "iqr": 0,
         "stdev": null,
-        "min": null,
-        "max": null,
-        "bins": []
-      }
+        "min": 29,
+        "max": 29,
+        "bin_size_days": 7,
+        "bins": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "under_7_pct": 0.0,
+        "under_14_pct": 0.0
+      },
+      "top_types": [
+        {
+          "name": "과학기술혁신인재양성(데이터사이언스융합인재양성)",
+          "count": 1
+        }
+      ]
     }
   }
 }

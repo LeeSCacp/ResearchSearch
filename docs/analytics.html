@@ -54,27 +54,33 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.06);
       display: flex; gap: 24px; flex-wrap: wrap;
     }
-    .stat-pill {
-      display: flex; flex-direction: column; gap: 2px;
-    }
+    .stat-pill { display: flex; flex-direction: column; gap: 2px; }
     .stat-label { font-size: 0.75rem; color: #6b7280; }
     .stat-value { font-size: 1.15rem; font-weight: 600; color: #1e3a5f; }
     .stat-sub   { font-size: 0.74rem; color: #6b7280; }
+
+    /* 시즌성 강도 배지 */
+    .strength-badge {
+      display: inline-block; padding: 2px 8px; border-radius: 10px;
+      font-size: 0.72rem; font-weight: 600; margin-left: 6px;
+    }
+    .strength-badge.strong   { background: #fee2e2; color: #b91c1c; }
+    .strength-badge.moderate { background: #fef3c7; color: #b45309; }
+    .strength-badge.weak     { background: #e0f2fe; color: #075985; }
+
     .empty-msg {
       padding: 40px; text-align: center; color: #9ca3af;
       background: white; border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.06);
     }
 
-    /* 차트 카드 그리드 */
+    /* 차트 그리드 */
     .chart-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
     }
-    @media (max-width: 900px) {
-      .chart-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 900px) { .chart-grid { grid-template-columns: 1fr; } }
     .chart-card {
       background: white; padding: 18px 20px; border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.06);
@@ -82,20 +88,21 @@
     .chart-card.full-width { grid-column: 1 / -1; }
     .chart-title {
       font-size: 0.95rem; font-weight: 600; color: #1e3a5f;
-      margin-bottom: 4px; display: flex; align-items: center; gap: 8px;
+      margin-bottom: 4px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
     }
     .chart-subtitle {
       font-size: 0.78rem; color: #6b7280; margin-bottom: 14px;
     }
     .chart-wrap { position: relative; height: 260px; }
 
-    /* 인사이트 박스 */
     .insight {
       margin-top: 12px; padding: 10px 12px;
       background: #f0f7ff; border-left: 3px solid #2d6a9f;
       border-radius: 4px; font-size: 0.82rem; color: #1e3a5f;
     }
     .insight strong { color: #1e40af; }
+    .insight.warning { background: #fef3c7; border-left-color: #d97706; color: #78350f; }
+    .insight.warning strong { color: #92400e; }
 
     /* 반복 사업 테이블 */
     .recurring-table {
@@ -107,7 +114,7 @@
     }
     .recurring-table th {
       font-weight: 600; color: #4b5563; background: #f9fafb;
-      font-size: 0.78rem; text-transform: uppercase;
+      font-size: 0.74rem; text-transform: uppercase;
     }
     .recurring-table tr:hover { background: #fafbfc; }
     .recurring-table .count-badge {
@@ -115,12 +122,49 @@
       background: #dbeafe; color: #1d4ed8;
       border-radius: 10px; font-size: 0.75rem; font-weight: 600;
     }
-    .recurring-table .next-date {
-      color: #16a34a; font-weight: 500;
+    .conf-badge {
+      display: inline-block; padding: 1px 7px; border-radius: 8px;
+      font-size: 0.7rem; font-weight: 600;
     }
-    .recurring-table .next-date.past { color: #9ca3af; font-weight: normal; }
-    .scrollable {
-      max-height: 480px; overflow-y: auto;
+    .conf-badge.high   { background: #d1fae5; color: #065f46; }
+    .conf-badge.medium { background: #fef3c7; color: #92400e; }
+    .conf-badge.low    { background: #fee2e2; color: #b91c1c; }
+    .next-date {
+      color: #16a34a; font-weight: 500;
+      font-size: 0.82rem;
+    }
+    .next-date.past   { color: #9ca3af; font-weight: normal; }
+    .next-window {
+      display: block; color: #9ca3af; font-size: 0.72rem;
+    }
+    .scrollable { max-height: 480px; overflow-y: auto; }
+
+    /* Top 사업 리스트 */
+    .top-list {
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .top-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 12px; background: #f9fafb; border-radius: 6px;
+    }
+    .top-rank {
+      font-size: 0.75rem; color: #6b7280; min-width: 22px;
+    }
+    .top-bar {
+      flex: 1; height: 8px; background: #e5e7eb; border-radius: 4px;
+      position: relative; overflow: hidden;
+    }
+    .top-bar-fill {
+      height: 100%; background: #2d6a9f; border-radius: 4px;
+    }
+    .top-count {
+      font-size: 0.82rem; font-weight: 600; color: #1e3a5f;
+      min-width: 28px; text-align: right;
+    }
+    .top-name {
+      font-size: 0.82rem; color: #4b5563;
+      flex: 0 0 auto; max-width: 50%;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
 
     .footer {
@@ -132,29 +176,25 @@
 <body>
   <div class="header">
     <h1>📊 연구과제 패턴 분석 — NRF 5년치</h1>
-    <div class="subtitle">2021~2026 NRF 사업공고 1,719건 시즌성·반복·트렌드·마감 패턴</div>
+    <div class="subtitle">2021~2026 NRF 사업공고 중 관심 분야(인문사회·심리·노화·AI 융합) 패턴 분석</div>
     <div class="updated" id="updatedAt">로딩 중...</div>
     <a href="./index.html">← 메인 대시보드로</a>
   </div>
 
   <div class="container">
-    <!-- 라벨 탭 -->
-    <div class="label-tabs" id="labelTabs">
-      <!-- JS에서 동적 생성 -->
-    </div>
-
-    <!-- 요약 카드 -->
+    <div class="label-tabs" id="labelTabs"></div>
     <div class="summary-row" id="summaryRow"></div>
 
-    <!-- 데이터 없음 메시지 -->
     <div class="empty-msg" id="emptyMsg" style="display:none;">
       이 라벨에 해당하는 데이터가 없습니다.
     </div>
 
-    <!-- 차트 그리드 -->
     <div class="chart-grid" id="chartGrid">
       <div class="chart-card">
-        <div class="chart-title">📅 월별 공고 분포 (시즌성)</div>
+        <div class="chart-title">
+          📅 월별 공고 분포 (시즌성)
+          <span id="strengthBadge"></span>
+        </div>
         <div class="chart-subtitle" id="seasonalitySub"></div>
         <div class="chart-wrap"><canvas id="monthlyChart"></canvas></div>
         <div class="insight" id="seasonalityInsight"></div>
@@ -174,21 +214,28 @@
         <div class="insight" id="deadlineInsight"></div>
       </div>
 
+      <div class="chart-card">
+        <div class="chart-title">🏆 가장 빈번한 사업 (Top 10)</div>
+        <div class="chart-subtitle">최근 5년간 가장 많이 공고된 사업명 (가장 구체적인 사업 단위)</div>
+        <div class="top-list" id="topList"></div>
+      </div>
+
       <div class="chart-card full-width">
         <div class="chart-title">🔄 반복 사업 + 다음 공고 예측</div>
-        <div class="chart-subtitle" id="recurringSub">
-          제목 정규화로 반복 사업을 식별하고, 평균 주기로 다음 공고 시점 예측
+        <div class="chart-subtitle">
+          제목 정규화로 반복 사업 식별 → 평균 주기·표준편차로 다음 공고 시점과 신뢰구간(±1σ) 산출
         </div>
         <div class="scrollable">
           <table class="recurring-table">
             <thead>
               <tr>
-                <th style="width:7%;">반복</th>
-                <th style="width:43%;">사업명 (최신)</th>
+                <th style="width:6%;">반복</th>
+                <th style="width:8%;">신뢰도</th>
+                <th style="width:36%;">사업명 (최신)</th>
                 <th style="width:18%;">분야</th>
-                <th style="width:10%;">정점 월</th>
-                <th style="width:10%;">평균 주기</th>
-                <th style="width:12%;">다음 예상</th>
+                <th style="width:7%;">정점</th>
+                <th style="width:9%;">평균 주기</th>
+                <th style="width:16%;">다음 예상 (±1σ)</th>
               </tr>
             </thead>
             <tbody id="recurringBody"></tbody>
@@ -199,19 +246,19 @@
   </div>
 
   <div class="footer">
-    데이터 출처: 한국연구재단(NRF) 공식 사업공고 |
-    분석: 시즌성 / 반복 사업 / 트렌드 / 마감일 패턴
+    데이터 출처: 한국연구재단(NRF) | 모집단: 관심 분야(인문사회·심리·노화·AI 융합) — 무관 공고는 분석 제외
   </div>
 
   <script>
     const KR_MONTH = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
     const TODAY = new Date().toISOString().slice(0, 10);
+    const STRENGTH_KR = { strong: '강한 시즌성', moderate: '뚜렷한 시즌성', weak: '약한 시즌성' };
+    const CONFIDENCE_KR = { high: '높음', medium: '보통', low: '낮음' };
 
     let analyticsData = null;
-    let currentLabel = "all";
-    let charts = { monthly: null, trend: null, deadline: null };
+    let currentLabel = "interest";
+    let charts = {};
 
-    // 차트 공통 옵션
     const COMMON_OPT = {
       responsive: true, maintainAspectRatio: false,
       plugins: { legend: { display: false } },
@@ -237,7 +284,7 @@
     }
 
     function renderTabs() {
-      const order = ['all', 'humanities', 'psychology', 'aging', 'psy_ai'];
+      const order = ['interest', 'humanities', 'psychology', 'aging', 'psy_ai'];
       const tabsEl = document.getElementById('labelTabs');
       tabsEl.innerHTML = '';
       for (const key of order) {
@@ -256,7 +303,6 @@
       const data = analyticsData.labels[currentLabel];
       const total = data.seasonality?.total || 0;
 
-      // 빈 데이터 처리
       const emptyEl = document.getElementById('emptyMsg');
       const gridEl  = document.getElementById('chartGrid');
       const sumEl   = document.getElementById('summaryRow');
@@ -275,6 +321,7 @@
       renderMonthly(data);
       renderTrend(data);
       renderDeadline(data);
+      renderTop(data);
       renderRecurring(data);
     }
 
@@ -284,22 +331,28 @@
       const d = data.deadline;
       const r = data.recurring;
       const sumEl = document.getElementById('summaryRow');
+      const slopeStr = t.regression_slope != null ?
+        (t.regression_slope > 0 ? '+' : '') + t.regression_slope + '건/년' : '-';
+      const slopeDir = t.regression_slope == null ? '-' :
+        t.regression_slope > 0.5 ? '증가 추세' :
+        t.regression_slope < -0.5 ? '감소 추세' : '보합';
+
       sumEl.innerHTML = `
-        <div class="stat-pill"><span class="stat-label">전체 공고</span>
+        <div class="stat-pill"><span class="stat-label">대상 공고</span>
           <span class="stat-value">${s.total}건</span>
           <span class="stat-sub">월평균 ${s.avg_per_month}건</span></div>
-        <div class="stat-pill"><span class="stat-label">정점 월</span>
-          <span class="stat-value">${KR_MONTH[s.peak_month-1]}</span>
-          <span class="stat-sub">${s.peak_count}건</span></div>
+        <div class="stat-pill"><span class="stat-label">정점 월 (±1)</span>
+          <span class="stat-value">${KR_MONTH[s.peak_month-1]} · ${s.peak_count}건</span>
+          <span class="stat-sub">정점월±1 ${s.peak_window_pct}%</span></div>
         <div class="stat-pill"><span class="stat-label">반복 사업</span>
           <span class="stat-value">${r.length}개</span>
           <span class="stat-sub">2회 이상 공고</span></div>
-        <div class="stat-pill"><span class="stat-label">마감 기간 (중앙값)</span>
+        <div class="stat-pill"><span class="stat-label">마감 기간 중앙값</span>
           <span class="stat-value">${d.median != null ? d.median + '일' : '-'}</span>
-          <span class="stat-sub">평균 ${d.mean != null ? d.mean + '일' : '-'}</span></div>
-        <div class="stat-pill"><span class="stat-label">연 평균 변화</span>
-          <span class="stat-value">${t.avg_yearly_change != null ? (t.avg_yearly_change > 0 ? '+' : '') + t.avg_yearly_change + '건' : '-'}</span>
-          <span class="stat-sub">${t.avg_yearly_change == null ? '-' : (t.avg_yearly_change > 0 ? '증가' : t.avg_yearly_change < 0 ? '감소' : '보합')}</span></div>
+          <span class="stat-sub">${d.under_7_pct != null ? '7일 이내 ' + d.under_7_pct + '%' : '-'}</span></div>
+        <div class="stat-pill"><span class="stat-label">5년 추세</span>
+          <span class="stat-value">${slopeStr}</span>
+          <span class="stat-sub">${slopeDir}</span></div>
       `;
     }
 
@@ -309,8 +362,17 @@
 
     function renderMonthly(data) {
       const s = data.seasonality;
-      document.getElementById('seasonalitySub').textContent =
-        `총 ${s.total}건 · 정점 ${KR_MONTH[s.peak_month-1]} / 저점 ${KR_MONTH[s.low_month-1]}`;
+      const sub = document.getElementById('seasonalitySub');
+      sub.textContent =
+        `총 ${s.total}건 · 정점 ${KR_MONTH[s.peak_month-1]} / 저점 ${KR_MONTH[s.low_month-1]}` +
+        (s.chi_square != null ? ` · χ²=${s.chi_square}` : '');
+
+      const badge = document.getElementById('strengthBadge');
+      if (s.seasonality_strength) {
+        badge.className = 'strength-badge ' + s.seasonality_strength;
+        badge.textContent = STRENGTH_KR[s.seasonality_strength];
+      } else { badge.className = ''; badge.textContent = ''; }
+
       destroyChart('monthly');
       const ctx = document.getElementById('monthlyChart').getContext('2d');
       charts.monthly = new Chart(ctx, {
@@ -328,10 +390,15 @@
         },
         options: COMMON_OPT
       });
+
+      // 인사이트: 정점월 ±1 누적 + 신청 준비 시점 권고
+      const peak = s.peak_month;
+      const prepMonth = ((peak - 2 + 11) % 12) + 1;   // 정점 2개월 전
       document.getElementById('seasonalityInsight').innerHTML =
-        `<strong>${KR_MONTH[s.peak_month-1]}</strong>에 공고가 가장 많이 나옵니다 (${s.peak_count}건). ` +
-        `<strong>${KR_MONTH[s.low_month-1]}</strong>은 가장 적습니다 (${s.low_count}건). ` +
-        `→ ${KR_MONTH[s.peak_month-1]} 전월부터 신청 준비를 시작하세요.`;
+        `<strong>${KR_MONTH[peak-1]}</strong>이 정점(${s.peak_count}건). ` +
+        `정점월 ±1개월(${KR_MONTH[(peak-2+12)%12]}~${KR_MONTH[peak%12]})에 ` +
+        `<strong>${s.peak_window_pct}%</strong>가 집중 → ` +
+        `<strong>${KR_MONTH[prepMonth-1]}경 신청 준비 시작 권장</strong>.`;
     }
 
     function renderTrend(data) {
@@ -353,18 +420,21 @@
         },
         options: COMMON_OPT
       });
-      const direction = t.avg_yearly_change == null ? '데이터 부족' :
-                        t.avg_yearly_change > 0  ? `<strong>증가 추세</strong> (연 +${t.avg_yearly_change}건)` :
-                        t.avg_yearly_change < 0  ? `<strong>감소 추세</strong> (연 ${t.avg_yearly_change}건)` :
-                                                    '<strong>보합</strong>';
-      document.getElementById('trendInsight').innerHTML =
-        `${t.years[0]}~${t.years[t.years.length - (t.current_year_incomplete ? 2 : 1)]}년 기준 ${direction}.`;
+      const slope = t.regression_slope;
+      let direction = '데이터 부족';
+      if (slope != null) {
+        if (slope > 0.5)      direction = `<strong>증가 추세</strong> (회귀 기울기 +${slope})`;
+        else if (slope < -0.5) direction = `<strong>감소 추세</strong> (회귀 기울기 ${slope})`;
+        else                   direction = `<strong>보합세</strong> (기울기 ${slope})`;
+      }
+      document.getElementById('trendInsight').innerHTML = direction +
+        (t.avg_yearly_change != null ? ` · 연평균 변화 ${t.avg_yearly_change > 0 ? '+' : ''}${t.avg_yearly_change}건` : '');
     }
 
     function renderDeadline(data) {
       const d = data.deadline;
       document.getElementById('deadlineSub').textContent =
-        `총 ${d.total}건 · 평균 ${d.mean}일 · 중앙값 ${d.median}일`;
+        `총 ${d.total}건 · 평균 ${d.mean}일 · 중앙값 ${d.median}일 · IQR ${d.q1}~${d.q3}일`;
       destroyChart('deadline');
       const labels = d.bins.map((_, i) => {
         const start = i * d.bin_size_days;
@@ -383,42 +453,78 @@
         },
         options: {
           ...COMMON_OPT,
-          scales: {
-            ...COMMON_OPT.scales,
-            x: { ...COMMON_OPT.scales.x, ticks: { autoSkip: true, maxRotation: 0 } }
-          }
+          scales: { ...COMMON_OPT.scales,
+            x: { ...COMMON_OPT.scales.x, ticks: { autoSkip: true, maxRotation: 0 } } }
         }
       });
-      let warning = '';
-      if (d.median != null && d.median <= 10) {
-        warning = ` <strong>⚠️ 절반의 공고가 ${d.median}일 안에 마감</strong> — 사전 준비 필수.`;
+
+      const insight = document.getElementById('deadlineInsight');
+      const isUrgent = d.under_7_pct >= 40;
+      insight.className = 'insight' + (isUrgent ? ' warning' : '');
+      insight.innerHTML =
+        `7일 이내 마감 <strong>${d.under_7_pct}%</strong> · 14일 이내 <strong>${d.under_14_pct}%</strong>. ` +
+        (isUrgent
+          ? `⚠️ 절반 가까이가 1주일 안에 마감 — <strong>관심 사업은 사전 준비 필수</strong>.`
+          : `대부분 2주 이상의 준비 시간이 있습니다.`);
+    }
+
+    function renderTop(data) {
+      const list = document.getElementById('topList');
+      list.innerHTML = '';
+      const tops = data.top_types || [];
+      if (!tops.length) {
+        list.innerHTML = '<div style="color:#9ca3af; padding:10px;">Top 사업 데이터 없음</div>';
+        return;
       }
-      document.getElementById('deadlineInsight').innerHTML =
-        `평균 ${d.mean}일, 중앙값 ${d.median}일 (표준편차 ${d.stdev}일).` + warning;
+      const maxCount = tops[0].count;
+      tops.forEach((t, i) => {
+        const pct = Math.round(100 * t.count / maxCount);
+        const item = document.createElement('div');
+        item.className = 'top-item';
+        item.innerHTML = `
+          <span class="top-rank">${i + 1}</span>
+          <span class="top-name" title="${escapeHtml(t.name)}">${escapeHtml(t.name)}</span>
+          <span class="top-bar"><span class="top-bar-fill" style="width:${pct}%;"></span></span>
+          <span class="top-count">${t.count}</span>
+        `;
+        list.appendChild(item);
+      });
     }
 
     function renderRecurring(data) {
       const tbody = document.getElementById('recurringBody');
       tbody.innerHTML = '';
       if (data.recurring.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding:20px; color:#9ca3af;">반복 사업 없음 (데이터 부족)</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:20px; color:#9ca3af;">반복 사업 없음 (데이터 부족)</td></tr>';
         return;
       }
       for (const c of data.recurring) {
         const tr = document.createElement('tr');
         const nextIsPast = c.next_predicted && c.next_predicted < TODAY;
         const nextStr = c.next_predicted || '-';
-        const interval = c.avg_interval_days != null ? c.avg_interval_days + '일' : '-';
+        const window = (c.next_window_low && c.next_window_high)
+          ? `${c.next_window_low.slice(5)} ~ ${c.next_window_high.slice(5)}` : '';
+        const interval = c.avg_interval_days != null
+          ? `${c.avg_interval_days}일` +
+            (c.stdev_interval_days != null ? ` (±${c.stdev_interval_days})` : '')
+          : '-';
         const peak = c.peak_month ? KR_MONTH[c.peak_month - 1] : '-';
+        const conf = c.confidence
+          ? `<span class="conf-badge ${c.confidence}">${CONFIDENCE_KR[c.confidence]}</span>`
+          : '-';
         tr.innerHTML = `
           <td><span class="count-badge">${c.occurrences}회</span></td>
-          <td title="${escapeHtml(c.title_sample)}">${escapeHtml(c.title_sample.slice(0, 70))}${c.title_sample.length > 70 ? '...' : ''}</td>
-          <td style="color:#6b7280; font-size:0.78rem;" title="${escapeHtml(c.category || '')}">
-            ${escapeHtml((c.category || '-').slice(0, 30))}${c.category && c.category.length > 30 ? '...' : ''}
+          <td>${conf}</td>
+          <td title="${escapeHtml(c.title_sample)}">${escapeHtml(c.title_sample.slice(0, 60))}${c.title_sample.length > 60 ? '...' : ''}</td>
+          <td style="color:#6b7280; font-size:0.76rem;" title="${escapeHtml(c.category || '')}">
+            ${escapeHtml((c.category || '-').slice(0, 28))}${c.category && c.category.length > 28 ? '...' : ''}
           </td>
           <td>${peak}</td>
           <td>${interval}</td>
-          <td class="next-date${nextIsPast ? ' past' : ''}">${nextStr}</td>
+          <td>
+            <span class="next-date${nextIsPast ? ' past' : ''}">${nextStr}</span>
+            ${window ? `<span class="next-window">±1σ: ${window}</span>` : ''}
+          </td>
         `;
         tbody.appendChild(tr);
       }
