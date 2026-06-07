@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연구과제 패턴 분석 — NRF 5년치</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', '맑은 고딕', sans-serif; background: #f5f7fa; color: #333; }
+
+    .header {
+      background: linear-gradient(135deg, #1e3a5f, #2d6a9f);
+      color: white; padding: 24px 32px;
+    }
+    .header h1 { font-size: 1.5rem; margin-bottom: 4px; }
+    .header .subtitle { font-size: 0.85rem; opacity: 0.85; }
+    .header .updated { font-size: 0.78rem; opacity: 0.6; margin-top: 6px; }
+    .header a {
+      color: #cce4ff; font-size: 0.85rem; text-decoration: none;
+      margin-top: 8px; display: inline-block;
+    }
+    .header a:hover { text-decoration: underline; }
+
+    .container { max-width: 1260px; margin: 0 auto; padding: 24px; }
+
+    /* 라벨 탭 */
+    .label-tabs {
+      background: white; border-radius: 8px 8px 0 0;
+      border-bottom: 2px solid #e5e7eb;
+      display: flex; gap: 0; padding: 0 20px;
+      overflow-x: auto;
+    }
+    .tab-btn {
+      padding: 12px 22px; border: none; background: none;
+      cursor: pointer; font-size: 0.92rem; color: #6b7280;
+      border-bottom: 2px solid transparent; margin-bottom: -2px;
+      white-space: nowrap; display: flex; align-items: center; gap: 8px;
+      transition: color 0.15s, background 0.15s;
+    }
+    .tab-btn:hover { color: #374151; background: #f9fafb; }
+    .tab-btn.active { color: #2d6a9f; border-bottom-color: #2d6a9f; font-weight: 600; }
+    .tab-count {
+      background: #f3f4f6; color: #6b7280;
+      padding: 2px 8px; border-radius: 10px; font-size: 0.73rem; font-weight: 600;
+    }
+    .tab-btn.active .tab-count { background: #dbeafe; color: #1d4ed8; }
+
+    /* 요약 카드 */
+    .summary-row {
+      background: white;
+      padding: 16px 20px; border-radius: 0 0 8px 8px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      display: flex; gap: 24px; flex-wrap: wrap;
+    }
+    .stat-pill {
+      display: flex; flex-direction: column; gap: 2px;
+    }
+    .stat-label { font-size: 0.75rem; color: #6b7280; }
+    .stat-value { font-size: 1.15rem; font-weight: 600; color: #1e3a5f; }
+    .stat-sub   { font-size: 0.74rem; color: #6b7280; }
+    .empty-msg {
+      padding: 40px; text-align: center; color: #9ca3af;
+      background: white; border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    /* 차트 카드 그리드 */
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    @media (max-width: 900px) {
+      .chart-grid { grid-template-columns: 1fr; }
+    }
+    .chart-card {
+      background: white; padding: 18px 20px; border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+    .chart-card.full-width { grid-column: 1 / -1; }
+    .chart-title {
+      font-size: 0.95rem; font-weight: 600; color: #1e3a5f;
+      margin-bottom: 4px; display: flex; align-items: center; gap: 8px;
+    }
+    .chart-subtitle {
+      font-size: 0.78rem; color: #6b7280; margin-bottom: 14px;
+    }
+    .chart-wrap { position: relative; height: 260px; }
+
+    /* 인사이트 박스 */
+    .insight {
+      margin-top: 12px; padding: 10px 12px;
+      background: #f0f7ff; border-left: 3px solid #2d6a9f;
+      border-radius: 4px; font-size: 0.82rem; color: #1e3a5f;
+    }
+    .insight strong { color: #1e40af; }
+
+    /* 반복 사업 테이블 */
+    .recurring-table {
+      width: 100%; border-collapse: collapse; font-size: 0.85rem;
+    }
+    .recurring-table th, .recurring-table td {
+      padding: 8px 10px; text-align: left;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .recurring-table th {
+      font-weight: 600; color: #4b5563; background: #f9fafb;
+      font-size: 0.78rem; text-transform: uppercase;
+    }
+    .recurring-table tr:hover { background: #fafbfc; }
+    .recurring-table .count-badge {
+      display: inline-block; padding: 2px 8px;
+      background: #dbeafe; color: #1d4ed8;
+      border-radius: 10px; font-size: 0.75rem; font-weight: 600;
+    }
+    .recurring-table .next-date {
+      color: #16a34a; font-weight: 500;
+    }
+    .recurring-table .next-date.past { color: #9ca3af; font-weight: normal; }
+    .scrollable {
+      max-height: 480px; overflow-y: auto;
+    }
+
+    .footer {
+      text-align: center; color: #9ca3af;
+      font-size: 0.75rem; padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📊 연구과제 패턴 분석 — NRF 5년치</h1>
+    <div class="subtitle">2021~2026 NRF 사업공고 1,719건 시즌성·반복·트렌드·마감 패턴</div>
+    <div class="updated" id="updatedAt">로딩 중...</div>
+    <a href="./index.html">← 메인 대시보드로</a>
+  </div>
+
+  <div class="container">
+    <!-- 라벨 탭 -->
+    <div class="label-tabs" id="labelTabs">
+      <!-- JS에서 동적 생성 -->
+    </div>
+
+    <!-- 요약 카드 -->
+    <div class="summary-row" id="summaryRow"></div>
+
+    <!-- 데이터 없음 메시지 -->
+    <div class="empty-msg" id="emptyMsg" style="display:none;">
+      이 라벨에 해당하는 데이터가 없습니다.
+    </div>
+
+    <!-- 차트 그리드 -->
+    <div class="chart-grid" id="chartGrid">
+      <div class="chart-card">
+        <div class="chart-title">📅 월별 공고 분포 (시즌성)</div>
+        <div class="chart-subtitle" id="seasonalitySub"></div>
+        <div class="chart-wrap"><canvas id="monthlyChart"></canvas></div>
+        <div class="insight" id="seasonalityInsight"></div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title">📈 연도별 추이 (5년 트렌드)</div>
+        <div class="chart-subtitle" id="trendSub"></div>
+        <div class="chart-wrap"><canvas id="trendChart"></canvas></div>
+        <div class="insight" id="trendInsight"></div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title">⏳ 공고~마감 기간 분포</div>
+        <div class="chart-subtitle" id="deadlineSub"></div>
+        <div class="chart-wrap"><canvas id="deadlineChart"></canvas></div>
+        <div class="insight" id="deadlineInsight"></div>
+      </div>
+
+      <div class="chart-card full-width">
+        <div class="chart-title">🔄 반복 사업 + 다음 공고 예측</div>
+        <div class="chart-subtitle" id="recurringSub">
+          제목 정규화로 반복 사업을 식별하고, 평균 주기로 다음 공고 시점 예측
+        </div>
+        <div class="scrollable">
+          <table class="recurring-table">
+            <thead>
+              <tr>
+                <th style="width:7%;">반복</th>
+                <th style="width:43%;">사업명 (최신)</th>
+                <th style="width:18%;">분야</th>
+                <th style="width:10%;">정점 월</th>
+                <th style="width:10%;">평균 주기</th>
+                <th style="width:12%;">다음 예상</th>
+              </tr>
+            </thead>
+            <tbody id="recurringBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    데이터 출처: 한국연구재단(NRF) 공식 사업공고 |
+    분석: 시즌성 / 반복 사업 / 트렌드 / 마감일 패턴
+  </div>
+
+  <script>
+    const KR_MONTH = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+    const TODAY = new Date().toISOString().slice(0, 10);
+
+    let analyticsData = null;
+    let currentLabel = "all";
+    let charts = { monthly: null, trend: null, deadline: null };
+
+    // 차트 공통 옵션
+    const COMMON_OPT = {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true, grid: { color: '#f0f0f0' } },
+        x: { grid: { display: false } }
+      }
+    };
+
+    async function init() {
+      try {
+        const res = await fetch('data/analytics.json');
+        analyticsData = await res.json();
+        document.getElementById('updatedAt').textContent = '생성: ' + analyticsData.generated_at;
+        renderTabs();
+        render();
+      } catch (e) {
+        document.getElementById('emptyMsg').style.display = 'block';
+        document.getElementById('emptyMsg').textContent =
+          'analytics.json 로드 실패. scripts/analyze_historical.py를 먼저 실행하세요.';
+        document.getElementById('chartGrid').style.display = 'none';
+      }
+    }
+
+    function renderTabs() {
+      const order = ['all', 'humanities', 'psychology', 'aging', 'psy_ai'];
+      const tabsEl = document.getElementById('labelTabs');
+      tabsEl.innerHTML = '';
+      for (const key of order) {
+        const data = analyticsData.labels[key];
+        if (!data) continue;
+        const total = data.seasonality?.total || 0;
+        const btn = document.createElement('button');
+        btn.className = 'tab-btn' + (key === currentLabel ? ' active' : '');
+        btn.innerHTML = data.label_kr + ' <span class="tab-count">' + total + '</span>';
+        btn.onclick = () => { currentLabel = key; renderTabs(); render(); };
+        tabsEl.appendChild(btn);
+      }
+    }
+
+    function render() {
+      const data = analyticsData.labels[currentLabel];
+      const total = data.seasonality?.total || 0;
+
+      // 빈 데이터 처리
+      const emptyEl = document.getElementById('emptyMsg');
+      const gridEl  = document.getElementById('chartGrid');
+      const sumEl   = document.getElementById('summaryRow');
+      if (total === 0) {
+        emptyEl.style.display = 'block';
+        emptyEl.textContent = '이 라벨에 해당하는 데이터가 없습니다.';
+        gridEl.style.display = 'none';
+        sumEl.style.display = 'none';
+        return;
+      }
+      emptyEl.style.display = 'none';
+      gridEl.style.display = '';
+      sumEl.style.display = 'flex';
+
+      renderSummary(data);
+      renderMonthly(data);
+      renderTrend(data);
+      renderDeadline(data);
+      renderRecurring(data);
+    }
+
+    function renderSummary(data) {
+      const s = data.seasonality;
+      const t = data.trend;
+      const d = data.deadline;
+      const r = data.recurring;
+      const sumEl = document.getElementById('summaryRow');
+      sumEl.innerHTML = `
+        <div class="stat-pill"><span class="stat-label">전체 공고</span>
+          <span class="stat-value">${s.total}건</span>
+          <span class="stat-sub">월평균 ${s.avg_per_month}건</span></div>
+        <div class="stat-pill"><span class="stat-label">정점 월</span>
+          <span class="stat-value">${KR_MONTH[s.peak_month-1]}</span>
+          <span class="stat-sub">${s.peak_count}건</span></div>
+        <div class="stat-pill"><span class="stat-label">반복 사업</span>
+          <span class="stat-value">${r.length}개</span>
+          <span class="stat-sub">2회 이상 공고</span></div>
+        <div class="stat-pill"><span class="stat-label">마감 기간 (중앙값)</span>
+          <span class="stat-value">${d.median != null ? d.median + '일' : '-'}</span>
+          <span class="stat-sub">평균 ${d.mean != null ? d.mean + '일' : '-'}</span></div>
+        <div class="stat-pill"><span class="stat-label">연 평균 변화</span>
+          <span class="stat-value">${t.avg_yearly_change != null ? (t.avg_yearly_change > 0 ? '+' : '') + t.avg_yearly_change + '건' : '-'}</span>
+          <span class="stat-sub">${t.avg_yearly_change == null ? '-' : (t.avg_yearly_change > 0 ? '증가' : t.avg_yearly_change < 0 ? '감소' : '보합')}</span></div>
+      `;
+    }
+
+    function destroyChart(name) {
+      if (charts[name]) { charts[name].destroy(); charts[name] = null; }
+    }
+
+    function renderMonthly(data) {
+      const s = data.seasonality;
+      document.getElementById('seasonalitySub').textContent =
+        `총 ${s.total}건 · 정점 ${KR_MONTH[s.peak_month-1]} / 저점 ${KR_MONTH[s.low_month-1]}`;
+      destroyChart('monthly');
+      const ctx = document.getElementById('monthlyChart').getContext('2d');
+      charts.monthly = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: KR_MONTH,
+          datasets: [{
+            data: s.monthly,
+            backgroundColor: s.monthly.map((v, i) =>
+              i === s.peak_month - 1 ? '#2d6a9f' :
+              i === s.low_month  - 1 ? '#fbbf24' : '#93c5fd'
+            ),
+            borderRadius: 4,
+          }]
+        },
+        options: COMMON_OPT
+      });
+      document.getElementById('seasonalityInsight').innerHTML =
+        `<strong>${KR_MONTH[s.peak_month-1]}</strong>에 공고가 가장 많이 나옵니다 (${s.peak_count}건). ` +
+        `<strong>${KR_MONTH[s.low_month-1]}</strong>은 가장 적습니다 (${s.low_count}건). ` +
+        `→ ${KR_MONTH[s.peak_month-1]} 전월부터 신청 준비를 시작하세요.`;
+    }
+
+    function renderTrend(data) {
+      const t = data.trend;
+      document.getElementById('trendSub').textContent =
+        `${t.years[0]}~${t.years[t.years.length-1]}년` +
+        (t.current_year_incomplete ? ` (${t.years[t.years.length-1]}년은 진행 중)` : '');
+      destroyChart('trend');
+      const ctx = document.getElementById('trendChart').getContext('2d');
+      charts.trend = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: t.years.map(String),
+          datasets: [{
+            data: t.yearly_counts,
+            borderColor: '#2d6a9f', backgroundColor: 'rgba(45,106,159,0.1)',
+            fill: true, tension: 0.3, pointRadius: 5, pointBackgroundColor: '#2d6a9f',
+          }]
+        },
+        options: COMMON_OPT
+      });
+      const direction = t.avg_yearly_change == null ? '데이터 부족' :
+                        t.avg_yearly_change > 0  ? `<strong>증가 추세</strong> (연 +${t.avg_yearly_change}건)` :
+                        t.avg_yearly_change < 0  ? `<strong>감소 추세</strong> (연 ${t.avg_yearly_change}건)` :
+                                                    '<strong>보합</strong>';
+      document.getElementById('trendInsight').innerHTML =
+        `${t.years[0]}~${t.years[t.years.length - (t.current_year_incomplete ? 2 : 1)]}년 기준 ${direction}.`;
+    }
+
+    function renderDeadline(data) {
+      const d = data.deadline;
+      document.getElementById('deadlineSub').textContent =
+        `총 ${d.total}건 · 평균 ${d.mean}일 · 중앙값 ${d.median}일`;
+      destroyChart('deadline');
+      const labels = d.bins.map((_, i) => {
+        const start = i * d.bin_size_days;
+        return `${start}-${start + d.bin_size_days - 1}일`;
+      });
+      const ctx = document.getElementById('deadlineChart').getContext('2d');
+      charts.deadline = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            data: d.bins,
+            backgroundColor: '#5b9bd5',
+            borderRadius: 3,
+          }]
+        },
+        options: {
+          ...COMMON_OPT,
+          scales: {
+            ...COMMON_OPT.scales,
+            x: { ...COMMON_OPT.scales.x, ticks: { autoSkip: true, maxRotation: 0 } }
+          }
+        }
+      });
+      let warning = '';
+      if (d.median != null && d.median <= 10) {
+        warning = ` <strong>⚠️ 절반의 공고가 ${d.median}일 안에 마감</strong> — 사전 준비 필수.`;
+      }
+      document.getElementById('deadlineInsight').innerHTML =
+        `평균 ${d.mean}일, 중앙값 ${d.median}일 (표준편차 ${d.stdev}일).` + warning;
+    }
+
+    function renderRecurring(data) {
+      const tbody = document.getElementById('recurringBody');
+      tbody.innerHTML = '';
+      if (data.recurring.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; padding:20px; color:#9ca3af;">반복 사업 없음 (데이터 부족)</td></tr>';
+        return;
+      }
+      for (const c of data.recurring) {
+        const tr = document.createElement('tr');
+        const nextIsPast = c.next_predicted && c.next_predicted < TODAY;
+        const nextStr = c.next_predicted || '-';
+        const interval = c.avg_interval_days != null ? c.avg_interval_days + '일' : '-';
+        const peak = c.peak_month ? KR_MONTH[c.peak_month - 1] : '-';
+        tr.innerHTML = `
+          <td><span class="count-badge">${c.occurrences}회</span></td>
+          <td title="${escapeHtml(c.title_sample)}">${escapeHtml(c.title_sample.slice(0, 70))}${c.title_sample.length > 70 ? '...' : ''}</td>
+          <td style="color:#6b7280; font-size:0.78rem;" title="${escapeHtml(c.category || '')}">
+            ${escapeHtml((c.category || '-').slice(0, 30))}${c.category && c.category.length > 30 ? '...' : ''}
+          </td>
+          <td>${peak}</td>
+          <td>${interval}</td>
+          <td class="next-date${nextIsPast ? ' past' : ''}">${nextStr}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+      }[c]));
+    }
+
+    init();
+  </script>
+</body>
+</html>

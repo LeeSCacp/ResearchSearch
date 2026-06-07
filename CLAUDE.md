@@ -118,6 +118,29 @@
 - [x] 전체 요약 탭: is_excluded 기반 소프트 필터 — 명백히 무관 분야 공고 숨김
 - [x] UX 개선: 접수 중 토글, D-day 색상 배지, 관련도 표시
 
+### Phase 12 — 알림 필터 정확도 개선 (완료, 2026-06-06)
+- [x] `matches()` 동의어 확장 제거 — `search()`만 동의어 확장 유지
+- [x] `config.yaml`: AI 제거(인공지능 유지), 정신건강 추가, 자율주행 exclude 추가
+- [x] 검증 15/15 케이스 정확
+
+### Phase 13 — NRF 과거 5년치 패턴 분석 (진행 중)
+- [x] Phase A: 사이트 조사 — URL 파라미터 `searchRegYearDttm=YYYY`로 연도별 조회 가능 확인
+- [x] Phase B: 수집 파이프라인 구축
+  - DB 모델: `HistoricalAnnouncement`, `CollectionCheckpoint`
+  - 스크립트: `scripts/collect_nrf_historical.py`
+- [x] Phase C: 전체 수집 완료 — **1,719건** (2020-12 ~ 2026-06, 약 2분 소요)
+  - posted_date/deadline 100%, category 95.3% 추출
+- [x] Phase D: 분야 라벨링 (광범위 — 제목+카테고리 기반)
+  - 인문사회 156건 / 심리학 10건 / 노화 7건 / 심리+AI 0건 / 미분류 1553건
+  - `scripts/label_historical.py`
+- [x] Phase E: 4가지 패턴 분석 (시즌성·예측·트렌드·마감일)
+  - `src/analytics/historical.py` + `scripts/analyze_historical.py`
+  - 인사이트: 인문사회 정점 3월(47건), 11월 0건 / 마감 중앙값 7일 / 5년 트렌드 +13건/년
+- [x] Phase F: 시각화 대시보드 (`docs/analytics.html`)
+  - Chart.js 기반 정적 페이지, 5개 라벨 탭 + 4개 차트
+  - 메인 대시보드에서 진입 링크 제공
+  - 출력: `docs/data/analytics.json`
+
 ---
 
 ## 남은 작업 (우선순위 순)

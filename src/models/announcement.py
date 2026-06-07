@@ -85,6 +85,65 @@ class Filter(Base):
     is_active  = Column(Boolean, default=True)
 
 
+class HistoricalAnnouncement(Base):
+    """5년치 과거 공고 — 운영 DB(announcements)와 분리하여 패턴 분석 전용으로 사용.
+
+    수집 출처: NRF (추후 NTIS/IRIS 확장 가능, source 컬럼으로 구분).
+    수집 시점: 일회성 + 점진적 갱신.
+    분석 용도: 시즌성, 다음 공고 예측, 분야별 트렌드, 마감일 패턴.
+    """
+    __tablename__ = "historical_announcements"
+
+    id            = Column(Integer, primary_key=True, autoincrement=True)
+    title         = Column(Text, nullable=False)
+    url           = Column(Text, unique=True, nullable=False)
+    source        = Column(String(20), nullable=False, default="nrf")   # 'nrf'/'ntis'/'iris'
+    category      = Column(Text)                       # NRF 분야 (예: "인문사회분야 > 개인연구군")
+    notice_type   = Column(String(40))                 # 공고 유형 (접수마감/접수중/보고서제출/사업관리/기타 등)
+    posted_date   = Column(Date)                       # 접수 시작일
+    deadline      = Column(Date)                       # 접수 마감일
+    year          = Column(Integer)                    # 검색 기준 연도 (수집 편의용 인덱스)
+
+    # 분야 자동 라벨 (Phase D — 다중 라벨)
+    label_psychology     = Column(Boolean, default=False)  # 심리학 전반
+    label_aging          = Column(Boolean, default=False)  # 노화·치매·고령
+    label_psy_ai         = Column(Boolean, default=False)  # 심리학 + AI 융합
+    label_humanities     = Column(Boolean, default=False)  # 인문사회 전반
+
+    collected_at  = Column(DateTime, default=datetime.now)
+
+    def to_dict(self) -> dict:
+        return {
+            "id": self.id, "title": self.title, "url": self.url,
+            "source": self.source, "category": self.category,
+            "notice_type": self.notice_type,
+            "posted_date": self.posted_date.isoformat() if self.posted_date else None,
+            "deadline":    self.deadline.isoformat()    if self.deadline    else None,
+            "year": self.year,
+            "labels": {
+                "psychology": self.label_psychology,
+                "aging":      self.label_aging,
+                "psy_ai":     self.label_psy_ai,
+                "humanities": self.label_humanities,
+            },
+            "collected_at": self.collected_at.isoformat() if self.collected_at else None,
+        }
+
+
+class CollectionCheckpoint(Base):
+    """수집 진행 상태 체크포인트 (중단 복구용)."""
+    __tablename__ = "collection_checkpoints"
+
+    id            = Column(Integer, primary_key=True, autoincrement=True)
+    source        = Column(String(20), nullable=False)   # 'nrf' 등
+    year          = Column(Integer, nullable=False)
+    page          = Column(Integer, nullable=False)
+    completed     = Column(Boolean, default=False)
+    items_count   = Column(Integer, default=0)
+    last_attempt  = Column(DateTime, default=datetime.now)
+    error_message = Column(Text)
+
+
 def get_engine(db_path: str):
     return create_engine(f"sqlite:///{db_path}", echo=False)
 
