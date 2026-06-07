@@ -169,8 +169,59 @@ def normalize_title(title: str) -> str:
     return t.lower()[:80]
 
 
+# 사업별 권장 사전 준비 기간 (마감 기간 외 추가로 필요한 일수)
+_PREP_BUFFER_DAYS = 30
+
+
+def _circular_month_stats(months: list[int]) -> tuple[int | None, float | None]:
+    """공고 월의 정점 + 변동성(원형 통계 근사).
+
+    NRF 사업이 보통 연 1~2회라 단순 통계로도 충분.
+    반환: (정점 월, 월 단위 표준편차)
+    """
+    if not months:
+        return None, None
+    counter = Counter(months)
+    peak = counter.most_common(1)[0][0]
+    # 정점월 기준 원형 거리 (예: 11월~1월 같이 연말연시 사업 처리)
+    distances = [min(abs(m - peak), 12 - abs(m - peak)) for m in months]
+    if len(distances) >= 2:
+        stdev = round(statistics.stdev(distances), 1)
+    else:
+        stdev = 0.0
+    return peak, stdev
+
+
+def _posting_consistency(month_stdev: float | None) -> str | None:
+    """공고일 일관성 라벨. 월 단위 표준편차 기반."""
+    if month_stdev is None:
+        return None
+    if month_stdev <= 0.5: return "exact"      # 거의 정확히 같은 월
+    if month_stdev <= 1.5: return "stable"     # ±1~2개월 내
+    if month_stdev <= 3.0: return "loose"      # 분기 단위 변동
+    return "scattered"                          # 연중 분산
+
+
+def _urgency(days_until: int | None) -> str | None:
+    """권장 시작일까지 D-day 기반 urgency 라벨."""
+    if days_until is None: return None
+    if days_until < 0:     return "critical"   # 권장 시작일 이미 지남
+    if days_until <= 30:   return "high"       # 30일 이내
+    if days_until <= 90:   return "medium"     # 90일 이내
+    return "low"
+
+
 def cluster_recurring(session, label: str, min_occurrences: int = 2) -> list[dict]:
-    """반복 사업 식별 + 다음 공고 신뢰구간 예측."""
+    """반복 사업 식별 + 지원 준비를 위한 종합 분석.
+
+    Phase 15 강화 포인트:
+      - 사업별 평균 마감 기간 (avg_deadline_days)
+      - 권장 준비 시작일 (prep_start) = 다음 공고 예상 - 평균 마감기간 - 30일 버퍼
+      - 권장 시작일까지 D-day (days_until_prep)
+      - 행동 시급도 라벨 (urgency: critical/high/medium/low)
+      - 공고일 일관성 (posting_consistency: exact/stable/loose/scattered)
+    """
+    today = date.today()
     items = _query(session, label).all()
     groups: dict[tuple, list[HistoricalAnnouncement]] = defaultdict(list)
 
@@ -192,18 +243,27 @@ def cluster_recurring(session, label: str, min_occurrences: int = 2) -> list[dic
         avg_interval = round(statistics.mean(intervals), 0) if intervals else None
         stdev_interval = round(statistics.stdev(intervals), 0) if len(intervals) >= 2 else None
 
-        # 다음 예측 + 신뢰구간 (평균 ± stdev)
+        # 다음 예측 + 신뢰구간
         last_date = dates[-1]
         next_predicted = None
         next_window_low = None
         next_window_high = None
-        if avg_interval:
-            next_predicted = last_date + timedelta(days=int(avg_interval))
+        likely_discontinued = False
+        if avg_interval and avg_interval > 0:
+            ai = int(avg_interval)
+            anchor = last_date + timedelta(days=ai)
+            # 이미 지난 시점이면 미래로 다음 사이클까지 보정
+            while anchor < today - timedelta(days=max(7, ai // 4)):
+                anchor = anchor + timedelta(days=ai)
+            next_predicted = anchor
+            # 마지막 공고가 2 사이클 이상 지났는데도 안 나왔다면 종료 사업 추정
+            if (today - last_date).days > 2 * ai:
+                likely_discontinued = True
             if stdev_interval:
-                next_window_low  = last_date + timedelta(days=int(avg_interval - stdev_interval))
-                next_window_high = last_date + timedelta(days=int(avg_interval + stdev_interval))
+                next_window_low  = next_predicted - timedelta(days=int(stdev_interval))
+                next_window_high = next_predicted + timedelta(days=int(stdev_interval))
 
-        # 예측 신뢰도 — 변동계수 (CV = stdev/mean)
+        # 예측 신뢰도 (CV)
         confidence = None
         if avg_interval and stdev_interval is not None and avg_interval > 0:
             cv = stdev_interval / avg_interval
@@ -211,8 +271,40 @@ def cluster_recurring(session, label: str, min_occurrences: int = 2) -> list[dic
                           "medium" if cv < 0.35 else
                           "low")
 
-        month_counter = Counter(d.month for d in dates)
-        peak_month = month_counter.most_common(1)[0][0] if month_counter else None
+        # 정점 월 + 공고일 일관성 (월 단위 원형 통계)
+        peak_month, month_stdev = _circular_month_stats([d.month for d in dates])
+        consistency = _posting_consistency(month_stdev)
+
+        # 사업별 평균 마감 기간 (해당 클러스터 내 공고들의 posted~deadline)
+        # 180일(6개월) 초과는 "연중 안내" 공고로 보고 outlier 제외
+        deadlines = [(a.posted_date, a.deadline) for a in sorted_grp
+                     if a.posted_date and a.deadline]
+        durations = [(dl - pd).days for pd, dl in deadlines if 0 <= (dl - pd).days <= 180]
+        avg_deadline_days = round(statistics.mean(durations), 0) if durations else None
+
+        # ── 권장 준비 시작일 ───────────────────────────────────────────
+        # 신뢰도 "낮음"인 사업은 예측 자체가 부정확 → 정점월 기반 시즌 모니터링만
+        prep_start = None
+        days_until_prep = None
+        prep_basis = None    # "predicted" | "seasonal"
+        if next_predicted and confidence in ("high", "medium"):
+            buffer = int(avg_deadline_days or 14) + _PREP_BUFFER_DAYS
+            prep_start = next_predicted - timedelta(days=buffer)
+            days_until_prep = (prep_start - today).days
+            prep_basis = "predicted"
+        elif peak_month:
+            # 신뢰도 낮음: 정점월 기준 권장 — 정점월 2개월 전 시작
+            current_year = today.year
+            target_month = peak_month
+            # 올해 정점월이 지났으면 내년 기준
+            tentative = date(current_year, target_month, 15) - timedelta(days=60)
+            if tentative < today:
+                tentative = date(current_year + 1, target_month, 15) - timedelta(days=60)
+            prep_start = tentative
+            days_until_prep = (prep_start - today).days
+            prep_basis = "seasonal"
+
+        urgency = _urgency(days_until_prep)
 
         clusters.append({
             "title_sample":     sorted_grp[-1].title[:80],
@@ -222,16 +314,77 @@ def cluster_recurring(session, label: str, min_occurrences: int = 2) -> list[dic
             "first_posted":     dates[0].isoformat(),
             "last_posted":      dates[-1].isoformat(),
             "peak_month":       peak_month,
+            "posting_consistency": consistency,
+            "posting_month_stdev": month_stdev,
             "avg_interval_days":   avg_interval,
             "stdev_interval_days": stdev_interval,
+            "avg_deadline_days":   avg_deadline_days,    # 사업별 평균 마감 기간
             "next_predicted":   next_predicted.isoformat() if next_predicted else None,
             "next_window_low":  next_window_low.isoformat()  if next_window_low  else None,
             "next_window_high": next_window_high.isoformat() if next_window_high else None,
             "confidence":       confidence,   # "high"/"medium"/"low"
+            # Phase 15 신규 — 지원 준비 중심 필드
+            "prep_start":       prep_start.isoformat() if prep_start else None,
+            "days_until_prep":  days_until_prep,
+            "prep_basis":       prep_basis,    # "predicted"/"seasonal"
+            "urgency":          urgency,       # "critical"/"high"/"medium"/"low"
+            "likely_discontinued": likely_discontinued,
         })
 
     clusters.sort(key=lambda c: c["occurrences"], reverse=True)
     return clusters
+
+
+# ----------------------------------------------------------------------
+# 2-a. "지금 액션 필요" 사업 추출 (Preparation Calendar 핵심)
+# ----------------------------------------------------------------------
+
+def action_required(clusters: list[dict], horizon_days: int = 90) -> list[dict]:
+    """오늘 ±horizon_days 내 권장 시작일이 있는 반복 사업만 필터.
+
+    정렬: critical → high → medium 순, 같은 urgency 안에서는 days_until_prep 오름차순.
+    """
+    URGENCY_ORDER = {"critical": 0, "high": 1, "medium": 2, "low": 3}
+    out = []
+    for c in clusters:
+        if c.get("likely_discontinued"):
+            continue                       # 종료 추정 사업 제외
+        d = c.get("days_until_prep")
+        if d is None:
+            continue
+        if d > horizon_days:
+            continue
+        out.append(c)
+    out.sort(key=lambda c: (URGENCY_ORDER.get(c.get("urgency", "low"), 3),
+                             c.get("days_until_prep", 0)))
+    return out
+
+
+# ----------------------------------------------------------------------
+# 2-b. 12개월 정점 캘린더 — 월별 정점 사업 매핑
+# ----------------------------------------------------------------------
+
+def monthly_calendar(clusters: list[dict], top_per_month: int = 8) -> list[list[dict]]:
+    """각 월에 정점(peak_month)이 위치한 반복 사업 리스트 (occurrences 내림차순).
+
+    반환: 길이 12 리스트, 각 항목은 해당 월 사업 목록.
+    """
+    by_month: dict[int, list[dict]] = {m: [] for m in range(1, 13)}
+    for c in clusters:
+        pm = c.get("peak_month")
+        if pm:
+            by_month[pm].append({
+                "title_sample": c["title_sample"],
+                "occurrences":  c["occurrences"],
+                "consistency":  c.get("posting_consistency"),
+                "category":     c.get("category", ""),
+                "next_predicted": c.get("next_predicted"),
+            })
+    out = []
+    for m in range(1, 13):
+        items = sorted(by_month[m], key=lambda x: x["occurrences"], reverse=True)
+        out.append(items[:top_per_month])
+    return out
 
 
 # ======================================================================
@@ -370,10 +523,13 @@ def top_business_types(session, label: str, k: int = 10) -> list[dict]:
 def run_full_analysis(session) -> dict:
     out = {}
     for label in LABEL_ORDER:
+        clusters = cluster_recurring(session, label, min_occurrences=2)
         out[label] = {
             "label_kr":    LABEL_NAMES_KR[label],
             "seasonality": analyze_seasonality(session, label),
-            "recurring":   cluster_recurring(session, label, min_occurrences=2),
+            "recurring":   clusters,
+            "action_required": action_required(clusters, horizon_days=90),
+            "calendar":    monthly_calendar(clusters, top_per_month=8),
             "trend":       analyze_trend(session, label),
             "deadline":    analyze_deadline_pattern(session, label),
             "top_types":   top_business_types(session, label, k=10),

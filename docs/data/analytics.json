@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07 05:57 UTC",
+  "generated_at": "2026-06-07 07:14 UTC",
   "labels": {
     "interest": {
       "label_kr": "관심 분야 통합",
@@ -51,12 +51,20 @@
           "first_posted": "2021-06-02",
           "last_posted": "2026-03-16",
           "peak_month": 6,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.1,
           "avg_interval_days": 291.0,
           "stdev_interval_days": 131.0,
+          "avg_deadline_days": 12,
           "next_predicted": "2027-01-01",
           "next_window_low": "2026-08-23",
           "next_window_high": "2027-05-12",
-          "confidence": "low"
+          "confidence": "low",
+          "prep_start": "2027-04-16",
+          "days_until_prep": 313,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2026년도 인문도시지원사업 신규과제 공고",
@@ -66,12 +74,20 @@
           "first_posted": "2021-04-20",
           "last_posted": "2026-03-05",
           "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 0.9,
           "avg_interval_days": 445,
           "stdev_interval_days": 192.0,
+          "avg_deadline_days": 8.0,
           "next_predicted": "2027-05-24",
           "next_window_low": "2026-11-13",
           "next_window_high": "2027-12-02",
-          "confidence": "low"
+          "confidence": "low",
+          "prep_start": "2027-02-14",
+          "days_until_prep": 252,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2026년도 인문사회분야 학술연구지원사업 신규과제 공고",
@@ -81,12 +97,20 @@
           "first_posted": "2022-02-14",
           "last_posted": "2026-02-02",
           "peak_month": 2,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.4,
           "avg_interval_days": 362.0,
           "stdev_interval_days": 17.0,
+          "avg_deadline_days": 23.0,
           "next_predicted": "2027-01-30",
           "next_window_low": "2027-01-13",
           "next_window_high": "2027-02-16",
-          "confidence": "high"
+          "confidence": "high",
+          "prep_start": "2026-12-08",
+          "days_until_prep": 184,
+          "prep_basis": "predicted",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2026년도 글로벌인문사회융합연구지원사업 신규과제 신청요강 공고(수정 2026.3.10.)",
@@ -96,12 +120,20 @@
           "first_posted": "2024-05-27",
           "last_posted": "2026-03-16",
           "peak_month": 5,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.3,
           "avg_interval_days": 164.0,
           "stdev_interval_days": 116.0,
+          "avg_deadline_days": 17.0,
           "next_predicted": "2026-08-27",
           "next_window_low": "2026-05-03",
           "next_window_high": "2026-12-21",
-          "confidence": "low"
+          "confidence": "low",
+          "prep_start": "2027-03-16",
+          "days_until_prep": 282,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2024년도 학술지평가 해외DB학술지 평가 공고",
@@ -111,12 +143,20 @@
           "first_posted": "2021-04-16",
           "last_posted": "2024-06-05",
           "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.2,
           "avg_interval_days": 382,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2025-06-22",
-          "next_window_low": "2025-05-23",
-          "next_window_high": "2025-07-22",
-          "confidence": "high"
+          "avg_deadline_days": 16.0,
+          "next_predicted": "2026-07-09",
+          "next_window_low": "2026-06-09",
+          "next_window_high": "2026-08-08",
+          "confidence": "high",
+          "prep_start": "2026-05-24",
+          "days_until_prep": -14,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2024년도 학술지평가 신규평가 공고",
@@ -126,12 +166,20 @@
           "first_posted": "2021-04-16",
           "last_posted": "2024-06-05",
           "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.2,
           "avg_interval_days": 382,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2025-06-22",
-          "next_window_low": "2025-05-23",
-          "next_window_high": "2025-07-22",
-          "confidence": "high"
+          "avg_deadline_days": 16.0,
+          "next_predicted": "2026-07-09",
+          "next_window_low": "2026-06-09",
+          "next_window_high": "2026-08-08",
+          "confidence": "high",
+          "prep_start": "2026-05-24",
+          "days_until_prep": -14,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2025년도 연구윤리활동지원사업 신규과제 공모",
@@ -141,12 +189,20 @@
           "first_posted": "2022-06-17",
           "last_posted": "2025-05-12",
           "peak_month": 5,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.0,
           "avg_interval_days": 353.0,
           "stdev_interval_days": 49.0,
+          "avg_deadline_days": 16.0,
           "next_predicted": "2026-04-30",
           "next_window_low": "2026-03-12",
           "next_window_high": "2026-06-18",
-          "confidence": "high"
+          "confidence": "high",
+          "prep_start": "2026-03-15",
+          "days_until_prep": -84,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모 (중견연구)",
@@ -156,12 +212,20 @@
           "first_posted": "2024-01-19",
           "last_posted": "2024-11-25",
           "peak_month": 1,
+          "posting_consistency": "loose",
+          "posting_month_stdev": 2.5,
           "avg_interval_days": 156.0,
           "stdev_interval_days": 26.0,
-          "next_predicted": "2025-04-30",
-          "next_window_low": "2025-04-04",
-          "next_window_high": "2025-05-26",
-          "confidence": "medium"
+          "avg_deadline_days": 12.0,
+          "next_predicted": "2026-08-11",
+          "next_window_low": "2026-07-16",
+          "next_window_high": "2026-09-06",
+          "confidence": "medium",
+          "prep_start": "2026-06-30",
+          "days_until_prep": 23,
+          "prep_basis": "predicted",
+          "urgency": "high",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2025년 온라인 논문투고 심사시스템(JAMS) 신청요강 공고",
@@ -171,12 +235,20 @@
           "first_posted": "2023-02-20",
           "last_posted": "2025-02-28",
           "peak_month": 2,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 370.0,
           "stdev_interval_days": 5.0,
-          "next_predicted": "2026-03-05",
-          "next_window_low": "2026-02-28",
-          "next_window_high": "2026-03-10",
-          "confidence": "high"
+          "avg_deadline_days": null,
+          "next_predicted": "2027-03-10",
+          "next_window_low": "2027-03-05",
+          "next_window_high": "2027-03-15",
+          "confidence": "high",
+          "prep_start": "2027-01-25",
+          "days_until_prep": 232,
+          "prep_basis": "predicted",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2023년도 인문한국플러스(HK⁺)지원사업(2유형) 신청요강 공고",
@@ -186,12 +258,20 @@
           "first_posted": "2021-07-22",
           "last_posted": "2023-07-20",
           "peak_month": 7,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 364,
           "stdev_interval_days": 0.0,
-          "next_predicted": "2024-07-18",
+          "avg_deadline_days": 6,
+          "next_predicted": "2026-07-16",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": "high"
+          "confidence": "high",
+          "prep_start": "2026-06-10",
+          "days_until_prep": 3,
+          "prep_basis": "predicted",
+          "urgency": "high",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2023년도 학술지 지원사업 신규과제 공모",
@@ -201,12 +281,20 @@
           "first_posted": "2021-07-07",
           "last_posted": "2023-06-23",
           "peak_month": 7,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 0.6,
           "avg_interval_days": 358,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2024-06-15",
-          "next_window_low": "2024-05-16",
-          "next_window_high": "2024-07-15",
-          "confidence": "high"
+          "avg_deadline_days": 7,
+          "next_predicted": "2026-06-01",
+          "next_window_low": "2026-05-02",
+          "next_window_high": "2026-07-01",
+          "confidence": "high",
+          "prep_start": "2026-04-25",
+          "days_until_prep": -43,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": true
         },
         {
           "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
@@ -216,12 +304,20 @@
           "first_posted": "2023-04-11",
           "last_posted": "2025-02-05",
           "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.0,
           "avg_interval_days": 333,
           "stdev_interval_days": 6.0,
-          "next_predicted": "2026-01-04",
-          "next_window_low": "2025-12-29",
-          "next_window_high": "2026-01-10",
-          "confidence": "high"
+          "avg_deadline_days": 59.0,
+          "next_predicted": "2026-12-03",
+          "next_window_low": "2026-11-27",
+          "next_window_high": "2026-12-09",
+          "confidence": "high",
+          "prep_start": "2026-09-05",
+          "days_until_prep": 90,
+          "prep_basis": "predicted",
+          "urgency": "medium",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2023년도 학술대회지원사업 신규과제 공모",
@@ -231,12 +327,20 @@
           "first_posted": "2021-03-11",
           "last_posted": "2023-03-10",
           "peak_month": 3,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 364.0,
           "stdev_interval_days": 11.0,
-          "next_predicted": "2024-03-08",
-          "next_window_low": "2024-02-26",
-          "next_window_high": "2024-03-19",
-          "confidence": "high"
+          "avg_deadline_days": 7,
+          "next_predicted": "2027-03-05",
+          "next_window_low": "2027-02-22",
+          "next_window_high": "2027-03-16",
+          "confidence": "high",
+          "prep_start": "2027-01-27",
+          "days_until_prep": 234,
+          "prep_basis": "predicted",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2021년도 인문사회학술연구교수(성과확산센터) 신청요강 공고(재공고)",
@@ -246,12 +350,20 @@
           "first_posted": "2021-03-12",
           "last_posted": "2021-08-02",
           "peak_month": 3,
+          "posting_consistency": "loose",
+          "posting_month_stdev": 2.5,
           "avg_interval_days": 72.0,
           "stdev_interval_days": 43.0,
-          "next_predicted": "2021-10-13",
-          "next_window_low": "2021-08-31",
-          "next_window_high": "2021-11-25",
-          "confidence": "low"
+          "avg_deadline_days": 5.0,
+          "next_predicted": "2026-07-07",
+          "next_window_low": "2026-05-25",
+          "next_window_high": "2026-08-19",
+          "confidence": "low",
+          "prep_start": "2027-01-14",
+          "days_until_prep": 221,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모(우수신진연구)",
@@ -261,12 +373,20 @@
           "first_posted": "2024-01-19",
           "last_posted": "2024-11-25",
           "peak_month": 1,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.4,
           "avg_interval_days": 311,
           "stdev_interval_days": null,
-          "next_predicted": "2025-10-02",
+          "avg_deadline_days": 12.0,
+          "next_predicted": "2026-08-09",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2026-11-16",
+          "days_until_prep": 162,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2024년도 계속평가, 재인증평가 공고",
@@ -276,12 +396,20 @@
           "first_posted": "2023-06-16",
           "last_posted": "2024-06-05",
           "peak_month": 6,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 355,
           "stdev_interval_days": null,
-          "next_predicted": "2025-05-26",
+          "avg_deadline_days": 14,
+          "next_predicted": "2026-05-16",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-04-16",
+          "days_until_prep": 313,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2021년 인문사회연구소지원사업 신규과제 재공고(성과확산센터)",
@@ -291,12 +419,20 @@
           "first_posted": "2021-07-13",
           "last_posted": "2021-10-12",
           "peak_month": 7,
+          "posting_consistency": "loose",
+          "posting_month_stdev": 2.1,
           "avg_interval_days": 91,
           "stdev_interval_days": null,
-          "next_predicted": "2022-01-11",
+          "avg_deadline_days": 6,
+          "next_predicted": "2026-07-07",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-05-16",
+          "days_until_prep": 343,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2021년도 연구윤리활동지원사업 상반기 2차 신규과제 공고",
@@ -306,12 +442,20 @@
           "first_posted": "2021-05-14",
           "last_posted": "2021-06-01",
           "peak_month": 5,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 0.7,
           "avg_interval_days": 18,
           "stdev_interval_days": null,
-          "next_predicted": "2021-06-19",
+          "avg_deadline_days": 30.0,
+          "next_predicted": "2026-06-11",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-03-16",
+          "days_until_prep": 282,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2022년도 인문사회연구소지원사업 신청요강(세부시행계획) 공고",
@@ -321,12 +465,20 @@
           "first_posted": "2021-06-01",
           "last_posted": "2022-06-14",
           "peak_month": 6,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 378,
           "stdev_interval_days": null,
-          "next_predicted": "2023-06-27",
+          "avg_deadline_days": 6,
+          "next_predicted": "2026-08-04",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-04-16",
+          "days_until_prep": 313,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2022년도 학술지평가 계속평가, 재인증평가 공고",
@@ -336,12 +488,20 @@
           "first_posted": "2021-04-16",
           "last_posted": "2022-04-28",
           "peak_month": 4,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 377,
           "stdev_interval_days": null,
-          "next_predicted": "2023-05-10",
+          "avg_deadline_days": 18.0,
+          "next_predicted": "2026-06-14",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-02-14",
+          "days_until_prep": 252,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2022년 온라인 논문투고 심사시스템(JAMS) 신청 공고",
@@ -351,12 +511,20 @@
           "first_posted": "2021-03-22",
           "last_posted": "2022-03-21",
           "peak_month": 3,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 364,
           "stdev_interval_days": null,
-          "next_predicted": "2023-03-20",
+          "avg_deadline_days": 11,
+          "next_predicted": "2026-03-16",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-01-14",
+          "days_until_prep": 221,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2022년도 인문사회분야 저술출판지원사업 신청요강 공고",
@@ -366,12 +534,20 @@
           "first_posted": "2021-02-26",
           "last_posted": "2022-02-14",
           "peak_month": 2,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 353,
           "stdev_interval_days": null,
-          "next_predicted": "2023-02-02",
+          "avg_deadline_days": 5,
+          "next_predicted": "2026-12-15",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2026-12-17",
+          "days_until_prep": 193,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2025년도 인문학대중화사업(인문사회통합성과확산센터) 신규과제 공모",
@@ -381,12 +557,20 @@
           "first_posted": "2024-06-12",
           "last_posted": "2025-07-15",
           "peak_month": 6,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 0.7,
           "avg_interval_days": 398,
           "stdev_interval_days": null,
+          "avg_deadline_days": 14.0,
           "next_predicted": "2026-08-17",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-04-16",
+          "days_until_prep": 313,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2025년도 인문사회분야 학술대회 지원사업 신규 과제 공모(연락처 수정)",
@@ -396,13 +580,304 @@
           "first_posted": "2024-03-19",
           "last_posted": "2025-02-26",
           "peak_month": 3,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 0.7,
           "avg_interval_days": 344,
           "stdev_interval_days": null,
-          "next_predicted": "2026-02-05",
+          "avg_deadline_days": 10.0,
+          "next_predicted": "2027-01-15",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-01-14",
+          "days_until_prep": 221,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         }
+      ],
+      "action_required": [
+        {
+          "title_sample": "2025년도 연구윤리활동지원사업 신규과제 공모",
+          "title_normalized": "연구윤리활동지원사업",
+          "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 연구윤리활동지원사업",
+          "occurrences": 4,
+          "first_posted": "2022-06-17",
+          "last_posted": "2025-05-12",
+          "peak_month": 5,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.0,
+          "avg_interval_days": 353.0,
+          "stdev_interval_days": 49.0,
+          "avg_deadline_days": 16.0,
+          "next_predicted": "2026-04-30",
+          "next_window_low": "2026-03-12",
+          "next_window_high": "2026-06-18",
+          "confidence": "high",
+          "prep_start": "2026-03-15",
+          "days_until_prep": -84,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
+        },
+        {
+          "title_sample": "2024년도 학술지평가 해외DB학술지 평가 공고",
+          "title_normalized": "학술지평가 해외db학술지 평가",
+          "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+          "occurrences": 4,
+          "first_posted": "2021-04-16",
+          "last_posted": "2024-06-05",
+          "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.2,
+          "avg_interval_days": 382,
+          "stdev_interval_days": 30.0,
+          "avg_deadline_days": 16.0,
+          "next_predicted": "2026-07-09",
+          "next_window_low": "2026-06-09",
+          "next_window_high": "2026-08-08",
+          "confidence": "high",
+          "prep_start": "2026-05-24",
+          "days_until_prep": -14,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
+        },
+        {
+          "title_sample": "2024년도 학술지평가 신규평가 공고",
+          "title_normalized": "학술지평가 신규평가",
+          "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+          "occurrences": 4,
+          "first_posted": "2021-04-16",
+          "last_posted": "2024-06-05",
+          "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.2,
+          "avg_interval_days": 382,
+          "stdev_interval_days": 30.0,
+          "avg_deadline_days": 16.0,
+          "next_predicted": "2026-07-09",
+          "next_window_low": "2026-06-09",
+          "next_window_high": "2026-08-08",
+          "confidence": "high",
+          "prep_start": "2026-05-24",
+          "days_until_prep": -14,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
+        },
+        {
+          "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
+          "title_normalized": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정",
+          "category": "교육·인력양성사업 > 인문사회 융합인재 양성사업",
+          "occurrences": 3,
+          "first_posted": "2023-04-11",
+          "last_posted": "2025-02-05",
+          "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.0,
+          "avg_interval_days": 333,
+          "stdev_interval_days": 6.0,
+          "avg_deadline_days": 59.0,
+          "next_predicted": "2026-12-03",
+          "next_window_low": "2026-11-27",
+          "next_window_high": "2026-12-09",
+          "confidence": "high",
+          "prep_start": "2026-09-05",
+          "days_until_prep": 90,
+          "prep_basis": "predicted",
+          "urgency": "medium",
+          "likely_discontinued": false
+        }
+      ],
+      "calendar": [
+        [
+          {
+            "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모 (중견연구)",
+            "occurrences": 3,
+            "consistency": "loose",
+            "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 핵심연구(유형B) (舊 중",
+            "next_predicted": "2026-08-11"
+          },
+          {
+            "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모(우수신진연구)",
+            "occurrences": 2,
+            "consistency": "stable",
+            "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 신진연구(유형B) (舊 우",
+            "next_predicted": "2026-08-09"
+          }
+        ],
+        [
+          {
+            "title_sample": "2026년도 인문사회분야 학술연구지원사업 신규과제 공고",
+            "occurrences": 5,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업",
+            "next_predicted": "2027-01-30"
+          },
+          {
+            "title_sample": "2025년 온라인 논문투고 심사시스템(JAMS) 신청요강 공고",
+            "occurrences": 3,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 국내학술지인용색인(KCI)",
+            "next_predicted": "2027-03-10"
+          },
+          {
+            "title_sample": "2022년도 인문사회분야 저술출판지원사업 신청요강 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 성과확산군 > 저술지원",
+            "next_predicted": "2026-12-15"
+          }
+        ],
+        [
+          {
+            "title_sample": "2023년도 학술대회지원사업 신규과제 공모",
+            "occurrences": 3,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술대회 지원사업",
+            "next_predicted": "2027-03-05"
+          },
+          {
+            "title_sample": "2021년도 인문사회학술연구교수(성과확산센터) 신청요강 공고(재공고)",
+            "occurrences": 3,
+            "consistency": "loose",
+            "category": "인문사회분야 학술연구지원사업 > 개인연구군 > 인문사회학술연구교수(A유형)",
+            "next_predicted": "2026-07-07"
+          },
+          {
+            "title_sample": "2022년 온라인 논문투고 심사시스템(JAMS) 신청 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 국내학술지인용색인(KCI)",
+            "next_predicted": "2026-03-16"
+          },
+          {
+            "title_sample": "2025년도 인문사회분야 학술대회 지원사업 신규 과제 공모(연락처 수정)",
+            "occurrences": 2,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술대회 지원사업",
+            "next_predicted": "2027-01-15"
+          }
+        ],
+        [
+          {
+            "title_sample": "2026년도 인문도시지원사업 신규과제 공고",
+            "occurrences": 5,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 성과확산군 > 인문학대중화",
+            "next_predicted": "2027-05-24"
+          },
+          {
+            "title_sample": "2024년도 학술지평가 해외DB학술지 평가 공고",
+            "occurrences": 4,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+            "next_predicted": "2026-07-09"
+          },
+          {
+            "title_sample": "2024년도 학술지평가 신규평가 공고",
+            "occurrences": 4,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+            "next_predicted": "2026-07-09"
+          },
+          {
+            "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
+            "occurrences": 3,
+            "consistency": "stable",
+            "category": "교육·인력양성사업 > 인문사회 융합인재 양성사업",
+            "next_predicted": "2026-12-03"
+          },
+          {
+            "title_sample": "2022년도 학술지평가 계속평가, 재인증평가 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+            "next_predicted": "2026-06-14"
+          }
+        ],
+        [
+          {
+            "title_sample": "2026년도 글로벌인문사회융합연구지원사업 신규과제 신청요강 공고(수정 2026.3.10.)",
+            "occurrences": 5,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 글로벌인문사회융합연구지원",
+            "next_predicted": "2026-08-27"
+          },
+          {
+            "title_sample": "2025년도 연구윤리활동지원사업 신규과제 공모",
+            "occurrences": 4,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 연구윤리활동지원사업",
+            "next_predicted": "2026-04-30"
+          },
+          {
+            "title_sample": "2021년도 연구윤리활동지원사업 상반기 2차 신규과제 공고",
+            "occurrences": 2,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 연구윤리활동지원사업",
+            "next_predicted": "2026-06-11"
+          }
+        ],
+        [
+          {
+            "title_sample": "(연구계획서 양식 및 FAQ 수정)2026년 사회과학연구지원사업 신규과제 신청요강 공고",
+            "occurrences": 7,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 한국사회과학연구(SSK)",
+            "next_predicted": "2027-01-01"
+          },
+          {
+            "title_sample": "2024년도 계속평가, 재인증평가 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+            "next_predicted": "2026-05-16"
+          },
+          {
+            "title_sample": "2022년도 인문사회연구소지원사업 신청요강(세부시행계획) 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 인문사회연구소지원",
+            "next_predicted": "2026-08-04"
+          },
+          {
+            "title_sample": "2025년도 인문학대중화사업(인문사회통합성과확산센터) 신규과제 공모",
+            "occurrences": 2,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 성과확산군 > 인문학대중화",
+            "next_predicted": "2026-08-17"
+          }
+        ],
+        [
+          {
+            "title_sample": "2023년도 인문한국플러스(HK⁺)지원사업(2유형) 신청요강 공고",
+            "occurrences": 3,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 인문한국지원(인문한국플러스(HK+)지원 / ",
+            "next_predicted": "2026-07-16"
+          },
+          {
+            "title_sample": "2023년도 학술지 지원사업 신규과제 공모",
+            "occurrences": 3,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지지원사업",
+            "next_predicted": "2026-06-01"
+          },
+          {
+            "title_sample": "2021년 인문사회연구소지원사업 신규과제 재공고(성과확산센터)",
+            "occurrences": 2,
+            "consistency": "loose",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 인문사회연구소지원",
+            "next_predicted": "2026-07-07"
+          }
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
       ],
       "trend": {
         "years": [
@@ -580,12 +1055,20 @@
           "first_posted": "2021-06-02",
           "last_posted": "2026-03-16",
           "peak_month": 6,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.1,
           "avg_interval_days": 291.0,
           "stdev_interval_days": 131.0,
+          "avg_deadline_days": 12,
           "next_predicted": "2027-01-01",
           "next_window_low": "2026-08-23",
           "next_window_high": "2027-05-12",
-          "confidence": "low"
+          "confidence": "low",
+          "prep_start": "2027-04-16",
+          "days_until_prep": 313,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2026년도 인문도시지원사업 신규과제 공고",
@@ -595,12 +1078,20 @@
           "first_posted": "2021-04-20",
           "last_posted": "2026-03-05",
           "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 0.9,
           "avg_interval_days": 445,
           "stdev_interval_days": 192.0,
+          "avg_deadline_days": 8.0,
           "next_predicted": "2027-05-24",
           "next_window_low": "2026-11-13",
           "next_window_high": "2027-12-02",
-          "confidence": "low"
+          "confidence": "low",
+          "prep_start": "2027-02-14",
+          "days_until_prep": 252,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2026년도 인문사회분야 학술연구지원사업 신규과제 공고",
@@ -610,12 +1101,20 @@
           "first_posted": "2022-02-14",
           "last_posted": "2026-02-02",
           "peak_month": 2,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.4,
           "avg_interval_days": 362.0,
           "stdev_interval_days": 17.0,
+          "avg_deadline_days": 23.0,
           "next_predicted": "2027-01-30",
           "next_window_low": "2027-01-13",
           "next_window_high": "2027-02-16",
-          "confidence": "high"
+          "confidence": "high",
+          "prep_start": "2026-12-08",
+          "days_until_prep": 184,
+          "prep_basis": "predicted",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2026년도 글로벌인문사회융합연구지원사업 신규과제 신청요강 공고(수정 2026.3.10.)",
@@ -625,12 +1124,20 @@
           "first_posted": "2024-05-27",
           "last_posted": "2026-03-16",
           "peak_month": 5,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.3,
           "avg_interval_days": 164.0,
           "stdev_interval_days": 116.0,
+          "avg_deadline_days": 17.0,
           "next_predicted": "2026-08-27",
           "next_window_low": "2026-05-03",
           "next_window_high": "2026-12-21",
-          "confidence": "low"
+          "confidence": "low",
+          "prep_start": "2027-03-16",
+          "days_until_prep": 282,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2024년도 학술지평가 해외DB학술지 평가 공고",
@@ -640,12 +1147,20 @@
           "first_posted": "2021-04-16",
           "last_posted": "2024-06-05",
           "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.2,
           "avg_interval_days": 382,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2025-06-22",
-          "next_window_low": "2025-05-23",
-          "next_window_high": "2025-07-22",
-          "confidence": "high"
+          "avg_deadline_days": 16.0,
+          "next_predicted": "2026-07-09",
+          "next_window_low": "2026-06-09",
+          "next_window_high": "2026-08-08",
+          "confidence": "high",
+          "prep_start": "2026-05-24",
+          "days_until_prep": -14,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2024년도 학술지평가 신규평가 공고",
@@ -655,12 +1170,20 @@
           "first_posted": "2021-04-16",
           "last_posted": "2024-06-05",
           "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.2,
           "avg_interval_days": 382,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2025-06-22",
-          "next_window_low": "2025-05-23",
-          "next_window_high": "2025-07-22",
-          "confidence": "high"
+          "avg_deadline_days": 16.0,
+          "next_predicted": "2026-07-09",
+          "next_window_low": "2026-06-09",
+          "next_window_high": "2026-08-08",
+          "confidence": "high",
+          "prep_start": "2026-05-24",
+          "days_until_prep": -14,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2025년도 연구윤리활동지원사업 신규과제 공모",
@@ -670,12 +1193,20 @@
           "first_posted": "2022-06-17",
           "last_posted": "2025-05-12",
           "peak_month": 5,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.0,
           "avg_interval_days": 353.0,
           "stdev_interval_days": 49.0,
+          "avg_deadline_days": 16.0,
           "next_predicted": "2026-04-30",
           "next_window_low": "2026-03-12",
           "next_window_high": "2026-06-18",
-          "confidence": "high"
+          "confidence": "high",
+          "prep_start": "2026-03-15",
+          "days_until_prep": -84,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2025년 온라인 논문투고 심사시스템(JAMS) 신청요강 공고",
@@ -685,12 +1216,20 @@
           "first_posted": "2023-02-20",
           "last_posted": "2025-02-28",
           "peak_month": 2,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 370.0,
           "stdev_interval_days": 5.0,
-          "next_predicted": "2026-03-05",
-          "next_window_low": "2026-02-28",
-          "next_window_high": "2026-03-10",
-          "confidence": "high"
+          "avg_deadline_days": null,
+          "next_predicted": "2027-03-10",
+          "next_window_low": "2027-03-05",
+          "next_window_high": "2027-03-15",
+          "confidence": "high",
+          "prep_start": "2027-01-25",
+          "days_until_prep": 232,
+          "prep_basis": "predicted",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2023년도 인문한국플러스(HK⁺)지원사업(2유형) 신청요강 공고",
@@ -700,12 +1239,20 @@
           "first_posted": "2021-07-22",
           "last_posted": "2023-07-20",
           "peak_month": 7,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 364,
           "stdev_interval_days": 0.0,
-          "next_predicted": "2024-07-18",
+          "avg_deadline_days": 6,
+          "next_predicted": "2026-07-16",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": "high"
+          "confidence": "high",
+          "prep_start": "2026-06-10",
+          "days_until_prep": 3,
+          "prep_basis": "predicted",
+          "urgency": "high",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2023년도 학술지 지원사업 신규과제 공모",
@@ -715,12 +1262,20 @@
           "first_posted": "2021-07-07",
           "last_posted": "2023-06-23",
           "peak_month": 7,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 0.6,
           "avg_interval_days": 358,
           "stdev_interval_days": 30.0,
-          "next_predicted": "2024-06-15",
-          "next_window_low": "2024-05-16",
-          "next_window_high": "2024-07-15",
-          "confidence": "high"
+          "avg_deadline_days": 7,
+          "next_predicted": "2026-06-01",
+          "next_window_low": "2026-05-02",
+          "next_window_high": "2026-07-01",
+          "confidence": "high",
+          "prep_start": "2026-04-25",
+          "days_until_prep": -43,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": true
         },
         {
           "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
@@ -730,12 +1285,20 @@
           "first_posted": "2023-04-11",
           "last_posted": "2025-02-05",
           "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.0,
           "avg_interval_days": 333,
           "stdev_interval_days": 6.0,
-          "next_predicted": "2026-01-04",
-          "next_window_low": "2025-12-29",
-          "next_window_high": "2026-01-10",
-          "confidence": "high"
+          "avg_deadline_days": 59.0,
+          "next_predicted": "2026-12-03",
+          "next_window_low": "2026-11-27",
+          "next_window_high": "2026-12-09",
+          "confidence": "high",
+          "prep_start": "2026-09-05",
+          "days_until_prep": 90,
+          "prep_basis": "predicted",
+          "urgency": "medium",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2023년도 학술대회지원사업 신규과제 공모",
@@ -745,12 +1308,20 @@
           "first_posted": "2021-03-11",
           "last_posted": "2023-03-10",
           "peak_month": 3,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 364.0,
           "stdev_interval_days": 11.0,
-          "next_predicted": "2024-03-08",
-          "next_window_low": "2024-02-26",
-          "next_window_high": "2024-03-19",
-          "confidence": "high"
+          "avg_deadline_days": 7,
+          "next_predicted": "2027-03-05",
+          "next_window_low": "2027-02-22",
+          "next_window_high": "2027-03-16",
+          "confidence": "high",
+          "prep_start": "2027-01-27",
+          "days_until_prep": 234,
+          "prep_basis": "predicted",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2021년도 인문사회학술연구교수(성과확산센터) 신청요강 공고(재공고)",
@@ -760,12 +1331,20 @@
           "first_posted": "2021-03-12",
           "last_posted": "2021-08-02",
           "peak_month": 3,
+          "posting_consistency": "loose",
+          "posting_month_stdev": 2.5,
           "avg_interval_days": 72.0,
           "stdev_interval_days": 43.0,
-          "next_predicted": "2021-10-13",
-          "next_window_low": "2021-08-31",
-          "next_window_high": "2021-11-25",
-          "confidence": "low"
+          "avg_deadline_days": 5.0,
+          "next_predicted": "2026-07-07",
+          "next_window_low": "2026-05-25",
+          "next_window_high": "2026-08-19",
+          "confidence": "low",
+          "prep_start": "2027-01-14",
+          "days_until_prep": 221,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2024년도 계속평가, 재인증평가 공고",
@@ -775,12 +1354,20 @@
           "first_posted": "2023-06-16",
           "last_posted": "2024-06-05",
           "peak_month": 6,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 355,
           "stdev_interval_days": null,
-          "next_predicted": "2025-05-26",
+          "avg_deadline_days": 14,
+          "next_predicted": "2026-05-16",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-04-16",
+          "days_until_prep": 313,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2021년 인문사회연구소지원사업 신규과제 재공고(성과확산센터)",
@@ -790,12 +1377,20 @@
           "first_posted": "2021-07-13",
           "last_posted": "2021-10-12",
           "peak_month": 7,
+          "posting_consistency": "loose",
+          "posting_month_stdev": 2.1,
           "avg_interval_days": 91,
           "stdev_interval_days": null,
-          "next_predicted": "2022-01-11",
+          "avg_deadline_days": 6,
+          "next_predicted": "2026-07-07",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-05-16",
+          "days_until_prep": 343,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2021년도 연구윤리활동지원사업 상반기 2차 신규과제 공고",
@@ -805,12 +1400,20 @@
           "first_posted": "2021-05-14",
           "last_posted": "2021-06-01",
           "peak_month": 5,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 0.7,
           "avg_interval_days": 18,
           "stdev_interval_days": null,
-          "next_predicted": "2021-06-19",
+          "avg_deadline_days": 30.0,
+          "next_predicted": "2026-06-11",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-03-16",
+          "days_until_prep": 282,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2022년도 인문사회연구소지원사업 신청요강(세부시행계획) 공고",
@@ -820,12 +1423,20 @@
           "first_posted": "2021-06-01",
           "last_posted": "2022-06-14",
           "peak_month": 6,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 378,
           "stdev_interval_days": null,
-          "next_predicted": "2023-06-27",
+          "avg_deadline_days": 6,
+          "next_predicted": "2026-08-04",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-04-16",
+          "days_until_prep": 313,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2022년도 학술지평가 계속평가, 재인증평가 공고",
@@ -835,12 +1446,20 @@
           "first_posted": "2021-04-16",
           "last_posted": "2022-04-28",
           "peak_month": 4,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 377,
           "stdev_interval_days": null,
-          "next_predicted": "2023-05-10",
+          "avg_deadline_days": 18.0,
+          "next_predicted": "2026-06-14",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-02-14",
+          "days_until_prep": 252,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2022년 온라인 논문투고 심사시스템(JAMS) 신청 공고",
@@ -850,12 +1469,20 @@
           "first_posted": "2021-03-22",
           "last_posted": "2022-03-21",
           "peak_month": 3,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 364,
           "stdev_interval_days": null,
-          "next_predicted": "2023-03-20",
+          "avg_deadline_days": 11,
+          "next_predicted": "2026-03-16",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-01-14",
+          "days_until_prep": 221,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2022년도 인문사회분야 저술출판지원사업 신청요강 공고",
@@ -865,12 +1492,20 @@
           "first_posted": "2021-02-26",
           "last_posted": "2022-02-14",
           "peak_month": 2,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 353,
           "stdev_interval_days": null,
-          "next_predicted": "2023-02-02",
+          "avg_deadline_days": 5,
+          "next_predicted": "2026-12-15",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2026-12-17",
+          "days_until_prep": 193,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2025년도 인문학대중화사업(인문사회통합성과확산센터) 신규과제 공모",
@@ -880,12 +1515,20 @@
           "first_posted": "2024-06-12",
           "last_posted": "2025-07-15",
           "peak_month": 6,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 0.7,
           "avg_interval_days": 398,
           "stdev_interval_days": null,
+          "avg_deadline_days": 14.0,
           "next_predicted": "2026-08-17",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-04-16",
+          "days_until_prep": 313,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2025년도 인문사회분야 학술대회 지원사업 신규 과제 공모(연락처 수정)",
@@ -895,13 +1538,289 @@
           "first_posted": "2024-03-19",
           "last_posted": "2025-02-26",
           "peak_month": 3,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 0.7,
           "avg_interval_days": 344,
           "stdev_interval_days": null,
-          "next_predicted": "2026-02-05",
+          "avg_deadline_days": 10.0,
+          "next_predicted": "2027-01-15",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-01-14",
+          "days_until_prep": 221,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         }
+      ],
+      "action_required": [
+        {
+          "title_sample": "2025년도 연구윤리활동지원사업 신규과제 공모",
+          "title_normalized": "연구윤리활동지원사업",
+          "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 연구윤리활동지원사업",
+          "occurrences": 4,
+          "first_posted": "2022-06-17",
+          "last_posted": "2025-05-12",
+          "peak_month": 5,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.0,
+          "avg_interval_days": 353.0,
+          "stdev_interval_days": 49.0,
+          "avg_deadline_days": 16.0,
+          "next_predicted": "2026-04-30",
+          "next_window_low": "2026-03-12",
+          "next_window_high": "2026-06-18",
+          "confidence": "high",
+          "prep_start": "2026-03-15",
+          "days_until_prep": -84,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
+        },
+        {
+          "title_sample": "2024년도 학술지평가 해외DB학술지 평가 공고",
+          "title_normalized": "학술지평가 해외db학술지 평가",
+          "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+          "occurrences": 4,
+          "first_posted": "2021-04-16",
+          "last_posted": "2024-06-05",
+          "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.2,
+          "avg_interval_days": 382,
+          "stdev_interval_days": 30.0,
+          "avg_deadline_days": 16.0,
+          "next_predicted": "2026-07-09",
+          "next_window_low": "2026-06-09",
+          "next_window_high": "2026-08-08",
+          "confidence": "high",
+          "prep_start": "2026-05-24",
+          "days_until_prep": -14,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
+        },
+        {
+          "title_sample": "2024년도 학술지평가 신규평가 공고",
+          "title_normalized": "학술지평가 신규평가",
+          "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+          "occurrences": 4,
+          "first_posted": "2021-04-16",
+          "last_posted": "2024-06-05",
+          "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.2,
+          "avg_interval_days": 382,
+          "stdev_interval_days": 30.0,
+          "avg_deadline_days": 16.0,
+          "next_predicted": "2026-07-09",
+          "next_window_low": "2026-06-09",
+          "next_window_high": "2026-08-08",
+          "confidence": "high",
+          "prep_start": "2026-05-24",
+          "days_until_prep": -14,
+          "prep_basis": "predicted",
+          "urgency": "critical",
+          "likely_discontinued": false
+        },
+        {
+          "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
+          "title_normalized": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정",
+          "category": "교육·인력양성사업 > 인문사회 융합인재 양성사업",
+          "occurrences": 3,
+          "first_posted": "2023-04-11",
+          "last_posted": "2025-02-05",
+          "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.0,
+          "avg_interval_days": 333,
+          "stdev_interval_days": 6.0,
+          "avg_deadline_days": 59.0,
+          "next_predicted": "2026-12-03",
+          "next_window_low": "2026-11-27",
+          "next_window_high": "2026-12-09",
+          "confidence": "high",
+          "prep_start": "2026-09-05",
+          "days_until_prep": 90,
+          "prep_basis": "predicted",
+          "urgency": "medium",
+          "likely_discontinued": false
+        }
+      ],
+      "calendar": [
+        [],
+        [
+          {
+            "title_sample": "2026년도 인문사회분야 학술연구지원사업 신규과제 공고",
+            "occurrences": 5,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업",
+            "next_predicted": "2027-01-30"
+          },
+          {
+            "title_sample": "2025년 온라인 논문투고 심사시스템(JAMS) 신청요강 공고",
+            "occurrences": 3,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 국내학술지인용색인(KCI)",
+            "next_predicted": "2027-03-10"
+          },
+          {
+            "title_sample": "2022년도 인문사회분야 저술출판지원사업 신청요강 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 성과확산군 > 저술지원",
+            "next_predicted": "2026-12-15"
+          }
+        ],
+        [
+          {
+            "title_sample": "2023년도 학술대회지원사업 신규과제 공모",
+            "occurrences": 3,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술대회 지원사업",
+            "next_predicted": "2027-03-05"
+          },
+          {
+            "title_sample": "2021년도 인문사회학술연구교수(성과확산센터) 신청요강 공고(재공고)",
+            "occurrences": 3,
+            "consistency": "loose",
+            "category": "인문사회분야 학술연구지원사업 > 개인연구군 > 인문사회학술연구교수(A유형)",
+            "next_predicted": "2026-07-07"
+          },
+          {
+            "title_sample": "2022년 온라인 논문투고 심사시스템(JAMS) 신청 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 국내학술지인용색인(KCI)",
+            "next_predicted": "2026-03-16"
+          },
+          {
+            "title_sample": "2025년도 인문사회분야 학술대회 지원사업 신규 과제 공모(연락처 수정)",
+            "occurrences": 2,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술대회 지원사업",
+            "next_predicted": "2027-01-15"
+          }
+        ],
+        [
+          {
+            "title_sample": "2026년도 인문도시지원사업 신규과제 공고",
+            "occurrences": 5,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 성과확산군 > 인문학대중화",
+            "next_predicted": "2027-05-24"
+          },
+          {
+            "title_sample": "2024년도 학술지평가 해외DB학술지 평가 공고",
+            "occurrences": 4,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+            "next_predicted": "2026-07-09"
+          },
+          {
+            "title_sample": "2024년도 학술지평가 신규평가 공고",
+            "occurrences": 4,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+            "next_predicted": "2026-07-09"
+          },
+          {
+            "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
+            "occurrences": 3,
+            "consistency": "stable",
+            "category": "교육·인력양성사업 > 인문사회 융합인재 양성사업",
+            "next_predicted": "2026-12-03"
+          },
+          {
+            "title_sample": "2022년도 학술지평가 계속평가, 재인증평가 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+            "next_predicted": "2026-06-14"
+          }
+        ],
+        [
+          {
+            "title_sample": "2026년도 글로벌인문사회융합연구지원사업 신규과제 신청요강 공고(수정 2026.3.10.)",
+            "occurrences": 5,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 글로벌인문사회융합연구지원",
+            "next_predicted": "2026-08-27"
+          },
+          {
+            "title_sample": "2025년도 연구윤리활동지원사업 신규과제 공모",
+            "occurrences": 4,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 연구윤리활동지원사업",
+            "next_predicted": "2026-04-30"
+          },
+          {
+            "title_sample": "2021년도 연구윤리활동지원사업 상반기 2차 신규과제 공고",
+            "occurrences": 2,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 연구윤리활동지원사업",
+            "next_predicted": "2026-06-11"
+          }
+        ],
+        [
+          {
+            "title_sample": "(연구계획서 양식 및 FAQ 수정)2026년 사회과학연구지원사업 신규과제 신청요강 공고",
+            "occurrences": 7,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 한국사회과학연구(SSK)",
+            "next_predicted": "2027-01-01"
+          },
+          {
+            "title_sample": "2024년도 계속평가, 재인증평가 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지평가",
+            "next_predicted": "2026-05-16"
+          },
+          {
+            "title_sample": "2022년도 인문사회연구소지원사업 신청요강(세부시행계획) 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 인문사회연구소지원",
+            "next_predicted": "2026-08-04"
+          },
+          {
+            "title_sample": "2025년도 인문학대중화사업(인문사회통합성과확산센터) 신규과제 공모",
+            "occurrences": 2,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 성과확산군 > 인문학대중화",
+            "next_predicted": "2026-08-17"
+          }
+        ],
+        [
+          {
+            "title_sample": "2023년도 인문한국플러스(HK⁺)지원사업(2유형) 신청요강 공고",
+            "occurrences": 3,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 인문한국지원(인문한국플러스(HK+)지원 / ",
+            "next_predicted": "2026-07-16"
+          },
+          {
+            "title_sample": "2023년도 학술지 지원사업 신규과제 공모",
+            "occurrences": 3,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 학술활동 및 연구윤리활동 > 학술지지원사업",
+            "next_predicted": "2026-06-01"
+          },
+          {
+            "title_sample": "2021년 인문사회연구소지원사업 신규과제 재공고(성과확산센터)",
+            "occurrences": 2,
+            "consistency": "loose",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 인문사회연구소지원",
+            "next_predicted": "2026-07-07"
+          }
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
       ],
       "trend": {
         "years": [
@@ -1079,12 +1998,20 @@
           "first_posted": "2021-06-02",
           "last_posted": "2026-03-16",
           "peak_month": 6,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.1,
           "avg_interval_days": 291.0,
           "stdev_interval_days": 131.0,
+          "avg_deadline_days": 12,
           "next_predicted": "2027-01-01",
           "next_window_low": "2026-08-23",
           "next_window_high": "2027-05-12",
-          "confidence": "low"
+          "confidence": "low",
+          "prep_start": "2027-04-16",
+          "days_until_prep": 313,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2026년도 글로벌인문사회융합연구지원사업 신규과제 신청요강 공고(수정 2026.3.10.)",
@@ -1094,12 +2021,20 @@
           "first_posted": "2024-05-27",
           "last_posted": "2026-03-16",
           "peak_month": 5,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.3,
           "avg_interval_days": 164.0,
           "stdev_interval_days": 116.0,
+          "avg_deadline_days": 17.0,
           "next_predicted": "2026-08-27",
           "next_window_low": "2026-05-03",
           "next_window_high": "2026-12-21",
-          "confidence": "low"
+          "confidence": "low",
+          "prep_start": "2027-03-16",
+          "days_until_prep": 282,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모 (중견연구)",
@@ -1109,12 +2044,20 @@
           "first_posted": "2024-01-19",
           "last_posted": "2024-11-25",
           "peak_month": 1,
+          "posting_consistency": "loose",
+          "posting_month_stdev": 2.5,
           "avg_interval_days": 156.0,
           "stdev_interval_days": 26.0,
-          "next_predicted": "2025-04-30",
-          "next_window_low": "2025-04-04",
-          "next_window_high": "2025-05-26",
-          "confidence": "medium"
+          "avg_deadline_days": 12.0,
+          "next_predicted": "2026-08-11",
+          "next_window_low": "2026-07-16",
+          "next_window_high": "2026-09-06",
+          "confidence": "medium",
+          "prep_start": "2026-06-30",
+          "days_until_prep": 23,
+          "prep_basis": "predicted",
+          "urgency": "high",
+          "likely_discontinued": true
         },
         {
           "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
@@ -1124,12 +2067,20 @@
           "first_posted": "2023-04-11",
           "last_posted": "2025-02-05",
           "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.0,
           "avg_interval_days": 333,
           "stdev_interval_days": 6.0,
-          "next_predicted": "2026-01-04",
-          "next_window_low": "2025-12-29",
-          "next_window_high": "2026-01-10",
-          "confidence": "high"
+          "avg_deadline_days": 59.0,
+          "next_predicted": "2026-12-03",
+          "next_window_low": "2026-11-27",
+          "next_window_high": "2026-12-09",
+          "confidence": "high",
+          "prep_start": "2026-09-05",
+          "days_until_prep": 90,
+          "prep_basis": "predicted",
+          "urgency": "medium",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2021년도 인문사회학술연구교수(성과확산센터) 신청요강 공고(재공고)",
@@ -1139,12 +2090,20 @@
           "first_posted": "2021-03-12",
           "last_posted": "2021-08-02",
           "peak_month": 3,
+          "posting_consistency": "loose",
+          "posting_month_stdev": 2.5,
           "avg_interval_days": 72.0,
           "stdev_interval_days": 43.0,
-          "next_predicted": "2021-10-13",
-          "next_window_low": "2021-08-31",
-          "next_window_high": "2021-11-25",
-          "confidence": "low"
+          "avg_deadline_days": 5.0,
+          "next_predicted": "2026-07-07",
+          "next_window_low": "2026-05-25",
+          "next_window_high": "2026-08-19",
+          "confidence": "low",
+          "prep_start": "2027-01-14",
+          "days_until_prep": 221,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모(우수신진연구)",
@@ -1154,12 +2113,20 @@
           "first_posted": "2024-01-19",
           "last_posted": "2024-11-25",
           "peak_month": 1,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.4,
           "avg_interval_days": 311,
           "stdev_interval_days": null,
-          "next_predicted": "2025-10-02",
+          "avg_deadline_days": 12.0,
+          "next_predicted": "2026-08-09",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2026-11-16",
+          "days_until_prep": 162,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": false
         },
         {
           "title_sample": "2021년 인문사회연구소지원사업 신규과제 재공고(성과확산센터)",
@@ -1169,12 +2136,20 @@
           "first_posted": "2021-07-13",
           "last_posted": "2021-10-12",
           "peak_month": 7,
+          "posting_consistency": "loose",
+          "posting_month_stdev": 2.1,
           "avg_interval_days": 91,
           "stdev_interval_days": null,
-          "next_predicted": "2022-01-11",
+          "avg_deadline_days": 6,
+          "next_predicted": "2026-07-07",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-05-16",
+          "days_until_prep": 343,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         },
         {
           "title_sample": "2022년도 인문사회연구소지원사업 신청요강(세부시행계획) 공고",
@@ -1184,13 +2159,122 @@
           "first_posted": "2021-06-01",
           "last_posted": "2022-06-14",
           "peak_month": 6,
+          "posting_consistency": "exact",
+          "posting_month_stdev": 0.0,
           "avg_interval_days": 378,
           "stdev_interval_days": null,
-          "next_predicted": "2023-06-27",
+          "avg_deadline_days": 6,
+          "next_predicted": "2026-08-04",
           "next_window_low": null,
           "next_window_high": null,
-          "confidence": null
+          "confidence": null,
+          "prep_start": "2027-04-16",
+          "days_until_prep": 313,
+          "prep_basis": "seasonal",
+          "urgency": "low",
+          "likely_discontinued": true
         }
+      ],
+      "action_required": [
+        {
+          "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
+          "title_normalized": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정",
+          "category": "교육·인력양성사업 > 인문사회 융합인재 양성사업",
+          "occurrences": 3,
+          "first_posted": "2023-04-11",
+          "last_posted": "2025-02-05",
+          "peak_month": 4,
+          "posting_consistency": "stable",
+          "posting_month_stdev": 1.0,
+          "avg_interval_days": 333,
+          "stdev_interval_days": 6.0,
+          "avg_deadline_days": 59.0,
+          "next_predicted": "2026-12-03",
+          "next_window_low": "2026-11-27",
+          "next_window_high": "2026-12-09",
+          "confidence": "high",
+          "prep_start": "2026-09-05",
+          "days_until_prep": 90,
+          "prep_basis": "predicted",
+          "urgency": "medium",
+          "likely_discontinued": false
+        }
+      ],
+      "calendar": [
+        [
+          {
+            "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모 (중견연구)",
+            "occurrences": 3,
+            "consistency": "loose",
+            "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 핵심연구(유형B) (舊 중",
+            "next_predicted": "2026-08-11"
+          },
+          {
+            "title_sample": "2025년도 과학기술정보통신부 기초연구사업 1차 신규과제 공모(우수신진연구)",
+            "occurrences": 2,
+            "consistency": "stable",
+            "category": "과학기술분야 기초연구사업 > 개인연구사업(과학기술정보통신부) > 신진연구(유형B) (舊 우",
+            "next_predicted": "2026-08-09"
+          }
+        ],
+        [],
+        [
+          {
+            "title_sample": "2021년도 인문사회학술연구교수(성과확산센터) 신청요강 공고(재공고)",
+            "occurrences": 3,
+            "consistency": "loose",
+            "category": "인문사회분야 학술연구지원사업 > 개인연구군 > 인문사회학술연구교수(A유형)",
+            "next_predicted": "2026-07-07"
+          }
+        ],
+        [
+          {
+            "title_sample": "｢인문사회 융합인재양성사업｣ 컨소시엄 선정 공고",
+            "occurrences": 3,
+            "consistency": "stable",
+            "category": "교육·인력양성사업 > 인문사회 융합인재 양성사업",
+            "next_predicted": "2026-12-03"
+          }
+        ],
+        [
+          {
+            "title_sample": "2026년도 글로벌인문사회융합연구지원사업 신규과제 신청요강 공고(수정 2026.3.10.)",
+            "occurrences": 5,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 글로벌인문사회융합연구지원",
+            "next_predicted": "2026-08-27"
+          }
+        ],
+        [
+          {
+            "title_sample": "(연구계획서 양식 및 FAQ 수정)2026년 사회과학연구지원사업 신규과제 신청요강 공고",
+            "occurrences": 7,
+            "consistency": "stable",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 한국사회과학연구(SSK)",
+            "next_predicted": "2027-01-01"
+          },
+          {
+            "title_sample": "2022년도 인문사회연구소지원사업 신청요강(세부시행계획) 공고",
+            "occurrences": 2,
+            "consistency": "exact",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 인문사회연구소지원",
+            "next_predicted": "2026-08-04"
+          }
+        ],
+        [
+          {
+            "title_sample": "2021년 인문사회연구소지원사업 신규과제 재공고(성과확산센터)",
+            "occurrences": 2,
+            "consistency": "loose",
+            "category": "인문사회분야 학술연구지원사업 > 집단연구군 > 인문사회연구소지원",
+            "next_predicted": "2026-07-07"
+          }
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
       ],
       "trend": {
         "years": [
@@ -1327,6 +2411,21 @@
         "peak_window_pct": 42.9
       },
       "recurring": [],
+      "action_required": [],
+      "calendar": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
       "trend": {
         "years": [
           2021,
@@ -1431,6 +2530,21 @@
         "peak_window_pct": 100.0
       },
       "recurring": [],
+      "action_required": [],
+      "calendar": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
       "trend": {
         "years": [
           2021,

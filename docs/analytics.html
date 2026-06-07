@@ -139,6 +139,83 @@
     }
     .scrollable { max-height: 480px; overflow-y: auto; }
 
+    /* Phase 15 — 액션 필요 카드 (페이지 최상단) */
+    .action-card {
+      background: white; padding: 18px 20px; border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      margin-bottom: 18px;
+    }
+    .action-list {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .action-item {
+      display: grid;
+      grid-template-columns: 75px 1fr auto;
+      gap: 12px; align-items: center;
+      padding: 12px 14px; border-radius: 6px;
+      border-left: 4px solid;
+    }
+    .action-item.critical { background: #fef2f2; border-left-color: #dc2626; }
+    .action-item.high     { background: #fff7ed; border-left-color: #ea580c; }
+    .action-item.medium   { background: #fefce8; border-left-color: #ca8a04; }
+    .action-dday {
+      font-size: 1.05rem; font-weight: 700; text-align: center;
+    }
+    .action-item.critical .action-dday { color: #dc2626; }
+    .action-item.high     .action-dday { color: #ea580c; }
+    .action-item.medium   .action-dday { color: #ca8a04; }
+    .action-main {
+      display: flex; flex-direction: column; gap: 2px; min-width: 0;
+    }
+    .action-title {
+      font-size: 0.92rem; font-weight: 600; color: #1f2937;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .action-meta {
+      font-size: 0.76rem; color: #6b7280;
+    }
+    .action-meta .sep { margin: 0 6px; color: #d1d5db; }
+    .action-dates {
+      font-size: 0.78rem; color: #4b5563; text-align: right;
+      white-space: nowrap;
+    }
+    .action-dates .label { color: #9ca3af; font-size: 0.72rem; }
+    .action-empty {
+      padding: 24px; text-align: center;
+      color: #9ca3af; font-size: 0.86rem;
+    }
+
+    /* Phase 15 — 12개월 정점 캘린더 */
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    @media (max-width: 700px) { .calendar-grid { grid-template-columns: repeat(2, 1fr); } }
+    .cal-month {
+      background: #f9fafb; padding: 10px; border-radius: 6px;
+      min-height: 120px;
+    }
+    .cal-month-label {
+      font-size: 0.75rem; font-weight: 600; color: #4b5563;
+      margin-bottom: 6px; display: flex; justify-content: space-between;
+    }
+    .cal-month-label .cnt {
+      background: #dbeafe; color: #1d4ed8;
+      padding: 1px 6px; border-radius: 8px; font-size: 0.7rem;
+    }
+    .cal-item {
+      font-size: 0.74rem; color: #1f2937; padding: 3px 6px;
+      margin-bottom: 3px; background: white; border-radius: 4px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      cursor: default;
+    }
+    .cal-item.exact  { border-left: 3px solid #16a34a; }
+    .cal-item.stable { border-left: 3px solid #2d6a9f; }
+    .cal-item.loose  { border-left: 3px solid #ca8a04; }
+    .cal-item.scattered { border-left: 3px solid #9ca3af; }
+    .cal-empty { font-size: 0.7rem; color: #d1d5db; font-style: italic; }
+
     /* Top 사업 리스트 */
     .top-list {
       display: flex; flex-direction: column; gap: 6px;
@@ -189,6 +266,18 @@
       이 라벨에 해당하는 데이터가 없습니다.
     </div>
 
+    <!-- Phase 15: 액션 필요 카드 (최상단) -->
+    <div class="action-card" id="actionCard">
+      <div class="chart-title">
+        🎯 지금 준비해야 할 사업
+        <span style="font-size:0.78rem; color:#9ca3af; font-weight:normal;">
+          (다음 공고 예상 — 평균 마감기간 — 30일 사전 준비)
+        </span>
+      </div>
+      <div class="chart-subtitle">권장 준비 시작일이 오늘 ±90일 이내인 사업만 표시. 종료 추정 사업은 제외.</div>
+      <div class="action-list" id="actionList"></div>
+    </div>
+
     <div class="chart-grid" id="chartGrid">
       <div class="chart-card">
         <div class="chart-title">
@@ -221,21 +310,35 @@
       </div>
 
       <div class="chart-card full-width">
-        <div class="chart-title">🔄 반복 사업 + 다음 공고 예측</div>
+        <div class="chart-title">🗓 12개월 정점 캘린더</div>
         <div class="chart-subtitle">
-          제목 정규화로 반복 사업 식별 → 평균 주기·표준편차로 다음 공고 시점과 신뢰구간(±1σ) 산출
+          각 월에 정점이 위치한 반복 사업 (왼쪽 색 막대 = 공고일 일관성:
+          <span style="color:#16a34a;">●</span> 정확 ·
+          <span style="color:#2d6a9f;">●</span> 안정 ·
+          <span style="color:#ca8a04;">●</span> 변동 ·
+          <span style="color:#9ca3af;">●</span> 분산)
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </div>
+
+      <div class="chart-card full-width">
+        <div class="chart-title">🔄 반복 사업 전체 (다음 공고 예측 + 준비 시작일)</div>
+        <div class="chart-subtitle">
+          반복 사업 전체 목록. 종료 추정(2 사이클 이상 미공고) 사업은 회색 처리.
+          준비 시작일은 다음 공고 예상 − 평균 마감기간 − 30일 버퍼.
         </div>
         <div class="scrollable">
           <table class="recurring-table">
             <thead>
               <tr>
-                <th style="width:6%;">반복</th>
-                <th style="width:8%;">신뢰도</th>
-                <th style="width:36%;">사업명 (최신)</th>
-                <th style="width:18%;">분야</th>
-                <th style="width:7%;">정점</th>
-                <th style="width:9%;">평균 주기</th>
-                <th style="width:16%;">다음 예상 (±1σ)</th>
+                <th style="width:5%;">반복</th>
+                <th style="width:7%;">신뢰도</th>
+                <th style="width:30%;">사업명 (최신)</th>
+                <th style="width:6%;">정점</th>
+                <th style="width:8%;">주기</th>
+                <th style="width:7%;">평균 마감</th>
+                <th style="width:15%;">다음 예상 (±1σ)</th>
+                <th style="width:12%;">준비 시작</th>
               </tr>
             </thead>
             <tbody id="recurringBody"></tbody>
@@ -317,12 +420,86 @@
       gridEl.style.display = '';
       sumEl.style.display = 'flex';
 
+      renderActionRequired(data);
       renderSummary(data);
       renderMonthly(data);
       renderTrend(data);
       renderDeadline(data);
       renderTop(data);
+      renderCalendar(data);
       renderRecurring(data);
+    }
+
+    // === Phase 15: 액션 필요 카드 ===
+    function renderActionRequired(data) {
+      const list = document.getElementById('actionList');
+      const items = data.action_required || [];
+      list.innerHTML = '';
+      if (items.length === 0) {
+        list.innerHTML = '<div class="action-empty">현재 90일 이내 준비 시작이 필요한 사업이 없습니다.</div>';
+        return;
+      }
+      for (const c of items) {
+        const d = c.days_until_prep;
+        const ddayStr = d < 0 ? `D+${-d}` : (d === 0 ? 'D-Day' : `D-${d}`);
+        const ddayLabel = d < 0 ? `${-d}일 지남` :
+                          d === 0 ? '오늘' : `${d}일 후`;
+        const dl = c.avg_deadline_days != null ? `평균 마감 ${c.avg_deadline_days}일` : '마감 불명';
+        const consistencyKR = {
+          exact: '매년 정확', stable: '매년 안정', loose: '분기 변동', scattered: '연중 분산'
+        }[c.posting_consistency] || '-';
+        const confKR = {high: '신뢰 높음', medium: '신뢰 보통', low: '신뢰 낮음'}[c.confidence] || '-';
+
+        const div = document.createElement('div');
+        div.className = 'action-item ' + (c.urgency || 'medium');
+        div.innerHTML = `
+          <div>
+            <div class="action-dday">${ddayStr}</div>
+            <div style="font-size:0.68rem; color:#9ca3af; text-align:center; margin-top:2px;">${ddayLabel}</div>
+          </div>
+          <div class="action-main">
+            <div class="action-title" title="${escapeHtml(c.title_sample)}">${escapeHtml(c.title_sample)}</div>
+            <div class="action-meta">
+              ${c.occurrences}회 반복<span class="sep">·</span>
+              ${dl}<span class="sep">·</span>
+              ${consistencyKR}<span class="sep">·</span>
+              ${confKR}
+            </div>
+          </div>
+          <div class="action-dates">
+            <div><span class="label">준비 시작</span> ${c.prep_start || '-'}</div>
+            <div><span class="label">예상 공고</span> ${c.next_predicted || '-'}</div>
+          </div>
+        `;
+        list.appendChild(div);
+      }
+    }
+
+    // === Phase 15: 12개월 정점 캘린더 ===
+    function renderCalendar(data) {
+      const grid = document.getElementById('calendarGrid');
+      grid.innerHTML = '';
+      const cal = data.calendar || [];
+      for (let m = 0; m < 12; m++) {
+        const box = document.createElement('div');
+        box.className = 'cal-month';
+        const items = cal[m] || [];
+        const totalOcc = items.reduce((s, it) => s + it.occurrences, 0);
+        let html = `<div class="cal-month-label">${KR_MONTH[m]}` +
+                   (totalOcc > 0 ? `<span class="cnt">${items.length}개</span>` : '') + `</div>`;
+        if (items.length === 0) {
+          html += '<div class="cal-empty">—</div>';
+        } else {
+          for (const it of items) {
+            const cls = it.consistency || 'scattered';
+            html += `<div class="cal-item ${cls}" title="${escapeHtml(it.title_sample)} (${it.occurrences}회)">
+              ${escapeHtml(it.title_sample.slice(0, 26))}
+            </div>`;
+          }
+        }
+        box.innerHTML = html;
+        grid.appendChild(box);
+      }
     }
 
     function renderSummary(data) {
@@ -495,12 +672,14 @@
       const tbody = document.getElementById('recurringBody');
       tbody.innerHTML = '';
       if (data.recurring.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:20px; color:#9ca3af;">반복 사업 없음 (데이터 부족)</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:20px; color:#9ca3af;">반복 사업 없음 (데이터 부족)</td></tr>';
         return;
       }
       for (const c of data.recurring) {
         const tr = document.createElement('tr');
-        const nextIsPast = c.next_predicted && c.next_predicted < TODAY;
+        const discontinued = c.likely_discontinued;
+        if (discontinued) tr.style.color = '#9ca3af';
+
         const nextStr = c.next_predicted || '-';
         const window = (c.next_window_low && c.next_window_high)
           ? `${c.next_window_low.slice(5)} ~ ${c.next_window_high.slice(5)}` : '';
@@ -512,19 +691,31 @@
         const conf = c.confidence
           ? `<span class="conf-badge ${c.confidence}">${CONFIDENCE_KR[c.confidence]}</span>`
           : '-';
+        const avgDl = c.avg_deadline_days != null ? `${c.avg_deadline_days}일` : '-';
+
+        // 준비 시작일 D-day 형식
+        let prepCell = '-';
+        if (c.prep_start && c.days_until_prep != null) {
+          const d = c.days_until_prep;
+          const dday = d < 0 ? `D+${-d}` : (d === 0 ? 'D-Day' : `D-${d}`);
+          const color = d < 0 ? '#dc2626' : (d <= 30 ? '#ea580c' : (d <= 90 ? '#ca8a04' : '#6b7280'));
+          prepCell = `<div style="color:${color}; font-weight:600; font-size:0.82rem;">${dday}</div>
+                      <div style="color:#9ca3af; font-size:0.7rem;">${c.prep_start}</div>`;
+        }
+
+        const titlePrefix = discontinued ? '⊘ ' : '';
         tr.innerHTML = `
           <td><span class="count-badge">${c.occurrences}회</span></td>
           <td>${conf}</td>
-          <td title="${escapeHtml(c.title_sample)}">${escapeHtml(c.title_sample.slice(0, 60))}${c.title_sample.length > 60 ? '...' : ''}</td>
-          <td style="color:#6b7280; font-size:0.76rem;" title="${escapeHtml(c.category || '')}">
-            ${escapeHtml((c.category || '-').slice(0, 28))}${c.category && c.category.length > 28 ? '...' : ''}
-          </td>
+          <td title="${escapeHtml(c.title_sample)}">${titlePrefix}${escapeHtml(c.title_sample.slice(0, 50))}${c.title_sample.length > 50 ? '...' : ''}</td>
           <td>${peak}</td>
           <td>${interval}</td>
+          <td>${avgDl}</td>
           <td>
-            <span class="next-date${nextIsPast ? ' past' : ''}">${nextStr}</span>
+            <span class="next-date${discontinued ? ' past' : ''}">${nextStr}</span>
             ${window ? `<span class="next-window">±1σ: ${window}</span>` : ''}
           </td>
+          <td>${prepCell}</td>
         `;
         tbody.appendChild(tr);
       }
