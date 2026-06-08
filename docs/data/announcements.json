@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-07 19:03 UTC",
-  "total": 39,
+  "updated_at": "2026-06-08 02:32 UTC",
+  "total": 42,
   "items": [
     {
       "id": 9,
@@ -604,6 +604,60 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 49,
+      "title": "2026년도 로봇산업기술개발사업 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021938",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-05-27",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-08T02:29:47.306601",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 48,
+      "title": "2026년도 K-로봇피지컬AI생태계조성사업 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021939",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-05-27",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-08T02:29:47.306085",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 47,
+      "title": "2026년도 제2차 바이오헬스분야 연구개발사업 신규지원 대상과제 통합 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021975",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-05-28",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-08T02:29:47.304686",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 46,
