@@ -160,6 +160,19 @@
   - 반복 사업 테이블에 신뢰구간 표시
   - 마감 임박(7일 이내 ≥40%) 자동 경고
 
+### Phase 16 — NTIS/IRIS 점진 누적 (완료, 2026-06-07)
+- 사이트 조사 결과: NTIS/IRIS는 "실시간 R&D 매칭" 정책으로 5년치 직접 수집 불가
+  - NTIS: 6가지 연도 파라미터 시도 모두 무시됨, 마감 공고 보존 안 함
+  - IRIS: 5가지 파라미터 시도 모두 무시됨, 현재 진행 중 46건만
+- 대안: 운영 DB → historical 자동 동기화로 매일 점진적 누적
+- [x] `scripts/sync_to_historical.py` — 운영 DB의 NTIS/IRIS/NRF 공고를 historical로 이관
+  - URL 기준 중복 회피, 자동 라벨링 적용
+  - 즉시 실행: NTIS 10건 + IRIS 10건 이관 완료 (총 1,739건)
+- [x] `scripts/run_scrape.py` 업데이트 — GitHub Actions 매 사이클마다:
+  1. 스크래핑 → 2. 리마인더 → 3. JSON export → **4. historical 동기화 → 5. 분석 재실행**
+- 결과: 관심 분야 통합 모집단 188 → 190건 (IRIS에서 심리 1 + 노화 1 추가)
+- 장기 전망: NTIS 연 ~500건 / IRIS 연 ~200건 누적 예상 → 1년 후 본격 분석 가능
+
 ### Phase 15 — 반복 사업 재설계: Preparation Calendar (완료, 2026-06-07)
 - [x] 분석 모듈 강화 (`src/analytics/historical.py`):
   - 사업별 평균 마감 기간 추출 (180일 outlier 제거)

@@ -39,6 +39,45 @@ async def main() -> None:
     count = export_announcements("docs/data/announcements.json")
     export_synonyms("docs/data/synonyms.json")
 
+    # Phase 16: 운영 DB → historical 동기화 + 분석 갱신
+    # NTIS/IRIS는 5년치 직접 수집 불가 → 매 사이클마다 점진 누적
+    logger.info("=== historical 동기화 시작 ===")
+    try:
+        from scripts.sync_to_historical import sync
+        stats = sync()
+        logger.info(
+            f"동기화 완료 — 신규 {stats['added']}건 "
+            f"(출처별: {stats.get('by_source', {})})"
+        )
+
+        if stats["added"] > 0:
+            logger.info("=== 신규 데이터 반영 — 분석 재실행 ===")
+            from src.analytics.historical import run_full_analysis
+            from src.config import load_config
+            from src.models.announcement import init_db, get_session
+            import json
+            from datetime import datetime, timezone
+            from pathlib import Path as _Path
+
+            config = load_config()
+            engine = init_db(config["database"]["path"])
+            session = get_session(engine)
+            try:
+                results = run_full_analysis(session)
+                out = {
+                    "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+                    "labels": results,
+                }
+                p = _Path("docs/data/analytics.json")
+                p.parent.mkdir(parents=True, exist_ok=True)
+                with open(p, "w", encoding="utf-8") as f:
+                    json.dump(out, f, ensure_ascii=False, indent=2, default=str)
+                logger.info("analytics.json 갱신 완료")
+            finally:
+                session.close()
+    except Exception as e:
+        logger.error(f"historical 동기화/분석 실패 (무시 진행): {e}")
+
     logger.info(f"=== 완료: {count}건 내보냄 ===")
 
 
