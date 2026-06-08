@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-08 02:32 UTC",
-  "total": 42,
+  "updated_at": "2026-06-08 10:15 UTC",
+  "total": 44,
   "items": [
     {
       "id": 9,
@@ -604,6 +604,42 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 51,
+      "title": "2026년도 「양자정보과학 인적기반조성사업」리더급 연구역량강화(전략기술형) 신규과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022234",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-06-08",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-08T10:13:55.192290",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 50,
+      "title": "팬데믹 대비 mRNA 백신 개발 지원사업 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022254",
+      "source": "iris",
+      "category": "질병관리청 > 한국보건산업진흥원",
+      "deadline": null,
+      "posted_date": "2026-06-08",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-08T10:13:55.191224",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 49,
