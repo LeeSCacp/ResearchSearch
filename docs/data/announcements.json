@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-09 01:57 UTC",
-  "total": 49,
+  "updated_at": "2026-06-09 08:58 UTC",
+  "total": 50,
   "items": [
     {
       "id": 9,
@@ -730,6 +730,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-08T15:23:45.525139",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 61,
+      "title": "ICT R&D 서면검토용 과제접수",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022354",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 정보통신기획평가원",
+      "deadline": null,
+      "posted_date": "2026-06-09",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-09T08:57:09.256564",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
