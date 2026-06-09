@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-08 19:59 UTC",
-  "total": 46,
+  "updated_at": "2026-06-09 01:57 UTC",
+  "total": 49,
   "items": [
     {
       "id": 9,
@@ -436,6 +436,11 @@
           "event": "d7",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d3",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -725,6 +730,60 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-08T15:23:45.525139",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 60,
+      "title": "2026년도 제2차 범부처 첨단 의료기기 연구개발사업 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021934",
+      "source": "iris",
+      "category": "다부처 > 재단법인 범부처의료기기연구개발사업단",
+      "deadline": null,
+      "posted_date": "2026-05-29",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-09T01:54:31.133761",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 59,
+      "title": "2026년도 SMR혁신제조국산화기술개발사업 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022055",
+      "source": "iris",
+      "category": "기후에너지환경부 > 한국에너지기술평가원",
+      "deadline": null,
+      "posted_date": "2026-05-29",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-09T01:54:31.133256",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 58,
+      "title": "2026년 [차세대 재생에너지 표준화 및 인증고도화 혁신지원] 사업 대상과제 공고(2차)",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022274",
+      "source": "iris",
+      "category": "기후에너지환경부 > 한국에너지공단",
+      "deadline": null,
+      "posted_date": "2026-06-09",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-09T01:54:31.130639",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
