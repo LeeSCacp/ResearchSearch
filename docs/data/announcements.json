@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-11 02:33 UTC",
-  "total": 56,
+  "updated_at": "2026-06-11 10:03 UTC",
+  "total": 58,
   "items": [
     {
       "id": 9,
@@ -763,6 +763,42 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-08T15:23:45.525139",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 70,
+      "title": "2026년도 소부장분야 전문인력양성(데이터융합형 신소재 고급인력양성) 신규과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022377",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-06-11",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-11T10:01:50.519661",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 69,
+      "title": "2026년 극한부품 시험입증지원사업(Track형 실증지원) 신규과제 재공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022416",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-06-11",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-11T10:01:50.517984",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
