@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-11 20:08 UTC",
-  "total": 58,
+  "updated_at": "2026-06-12 02:14 UTC",
+  "total": 60,
   "items": [
     {
       "id": 9,
@@ -493,7 +493,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-29T09:31:39.418257",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": false
     },
@@ -511,7 +517,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.452201",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": true
     },
@@ -766,6 +778,42 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
+    },
+    {
+      "id": 72,
+      "title": "2026년도 (탄소융복합소재부품) 장비국산화 지원사업 신규지원 대상과제 3차 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022394",
+      "source": "iris",
+      "category": "산업통상부 > 한국탄소산업진흥원",
+      "deadline": null,
+      "posted_date": "2026-06-12",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-12T02:12:52.948389",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 71,
+      "title": "2026년도 제2차 조선해양산업기술개발사업 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022434",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-06-12",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-12T02:12:52.947388",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 70,
