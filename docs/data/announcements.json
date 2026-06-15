@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-15 02:32 UTC",
-  "total": 64,
+  "updated_at": "2026-06-15 11:42 UTC",
+  "total": 65,
   "items": [
     {
       "id": 9,
@@ -918,6 +918,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-15T02:31:42.907461",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 80,
+      "title": "2026년도 제3차 조선해양산업기술개발사업(AI완전자율운항선박기술개발) 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022474",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-06-15",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-15T11:41:17.901413",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
