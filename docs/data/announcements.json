@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-14 19:06 UTC",
-  "total": 62,
+  "updated_at": "2026-06-15 02:32 UTC",
+  "total": 64,
   "items": [
     {
       "id": 9,
@@ -590,7 +590,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.451812",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": false,
       "extra_sources": [
@@ -612,7 +618,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.451392",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": true,
       "extra_sources": [
@@ -634,7 +646,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.450984",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": true,
       "extra_sources": [
@@ -656,7 +674,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.450521",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": true,
       "extra_sources": [
@@ -678,7 +702,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.450046",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": false
     },
@@ -696,7 +726,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-24T18:58:32.449134",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": false,
       "extra_sources": [
@@ -867,6 +903,42 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
+    },
+    {
+      "id": 78,
+      "title": "2026년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 공고_(2026)2026년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270630&flag=rndList",
+      "source": "ntis",
+      "category": "해양수산부",
+      "deadline": "2026-07-14",
+      "posted_date": "2026-06-15",
+      "description": "해양수산부 공고 제2026-1082호 2026 년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 공고 「 국가연구개발혁신법 」 제 9 조 ( 예고 및 공모 등 ) 및 「 해양수산과학기술육성법 」 제 8 조 ( 연구개발사업 등의 추진 ) 에 따라 , “ AI 완전자율운항선박 기술개발 ” 사업의 신규과제를 추진하고자 다음과 같이 공고하오니 많은 관심과 참여 바랍니다 . 2026 년 6 월 15 일 < 주무부처 > 해양수산부장관 < 전문기관 > 해양수산과학기술진흥원",
+      "budget": "0억원",
+      "attachments": "2026년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 공_18924089689229801.pdf\n[공고문 붙임 4] 연구개발계획서 서식 및 별첨서류(1~9) 등 관련서_18924089729850537.zip\n[공고문 붙임 5] 참고자료(규정 및 iris 매뉴얼 등_18924089759041664.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-15T02:31:42.907461",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 79,
+      "title": "2026년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021994",
+      "source": "iris",
+      "category": "해양수산부 > 해양수산과학기술진흥원",
+      "deadline": null,
+      "posted_date": "2026-06-15",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-15T02:31:42.910941",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 73,
