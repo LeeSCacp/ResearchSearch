@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15 20:43 UTC",
+  "updated_at": "2026-06-16 02:35 UTC",
   "total": 65,
   "items": [
     {
@@ -519,6 +519,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -547,6 +552,11 @@
           "event": "d7",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d3",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -569,6 +579,11 @@
       "notification_logs": [
         {
           "event": "d7",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d3",
           "channel": "email",
           "success": true
         }
