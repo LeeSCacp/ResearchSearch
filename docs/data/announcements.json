@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-16 02:35 UTC",
-  "total": 65,
+  "updated_at": "2026-06-16 10:52 UTC",
+  "total": 66,
   "items": [
     {
       "id": 9,
@@ -933,6 +933,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-15T02:31:42.907461",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 81,
+      "title": "2026년 하반기 원자력정책연구사업 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022574",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-06-16",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-16T10:51:03.739840",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
