@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-17 19:56 UTC",
+  "updated_at": "2026-06-18 02:30 UTC",
   "total": 67,
   "items": [
     {
@@ -557,6 +557,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -584,6 +589,11 @@
         },
         {
           "event": "d3",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d1",
           "channel": "email",
           "success": true
         }
