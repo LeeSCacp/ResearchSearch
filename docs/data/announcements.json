@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-18 10:02 UTC",
+  "updated_at": "2026-06-18 14:41 UTC",
   "total": 67,
   "items": [
     {
@@ -794,6 +794,45 @@
       ]
     },
     {
+      "id": 83,
+      "title": "2026년도 재난안전 중점기술 로드맵 연계형 기술개발사업  신규과제 공모",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1268334&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-06-26",
+      "posted_date": "2026-05-29",
+      "description": "행 정안전부 공고 제2026-685호 2026년도 재난안전 중점기술 로드맵 연계형 기술개발사업 신규과제 공모 2026년도 ‘재난안전 중점기술 로드맵 연계형 기술개발사업’ 신규과제를 다음과 같이  공모하오니, 연구개발사업에 참여를 희망하는 기관은 신청하여 주시기 바랍니다. 2026년  5월 27일 행정안전부장관 1 . 사업개요 ㅇ 사업목적 : 재난안전 R&D 분야의 백화점식 R&D를 지양하고 고유 임무형 현장적용 기술에 선택·집중하기 위한 중점기술 로드맵 연계형 기술개발 추진 ㅇ 신규 연구개발과제 : 품목지정 3개 과제 - Neuro-Symbolic AI 등 인공지능 기술을 활용한 안전취약계층 맞춤형 안전의복 개발 - AI 기반 기후위기 대응 스마트방재도시를 위한 재난 리스크 및 회복력 평가 기술 개발 - 드론 영상 및 지식그래프 기반 소하천·세천 위험정보 자동 탐지 및 안전관리 의사결정 지원 시스템 ㅇ 지원형태 : 정부 출연 ※ 연구개발비 편성시 유의사항의 기관부담연구개발비 부담기준 참조(첨부 2) ㅇ 사업추진체계 ① 사업 시행기관 : 행정안전부 (재난안전연구개발과) ② 과제 관리기관 (총괄기관) : 한국산업기술기획평가원 ③ 과제 수행기관 : 주관연구개발기관 * , 공동연구개발기관 ** 으로 편성된 컨소시엄 구성이 가능하며, [첨부 1]의 ‘지원기간/예산/추진체계’를 반드시 확인하여 연구개발과제 수행기관을 구성할 것 * 연구개발과제를 주관하여 수행하는 연구개발기관 ** 주관연구개발기관과의 연구개발과제 협약에 따라 연구개발과제를 분담하여 공동으로 수행하는 연구개발기관 - 주관연구개발기관이 기업일 경우는 접수 마감일 현재 법인사업자이어야 함 * 기업의 경우 연구개발조직(한국산업기술진흥협회에서 발급하는 기업부설연구소 또는 연구개발전담부서 인정서를 보유)을 접수 마감일 현재 보유하고 있어야 함 - 컨소시엄 구성 시 참여하는 기관·단체의 과다 편성으로 추진체계의 비효율성을 최대한 지양하고, 반드시 필요한 기관·단체로만 구성하여 연구추진의 효율성을 도모할 것 * 위탁기관",
+      "budget": "25억원",
+      "attachments": "0. 2026년 재난안전 중점기술 로드맵 연계형 기술개발사업 공모 공고_17357475167309575.hwp\n1. 공고용 신규기획과제 RF_17357475315109441.hwp\n2. 신청서류 _17357475196283093.zip\n3. 관련 법령 _17357475329677282.zip\n4. 온라인 과제접수 매뉴얼(IRIS_17357475222790487.pdf\n5. 추가설명자료_행안부 R&D 성과지표별 IRIS 입력항목 안내_17357475358133173.hwp",
+      "detail_fetched": true,
+      "is_notified": true,
+      "created_at": "2026-06-18T14:41:25.690276",
+      "notification_logs": [
+        {
+          "event": "new",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "new",
+          "channel": "telegram",
+          "success": false,
+          "error": "발송 실패"
+        },
+        {
+          "event": "new",
+          "channel": "calendar",
+          "success": true
+        }
+      ],
+      "is_relevant": true,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
       "id": 74,
       "title": "2026년도 AI최고급신진연구자지원 사업 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1265965&flag=rndList",
@@ -1435,24 +1474,6 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-05-29T09:31:39.421659",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
-      "id": 37,
-      "title": "2026년도 재난안전 중점기술 로드맵 연계형 기술개발사업 신규과제 공모",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021895",
-      "source": "iris",
-      "category": "행정안전부 > 한국산업기술기획평가원",
-      "deadline": null,
-      "posted_date": "2026-05-27",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-05-29T01:59:56.411256",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
