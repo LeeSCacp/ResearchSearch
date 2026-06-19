@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-18 20:09 UTC",
-  "total": 71,
+  "updated_at": "2026-06-19 02:48 UTC",
+  "total": 73,
   "items": [
     {
       "id": 9,
@@ -660,6 +660,11 @@
           "event": "d7",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d3",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -686,6 +691,11 @@
       "notification_logs": [
         {
           "event": "d7",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d3",
           "channel": "email",
           "success": true
         }
@@ -716,6 +726,11 @@
           "event": "d7",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d3",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -742,6 +757,11 @@
       "notification_logs": [
         {
           "event": "d7",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d3",
           "channel": "email",
           "success": true
         }
@@ -772,6 +792,11 @@
           "event": "d7",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d3",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -794,6 +819,11 @@
       "notification_logs": [
         {
           "event": "d7",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d3",
           "channel": "email",
           "success": true
         }
@@ -862,6 +892,11 @@
         {
           "event": "new",
           "channel": "calendar",
+          "success": true
+        },
+        {
+          "event": "d7",
+          "channel": "email",
           "success": true
         }
       ],
@@ -1089,6 +1124,42 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 91,
+      "title": "2026년도 1차 에너지인력양성사업 및 에너지차세대리더 육성사업 신규지원대상 연구개발과제 재공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022235",
+      "source": "iris",
+      "category": "기후에너지환경부 > 한국에너지기술평가원",
+      "deadline": null,
+      "posted_date": "2026-06-15",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-19T02:46:32.229070",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 90,
+      "title": "2026년도 1차 에너지인력양성사업 및 에너지차세대리더 육성사업 신규지원대상 연구개발과제 재공고(에너지기술공유대학)",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022294",
+      "source": "iris",
+      "category": "기후에너지환경부 > 한국에너지기술평가원",
+      "deadline": null,
+      "posted_date": "2026-06-15",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-19T02:46:32.228046",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 89,
