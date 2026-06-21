@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20 19:07 UTC",
+  "updated_at": "2026-06-21 02:29 UTC",
   "total": 73,
   "items": [
     {
@@ -665,6 +665,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -696,6 +701,11 @@
         },
         {
           "event": "d3",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d1",
           "channel": "email",
           "success": true
         }
@@ -731,6 +741,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -762,6 +777,11 @@
         },
         {
           "event": "d3",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d1",
           "channel": "email",
           "success": true
         }
@@ -797,6 +817,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -826,6 +851,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -852,6 +882,11 @@
       "notification_logs": [
         {
           "event": "d7",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d3",
           "channel": "email",
           "success": true
         }
