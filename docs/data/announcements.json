@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21 19:11 UTC",
+  "updated_at": "2026-06-22 02:33 UTC",
   "total": 73,
   "items": [
     {
@@ -956,7 +956,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-12T14:29:30.940083",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": false
     },
@@ -974,7 +980,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-08T15:23:45.529262",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": false,
       "extra_sources": [
