@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-22 02:33 UTC",
-  "total": 73,
+  "updated_at": "2026-06-22 11:31 UTC",
+  "total": 74,
   "items": [
     {
       "id": 9,
@@ -1171,6 +1171,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 92,
+      "title": "2026년 한-캐나다 이공계 대학원생 연수프로그램 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022515",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-06-22",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-22T11:30:40.313091",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 91,
