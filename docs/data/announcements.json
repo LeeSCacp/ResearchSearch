@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24 19:24 UTC",
+  "updated_at": "2026-06-25 02:02 UTC",
   "total": 74,
   "items": [
     {
@@ -943,6 +943,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": true,
@@ -1070,7 +1075,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-08T15:23:45.527766",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": false,
       "extra_sources": [
