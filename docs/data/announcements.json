@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25 19:44 UTC",
+  "updated_at": "2026-06-26 02:04 UTC",
   "total": 74,
   "items": [
     {
@@ -976,6 +976,11 @@
           "event": "d7",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d3",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -998,6 +1003,11 @@
       "notification_logs": [
         {
           "event": "d7",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d3",
           "channel": "email",
           "success": true
         }
