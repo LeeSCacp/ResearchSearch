@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-28 19:00 UTC",
-  "total": 74,
+  "updated_at": "2026-06-29 02:10 UTC",
+  "total": 77,
   "items": [
     {
       "id": 9,
@@ -642,6 +642,72 @@
       "is_excluded": true
     },
     {
+      "id": 102,
+      "title": "2026년도 미래국방가교기술개발사업 신규과제 재공모",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270268&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-06-22",
+      "posted_date": "2026-06-11",
+      "description": "과학기술정보통신부 공고 제2026 – 680 호 방위사업청 공고 제2026 – 73 호 2026년도 미래국방가교기술개발사업 신규과제 재공모 과학기술정보통신부와 방위사업청에서 추진하는 「미래국방가교기술개발사업」의 신규과제를 아래와 같이 재공모하오니 관심 있는 연구자들의 많은 참여 바랍니다. 2026년 6월 11 일 < 주무부처 > 부총리 겸 과학기술정보통신부 장관 배 경 훈 < 주무부처 > 방위사업청 청장 이 용 철 < 전문기관 > 한국연구재단 이사장 홍 원 화",
+      "budget": "35.09억원",
+      "attachments": "[공고문] 2026년도 미래국방가교기술개발사업 신규과제 재공고_18358854769402270.hwpx\n붙임1 과제제안요구서(RFP_18358854837439480.pdf\n붙임2 연구개발계획서(양식_18358854817773925.zip\n붙임3 별첨자료(양식_18358854797657611.zip\n붙임4 (참고자료) IRIS 매뉴얼, TRL 기준 _18358854854347256.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T02:09:59.855959",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
+      "id": 100,
+      "title": "2026년 극한부품 시험입증지원사업(Track형 실증지원) 신규과제 재공모",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270282&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-06-22",
+      "posted_date": "2026-06-11",
+      "description": "과학기술정보통신부 공고 제 2026 – 687 호 2026 년도 극한부품 시험입증지원사업 (Track형 실증지원 ) 신규과제 재공모 과학기술정보통신부에서 추진하는 「 2026 년 극한부품 시험입증지원사업(Track형 실증지원) 」 의 신규과제를 아래와 같이 재공모하오니 관심 있는 연구자 들의 많은 참여 바랍니다 . 2026 년 6 월 11 일 < 주무부처 >         부총리 겸 과학기술정보통신부 장관 배 경 훈 < 전문기관 > 한국연구재단 이사장 홍 원 화",
+      "budget": "7.26억원",
+      "attachments": "[공고문] 2026년 극한부품 시험입증지원사업(Track형 실증) 신규과제 재공_18606272353583614.pdf\n붙임1 2026년 극한부품 시험입증지원사업 신규과제 과제제안요구서(RFP_18606272309744275.pdf\n붙임2 연구개발계획서(양식_18606272383013296.zip\n붙임3 별첨자료 양_18606272336258495.hwp\n붙임4 (참고자료) IRIS 매뉴얼, TRL 기준 _18606272402831160.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T02:09:59.854907",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
+      "id": 98,
+      "title": "2026년도 (탄소융복합소재부품) 장비국산화 지원사업  신규지원 대상과제 3차 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270263&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-06-22",
+      "posted_date": "2026-06-12",
+      "description": "2026년도「장비국산화 지원사업」신규지원 대상과제 3차 공고 2026년도 (탄소융복합소재부품관련) 장비국산화 지원사업 신규지원 대상과제를 다음과 같이 재공고하오니 사업에 참여를 희망하는 기업은 관련 규정 및 절차에 따라 신청하여 주시기 바랍니다. 2026년 6월 12일 한국탄소산업진흥원장",
+      "budget": "2.91억원",
+      "attachments": "2.신청서_18352355961213937.zip\n2026년 장비국산화지원사업 신규지원 대상과제 3차 공_18352355936828001.hwp\n3.관련규_18352356245131097.zip\n4.IRIS 접수 매뉴_18352355983085761.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T02:09:59.853702",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
       "id": 26,
       "title": "2026년도 제2차 산업기술RD연구기획사업 신규지원 대상과제 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1267765&flag=rndList",
@@ -1030,6 +1096,30 @@
       ]
     },
     {
+      "id": 97,
+      "title": "2026년도 제2차 조선해양산업기술개발사업 신규지원 대상과제 공고(국제협력)",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270446&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-07-01",
+      "posted_date": "2026-06-12",
+      "description": "산업통상부 공고 제 2026-429 호 2026 년도 제 2 차 조선해양산업기술개발사업 신규지원 대상과제 공고 2026 년도 제 2 차 조선해양산업기술개발사업 신규 지원대상 연구개발과제 를 다음과 같이 공고하오니 수행하고자 하는 자는 신청하여 주시기 바랍니다 . 2026 년 06 월 12 일 산업통상부장관",
+      "budget": "212억원",
+      "attachments": "(공고 2026-429) 2026년도 제2차 조선해양산업기술개발사업 신규지원 대상과제 공고_18664428857744717.hwpx\n붙임 01. 품목개요서(상세 RFP_18664428914435208.hwpx\n붙임 02. 연구개발계획서 등 관련양_18664428772510590.zip\n붙임 03. 평가결과 이의 신청_18664428879976286.zip\n붙임 04. 관련 법령 및 규_18664428935338507.zip\n붙임 05. 온라인 연구개발과제 접수매뉴_18664428991264226.pdf\n붙임 06. R&D 자율성트랙 제도안내_SROM_18664428814375070.hwp\n붙임 07. 사전지원제외 기관 변경 요청_18664428898680914.hwp\n붙임 08. 2026년 국제공동 R&D 신규 접수 유의사_18664429082561990.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T02:09:59.853164",
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
       "id": 62,
       "title": "2026년도 한국형 ARPA-H 프로젝트 신규지원 대상과제 통합공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1269018&flag=rndList",
@@ -1108,6 +1198,11 @@
       "notification_logs": [
         {
           "event": "d7",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d3",
           "channel": "email",
           "success": true
         }
@@ -1218,6 +1313,108 @@
       "is_excluded": false
     },
     {
+      "id": 99,
+      "title": "2026년도 방사선이용 기술개발사업(방사선 기반 소재·장비 기술 혁신화) 신규과제 공모",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270283&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-07-13",
+      "posted_date": "2026-06-25",
+      "description": "과학기술정보통신부 공고 제2026 – 0675호 2026년도 방사선이용 기술개발사업(방사선 기반 소재·장비 기술 혁신화) 신규과제 공모 과학기술정보통신부가 추진하는「방사선이용 기술개발사업(방사선 기반 소재·장비 기술 혁신화)의 신규과제를 아래와 같이 공모하오니 관심 있는 연구자들의 많은 참여 바랍니다. 2026년 6월 11일 <주무부처> 부총리 겸 과학기술정보통신부 장관  배  경  훈 <전문기관> 한국연구재단 이사장  홍  원  화",
+      "budget": "165억원",
+      "attachments": "(공고문) 2026년도 방사선 기반 소재·장비 기술 혁신화 신규과_19750291877125511.hwpx\n붙임1. 과제제안요구서(RFP_19750292010152906.hwp\n붙임2. 연구개발계획서 양_19750291619346003.zip\n붙임3. 별첨자료 양_19750292180153384.hwp\n붙임4. 신규과제 신청 FA_19750291744171469.pdf",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T02:09:59.854346",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 96,
+      "title": "2026년도 제2차 조선해양산업기술개발사업 신규지원 대상과제 공고(일반과제)",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270447&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-07-13",
+      "posted_date": "2026-06-12",
+      "description": "산업통상부 공고 제 2026-429 호 2026 년도 제 2 차 조선해양산업기술개발사업 신규지원 대상과제 공고 2026 년도 제 2 차 조선해양산업기술개발사업 신규 지원대상 연구개발과제 를 다음과 같이 공고하오니 수행하고자 하는 자는 신청하여 주시기 바랍니다 . 2026 년 06 월 12 일 산업통상부장관",
+      "budget": "212억원",
+      "attachments": "(공고 2026-429) 2026년도 제2차 조선해양산업기술개발사업 신규지원 대상과제 공고_18664435819916352.hwpx\n붙임 01. 품목개요서(상세 RFP_18664435872170347.hwpx\n붙임 02. 연구개발계획서 등 관련양_18664435754211018.zip\n붙임 03. 평가결과 이의 신청_18664435838098462.zip\n붙임 04. 관련 법령 및 규_18664435891415770.zip\n붙임 05. 온라인 연구개발과제 접수매뉴_18664435942752975.pdf\n붙임 06. R&D 자율성트랙 제도안내_SROM_18664435782551246.hwp\n붙임 07. 사전지원제외 기관 변경 요청_18664435856140747.hwp\n붙임 08. 2026년 국제공동 R&D 신규 접수 유의사_18664436033581071.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T02:09:59.852630",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 95,
+      "title": "2026년도 제2차 국가표준기술력향상사업 신규지원 대상과제 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270448&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-07-13",
+      "posted_date": "2026-06-19",
+      "description": "산업통상부 국가기술표준원 공고 제 2026-189 호 2026 년도 제 2 차 국가표준기술력향상사업 신규지원 대상과제 공고 2026 년도 제 2 차 국가표준기술력향상사업 신규 지원대상 연구개발과제 를 다음과 같이 공고하오니 수행 하고자 하는 자는 신청하여 주시기 바랍니다 . 2026 년 6 월 12 일 산업통상부 국가기술표준원장",
+      "budget": "7.765억원",
+      "attachments": "2026년도 제2차 국가표준기술력향상사업 신규지원 대상과제 공_18458261828471866.hwp\n2026년도 제2차 국가표준기술력향상사업 신규지원 대상과제 품목요약_18458261850262957.hwp\n붙임 01. 연구개발계획서 등 관련양_18458262113199504.zip\n붙임 02. 평가결과 이의 신청_18458262146314671.zip\n붙임 03. 관련 법령 및 규_18458261868717821.zip\n붙임 04. 온라인 연구개발과제 접수매뉴_18458261931181885.pdf\n붙임 05. R&D 자율성트랙 제도안_18458262073973782.hwp\n붙임 06. 사전지원제외 기관 변경 요청_18458262036287369.hwp\n붙임 07. 2026년 국제공동 R&D 신규 접수 유의사_18458262054525449.hwp",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T02:09:59.852076",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
+      "id": 94,
+      "title": "바이오·의료기술개발 사업 신규과제 제5차 공모",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270450&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-07-13",
+      "posted_date": "2026-06-12",
+      "description": "과학기술정보통신부 공고 제 2026 – 0690 호 2026 년도 바이오 · 의료기술개발 사업 제 5 차 신규과제 공모 과학기술정보통신부가 추진하는 「 바이오 · 의료기술개발 사업 」 의 제 5 차 신규과제를 아래와 같이 공모하오니 관심 있는 연구자들의 많은 참여 바랍니다 . 2026 년 6 월 12 일 < 주무부처 > 부총리 겸 과학기술정보통신부 장관 배 경 훈 < 전문기관 > 한국연구재단 이사장 홍 원 화 내역사업명 RFP 관리번호 RFP 수 선정예정 과제수 당해 연구비 ( 억원 ) 첨단 GW 바이오 ○ [2026- 차세대바이오 -05- 분야공모 -01] 차세대 식물 엑소좀 기술 개발 및 실증 연계 핵심 거점 구축 사업 11 개 내외 20 합계 11 개 내외 20",
+      "budget": "20억원",
+      "attachments": "2026년도 바이오·의료기술개발 사업 제5차 신규과제 공고_18680464878286415.hwpx\n붙임 1. 연구주제안내서(RFP_18680464812132220.pdf\n붙임 2. 양식 및 안_18680464899591027.zip\n붙임 3. 생명자원 기탁 및 생명정보 등록에 관한 안_18680464840395364.hwpx",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T02:09:59.851443",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
+      "id": 101,
+      "title": "2026년도 소부장분야 전문인력양성(데이터융합형 신소재 고급인력양성) 신규과제 공모",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270271&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-07-14",
+      "posted_date": "2026-06-11",
+      "description": "과학기술정보통신부 공고 제2026–0682호 2026 년도 소부장분야 전문인력양성 ( 데이터융합형 신소재 고급인력양성 ) 신규과제 공모 과학기술정보통신부에서 추진하는 소부장분야 전문인력양성사업 ( 데이터융합형 신 소재 고급인력양성 ) 의 2026 년도 신규과제를 아래와 같이 공모하오니 , 관심 있는 연구자들의 많은 참여 바랍니다 . ◾ 사업설명회 개최 : 2026. 6. 24. ( 수 ) 시간 추후 공지 , 온라인 * 개최일정은 추후 변경될 수 있으며 , 연구재단 (www.nrf.re.kr) 홈페이지에 공지 예정 2026 년 6 월 11 일 < 주무부처 > 부총리 겸 과학기술정보통신부 장관 배 경 훈 < 전문기관 > 한국연구재단 이사장 홍 원 화",
+      "budget": "7.5억원",
+      "attachments": "(붙임1) 신규과제 공모 공고_18594556181956613.hwpx\n(붙임2) 공모 안내_18594556165098767.hwpx\n(붙임3) 별첨서_18594556128189588.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T02:09:59.855428",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
       "id": 78,
       "title": "2026년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 공고_(2026)2026년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270630&flag=rndList",
@@ -1234,6 +1431,28 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 93,
+      "title": "2026년도 1차 에너지인력양성사업 및 에너지차세대리더 육성사업 신규지원대상 연구개발과제 재공고(에너지기술공유대학)",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270267&flag=rndList",
+      "source": "ntis",
+      "category": "기후에너지환경부",
+      "deadline": "2026-07-21",
+      "posted_date": "2026-06-19",
+      "description": "공고문",
+      "budget": "10억원",
+      "attachments": "(기후에너지환경부 공고 제2026-76호) 2026년도 1차 에너지인력양성 신규지원대상 연구개발과제 재공_18358147118611933.hwp\n1.프로그램 개요_18358145229825233.pdf\n2.기획보고서(공개용_18358147244591847.pdf\n3. 기획참여전문가 명단_에너지인력양_18358147396395324.pdf\n4. 제출서류 및 참고(수정_18358145362346806.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T02:09:59.850297",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 92,
@@ -1267,42 +1486,6 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-19T02:46:32.229070",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
-      "id": 90,
-      "title": "2026년도 1차 에너지인력양성사업 및 에너지차세대리더 육성사업 신규지원대상 연구개발과제 재공고(에너지기술공유대학)",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022294",
-      "source": "iris",
-      "category": "기후에너지환경부 > 한국에너지기술평가원",
-      "deadline": null,
-      "posted_date": "2026-06-15",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-06-19T02:46:32.228046",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
-      "id": 89,
-      "title": "2026년도 제2차 국가표준기술력향상사업 신규지원 대상과제 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022395",
-      "source": "iris",
-      "category": "산업통상부 > 한국산업기술기획평가원",
-      "deadline": null,
-      "posted_date": "2026-06-12",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-06-18T20:08:18.593254",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
@@ -1380,42 +1563,6 @@
       "is_excluded": true
     },
     {
-      "id": 73,
-      "title": "바이오·의료기술개발 사업 신규과제 제5차 공모",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022457",
-      "source": "iris",
-      "category": "분야공모",
-      "deadline": null,
-      "posted_date": "2026-06-12",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-06-12T09:54:14.395441",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
-      "id": 72,
-      "title": "2026년도 (탄소융복합소재부품) 장비국산화 지원사업 신규지원 대상과제 3차 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022394",
-      "source": "iris",
-      "category": "산업통상부 > 한국탄소산업진흥원",
-      "deadline": null,
-      "posted_date": "2026-06-12",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-06-12T02:12:52.948389",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": true
-    },
-    {
       "id": 71,
       "title": "2026년도 제2차 조선해양산업기술개발사업 신규지원 대상과제 공고",
       "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022434",
@@ -1434,42 +1581,6 @@
       "is_excluded": true
     },
     {
-      "id": 70,
-      "title": "2026년도 소부장분야 전문인력양성(데이터융합형 신소재 고급인력양성) 신규과제 공모",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022377",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 한국연구재단",
-      "deadline": null,
-      "posted_date": "2026-06-11",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-06-11T10:01:50.519661",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": true
-    },
-    {
-      "id": 69,
-      "title": "2026년 극한부품 시험입증지원사업(Track형 실증지원) 신규과제 재공모",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022416",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 한국연구재단",
-      "deadline": null,
-      "posted_date": "2026-06-11",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-06-11T10:01:50.517984",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
       "id": 68,
       "title": "2026년도 제2차 백신실용화기술개발사업단 신규지원 대상과제 공고",
       "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022378",
@@ -1486,24 +1597,6 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
-    },
-    {
-      "id": 67,
-      "title": "2026년도 미래국방가교기술개발사업 신규과제 재공모",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022415",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 한국연구재단",
-      "deadline": null,
-      "posted_date": "2026-06-11",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-06-11T02:30:03.906550",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": true
     },
     {
       "id": 66,
