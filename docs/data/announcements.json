@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29 15:25 UTC",
+  "updated_at": "2026-06-29 19:30 UTC",
   "total": 78,
   "items": [
     {
@@ -1117,6 +1117,11 @@
         },
         {
           "event": "d3",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d1",
           "channel": "email",
           "success": true
         }
