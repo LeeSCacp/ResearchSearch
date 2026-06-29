@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-29 02:10 UTC",
-  "total": 77,
+  "updated_at": "2026-06-29 10:18 UTC",
+  "total": 78,
   "items": [
     {
       "id": 9,
@@ -1096,6 +1096,34 @@
       ]
     },
     {
+      "id": 103,
+      "title": "2026년 하반기 원자력정책연구사업 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270835&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-06-30",
+      "posted_date": "2026-06-16",
+      "description": "과학기술정보통신부 공고 제 2026 – 0703 호 2026 년도 하반기 원자력정책연구사업 공고 과학기술정보통신 부는 국가원자력정책 개발과 제도개선 등에 활용하고자 원자력 정책연구사업을 추진하고 있습니다 . 이와 관련하여 2026 년도 하반기 원자력정책 연 구사업으로 다음 과제를 공모하오니 신청하여 주시기 바랍니다 . 2026 년 6 월 16 일 < 주무 부처 > 부총리 겸 과학기술정보통신부 장관 배 경 훈 < 전문 기관 > 한국연구재단 이사장 홍 원 화",
+      "budget": "3억원",
+      "attachments": "[공고문] 2026년도 하반기 원자력정책연구사업 공고_19023370762402876.hwp\n붙임1. 2026년도 하반기 원자력정책연구사업 과제제안_19023370783426543.hwpx\n붙임2. 연구개발계획서 양_19023370801696065.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T10:18:31.952332",
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
+      "is_relevant": false,
+      "is_excluded": true,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
       "id": 97,
       "title": "2026년도 제2차 조선해양산업기술개발사업 신규지원 대상과제 공고(국제협력)",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270446&flag=rndList",
@@ -1112,6 +1140,11 @@
       "notification_logs": [
         {
           "event": "d7",
+          "channel": "email",
+          "success": true
+        },
+        {
+          "event": "d3",
           "channel": "email",
           "success": true
         }
@@ -1393,6 +1426,24 @@
       ]
     },
     {
+      "id": 104,
+      "title": "2026년도 제3차 조선해양산업기술개발사업 신규지원 대상과제 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270636&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-07-14",
+      "posted_date": "2026-06-15",
+      "description": "산업통상부 공고 제 2026-433 호 2026 년도 제 3 차 조선해양산업기술개발사업 신규지원 대상과제 공고 2026 년도 제 2 차 조선해양산업기술개발사업 신규 지원대상 연구개발과제 를 다음과 같이 공고하오니 수행하고자 하는 자는 신청하여 주시기 바랍니다 . 2026 년 06 월 15 일 산업통상부장관",
+      "budget": "158.5억원",
+      "attachments": "2026년도 제3차 조선해양산업기술개발사업 신규지원 대상과제 공고문.hwp_18702725466267061.hwpx\n붙임 01. 품목개요서(상세 RFP_18702725530817565.hwpx\n붙임 02. 연구개발계획서 등 관련양_18702725737278844.zip\n붙임 03. 평가결과 이의 신청_18702725499757713.zip\n붙임 04. 관련 법령 및 규_18702725766431585.zip\n붙임 05. 온라인 연구개발과제 접수매뉴_18702725557608953.pdf\n붙임 06. R&D 자율성트랙 제도안내_SROM_18702725657102323.hwp\n붙임 07. 사전지원제외 기관 변경 요청_18702725698279159.hwp\n붙임 08. 2026년 국제공동 R&D 신규 접수 유의사_18702725831107903.zip\n붙임 09. 통합사업단 운영관리지_18702725717368578.hwpx",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-29T10:18:31.953427",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
       "id": 101,
       "title": "2026년도 소부장분야 전문인력양성(데이터융합형 신소재 고급인력양성) 신규과제 공모",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270271&flag=rndList",
@@ -1507,24 +1558,6 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
-    },
-    {
-      "id": 81,
-      "title": "2026년 하반기 원자력정책연구사업 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022574",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 한국연구재단",
-      "deadline": null,
-      "posted_date": "2026-06-16",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-06-16T10:51:03.739840",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": true
     },
     {
       "id": 80,
