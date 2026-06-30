@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-30 02:06 UTC",
-  "total": 80,
+  "updated_at": "2026-06-30 08:54 UTC",
+  "total": 81,
   "items": [
     {
       "id": 9,
@@ -1535,6 +1535,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 107,
+      "title": "2026년 중소기업 수출 핵심품목 탄소감축 기술개발사업 하반기 시행계획 추가 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022697",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": null,
+      "posted_date": "2026-06-30",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-06-30T08:53:31.157669",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 106,
