@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-01 02:10 UTC",
-  "total": 82,
+  "updated_at": "2026-07-01 09:26 UTC",
+  "total": 85,
   "items": [
     {
       "id": 9,
@@ -1096,6 +1096,24 @@
       ]
     },
     {
+      "id": 111,
+      "title": "'26년 민·군규격표준화사업 신규연구개발과제 RFP 사전공고 및 설명회 개최 안내",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1271349&flag=rndList",
+      "source": "ntis",
+      "category": "방위사업청",
+      "deadline": "2026-06-30",
+      "posted_date": "2026-06-18",
+      "description": "공고내용 '26년 민·군규격표준화사업 신규연구개발과제 RFP(안) 사전공고 및 설명회 개최 안내 ○ RFP(안) 사전공고 - 기간 : '26.6.18.(목)~24.(수) 12:00 - 공고게시판 : 국방기술품질원 홈페이지 공지사항(링크 참조) * 과제 RFP에 대한 문의사항의 경우, std20@dtaq.re.kr로 메일 문의(사전공고 기간에 한함) * 최종 RFP는 주관연구개발기관 공모(예정기간 : 6.30.~7.30.)시 확정 ○ 사업 설명회 (링크 참조) - 일시 : '26.6.30.(화) 15:00 ~ 17:00 - 장소 : 대전컨벤션센터(DCC) 205호(2층) * 사업설명회 참석 희망자는 std 20@dtaq.re.kr로 메일 회신 바 랍니다. 최종 수정일 : 2026-07-01",
+      "budget": "0억원",
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-01T09:26:26.687881",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
       "id": 103,
       "title": "2026년 하반기 원자력정책연구사업 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270835&flag=rndList",
@@ -1546,6 +1564,42 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 109,
+      "title": "민·군규격표준화사업 연구개발과제 주관연구개발기관 공모",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1272403&flag=rndList",
+      "source": "ntis",
+      "category": "방위사업청",
+      "deadline": "2026-07-30",
+      "posted_date": "2026-06-30",
+      "description": "공고내용 민·군규격표준화사업 연구개발과제 주관연구개발기관 공모 2026년도 민·군규격표준화사업 신규 연구개발과제의 주관연구개발기관을 다음과 같이 공모하오니, 관심 있는 기관의 많은 참여를 바랍니다. 2026년 6월 방위사업청장 · 국방기술품질원장 ○ 대상과제 1. (26-DU-UNI-01) 군용전지 상호운용성 확보를 위한 표준화 연구 2. (26-DU-UNI-02) AI 적용 체계 안전설계기획 프레임워크 표준화 연구 3. (26-DU-UNI-03) 우주용 PCB 표준화 연구 ○ 접수기간 : 2026. 7. 30.(목) 17:00 까지 ※ 자세한 사항은 붙임을 참고하시기 바랍니다. 최종 수정일 : 2026-07-01",
+      "budget": "0억원",
+      "attachments": "붙임1_민·군규격표준화사업 주관연구개발기관 공고문_2026.hwpx\n붙임2-1_RFP1_군용전지 상호운용성 확보를 위한 표준화 연구.pdf\n붙임2-2_RFP2_AI 적용 체계 안전설계기획 프레임워크 표준화 연구.pdf\n붙임2-3_RFP3_우주용 PCB 표준화 연구.pdf\n붙임3_연구개발계획서(제출양식)_2026.hwpx",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-01T09:26:26.686062",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 110,
+      "title": "2026년 글로벌 공동연구 촉진사업 - 양자 매칭(중국) 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1271296&flag=rndList",
+      "source": "ntis",
+      "category": "기타",
+      "deadline": "2026-07-31",
+      "posted_date": "2026-06-19",
+      "description": "공고내용 세부내용 첨부파일 확인 최종 수정일 : 2026-07-01",
+      "budget": "0.5억원",
+      "attachments": "2026년 글로벌 공동연구 촉진사업(양자 매칭, 중국) - 공고문.hwp\n2026년 글로벌 공동연구 촉진사업(양자매칭, 중국)-연구계획서 양식.hwp",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-01T09:26:26.687247",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 108,
