@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-30 19:29 UTC",
-  "total": 81,
+  "updated_at": "2026-07-01 02:10 UTC",
+  "total": 82,
   "items": [
     {
       "id": 9,
@@ -1263,6 +1263,11 @@
           "event": "d3",
           "channel": "email",
           "success": true
+        },
+        {
+          "event": "d1",
+          "channel": "email",
+          "success": true
         }
       ],
       "is_relevant": false,
@@ -1314,7 +1319,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-08T15:23:45.525139",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": false
     },
@@ -1535,6 +1546,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 108,
+      "title": "2026년도 한중핵심공동연구사업(Key Joint Research Program) 신규과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022456",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-06-29",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-01T02:09:29.377134",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 107,
