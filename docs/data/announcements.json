@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-02 19:06 UTC",
-  "total": 86,
+  "updated_at": "2026-07-03 01:47 UTC",
+  "total": 87,
   "items": [
     {
       "id": 9,
@@ -1385,7 +1385,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-18T20:08:18.587913",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": true,
       "extra_sources": [
@@ -1407,7 +1413,13 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-06-18T20:08:18.586892",
-      "notification_logs": [],
+      "notification_logs": [
+        {
+          "event": "d7",
+          "channel": "email",
+          "success": true
+        }
+      ],
       "is_relevant": false,
       "is_excluded": false
     },
@@ -1606,6 +1618,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 114,
+      "title": "2026년 제2차 범부처 첨단 의료기기 연구개발사업 신규지원 대상과제 재공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022777",
+      "source": "iris",
+      "category": "다부처 > 재단법인 범부처의료기기연구개발사업단",
+      "deadline": null,
+      "posted_date": "2026-07-01",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-03T01:46:18.713181",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 113,
