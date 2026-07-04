@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-04 01:45 UTC",
-  "total": 87,
+  "updated_at": "2026-07-04 08:19 UTC",
+  "total": 88,
   "items": [
     {
       "id": 9,
@@ -1375,6 +1375,24 @@
       ],
       "is_relevant": false,
       "is_excluded": false
+    },
+    {
+      "id": 115,
+      "title": "2026년도 하반기 원자력정책연구사업 재공고",
+      "url": "https://www.nrf.re.kr/biz/info/notice/list",
+      "source": "nrf",
+      "category": "원자력연구개발사업, 원자력진흥",
+      "deadline": "2026-07-10",
+      "posted_date": "2026-07-02",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-04T08:19:46.643362",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 85,
