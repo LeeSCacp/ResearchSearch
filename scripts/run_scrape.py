@@ -41,16 +41,23 @@ async def main() -> None:
 
     # Phase 16: 운영 DB → historical 동기화 + 분석 갱신
     # NTIS/IRIS는 5년치 직접 수집 불가 → 매 사이클마다 점진 누적
+    # 순서: 부트스트랩(커밋된 파일 → DB 복원) → 동기화 → 내보내기 → 분석
+    # 부트스트랩 덕분에 Actions 캐시 DB에도 NRF 5년치가 복원되어
+    # analytics.json이 0건으로 덮어써지는 문제와 캐시 유실 위험을 함께 방지.
     logger.info("=== historical 동기화 시작 ===")
     try:
-        from scripts.sync_to_historical import sync
+        from scripts.sync_to_historical import (
+            bootstrap_from_export, sync, export_historical,
+        )
+        restored = bootstrap_from_export()
         stats = sync()
+        export_historical()
         logger.info(
-            f"동기화 완료 — 신규 {stats['added']}건 "
+            f"동기화 완료 — 부트스트랩 {restored}건, 신규 {stats['added']}건 "
             f"(출처별: {stats.get('by_source', {})})"
         )
 
-        if stats["added"] > 0:
+        if restored > 0 or stats["added"] > 0:
             logger.info("=== 신규 데이터 반영 — 분석 재실행 ===")
             from src.analytics.historical import run_full_analysis
             from src.config import load_config

@@ -117,13 +117,34 @@ async def run_reminder_cycle():
         notif_cfg = config.get("notifications", {})
 
         # 마감일이 있고 아직 마감되지 않은 공고 전체 조회
-        active_announcements = (
+        candidates = (
             session.query(Announcement)
             .filter(Announcement.deadline.isnot(None))
             .filter(Announcement.deadline >= today)
             .all()
         )
-        logger.info(f"리마인더 대상 후보: {len(active_announcements)}건")
+
+        # 신규 공고 알림과 동일한 필터 적용 — 무관 분야 공고는 리마인더도 보내지 않음
+        filter_cfg = config.get("filters", {})
+        filter_engine = FilterEngine(
+            keywords=filter_cfg.get("keywords", []),
+            categories=filter_cfg.get("categories", []),
+            exclude_keywords=filter_cfg.get("exclude_keywords", []),
+        )
+        active_announcements = []
+        for ann in candidates:
+            dto = AnnouncementData(
+                title=ann.title, url=ann.url, source=ann.source,
+                category=ann.category or "", deadline=ann.deadline,
+                posted_date=ann.posted_date, description=ann.description or "",
+            )
+            if filter_engine.matches(dto):
+                active_announcements.append(ann)
+
+        logger.info(
+            f"리마인더 대상 후보: {len(active_announcements)}건 "
+            f"(마감 임박 전체 {len(candidates)}건 중 필터 통과)"
+        )
 
         # 각 임계값별로 미발송 대상 추출
         # [(Announcement, event_type, days_left), ...]

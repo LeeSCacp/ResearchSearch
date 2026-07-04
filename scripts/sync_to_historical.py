@@ -90,13 +90,96 @@ def sync() -> dict:
     return stats
 
 
+# ----------------------------------------------------------------------
+# historical 내보내기 / 부트스트랩 (GitHub Actions 캐시 유실 대비)
+# ----------------------------------------------------------------------
+# 배경: 로컬에서 수집한 NRF 5년치(1,700여 건)는 DB가 gitignore라 Actions에
+# 전달되지 않는다. Actions가 자기 캐시 DB 기준으로 분석을 돌리면
+# analytics.json이 0건으로 덮어써진다. 또한 점진 누적분이 캐시에만 있으면
+# 캐시 유실 시 몇 달치 데이터가 사라진다.
+# 해결: historical 테이블 전체를 docs/data/historical.json으로 커밋하고,
+# 실행 시작 시 이 파일에서 DB에 없는 행을 복원(bootstrap)한다.
+
+import json
+from datetime import datetime as _dt
+
+HISTORICAL_EXPORT_PATH = "docs/data/historical.json"
+
+_DATE_FIELDS = ("posted_date", "deadline")
+
+
+def export_historical(path: str = HISTORICAL_EXPORT_PATH) -> int:
+    """historical 테이블 전체를 JSON으로 내보낸다. 내보낸 행 수 반환."""
+    config = load_config()
+    engine = init_db(config["database"]["path"])
+    session = get_session(engine)
+    try:
+        rows = []
+        for h in session.query(HistoricalAnnouncement).all():
+            rows.append({
+                "title": h.title, "url": h.url, "source": h.source,
+                "category": h.category, "notice_type": h.notice_type,
+                "posted_date": h.posted_date.isoformat() if h.posted_date else None,
+                "deadline":    h.deadline.isoformat()    if h.deadline    else None,
+                "year": h.year,
+                "label_psychology": bool(h.label_psychology),
+                "label_aging":      bool(h.label_aging),
+                "label_psy_ai":     bool(h.label_psy_ai),
+                "label_humanities": bool(h.label_humanities),
+            })
+        rows.sort(key=lambda r: r["url"])   # 안정 정렬 → git diff 최소화
+        out = Path(path)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        with open(out, "w", encoding="utf-8") as f:
+            json.dump(rows, f, ensure_ascii=False, separators=(",", ":"))
+        logger.info(f"historical 내보내기: {len(rows)}건 → {path}")
+        return len(rows)
+    finally:
+        session.close()
+
+
+def bootstrap_from_export(path: str = HISTORICAL_EXPORT_PATH) -> int:
+    """내보내기 파일에서 DB에 없는 행을 복원한다. 복원한 행 수 반환."""
+    p = Path(path)
+    if not p.exists():
+        logger.info(f"부트스트랩 파일 없음 — 건너뜀: {path}")
+        return 0
+
+    with open(p, encoding="utf-8") as f:
+        rows = json.load(f)
+
+    config = load_config()
+    engine = init_db(config["database"]["path"])
+    session = get_session(engine)
+    restored = 0
+    try:
+        existing_urls = {
+            u for (u,) in session.query(HistoricalAnnouncement.url).all()
+        }
+        for r in rows:
+            if not r.get("url") or r["url"] in existing_urls:
+                continue
+            kwargs = dict(r)
+            for fld in _DATE_FIELDS:
+                v = kwargs.get(fld)
+                kwargs[fld] = _dt.strptime(v, "%Y-%m-%d").date() if v else None
+            session.add(HistoricalAnnouncement(**kwargs))
+            restored += 1
+        session.commit()
+        logger.info(f"부트스트랩: 파일 {len(rows)}건 중 {restored}건 복원")
+        return restored
+    finally:
+        session.close()
+
+
 def main():
     logger.info("운영 DB → historical 동기화 시작")
+    restored = bootstrap_from_export()
     stats = sync()
+    export_historical()
     logger.info(
-        f"확인 {stats['checked']}건 / "
-        f"신규 {stats['added']}건 / "
-        f"이미 있음 {stats['skipped']}건"
+        f"부트스트랩 {restored}건 / 확인 {stats['checked']}건 / "
+        f"신규 {stats['added']}건 / 이미 있음 {stats['skipped']}건"
     )
     if stats["by_source"]:
         logger.info(f"신규 출처별: {stats['by_source']}")

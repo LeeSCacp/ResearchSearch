@@ -1,12 +1,14 @@
 """한국연구재단(NRF) 사업공고 스크래퍼.
 
-NRF 사이트(nrf.re.kr)는 SPA 기반으로, Playwright를 사용하여
-사업공고 목록을 수집한다. 검색 기간을 6개월로 설정한 뒤 조회한다.
+NRF 사업공고 페이지(/page/362)를 URL 파라미터 방식으로 직접 조회한다.
+과거 5년치 수집기(scripts/collect_nrf_historical.py)에서 검증된
+`div.public-notice-block` 구조를 동일하게 사용한다.
 
-페이지: /biz/info/notice/list
-검색 조건:
-  - bizSelectSearchRegDttm: '6M' (최근 6개월)
-  - searchBizQueryBtn 클릭으로 검색 실행
+수집 정책 (운영 알림용):
+  - 최신 등록순 상위 2페이지(200건)를 읽어
+  - "접수중"/"접수예정" 상태이거나 마감일이 아직 남은 공고만 반환
+  - 목록에서 category([브래킷])와 접수기간(시작~마감)까지 추출
+    → 필터 엔진이 인문사회 등 분야 카테고리로 매칭 가능
 """
 
 import re
@@ -16,6 +18,33 @@ from src.scrapers.base import BaseScraper, AnnouncementData
 
 NRF_NOTICE_URL = "https://www.nrf.re.kr/biz/info/notice/list"
 NRF_BASE_URL   = "https://www.nrf.re.kr"
+
+# 운영 수집: 최신 등록순 상위 N페이지 (100건/페이지)
+_LIST_PAGES = 2
+
+# 공고 유형 라벨 (블록 텍스트 맨 앞에 등장)
+_NOTICE_TYPES = [
+    "접수중", "접수예정", "접수마감",
+    "보고서제출관련공지", "사업관리(기타)", "선정결과안내", "기타",
+]
+
+
+def _build_list_url(page_num: int, page_size: int = 100) -> str:
+    """전체 기간 + 최신 등록순 목록 URL (historical 수집기와 동일 구조)."""
+    return (
+        f"{NRF_BASE_URL}/page/362?menuNo=362&bizNo=0&bizNotGubn=guide"
+        f"&pageNum={page_num}"
+        "&searchRegChoiceDttm=M"
+        "&bizSearchRegDttmAllYn=Y"
+        "&searchRegYearDttm=&searchRegStartMonthDttm=&searchRegEndMonthDttm="
+        "&orderType=REG_DTTM&orderTypeAt=DESC"
+        "&orderTypeBiz=BIZ_DYSC_END_DATE_ORDER&orderTypeBizAt=DESC"
+        "&bizCompleteNm=&myBizCheckYn=&myDeptBizCheckYn="
+        "&bizChgMbrNo=&bizChgMbrPostNm=&searchSplitBizNo="
+        "&bizSearchRegDttmAllYnInput=Y"
+        "&bizSelectSearchRegDttm=&regStartDttm=&regEndDttm=&keyword=&bizCatNm="
+        f"&pageSize={page_size}"
+    )
 
 
 class NRFScraper(BaseScraper):
@@ -31,150 +60,95 @@ class NRFScraper(BaseScraper):
             results = await self._scrape_list()
         except Exception as e:
             self.log_error(f"목록 수집 실패: {e}")
-        self.log_info(f"{len(results)}건 수집 완료")
+        self.log_info(f"{len(results)}건 수집 완료 (접수 중/예정만)")
         return results
 
     async def _scrape_list(self) -> list[AnnouncementData]:
         from playwright.async_api import async_playwright
-        from bs4 import BeautifulSoup
 
-        results = []
+        raw_blocks: list[dict] = []
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=True)
-            page    = await browser.new_page()
-            await page.goto(NRF_NOTICE_URL, wait_until="networkidle", timeout=60000)
-
-            # 검색 기간 '최근 6개월' 설정
-            await page.evaluate("""() => {
-                var sel = document.querySelector('select[name=bizSelectSearchRegDttm]');
-                if (sel) {
-                    sel.value = '6M';
-                    sel.dispatchEvent(new Event('change'));
-                    if (typeof fnBizSelectSearchRegDttm === 'function')
-                        fnBizSelectSearchRegDttm(sel);
-                }
-            }""")
-            await page.wait_for_timeout(1500)
-            await page.evaluate("""() => {
-                var btn = document.querySelector('.searchBizQueryBtn');
-                if (btn) btn.click();
-            }""")
-            await page.wait_for_timeout(3000)
-            await page.wait_for_load_state("networkidle")
-
-            body_text = await page.inner_text("body")
-            total_match = re.search(r"전체\s*(\d+)\s*건", body_text)
-            total = int(total_match.group(1)) if total_match else 0
-
-            if total == 0:
-                self.log_info("현재 시점에 NRF 신규 사업공모가 없습니다")
-                await browser.close()
-                return results
-
-            self.log_info(f"NRF 검색 결과: {total}건")
-
-            # HTML 파싱으로 공고 목록 추출 (SPA 대응)
-            content = await page.content()
+            page = await browser.new_page()
+            for page_num in range(1, _LIST_PAGES + 1):
+                await page.goto(_build_list_url(page_num),
+                                wait_until="networkidle", timeout=60000)
+                await page.wait_for_timeout(1500)
+                blocks = await page.evaluate("""() => {
+                    const blocks = document.querySelectorAll('div.public-notice-block');
+                    return Array.from(blocks).map(b => {
+                        const a = b.querySelector('a.title-name');
+                        let token = '';
+                        if (a) {
+                            const oc = a.getAttribute('onclick') || '';
+                            const m = oc.match(/[\\d]{4,}/);
+                            if (m) token = m[0];
+                        }
+                        return {
+                            text: (b.innerText || '').replace(/\\s+/g, ' ').trim(),
+                            title: a ? (a.innerText || '').trim() : '',
+                            token: token,
+                        };
+                    });
+                }""")
+                if not blocks:
+                    self.log_warning(f"p{page_num}: public-notice-block 미발견")
+                    break
+                raw_blocks.extend(blocks)
             await browser.close()
 
-        soup = BeautifulSoup(content, "lxml")
-        results = self._parse_list_html(soup)
-        self.log_info(f"목록 파싱: {len(results)}건 추출")
-        return results
-
-    def _parse_list_html(self, soup) -> list[AnnouncementData]:
-        """BeautifulSoup으로 NRF 공고 목록 파싱."""
-        results = []
-
-        # NRF 공고 목록: table 또는 ul 기반 구조 탐색
-        # 우선 table > tbody > tr 시도
-        for tr in soup.select("table tbody tr"):
-            ann = self._parse_row(tr)
-            if ann:
+        today = date.today()
+        results: list[AnnouncementData] = []
+        for blk in raw_blocks:
+            if not blk["title"]:
+                continue
+            ann = self._parse_block(blk["text"], blk["title"], blk["token"])
+            if ann is None:
+                continue
+            # 접수 중/예정이거나 마감일이 남은 공고만 알림 대상
+            is_open = (
+                blk["text"].startswith(("접수중", "접수예정"))
+                or (ann.deadline is not None and ann.deadline >= today)
+            )
+            if is_open:
                 results.append(ann)
-
-        # table 방식으로 수집 못 한 경우 li 기반 시도
-        if not results:
-            for li in soup.select("ul.board-list li, ul.list-type li, .bbs-list li"):
-                ann = self._parse_li(li)
-                if ann:
-                    results.append(ann)
-
         return results
 
-    def _parse_row(self, tr) -> AnnouncementData | None:
-        """table tr 행에서 공고 정보 추출."""
-        cells = tr.find_all("td")
-        if len(cells) < 2:
-            return None
+    def _parse_block(self, text: str, title: str, token: str) -> AnnouncementData | None:
+        """공고 블록 텍스트에서 메타 정보 추출 (historical 수집기와 동일 로직)."""
+        t = re.sub(r"\s+", " ", text).strip()
 
-        # 제목 셀에서 링크 찾기
-        title_td = None
-        for td in cells:
-            a = td.find("a")
-            if a and len(a.get_text(strip=True)) > 15:
-                title_td = td
-                break
-        if not title_td:
-            return None
+        # D-day / NEW 마커 제거
+        t = re.sub(r"^D-\d+\s*", "", t)
+        t = re.sub(r"\sNEW($|\s)", " ", t)
 
-        a_tag = title_td.find("a")
-        title = a_tag.get_text(strip=True)
-        url   = self._extract_url_from_tag(a_tag)
+        # 카테고리: [ ... ]
+        category = ""
+        cat_match = re.search(r"\[([^\[\]]+)\]", t)
+        if cat_match:
+            category = cat_match.group(1).strip()
 
-        # 행 전체 텍스트에서 날짜 추출
-        row_text = tr.get_text()
-        dates = re.findall(r"(\d{4}[-./]\d{2}[-./]\d{2})", row_text)
+        # 접수일자: YYYY-MM-DD ~ YYYY-MM-DD
+        posted_date, deadline = None, None
+        date_match = re.search(
+            r"접수일자\s*[:：]\s*(\d{4}-\d{2}-\d{2})[^~]*~\s*(\d{4}-\d{2}-\d{2})", t
+        )
+        if date_match:
+            try:
+                posted_date = datetime.strptime(date_match.group(1), "%Y-%m-%d").date()
+                deadline    = datetime.strptime(date_match.group(2), "%Y-%m-%d").date()
+            except ValueError:
+                pass
+
+        url = (
+            f"{NRF_BASE_URL}/biz/info/notice/view?menuNo=1&notiSn={token}"
+            if token else NRF_NOTICE_URL
+        )
 
         return AnnouncementData(
             title=title, url=url, source="nrf",
-            posted_date=self._parse_date(dates[0]) if dates else None,
-            deadline=self._parse_date(dates[-1]) if len(dates) > 1 else None,
+            category=category, posted_date=posted_date, deadline=deadline,
         )
-
-    def _parse_li(self, li) -> AnnouncementData | None:
-        """list item에서 공고 정보 추출."""
-        a_tag = li.find("a")
-        if not a_tag:
-            return None
-        title = a_tag.get_text(strip=True)
-        if len(title) < 15:
-            return None
-
-        url     = self._extract_url_from_tag(a_tag)
-        li_text = li.get_text()
-        dates   = re.findall(r"(\d{4}[-./]\d{2}[-./]\d{2})", li_text)
-
-        return AnnouncementData(
-            title=title, url=url, source="nrf",
-            posted_date=self._parse_date(dates[0]) if dates else None,
-            deadline=self._parse_date(dates[-1]) if len(dates) > 1 else None,
-        )
-
-    def _extract_url_from_tag(self, a_tag) -> str:
-        """<a> 태그에서 URL 추출. SPA onclick/href 패턴 모두 처리."""
-        href    = (a_tag.get("href") or "").strip()
-        onclick = (a_tag.get("onclick") or "").strip()
-
-        # 1. href가 실제 경로인 경우
-        if href and not href.startswith(("javascript", "#")):
-            return href if href.startswith("http") else NRF_BASE_URL + href
-
-        # 2. onclick 또는 href의 javascript: 에서 notiSn / ID 추출
-        #    패턴 예: goView('12345'), fn_detail(12345), location.href='...notiSn=12345'
-        for text in (onclick, href):
-            # URL 내 notiSn 파라미터
-            m = re.search(r"notiSn[='\"\s,]+(\d+)", text)
-            if m:
-                return f"{NRF_BASE_URL}/biz/info/notice/view?menuNo=1&notiSn={m.group(1)}"
-            # 함수 호출 첫 번째 숫자 인자
-            m = re.search(r"\(\s*['\"]?(\d{4,})['\"]?", text)
-            if m:
-                return f"{NRF_BASE_URL}/biz/info/notice/view?menuNo=1&notiSn={m.group(1)}"
-
-        # 3. 추출 실패 → 목록 URL (상세 수집 불가)
-        self.log_warning(f"URL 추출 실패 (href={href!r}, onclick={onclick!r})")
-        return NRF_NOTICE_URL
 
     # ------------------------------------------------------------------
     # 상세 수집
