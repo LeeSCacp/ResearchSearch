@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-06 01:56 UTC",
-  "total": 91,
+  "updated_at": "2026-07-06 09:53 UTC",
+  "total": 93,
   "items": [
     {
       "id": 9,
@@ -1505,6 +1505,24 @@
       "is_excluded": false
     },
     {
+      "id": 125,
+      "title": "「출연(연) 전략연구사업 평가제도·관리체계 수립」 정책연구과제 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1272407&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-07-13",
+      "posted_date": "2026-07-01",
+      "description": "공고내용 「출연(연) 전략연구사업 평가제도·관리체계 수립」 정책연구과제 공고 게시합니다. 상세한 내용은 첨부된 파일을 참조하여 주시기 바라며, 관련 문의는 담당자 메일(wonseok@nst.re.kr)로 송부하여 주시기 바랍니다. 최종 수정일 : 2026-07-06",
+      "budget": "1.5억원",
+      "attachments": "공고문 (출연(연) 전략연구사업 평가제도·관리체계 수립)_게시.hwp\n공고문 (출연(연) 전략연구사업 평가제도·관리체계 수립)_게시.pdf",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-06T09:51:59.136162",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
       "id": 119,
       "title": "2026년 중소기업 수출 핵심품목 탄소감축 기술개발사업 하반기 시행계획 추가 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1272234&flag=rndList",
@@ -1844,6 +1862,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 126,
+      "title": "2026년도 개도국기후기술실증연구 사업 신규과제 2차 재공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=020774",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-07-06",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-06T09:51:59.139034",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 114,
