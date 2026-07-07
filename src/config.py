@@ -1,4 +1,5 @@
 import os
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import yaml
@@ -8,6 +9,14 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_PATH = BASE_DIR / "config" / "config.yaml"
+
+# 한국 표준시 — GitHub Actions는 UTC로 돌아 date.today()가 최대 9시간
+# 이르게 나온다. D-day 계산 등 사용자 기준 날짜는 반드시 이 함수를 쓴다.
+KST = timezone(timedelta(hours=9))
+
+
+def today_kst() -> date:
+    return datetime.now(KST).date()
 
 
 def load_config(path: Path = CONFIG_PATH) -> dict:

@@ -7,7 +7,7 @@ from fastapi import FastAPI, Request, Query
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
-from src.config import load_config
+from src.config import load_config, today_kst
 from src.models.announcement import Announcement, NotificationLog, init_db, get_session
 from src.filters.engine import FilterEngine
 
@@ -85,7 +85,7 @@ def create_app() -> FastAPI:
                     "page": page,
                     "total_pages": total_pages,
                     "total": total,
-                    "today": date.today(),
+                    "today": today_kst(),
                     "has_keyword": bool(keywords),
                 },
             )

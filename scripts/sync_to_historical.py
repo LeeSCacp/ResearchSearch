@@ -26,7 +26,7 @@ logging.basicConfig(level=logging.INFO,
                     datefmt="%H:%M:%S")
 logger = logging.getLogger("sync")
 
-from src.config import load_config
+from src.config import load_config, today_kst
 from src.models.announcement import (
     init_db, get_session, Announcement, HistoricalAnnouncement,
 )
@@ -66,12 +66,18 @@ def sync() -> dict:
             if op.posted_date:
                 year = op.posted_date.year
 
+            # 마감일 기준으로 실제 상태 기록 (일괄 "접수마감" 오기록 방지)
+            if op.deadline:
+                notice_type = "접수중" if op.deadline >= today_kst() else "접수마감"
+            else:
+                notice_type = ""
+
             hist = HistoricalAnnouncement(
                 title       = (op.title or "")[:2000],
                 url         = op.url,
                 source      = op.source or "unknown",
                 category    = (op.category or "")[:500],
-                notice_type = "접수마감" if op.deadline else "",
+                notice_type = notice_type,
                 posted_date = op.posted_date,
                 deadline    = op.deadline,
                 year        = year,

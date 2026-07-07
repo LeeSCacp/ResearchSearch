@@ -10,7 +10,7 @@ from datetime import datetime, date
 
 from sqlalchemy.orm import Session
 
-from src.config import load_config
+from src.config import load_config, today_kst
 from src.models.announcement import Announcement, NotificationLog, init_db, get_session
 from src.scrapers.base import AnnouncementData
 from src.scrapers.nrf import NRFScraper
@@ -113,7 +113,7 @@ async def run_reminder_cycle():
     session = get_session(engine)
 
     try:
-        today = date.today()
+        today = today_kst()
         notif_cfg = config.get("notifications", {})
 
         # 마감일이 있고 아직 마감되지 않은 공고 전체 조회

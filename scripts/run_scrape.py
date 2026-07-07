@@ -27,7 +27,14 @@ logger = logging.getLogger(__name__)
 
 async def main() -> None:
     from src.scheduler import run_scraping_cycle, run_reminder_cycle
-    from src.export import export_announcements, export_synonyms
+    from src.export import export_announcements, export_synonyms, restore_announcements
+
+    # 캐시 유실 대비: 커밋된 JSON에서 운영 DB 복원 (중복 알림 방지)
+    logger.info("=== 운영 DB 복원 확인 ===")
+    try:
+        restore_announcements()
+    except Exception as e:
+        logger.error(f"운영 DB 복원 실패 (무시 진행): {e}")
 
     logger.info("=== 스크래핑 사이클 시작 ===")
     await run_scraping_cycle()

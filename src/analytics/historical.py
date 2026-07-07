@@ -23,6 +23,7 @@ from typing import Iterable
 
 from sqlalchemy import or_
 
+from src.config import today_kst
 from src.models.announcement import HistoricalAnnouncement
 
 
@@ -221,7 +222,7 @@ def cluster_recurring(session, label: str, min_occurrences: int = 2) -> list[dic
       - 행동 시급도 라벨 (urgency: critical/high/medium/low)
       - 공고일 일관성 (posting_consistency: exact/stable/loose/scattered)
     """
-    today = date.today()
+    today = today_kst()
     items = _query(session, label).all()
     groups: dict[tuple, list[HistoricalAnnouncement]] = defaultdict(list)
 
@@ -418,7 +419,7 @@ def analyze_trend(session, label: str, year_min: int = 2021, year_max: int = 202
     counts = [yearly[y] for y in years]
 
     # 완성된 연도만 회귀 (현재 진행 연도 제외)
-    current_year = date.today().year
+    current_year = today_kst().year
     completed_years = [y for y in years if y < current_year]
     completed_counts = [yearly[y] for y in completed_years]
 

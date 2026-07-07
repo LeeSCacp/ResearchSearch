@@ -6,6 +6,7 @@ from datetime import date
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+from src.config import today_kst
 from src.models.announcement import Announcement
 
 logger = logging.getLogger(__name__)
@@ -212,7 +213,7 @@ class EmailNotifier:
         </body></html>"""
 
     def _build_new_html(self, announcements: list[Announcement]) -> str:
-        today = date.today()
+        today = today_kst()
         source_names = {"nrf": "NRF", "ntis": "NTIS", "iris": "IRIS"}
         rows = ""
         for ann in announcements:
@@ -245,7 +246,7 @@ class EmailNotifier:
         </body></html>"""
 
     def _build_reminder_html(self, reminders: list[tuple]) -> str:
-        today = date.today()
+        today = today_kst()
         source_names = {"nrf": "NRF", "ntis": "NTIS", "iris": "IRIS"}
 
         # 긴급도에 따른 헤더 색상

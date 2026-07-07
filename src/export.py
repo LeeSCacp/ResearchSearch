@@ -141,6 +141,80 @@ def export_announcements(
         session.close()
 
 
+def restore_announcements(
+    input_path: str = "docs/data/announcements.json",
+) -> int:
+    """캐시 유실 시 커밋된 JSON에서 운영 DB를 복원한다. 복원 건수 반환.
+
+    목적: GitHub Actions 캐시가 유실되면 운영 DB가 비어 모든 현재 공고가
+    "신규"로 재분류되어 중복 알림이 발송된다. 커밋된 announcements.json에서
+    기존 공고와 알림 이력을 복원해 이를 방지한다.
+
+    - URL 기준으로 DB에 없는 공고만 삽입 (is_notified=True로 재알림 방지)
+    - notification_logs도 함께 복원 → 리마인더(d7/d3/d1) 중복 발송 방지
+    - 제목 중복 병합으로 JSON에서 빠진 공고는 복원 불가 (1회 재알림 허용)
+    """
+    p = Path(input_path)
+    if not p.exists():
+        logger.info(f"[restore] 복원 파일 없음 — 건너뜀: {input_path}")
+        return 0
+
+    with open(p, encoding="utf-8") as f:
+        data = json.load(f)
+    items = data.get("items", [])
+    if not items:
+        return 0
+
+    def _parse_d(v):
+        if not v:
+            return None
+        try:
+            return datetime.strptime(v[:10], "%Y-%m-%d").date()
+        except ValueError:
+            return None
+
+    config = load_config()
+    engine = init_db(config["database"]["path"])
+    session = get_session(engine)
+    restored = 0
+    try:
+        existing_urls = {u for (u,) in session.query(Announcement.url).all()}
+        for it in items:
+            url = it.get("url")
+            if not url or url in existing_urls:
+                continue
+            ann = Announcement(
+                title=it.get("title") or "",
+                url=url,
+                source=it.get("source") or "unknown",
+                category=it.get("category"),
+                deadline=_parse_d(it.get("deadline")),
+                posted_date=_parse_d(it.get("posted_date")),
+                description=it.get("description"),
+                budget=it.get("budget"),
+                attachments=it.get("attachments"),
+                detail_fetched=bool(it.get("detail_fetched")),
+                is_notified=True,   # 복원 공고는 재알림 금지
+            )
+            session.add(ann)
+            session.flush()   # ann.id 확보
+            for log in it.get("notification_logs", []):
+                session.add(NotificationLog(
+                    announcement_id=ann.id,
+                    channel=log.get("channel", "email"),
+                    event_type=log.get("event", "new"),
+                    success=bool(log.get("success")),
+                    error_message=log.get("error"),
+                ))
+            restored += 1
+        session.commit()
+        if restored:
+            logger.info(f"[restore] 운영 DB 복원: {restored}건 (캐시 유실 감지)")
+        return restored
+    finally:
+        session.close()
+
+
 def export_synonyms(
     output_path: str = "docs/data/synonyms.json",
 ) -> None:
