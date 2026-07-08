@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-07 19:31 UTC",
-  "total": 93,
+  "updated_at": "2026-07-08 01:27 UTC",
+  "total": 96,
   "items": [
     {
       "id": 9,
@@ -1862,6 +1862,60 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 129,
+      "title": "2026년도 중소기업기술혁신개발사업 글로벌선도기술개발(수출지향형) 바이오헬스 추천기업 대상 연구개발계획서 제출 안내",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022614",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": null,
+      "posted_date": "2026-06-22",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-08T01:24:02.458226",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 128,
+      "title": "2026년도 중소기업기술혁신개발사업 글로벌선도기술개발(함께달리기) 시행계획 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022615",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": null,
+      "posted_date": "2026-06-22",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-08T01:24:02.457672",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 127,
+      "title": "2026년도 중소기업기술혁신개발사업 글로벌선도기술개발(이어달리기) 시행계획 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022634",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": null,
+      "posted_date": "2026-06-22",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-08T01:24:02.456618",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 126,
