@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-08 08:06 UTC",
-  "total": 97,
+  "updated_at": "2026-07-08 13:27 UTC",
+  "total": 98,
   "items": [
     {
       "id": 9,
@@ -1862,6 +1862,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 131,
+      "title": "2026년도 「양자정보과학 인적기반조성사업」리더급 연구역량강화(전략기술형) 신규과제 재공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022977",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-07-08",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-08T13:26:17.129449",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 130,
