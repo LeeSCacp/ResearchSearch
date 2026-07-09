@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-08 19:04 UTC",
-  "total": 98,
+  "updated_at": "2026-07-09 01:46 UTC",
+  "total": 99,
   "items": [
     {
       "id": 9,
@@ -1862,6 +1862,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 132,
+      "title": "2026년 첨단기술을 활용한 사회문제해결 실증확산 지원 (개발 및 실증지원) 신규과제 재공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023017",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-07-09",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-09T01:45:15.196308",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 131,
