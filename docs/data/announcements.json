@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-09 19:18 UTC",
-  "total": 101,
+  "updated_at": "2026-07-10 01:32 UTC",
+  "total": 103,
   "items": [
     {
       "id": 9,
@@ -1898,6 +1898,42 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 136,
+      "title": "2026년도 임무수요기반 성층권 드론 실증 플랫폼 개발 사업 2단계 신규과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022957",
+      "source": "iris",
+      "category": "우주항공청 > 우주항공청",
+      "deadline": null,
+      "posted_date": "2026-07-10",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-10T01:30:29.873511",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 135,
+      "title": "2026년도 미래치안 도전기술 개발(융합탐색) 신규과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022997",
+      "source": "iris",
+      "category": "다부처 > 과학치안진흥센터",
+      "deadline": null,
+      "posted_date": "2026-07-10",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-10T01:30:29.872460",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 132,
