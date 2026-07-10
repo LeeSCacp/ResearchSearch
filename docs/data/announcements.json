@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-10 01:32 UTC",
-  "total": 103,
+  "updated_at": "2026-07-10 09:00 UTC",
+  "total": 105,
   "items": [
     {
       "id": 9,
@@ -1898,6 +1898,42 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 138,
+      "title": "2026년도 투·융자 연계 기술개발사업 지원계획 수정 공고(딥테크 챌린지 프로젝트_기술도전형)",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=019508",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": null,
+      "posted_date": "2026-07-10",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-10T08:58:07.487512",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 137,
+      "title": "2026년도 제2차 백신실용화기술개발사업단 신규지원 대상과제 재공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023057",
+      "source": "iris",
+      "category": "보건복지부 > 한국보건산업진흥원",
+      "deadline": null,
+      "posted_date": "2026-07-10",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-10T08:58:07.486131",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 136,
