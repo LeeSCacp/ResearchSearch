@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-12 12:51 UTC",
-  "total": 105,
+  "updated_at": "2026-07-12 18:47 UTC",
+  "total": 106,
   "items": [
     {
       "id": 9,
@@ -1898,6 +1898,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 139,
+      "title": "2026년 혁신연구장비핵심기술개발및상용화사업 첨단연구장비상용화 본과제 신청안내",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023037",
+      "source": "iris",
+      "category": "분야공모",
+      "deadline": null,
+      "posted_date": "2026-07-13",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-12T18:45:59.777108",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 138,
