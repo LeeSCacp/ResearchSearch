@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16 07:53 UTC",
+  "updated_at": "2026-07-16 13:14 UTC",
   "total": 111,
   "items": [
     {
@@ -2086,6 +2086,28 @@
       ]
     },
     {
+      "id": 152,
+      "title": "2026년도 국제공동연구 신속지원사업(미국 제네시스 미션과의 협력을 위한 탐색연구) 신규과제 공모",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273125&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-08-31",
+      "posted_date": "2026-07-08",
+      "description": "과학기술정보통신부 공고 – 제 2026-0758 호 2026 년도 국제공동연구 신속지원사업 ( 미국 제네시스 미션과의 협력을 위한 탐색연구 ) 신규과제 공모 과학기술정보통신부에서 추진하는 「 국제공동연구 신속지원사업 ( 미국 제네시스 미션과의 협력을 위한 탐색연구 ) 」 의 신규 과제를 다음과 같이 공모하오니 관심 있는 분들의 많은 신청 바랍니다 . 2026 년 7 월 8 일 < 주무부처 > 부총리 및 과학기술정보통신부 장 관 배 경 훈 < 전문기관 > 한국연구재단 이사장 홍 원 화 ※ 공정하고 원활한 선정평가를 위해 연구계획에 부합하는 ' 국책연구 기획평가 전문분야 ' 및 ' 기초연구 기획평가 전문분야 '를 각각 2개 이상 선택",
+      "budget": "0.8억원",
+      "attachments": "2026년 국제공동연구 신속지원 선정평가 공고_20927666035533121.pdf\n붙임1.2026년도 국제공동연구 신속지원사업 신규과제 공모 공고_20927666306169239.hwpx\n붙임2.제출서류양_20927666289983643.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-16T13:14:35.754536",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
       "id": 146,
       "title": "2026년도 임무수요기반 성층권 드론 실증 플랫폼 개발 사업 2단계 신규과제 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273370&flag=rndList",
@@ -2139,24 +2161,6 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-10T08:58:07.487512",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
-      "id": 130,
-      "title": "2026년도 국제공동연구 신속지원사업(미국 제네시스 미션과의 협력을 위한 탐색연구) 신규과제 공모",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023018",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 한국연구재단",
-      "deadline": null,
-      "posted_date": "2026-07-08",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-08T08:05:13.938728",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
