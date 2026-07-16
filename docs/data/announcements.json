@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-15 18:52 UTC",
+  "updated_at": "2026-07-16 01:23 UTC",
   "total": 111,
   "items": [
     {
@@ -1919,7 +1919,11 @@
         }
       ],
       "is_relevant": true,
-      "is_excluded": false
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 149,
