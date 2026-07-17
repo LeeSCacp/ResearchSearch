@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16 13:14 UTC",
+  "generated_at": "2026-07-17 18:57 UTC",
   "labels": {
     "interest": {
       "label_kr": "관심 분야 통합",
@@ -61,7 +61,7 @@
           "next_window_high": "2027-05-12",
           "confidence": "low",
           "prep_start": "2027-04-16",
-          "days_until_prep": 274,
+          "days_until_prep": 272,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -84,7 +84,7 @@
           "next_window_high": "2027-12-02",
           "confidence": "low",
           "prep_start": "2027-02-14",
-          "days_until_prep": 213,
+          "days_until_prep": 211,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -107,7 +107,7 @@
           "next_window_high": "2027-02-16",
           "confidence": "high",
           "prep_start": "2026-12-08",
-          "days_until_prep": 145,
+          "days_until_prep": 143,
           "prep_basis": "predicted",
           "urgency": "low",
           "likely_discontinued": false
@@ -130,7 +130,7 @@
           "next_window_high": "2026-12-21",
           "confidence": "low",
           "prep_start": "2027-03-16",
-          "days_until_prep": 243,
+          "days_until_prep": 241,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -153,7 +153,7 @@
           "next_window_high": "2026-08-08",
           "confidence": "high",
           "prep_start": "2026-05-24",
-          "days_until_prep": -53,
+          "days_until_prep": -55,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": true
@@ -176,7 +176,7 @@
           "next_window_high": "2026-08-08",
           "confidence": "high",
           "prep_start": "2026-05-24",
-          "days_until_prep": -53,
+          "days_until_prep": -55,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": true
@@ -199,7 +199,7 @@
           "next_window_high": "2026-06-18",
           "confidence": "high",
           "prep_start": "2026-03-15",
-          "days_until_prep": -123,
+          "days_until_prep": -125,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": false
@@ -222,7 +222,7 @@
           "next_window_high": "2026-08-19",
           "confidence": "low",
           "prep_start": "2027-01-14",
-          "days_until_prep": 182,
+          "days_until_prep": 180,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -245,7 +245,7 @@
           "next_window_high": null,
           "confidence": "high",
           "prep_start": "2026-06-10",
-          "days_until_prep": -36,
+          "days_until_prep": -38,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": true
@@ -268,7 +268,7 @@
           "next_window_high": "2026-07-01",
           "confidence": "high",
           "prep_start": "2026-04-25",
-          "days_until_prep": -82,
+          "days_until_prep": -84,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": true
@@ -291,7 +291,7 @@
           "next_window_high": "2027-03-16",
           "confidence": "high",
           "prep_start": "2027-01-27",
-          "days_until_prep": 195,
+          "days_until_prep": 193,
           "prep_basis": "predicted",
           "urgency": "low",
           "likely_discontinued": true
@@ -314,7 +314,7 @@
           "next_window_high": "2026-09-06",
           "confidence": "medium",
           "prep_start": "2026-06-30",
-          "days_until_prep": -16,
+          "days_until_prep": -18,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": true
@@ -337,7 +337,7 @@
           "next_window_high": "2027-03-15",
           "confidence": "high",
           "prep_start": "2027-01-25",
-          "days_until_prep": 193,
+          "days_until_prep": 191,
           "prep_basis": "predicted",
           "urgency": "low",
           "likely_discontinued": false
@@ -360,7 +360,7 @@
           "next_window_high": "2026-12-09",
           "confidence": "high",
           "prep_start": "2026-09-05",
-          "days_until_prep": 51,
+          "days_until_prep": 49,
           "prep_basis": "predicted",
           "urgency": "medium",
           "likely_discontinued": false
@@ -383,7 +383,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-05-16",
-          "days_until_prep": 304,
+          "days_until_prep": 302,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -406,7 +406,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-03-16",
-          "days_until_prep": 243,
+          "days_until_prep": 241,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -429,7 +429,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-02-14",
-          "days_until_prep": 213,
+          "days_until_prep": 211,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -452,7 +452,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-04-16",
-          "days_until_prep": 274,
+          "days_until_prep": 272,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -475,7 +475,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2026-12-17",
-          "days_until_prep": 154,
+          "days_until_prep": 152,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -498,7 +498,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-01-14",
-          "days_until_prep": 182,
+          "days_until_prep": 180,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -521,7 +521,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2026-11-16",
-          "days_until_prep": 123,
+          "days_until_prep": 121,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -544,7 +544,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-04-16",
-          "days_until_prep": 274,
+          "days_until_prep": 272,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -567,7 +567,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-04-16",
-          "days_until_prep": 274,
+          "days_until_prep": 272,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -590,7 +590,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-01-14",
-          "days_until_prep": 182,
+          "days_until_prep": 180,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -615,7 +615,7 @@
           "next_window_high": "2026-06-18",
           "confidence": "high",
           "prep_start": "2026-03-15",
-          "days_until_prep": -123,
+          "days_until_prep": -125,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": false
@@ -638,7 +638,7 @@
           "next_window_high": "2026-12-09",
           "confidence": "high",
           "prep_start": "2026-09-05",
-          "days_until_prep": 51,
+          "days_until_prep": 49,
           "prep_basis": "predicted",
           "urgency": "medium",
           "likely_discontinued": false
@@ -1019,7 +1019,7 @@
           "next_window_high": "2027-05-12",
           "confidence": "low",
           "prep_start": "2027-04-16",
-          "days_until_prep": 274,
+          "days_until_prep": 272,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -1042,7 +1042,7 @@
           "next_window_high": "2027-12-02",
           "confidence": "low",
           "prep_start": "2027-02-14",
-          "days_until_prep": 213,
+          "days_until_prep": 211,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -1065,7 +1065,7 @@
           "next_window_high": "2027-02-16",
           "confidence": "high",
           "prep_start": "2026-12-08",
-          "days_until_prep": 145,
+          "days_until_prep": 143,
           "prep_basis": "predicted",
           "urgency": "low",
           "likely_discontinued": false
@@ -1088,7 +1088,7 @@
           "next_window_high": "2026-12-21",
           "confidence": "low",
           "prep_start": "2027-03-16",
-          "days_until_prep": 243,
+          "days_until_prep": 241,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -1111,7 +1111,7 @@
           "next_window_high": "2026-08-08",
           "confidence": "high",
           "prep_start": "2026-05-24",
-          "days_until_prep": -53,
+          "days_until_prep": -55,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": true
@@ -1134,7 +1134,7 @@
           "next_window_high": "2026-08-08",
           "confidence": "high",
           "prep_start": "2026-05-24",
-          "days_until_prep": -53,
+          "days_until_prep": -55,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": true
@@ -1157,7 +1157,7 @@
           "next_window_high": "2026-06-18",
           "confidence": "high",
           "prep_start": "2026-03-15",
-          "days_until_prep": -123,
+          "days_until_prep": -125,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": false
@@ -1180,7 +1180,7 @@
           "next_window_high": "2026-08-19",
           "confidence": "low",
           "prep_start": "2027-01-14",
-          "days_until_prep": 182,
+          "days_until_prep": 180,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -1203,7 +1203,7 @@
           "next_window_high": null,
           "confidence": "high",
           "prep_start": "2026-06-10",
-          "days_until_prep": -36,
+          "days_until_prep": -38,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": true
@@ -1226,7 +1226,7 @@
           "next_window_high": "2026-07-01",
           "confidence": "high",
           "prep_start": "2026-04-25",
-          "days_until_prep": -82,
+          "days_until_prep": -84,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": true
@@ -1249,7 +1249,7 @@
           "next_window_high": "2027-03-16",
           "confidence": "high",
           "prep_start": "2027-01-27",
-          "days_until_prep": 195,
+          "days_until_prep": 193,
           "prep_basis": "predicted",
           "urgency": "low",
           "likely_discontinued": true
@@ -1272,7 +1272,7 @@
           "next_window_high": "2027-03-15",
           "confidence": "high",
           "prep_start": "2027-01-25",
-          "days_until_prep": 193,
+          "days_until_prep": 191,
           "prep_basis": "predicted",
           "urgency": "low",
           "likely_discontinued": false
@@ -1295,7 +1295,7 @@
           "next_window_high": "2026-12-09",
           "confidence": "high",
           "prep_start": "2026-09-05",
-          "days_until_prep": 51,
+          "days_until_prep": 49,
           "prep_basis": "predicted",
           "urgency": "medium",
           "likely_discontinued": false
@@ -1318,7 +1318,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-05-16",
-          "days_until_prep": 304,
+          "days_until_prep": 302,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -1341,7 +1341,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-03-16",
-          "days_until_prep": 243,
+          "days_until_prep": 241,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -1364,7 +1364,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-02-14",
-          "days_until_prep": 213,
+          "days_until_prep": 211,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -1387,7 +1387,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-04-16",
-          "days_until_prep": 274,
+          "days_until_prep": 272,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -1410,7 +1410,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2026-12-17",
-          "days_until_prep": 154,
+          "days_until_prep": 152,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -1433,7 +1433,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-01-14",
-          "days_until_prep": 182,
+          "days_until_prep": 180,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -1456,7 +1456,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-04-16",
-          "days_until_prep": 274,
+          "days_until_prep": 272,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -1479,7 +1479,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-04-16",
-          "days_until_prep": 274,
+          "days_until_prep": 272,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -1502,7 +1502,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-01-14",
-          "days_until_prep": 182,
+          "days_until_prep": 180,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -1527,7 +1527,7 @@
           "next_window_high": "2026-06-18",
           "confidence": "high",
           "prep_start": "2026-03-15",
-          "days_until_prep": -123,
+          "days_until_prep": -125,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": false
@@ -1550,7 +1550,7 @@
           "next_window_high": "2026-12-09",
           "confidence": "high",
           "prep_start": "2026-09-05",
-          "days_until_prep": 51,
+          "days_until_prep": 49,
           "prep_basis": "predicted",
           "urgency": "medium",
           "likely_discontinued": false
@@ -1916,7 +1916,7 @@
           "next_window_high": "2027-05-12",
           "confidence": "low",
           "prep_start": "2027-04-16",
-          "days_until_prep": 274,
+          "days_until_prep": 272,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -1939,7 +1939,7 @@
           "next_window_high": "2026-12-21",
           "confidence": "low",
           "prep_start": "2027-03-16",
-          "days_until_prep": 243,
+          "days_until_prep": 241,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -1962,7 +1962,7 @@
           "next_window_high": "2026-08-19",
           "confidence": "low",
           "prep_start": "2027-01-14",
-          "days_until_prep": 182,
+          "days_until_prep": 180,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -1985,7 +1985,7 @@
           "next_window_high": "2026-09-06",
           "confidence": "medium",
           "prep_start": "2026-06-30",
-          "days_until_prep": -16,
+          "days_until_prep": -18,
           "prep_basis": "predicted",
           "urgency": "critical",
           "likely_discontinued": true
@@ -2008,7 +2008,7 @@
           "next_window_high": "2026-12-09",
           "confidence": "high",
           "prep_start": "2026-09-05",
-          "days_until_prep": 51,
+          "days_until_prep": 49,
           "prep_basis": "predicted",
           "urgency": "medium",
           "likely_discontinued": false
@@ -2031,7 +2031,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-05-16",
-          "days_until_prep": 304,
+          "days_until_prep": 302,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -2054,7 +2054,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2027-04-16",
-          "days_until_prep": 274,
+          "days_until_prep": 272,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": true
@@ -2077,7 +2077,7 @@
           "next_window_high": null,
           "confidence": null,
           "prep_start": "2026-11-16",
-          "days_until_prep": 123,
+          "days_until_prep": 121,
           "prep_basis": "seasonal",
           "urgency": "low",
           "likely_discontinued": false
@@ -2102,7 +2102,7 @@
           "next_window_high": "2026-12-09",
           "confidence": "high",
           "prep_start": "2026-09-05",
-          "days_until_prep": 51,
+          "days_until_prep": 49,
           "prep_basis": "predicted",
           "urgency": "medium",
           "likely_discontinued": false
