@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 
 async def main() -> None:
-    from src.scheduler import run_scraping_cycle, run_reminder_cycle
+    from src.scheduler import run_scraping_cycle, run_daily_digest
     from src.export import export_announcements, export_synonyms, restore_announcements
 
     # 캐시 유실 대비: 커밋된 JSON에서 운영 DB 복원 (중복 알림 방지)
@@ -39,8 +39,10 @@ async def main() -> None:
     logger.info("=== 스크래핑 사이클 시작 ===")
     await run_scraping_cycle()
 
-    logger.info("=== D-day 리마인더 사이클 시작 ===")
-    await run_reminder_cycle()
+    # 일일 다이제스트: 09:00 KST 이후 첫 사이클에서 하루 1통 발송
+    # (매 사이클 호출해도 DigestLog + 시각 판정으로 중복 발송 없음)
+    logger.info("=== 일일 다이제스트 확인 ===")
+    await run_daily_digest()
 
     logger.info("=== JSON 내보내기 시작 ===")
     count = export_announcements("docs/data/announcements.json")

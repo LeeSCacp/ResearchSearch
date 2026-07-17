@@ -10,8 +10,10 @@ from datetime import datetime, date
 
 from sqlalchemy.orm import Session
 
-from src.config import load_config, today_kst
-from src.models.announcement import Announcement, NotificationLog, init_db, get_session
+from src.config import load_config, today_kst, KST
+from src.models.announcement import (
+    Announcement, NotificationLog, DigestLog, init_db, get_session,
+)
 from src.scrapers.base import AnnouncementData
 from src.scrapers.nrf import NRFScraper
 from src.scrapers.ntis import NTISScraper
@@ -70,28 +72,14 @@ async def run_scraping_cycle():
         filtered_urls = {d.url for d in filtered_dtos}
         filtered = [a for a in new_announcements if a.url in filtered_urls]
 
+        # 4. 필터 결과 로그만 남긴다 — 발송은 일일 다이제스트(09:00 KST)가 전담
+        #    (2026-07-18 B: 즉시 발송 제거, 하루 최대 1통 통합)
         logger.info(
             f"필터 통과: {len(filtered)}건 / 전체 신규: {len(new_announcements)}건 "
-            f"(키워드: {filter_cfg.get('keywords', [])})"
+            f"— 다이제스트 대기 (is_notified=False 유지)"
         )
-        if filtered:
-            for a in filtered:
-                logger.info(f"  → 알림 대상: [{a.source}] {a.title[:50]}")
-        else:
-            # 필터 미통과 이유 확인용 로그
-            logger.info("필터 통과 공고 없음 — 아래 공고들의 키워드/카테고리 매칭 실패:")
-            for a in new_announcements[:5]:
-                logger.info(f"  ✗ [{a.source}] {a.title[:50]} | cat={a.category}")
-            logger.info("알림 생략")
-            return
-
-        # 4. 알림 발송 + 로그 기록
-        notif_cfg = config.get("notifications", {})
-        await _send_new_notifications(session, notif_cfg, filtered)
-
-        # 5. Google Calendar 마감일 등록 (필터 통과 공고만)
-        cal_cfg = notif_cfg.get("google_calendar", {})
-        await _add_calendar_events(session, cal_cfg, filtered)
+        for a in filtered:
+            logger.info(f"  → 다이제스트 대상: [{a.source}] {a.title[:50]}")
 
     except Exception as e:
         logger.error(f"스크래핑 사이클 오류: {e}")
@@ -101,7 +89,151 @@ async def run_scraping_cycle():
 
 
 # ======================================================================
-# D-day 리마인더 사이클
+# 일일 다이제스트 사이클 (2026-07-18 B) — 하루 최대 1통, 09:00 KST 이후
+# ======================================================================
+
+# 신규 섹션에 포함할 공고의 최대 나이(일) — 오래 묵은 미발송 공고가
+# 키워드 변경 등으로 갑자기 "신규"로 되살아나는 것을 방지
+_DIGEST_NEW_MAX_AGE_DAYS = 14
+
+
+async def run_daily_digest():
+    """일일 다이제스트: 신규 공고 + 마감 리마인더를 1통으로 통합 발송.
+
+    발송 규칙:
+      - KST 09시 이전 사이클(새벽 3시 등)은 건너뜀
+      - KST 날짜당 최대 1통 (DigestLog로 보장)
+      - 보낼 내용이 없으면 침묵 (그날은 count=0으로 기록)
+      - 발송 실패 시 기록하지 않음 → 같은 날 다음 사이클(15시)이 재시도
+    """
+    config = load_config()
+    engine = init_db(config["database"]["path"])
+    session = get_session(engine)
+
+    try:
+        now_kst = datetime.now(KST)
+        today = now_kst.date()
+
+        if now_kst.hour < 9:
+            logger.info(f"다이제스트: KST {now_kst.hour}시 — 09시 이전, 건너뜀")
+            return
+        if session.query(DigestLog).filter_by(digest_date=today).first():
+            logger.info("다이제스트: 오늘자 발송(또는 침묵) 기록 있음 — 건너뜀")
+            return
+
+        filter_cfg = config.get("filters", {})
+        filter_engine = FilterEngine(
+            keywords=filter_cfg.get("keywords", []),
+            categories=filter_cfg.get("categories", []),
+            exclude_keywords=filter_cfg.get("exclude_keywords", []),
+            conditional_keywords=filter_cfg.get("conditional_keywords", []),
+        )
+
+        def _dto(a: Announcement) -> AnnouncementData:
+            return AnnouncementData(
+                title=a.title, url=a.url, source=a.source,
+                category=a.category or "", deadline=a.deadline,
+                posted_date=a.posted_date, description=a.description or "",
+            )
+
+        # ── 1. 신규 섹션: 미발송 + 마감 안 지남 + 최근 등록 + 필터 통과 ──
+        new_candidates = (
+            session.query(Announcement)
+            .filter(Announcement.is_notified == False)
+            .all()
+        )
+        new_items: list[tuple[Announcement, list[str]]] = []
+        for ann in new_candidates:
+            if ann.deadline and ann.deadline < today:
+                continue   # 이미 마감
+            if ann.created_at and (datetime.now() - ann.created_at).days > _DIGEST_NEW_MAX_AGE_DAYS:
+                continue   # 오래 묵은 미발송 공고
+            dto = _dto(ann)
+            if filter_engine.matches(dto):
+                new_items.append((ann, filter_engine.match_reasons(dto)))
+        new_ids = {ann.id for ann, _ in new_items}
+
+        # ── 2. 리마인더 섹션: 필터 통과 + 단계 도달 + 미발송 단계만 ──────
+        reminder_items: list[tuple[Announcement, str, int, list[str]]] = []
+        active = (
+            session.query(Announcement)
+            .filter(Announcement.deadline.isnot(None))
+            .filter(Announcement.deadline >= today)
+            .all()
+        )
+        for ann in active:
+            if ann.id in new_ids:
+                continue   # 오늘 신규로 소개되는 공고는 리마인더 중복 제외
+            dto = _dto(ann)
+            if not filter_engine.matches(dto):
+                continue
+            days_left = (ann.deadline - today).days
+            for event_type, threshold, _label in REMINDER_THRESHOLDS:
+                if days_left > threshold:
+                    continue
+                already = (
+                    session.query(NotificationLog)
+                    .filter_by(announcement_id=ann.id,
+                               event_type=event_type, success=True)
+                    .first()
+                )
+                if not already:
+                    reminder_items.append(
+                        (ann, event_type, days_left, filter_engine.match_reasons(dto))
+                    )
+                break   # 가장 긴급한 미발송 단계 하나만
+
+        # 마감 가까운 순 정렬
+        reminder_items.sort(key=lambda x: x[2])
+
+        # ── 3. 발송 또는 침묵 ────────────────────────────────────────────
+        if not new_items and not reminder_items:
+            session.add(DigestLog(digest_date=today, item_count=0, success=True))
+            session.commit()
+            logger.info("다이제스트: 보낼 내용 없음 — 오늘은 침묵 (기록만)")
+            return
+
+        email_cfg = config.get("notifications", {}).get("email", {})
+        notifier = EmailNotifier(email_cfg)
+        ok, err = notifier.send_digest(new_items, reminder_items, today)
+
+        if not ok:
+            logger.error(f"다이제스트 발송 실패 — 다음 사이클 재시도: {err}")
+            for ann, _ in new_items:
+                _log_notification(session, ann.id, "email", "new", False, err)
+            for ann, event_type, _, _ in reminder_items:
+                _log_notification(session, ann.id, "email", event_type, False, err)
+            return
+
+        # ── 4. 성공 기록 ─────────────────────────────────────────────────
+        for ann, _ in new_items:
+            ann.is_notified = True
+            _log_notification(session, ann.id, "email", "new", True)
+        for ann, event_type, _, _ in reminder_items:
+            _log_notification(session, ann.id, "email", event_type, True)
+        session.add(DigestLog(
+            digest_date=today,
+            item_count=len(new_items) + len(reminder_items),
+            success=True,
+        ))
+        session.commit()
+        logger.info(
+            f"다이제스트 발송 완료: 신규 {len(new_items)} + 리마인더 {len(reminder_items)}"
+        )
+
+        # ── 5. Google Calendar (켜져 있을 때만, 신규 공고만) ─────────────
+        cal_cfg = config.get("notifications", {}).get("google_calendar", {})
+        await _add_calendar_events(session, cal_cfg, [ann for ann, _ in new_items])
+
+    except Exception as e:
+        logger.error(f"다이제스트 사이클 오류: {e}")
+        session.rollback()
+    finally:
+        session.close()
+
+
+# ======================================================================
+# D-day 리마인더 사이클 (레거시 — 다이제스트로 대체됨, 테스트용 유지)
 # ======================================================================
 
 async def run_reminder_cycle():

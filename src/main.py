@@ -15,7 +15,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 from src.config import load_config
 from src.models.announcement import init_db
-from src.scheduler import run_scraping_cycle, run_reminder_cycle
+from src.scheduler import run_scraping_cycle, run_daily_digest
 from src.web.app import create_app
 
 logging.basicConfig(
@@ -44,18 +44,18 @@ async def lifespan(app):
         replace_existing=True,
     )
 
-    # D-day 리마인더: 매일 오전 9시
+    # 일일 다이제스트(신규+리마인더 통합): 매일 오전 9시
     scheduler.add_job(
-        run_reminder_cycle,
+        run_daily_digest,
         "cron",
         hour=9,
         minute=0,
-        id="reminder_cycle",
+        id="daily_digest",
         replace_existing=True,
     )
 
     scheduler.start()
-    logger.info(f"스케줄러 시작 — 스크래핑: {interval}시간 간격 / 리마인더: 매일 09:00")
+    logger.info(f"스케줄러 시작 — 스크래핑: {interval}시간 간격 / 다이제스트: 매일 09:00")
 
     # 서버 기동 직후 1회 안전 실행
     async def _safe_initial_scrape():

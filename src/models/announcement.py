@@ -130,6 +130,21 @@ class HistoricalAnnouncement(Base):
         }
 
 
+class DigestLog(Base):
+    """일일 다이제스트 발송 기록 — KST 날짜당 최대 1통 보장.
+
+    item_count=0 기록은 "보낼 내용이 없어 침묵한 날"을 뜻한다
+    (그날 이후 사이클에서 다이제스트를 다시 시도하지 않기 위해 기록).
+    """
+    __tablename__ = "digest_logs"
+
+    id          = Column(Integer, primary_key=True, autoincrement=True)
+    digest_date = Column(Date, nullable=False, unique=True)   # KST 기준 날짜
+    sent_at     = Column(DateTime, default=datetime.now)
+    item_count  = Column(Integer, default=0)                  # 0 = 침묵한 날
+    success     = Column(Boolean, default=True)
+
+
 class CollectionCheckpoint(Base):
     """수집 진행 상태 체크포인트 (중단 복구용)."""
     __tablename__ = "collection_checkpoints"

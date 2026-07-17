@@ -258,6 +258,41 @@ class FilterEngine:
 
         return False
 
+    def match_reasons(self, item: AnnouncementData) -> list[str]:
+        """이 공고가 필터를 통과한 근거 키워드 목록 (다이제스트 메일 배지용).
+
+        matches()와 동일한 규칙으로 평가하되, 매칭된 근거를 문자열로 수집한다.
+        통과하지 못하는 공고면 빈 리스트.
+        """
+        primary = self._primary_text(item)
+        full    = self._searchable_text(item)
+
+        for excl in self._default_exclude_keywords:
+            if excl.lower() in primary:
+                return []
+
+        reasons: list[str] = []
+
+        for kw in self._default_keywords:
+            if kw.lower() in primary:
+                reasons.append(kw)
+
+        item_cat = (getattr(item, "category", "") or "").lower()
+        for cat in self._default_categories:
+            if cat.lower() in item_cat and cat not in reasons:
+                reasons.append(cat)
+
+        if not reasons:
+            # 조건부 키워드 경로: "인공지능×심리" 형태로 표기
+            for ck in self._default_conditional_keywords:
+                if ck.lower() in primary:
+                    partners = [kw for kw in self._default_keywords if kw.lower() in full]
+                    if partners:
+                        reasons.append(f"{ck}×{partners[0]}")
+                    break
+
+        return reasons
+
     def filter_items(self, items: list[AnnouncementData],
                      keywords: list[str] = None,
                      categories: list[str] = None,
