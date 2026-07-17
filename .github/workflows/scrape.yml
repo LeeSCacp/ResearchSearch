@@ -74,3 +74,16 @@ jobs:
             git pull --rebase origin main
             git push origin main
           fi
+
+      # ── 침묵 고장 감지 게이트 ────────────────────────────────────────────────
+      # 스크래퍼 연속 2회 비정상 또는 다이제스트 발송 실패 시 워크플로를 실패
+      # 처리한다 → GitHub이 실패 알림 메일을 보내 "고장난 줄 모르는 고장" 방지.
+      # (데이터 커밋 후에 실행되므로 수집 결과는 보존됨)
+      - name: 수집 상태 점검
+        run: |
+          if [ -f data/health_fail.flag ]; then
+            echo "::error::시스템 비정상 감지"
+            cat data/health_fail.flag
+            exit 1
+          fi
+          echo "모든 소스 정상"

@@ -37,12 +37,27 @@ async def main() -> None:
         logger.error(f"운영 DB 복원 실패 (무시 진행): {e}")
 
     logger.info("=== 스크래핑 사이클 시작 ===")
-    await run_scraping_cycle()
+    health_alerts = await run_scraping_cycle() or []
 
     # 일일 다이제스트: 09:00 KST 이후 첫 사이클에서 하루 1통 발송
     # (매 사이클 호출해도 DigestLog + 시각 판정으로 중복 발송 없음)
     logger.info("=== 일일 다이제스트 확인 ===")
-    await run_daily_digest()
+    digest_status = await run_daily_digest() or {}
+
+    # 침묵 고장 감지: 경보가 있으면 플래그 파일 기록
+    # → 워크플로 마지막 단계가 이 파일을 보고 실패 처리 (GitHub 실패 알림 발송)
+    # 데이터 커밋 이후에 실패시키기 위해 여기서 exit하지 않는다.
+    alerts = list(health_alerts)
+    if digest_status.get("send_failed"):
+        alerts.append("다이제스트 이메일 발송 실패 (같은 날 다음 사이클 재시도 예정)")
+    flag = Path("data/health_fail.flag")
+    if alerts:
+        flag.parent.mkdir(exist_ok=True)
+        flag.write_text("\n".join(alerts), encoding="utf-8")
+        for a in alerts:
+            logger.error(f"[경보] {a}")
+    elif flag.exists():
+        flag.unlink()   # 회복 시 플래그 제거
 
     logger.info("=== JSON 내보내기 시작 ===")
     count = export_announcements("docs/data/announcements.json")

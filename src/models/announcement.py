@@ -130,6 +130,22 @@ class HistoricalAnnouncement(Base):
         }
 
 
+class SourceHealth(Base):
+    """스크래퍼 소스별 연속 실패 카운터 — 침묵 고장 감지용.
+
+    일시적 네트워크 오류로 워크플로가 실패 처리되는 것을 막기 위해
+    연속 2회(12시간) 이상 실패 시에만 경보 대상으로 삼는다.
+    """
+    __tablename__ = "source_health"
+
+    id                   = Column(Integer, primary_key=True, autoincrement=True)
+    source               = Column(String(20), nullable=False, unique=True)
+    consecutive_failures = Column(Integer, default=0)
+    last_ok_at           = Column(DateTime)
+    last_error           = Column(Text)
+    updated_at           = Column(DateTime, default=datetime.now)
+
+
 class DigestLog(Base):
     """일일 다이제스트 발송 기록 — KST 날짜당 최대 1통 보장.
 

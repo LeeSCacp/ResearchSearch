@@ -31,33 +31,81 @@ class IRISScraper(BaseScraper):
     # 목록 수집
     # ------------------------------------------------------------------
 
+    # 페이지네이션 안전 상한 (10건/페이지 × 10 = 최대 100건)
+    _MAX_PAGES = 10
+
     async def scrape(self) -> list[AnnouncementData]:
         results: list[AnnouncementData] = []
         try:
             results = await self._scrape_list()
         except Exception as e:
             self.log_error(f"목록 수집 실패: {e}")
+            self.set_health(False, None, str(e))
         self.log_info(f"{len(results)}건 수집 완료")
         return results
 
     async def _scrape_list(self) -> list[AnnouncementData]:
+        """전체 페이지 순회 수집.
+
+        기존에는 1페이지(10건)만 읽어 나머지가 유실됐다.
+        pageIndex hidden input을 폼 조작으로 바꿔가며 전체를 순회한다.
+        """
+        import re as _re
         from playwright.async_api import async_playwright
+
         results = []
+        seen_urls: set[str] = set()
+        raw_total = 0
+
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=True)
             page = await browser.new_page()
             await page.goto(IRIS_LIST_URL, wait_until="networkidle", timeout=60000)
-            items = await page.query_selector_all(
-                '[onclick*="f_bsnsAncmBtinSituListForm_view"]'
-            )
-            for item in items:
-                try:
-                    ann = await self._parse_item(item)
-                    if ann:
-                        results.append(ann)
-                except Exception as e:
-                    self.log_error(f"항목 파싱 실패: {e}")
+            await page.wait_for_timeout(1000)
+
+            # 전체 건수 → 페이지 수 계산 (10건/페이지)
+            body = await page.inner_text("body")
+            m = _re.search(r"전체\s*([0-9,]+)\s*건", body)
+            total_count = int(m.group(1).replace(",", "")) if m else 0
+            total_pages = min(self._MAX_PAGES, max(1, (total_count + 9) // 10))
+
+            for page_num in range(1, total_pages + 1):
+                if page_num > 1:
+                    moved = await page.evaluate(f"""() => {{
+                        const f = document.forms['bsnsAncmBtinSituListForm'];
+                        if (!f) return false;
+                        const pi = f.querySelector('input[name="pageIndex"]');
+                        if (!pi) return false;
+                        pi.value = '{page_num}';
+                        f.submit();
+                        return true;
+                    }}""")
+                    if not moved:
+                        self.log_warning(f"p{page_num}: pageIndex 폼 조작 실패 — 순회 중단")
+                        break
+                    await page.wait_for_timeout(3000)
+
+                items = await page.query_selector_all(
+                    '[onclick*="f_bsnsAncmBtinSituListForm_view"]'
+                )
+                raw_total += len(items)
+                if not items:
+                    break
+                for item in items:
+                    try:
+                        ann = await self._parse_item(item)
+                        if ann and ann.url not in seen_urls:
+                            seen_urls.add(ann.url)
+                            results.append(ann)
+                    except Exception as e:
+                        self.log_error(f"항목 파싱 실패: {e}")
             await browser.close()
+
+        # 전체 건수를 인식했는데 항목을 하나도 못 읽었다면 구조 변경 의심
+        ok = raw_total > 0 or total_count == 0
+        self.set_health(ok, raw_total,
+                        "" if ok else f"전체 {total_count}건 표시되나 파싱 0건")
+        self.log_info(f"페이지 {total_pages}개 순회, 원시 {raw_total}건")
         return results
 
     async def _parse_item(self, item) -> AnnouncementData | None:

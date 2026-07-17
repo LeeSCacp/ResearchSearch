@@ -40,26 +40,36 @@ class NTISScraper(BaseScraper):
             results = await self._scrape_list()
         except Exception as e:
             self.log_error(f"목록 수집 실패: {e}")
+            self.set_health(False, None, str(e))
         self.log_info(f"{len(results)}건 수집 완료")
         return results
 
     async def _scrape_list(self) -> list[AnnouncementData]:
         results = []
         async with httpx.AsyncClient(timeout=30, verify=False) as client:
-            response = await client.get(NTIS_LIST_URL, headers=HEADERS)
+            # pageUnit=100: 기본 10건만 노출되어 공고가 몰리는 날 유실되던 문제 방지
+            response = await client.get(
+                NTIS_LIST_URL, headers=HEADERS,
+                params={"pageUnit": "100", "pageIndex": "1"},
+            )
             response.raise_for_status()
             soup = BeautifulSoup(response.text, "lxml")
             table = soup.find("table", class_="basic_list")
             if not table:
-                self.log_error("basic_list 테이블을 찾을 수 없습니다")
+                self.log_error("basic_list 테이블을 찾을 수 없습니다 — 사이트 구조 변경 의심")
+                self.set_health(False, 0, "basic_list 테이블 없음")
                 return results
-            for row in table.find_all("tr")[1:]:
+            rows = table.find_all("tr")[1:]
+            for row in rows:
                 try:
                     item = self._parse_row(row)
                     if item:
                         results.append(item)
                 except Exception as e:
                     self.log_error(f"행 파싱 실패: {e}")
+            # 행은 있는데 파싱 결과가 전혀 없으면 구조 변경 의심
+            self.set_health(len(results) > 0 or len(rows) == 0, len(rows),
+                            "" if results or not rows else "행 파싱 전멸")
         return results
 
     def _parse_row(self, row) -> AnnouncementData | None:

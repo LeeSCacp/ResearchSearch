@@ -12,8 +12,12 @@ from sqlalchemy.orm import Session
 
 from src.config import load_config, today_kst, KST
 from src.models.announcement import (
-    Announcement, NotificationLog, DigestLog, init_db, get_session,
+    Announcement, NotificationLog, DigestLog, SourceHealth,
+    init_db, get_session,
 )
+
+# 이 횟수 이상 연속 실패하면 워크플로 경보 대상 (6시간 주기 × 2 = 12시간)
+HEALTH_ALERT_THRESHOLD = 2
 from src.scrapers.base import AnnouncementData
 from src.scrapers.nrf import NRFScraper
 from src.scrapers.ntis import NTISScraper
@@ -30,16 +34,22 @@ logger = logging.getLogger(__name__)
 # 신규 공고 스크래핑 사이클
 # ======================================================================
 
-async def run_scraping_cycle():
-    """1회 스크래핑 사이클: 수집 → 저장 → 필터 → 신규 공고 알림."""
+async def run_scraping_cycle() -> list[str]:
+    """1회 스크래핑 사이클: 수집 → 저장(갱신 포함) → 필터 로그.
+
+    Returns:
+        health 경보 목록 (연속 실패 임계 도달 소스). 정상이면 빈 리스트.
+    """
     config = load_config()
     engine = init_db(config["database"]["path"])
     session = get_session(engine)
+    health_alerts: list[str] = []
 
     try:
-        # 1. 스크래핑
-        all_items = await _scrape_all(config)
+        # 1. 스크래핑 + 소스 상태 갱신 (침묵 고장 감지)
+        all_items, healths = await _scrape_all(config)
         logger.info(f"총 {len(all_items)}건 수집됨")
+        health_alerts = _update_source_health(session, healths)
 
         # 2. 신규 공고만 저장
         new_announcements = _save_new_items(session, all_items)
@@ -47,7 +57,7 @@ async def run_scraping_cycle():
 
         if not new_announcements:
             logger.info("신규 공고 없음, 알림 생략")
-            return
+            return health_alerts
 
         # 3. 상세 정보 수집 (신규 공고만)
         await _enrich_new_items(session, all_items, new_announcements)
@@ -86,6 +96,7 @@ async def run_scraping_cycle():
         session.rollback()
     finally:
         session.close()
+    return health_alerts
 
 
 # ======================================================================
@@ -97,7 +108,7 @@ async def run_scraping_cycle():
 _DIGEST_NEW_MAX_AGE_DAYS = 14
 
 
-async def run_daily_digest():
+async def run_daily_digest() -> dict:
     """일일 다이제스트: 신규 공고 + 마감 리마인더를 1통으로 통합 발송.
 
     발송 규칙:
@@ -105,7 +116,12 @@ async def run_daily_digest():
       - KST 날짜당 최대 1통 (DigestLog로 보장)
       - 보낼 내용이 없으면 침묵 (그날은 count=0으로 기록)
       - 발송 실패 시 기록하지 않음 → 같은 날 다음 사이클(15시)이 재시도
+
+    Returns:
+        {"sent": bool, "send_failed": bool, "items": int}
+        send_failed=True는 발송을 시도했으나 실패한 경우 (워크플로 경보 대상).
     """
+    status = {"sent": False, "send_failed": False, "items": 0}
     config = load_config()
     engine = init_db(config["database"]["path"])
     session = get_session(engine)
@@ -116,10 +132,10 @@ async def run_daily_digest():
 
         if now_kst.hour < 9:
             logger.info(f"다이제스트: KST {now_kst.hour}시 — 09시 이전, 건너뜀")
-            return
+            return status
         if session.query(DigestLog).filter_by(digest_date=today).first():
             logger.info("다이제스트: 오늘자 발송(또는 침묵) 기록 있음 — 건너뜀")
-            return
+            return status
 
         filter_cfg = config.get("filters", {})
         filter_engine = FilterEngine(
@@ -191,19 +207,20 @@ async def run_daily_digest():
             session.add(DigestLog(digest_date=today, item_count=0, success=True))
             session.commit()
             logger.info("다이제스트: 보낼 내용 없음 — 오늘은 침묵 (기록만)")
-            return
+            return status
 
         email_cfg = config.get("notifications", {}).get("email", {})
         notifier = EmailNotifier(email_cfg)
         ok, err = notifier.send_digest(new_items, reminder_items, today)
 
         if not ok:
+            status["send_failed"] = True
             logger.error(f"다이제스트 발송 실패 — 다음 사이클 재시도: {err}")
             for ann, _ in new_items:
                 _log_notification(session, ann.id, "email", "new", False, err)
             for ann, event_type, _, _ in reminder_items:
                 _log_notification(session, ann.id, "email", event_type, False, err)
-            return
+            return status
 
         # ── 4. 성공 기록 ─────────────────────────────────────────────────
         for ann, _ in new_items:
@@ -217,6 +234,8 @@ async def run_daily_digest():
             success=True,
         ))
         session.commit()
+        status["sent"] = True
+        status["items"] = len(new_items) + len(reminder_items)
         logger.info(
             f"다이제스트 발송 완료: 신규 {len(new_items)} + 리마인더 {len(reminder_items)}"
         )
@@ -230,6 +249,7 @@ async def run_daily_digest():
         session.rollback()
     finally:
         session.close()
+    return status
 
 
 # ======================================================================
@@ -329,7 +349,8 @@ async def run_reminder_cycle():
 # 내부 함수
 # ======================================================================
 
-async def _scrape_all(config: dict) -> list[AnnouncementData]:
+async def _scrape_all(config: dict) -> tuple[list[AnnouncementData], dict[str, dict]]:
+    """모든 스크래퍼 실행. (수집 항목, 소스별 health) 반환."""
     sites = config.get("scraping", {}).get("sites", {})
     scrapers = []
     if sites.get("nrf",  True): scrapers.append(NRFScraper())
@@ -341,12 +362,45 @@ async def _scrape_all(config: dict) -> list[AnnouncementData]:
         return_exceptions=True,
     )
     all_items: list[AnnouncementData] = []
-    for result in results:
+    healths: dict[str, dict] = {}
+    for scraper, result in zip(scrapers, results):
         if isinstance(result, Exception):
             logger.error(f"스크래퍼 오류: {result}")
+            healths[scraper.source_name] = {
+                "ok": False, "raw_count": None, "error": str(result)[:300],
+            }
         else:
             all_items.extend(result)
-    return all_items
+            healths[scraper.source_name] = scraper.health
+    return all_items, healths
+
+
+def _update_source_health(session: Session, healths: dict[str, dict]) -> list[str]:
+    """SourceHealth 갱신. 연속 실패 임계 도달 소스 목록 반환."""
+    alerts: list[str] = []
+    for source, h in healths.items():
+        row = session.query(SourceHealth).filter_by(source=source).first()
+        if not row:
+            row = SourceHealth(source=source, consecutive_failures=0)
+            session.add(row)
+        if h.get("ok"):
+            row.consecutive_failures = 0
+            row.last_ok_at = datetime.now()
+            row.last_error = None
+        else:
+            row.consecutive_failures = (row.consecutive_failures or 0) + 1
+            row.last_error = h.get("error", "")
+            logger.warning(
+                f"[health] {source} 수집 비정상 (연속 {row.consecutive_failures}회): "
+                f"{h.get('error', '')}"
+            )
+            if row.consecutive_failures >= HEALTH_ALERT_THRESHOLD:
+                alerts.append(
+                    f"{source}: 연속 {row.consecutive_failures}회 수집 비정상 — {h.get('error', '')}"
+                )
+        row.updated_at = datetime.now()
+    session.commit()
+    return alerts
 
 
 async def _enrich_new_items(
@@ -401,9 +455,37 @@ async def _enrich_new_items(
 
 
 def _save_new_items(session: Session, items: list[AnnouncementData]) -> list[Announcement]:
+    """신규 공고 저장 + 기존 공고 변경 반영.
+
+    기존 공고 갱신 (2026-07-18 O3):
+      - 마감일이 바뀌면(연장 등) 갱신하고, 기존 리마인더 발송 기록을 삭제
+        → 새 마감일 기준으로 D-30~D-1 단계가 다시 동작
+      - category가 비어 있었는데 새로 채워졌으면 보완
+    """
     new_announcements: list[Announcement] = []
+    updated = 0
     for item in items:
-        if session.query(Announcement).filter_by(url=item.url).first():
+        existing = session.query(Announcement).filter_by(url=item.url).first()
+        if existing:
+            changed = False
+            if item.deadline and existing.deadline != item.deadline:
+                logger.info(
+                    f"마감일 변경 감지 [{existing.title[:40]}]: "
+                    f"{existing.deadline} → {item.deadline} (리마인더 단계 초기화)"
+                )
+                existing.deadline = item.deadline
+                # 이전 마감일 기준 리마인더 기록 삭제 → 새 마감일로 재발송 가능
+                (session.query(NotificationLog)
+                 .filter(NotificationLog.announcement_id == existing.id)
+                 .filter(NotificationLog.event_type.in_(
+                     [et for et, _, _ in REMINDER_THRESHOLDS]))
+                 .delete(synchronize_session=False))
+                changed = True
+            if item.category and not existing.category:
+                existing.category = item.category
+                changed = True
+            if changed:
+                updated += 1
             continue
         ann = Announcement(
             title=item.title, url=item.url, source=item.source,
@@ -414,6 +496,8 @@ def _save_new_items(session: Session, items: list[AnnouncementData]) -> list[Ann
         session.add(ann)
         new_announcements.append(ann)
     session.commit()
+    if updated:
+        logger.info(f"기존 공고 갱신: {updated}건")
     return new_announcements
 
 

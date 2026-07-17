@@ -61,6 +61,7 @@ class NRFScraper(BaseScraper):
             results = await self._scrape_list()
         except Exception as e:
             self.log_error(f"목록 수집 실패: {e}")
+            self.set_health(False, None, str(e))
         self.log_info(f"{len(results)}건 수집 완료 (접수 중/예정만)")
         return results
 
@@ -93,10 +94,16 @@ class NRFScraper(BaseScraper):
                     });
                 }""")
                 if not blocks:
-                    self.log_warning(f"p{page_num}: public-notice-block 미발견")
+                    if page_num == 1:
+                        self.log_warning("p1: public-notice-block 미발견 — 사이트 구조 변경 의심")
                     break
                 raw_blocks.extend(blocks)
             await browser.close()
+
+        # 1페이지부터 블록이 전혀 없으면 구조 변경 의심 (NRF는 항상 공고가 게시됨)
+        ok = len(raw_blocks) > 0
+        self.set_health(ok, len(raw_blocks),
+                        "" if ok else "public-notice-block 0개 — 구조 변경 의심")
 
         today = today_kst()
         results: list[AnnouncementData] = []

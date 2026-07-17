@@ -25,6 +25,17 @@ class BaseScraper(ABC):
 
     source_name: str = ""
 
+    def __init__(self):
+        # 침묵 고장 감지용 — scrape() 실행 후 각 스크래퍼가 갱신한다.
+        #   raw_count: 사이트에서 파싱한 원시 목록 개수 (필터링 전)
+        #   ok: 구조가 정상으로 보이는지 (raw_count > 0 등)
+        #   error: 실패 사유
+        # "접수 중 공고 0건"은 정상일 수 있으므로 ok 판정은 raw_count 기준.
+        self.health: dict = {"ok": True, "raw_count": None, "error": ""}
+
+    def set_health(self, ok: bool, raw_count: int | None, error: str = ""):
+        self.health = {"ok": ok, "raw_count": raw_count, "error": error[:300]}
+
     @abstractmethod
     async def scrape(self) -> list[AnnouncementData]:
         """사이트에서 공고 목록을 수집하여 반환한다."""
