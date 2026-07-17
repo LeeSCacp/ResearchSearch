@@ -56,6 +56,7 @@ async def run_scraping_cycle():
             keywords=filter_cfg.get("keywords", []),
             categories=filter_cfg.get("categories", []),
             exclude_keywords=filter_cfg.get("exclude_keywords", []),
+            conditional_keywords=filter_cfg.get("conditional_keywords", []),
         )
         dto_items = [
             AnnouncementData(
@@ -130,6 +131,7 @@ async def run_reminder_cycle():
             keywords=filter_cfg.get("keywords", []),
             categories=filter_cfg.get("categories", []),
             exclude_keywords=filter_cfg.get("exclude_keywords", []),
+            conditional_keywords=filter_cfg.get("conditional_keywords", []),
         )
         active_announcements = []
         for ann in candidates:

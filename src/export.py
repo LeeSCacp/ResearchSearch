@@ -67,6 +67,7 @@ def export_announcements(
             keywords=filter_cfg.get("keywords", []),
             categories=filter_cfg.get("categories", []),
             exclude_keywords=filter_cfg.get("exclude_keywords", []),
+            conditional_keywords=filter_cfg.get("conditional_keywords", []),
         )
 
         # 제외 키워드 목록을 개별 단어로 평탄화
