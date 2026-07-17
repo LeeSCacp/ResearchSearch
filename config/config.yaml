@@ -77,7 +77,8 @@ notifications:
     chat_id: ""           # 환경변수로 주입
 
   google_calendar:
-    enabled: true         # GitHub Secret GOOGLE_CALENDAR_CREDENTIALS / GOOGLE_CALENDAR_ID 필요
+    enabled: false        # 2026-07-18 사용자 요청으로 비활성화 (다듬는 동안 캘린더 오염 방지)
+                          # 재활성화: true로 변경만 하면 됨 (Secret은 유지되어 있음)
     calendar_id: ""       # 환경변수 GOOGLE_CALENDAR_ID로 주입
 
 database:
