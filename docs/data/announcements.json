@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-20 19:22 UTC",
-  "total": 140,
+  "updated_at": "2026-07-21 01:23 UTC",
+  "total": 145,
   "items": [
     {
       "id": 9,
@@ -2293,26 +2293,22 @@
       "is_excluded": false
     },
     {
-      "id": 141,
-      "title": "2026년 혁신연구장비핵심기술개발및상용화사업 첨단연구장비상용화 본과제 신청안내",
-      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273384&flag=rndList",
+      "id": 206,
+      "title": "2026년 나노·소재기술개발사업(팹고도화) 모아팹 중고장비 활용 지원 신규과제 접수(정책지정)",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273960&flag=rndList",
       "source": "ntis",
       "category": "과학기술정보통신부",
-      "deadline": "2026-07-19",
-      "posted_date": "2026-07-13",
-      "description": "본 공고는 「2026년 혁신연구장비핵심기술개발및상용화사업」 첨단연구장비상용화 본과제 진행을 위해 게시되었습니다. 협약체결 대상 주관기관은 신청해주시기 바랍니다.",
-      "budget": "0억원",
-      "attachments": null,
+      "deadline": "2026-07-20",
+      "posted_date": "2026-07-07",
+      "description": "2026 년 나노·소재기술개발사업(팹고도화) 모아팹 중고장비 활용 지원 신규과제 접수 ( 정책지정 ) ( 관련 : 과기정통부 원천기술과 -1767(2026.07.03.)) ㅇ 과제명: 모아팹 중고장비 활용 지원 ㅇ 주관기관 : 사단법인 국가나노인프라협의체 ㅇ 연구책임자 제출기간 : 2026.7.20.(월 ) 14 시까지 ㅇ 주관연구개발기관 승인기간 : 2026.7.20.(월 ) 18 시까지",
+      "budget": "2,511억원",
+      "attachments": "[본문] 2026년도 나노·소재기술기술개발(팹고도화) 신규과제 정책지정 알_21731471709154761.pdf",
       "detail_fetched": true,
       "is_notified": false,
-      "created_at": "2026-07-14T01:15:54.662699",
+      "created_at": "2026-07-21T01:23:12.476720",
       "notification_logs": [],
       "is_relevant": false,
-      "is_excluded": false,
-      "extra_sources": [
-        "ntis",
-        "iris"
-      ]
+      "is_excluded": true
     },
     {
       "id": 163,
@@ -2381,6 +2377,28 @@
       ]
     },
     {
+      "id": 141,
+      "title": "2026년 혁신연구장비핵심기술개발및상용화사업 첨단연구장비상용화 본과제 신청안내",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273384&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-07-20",
+      "posted_date": "2026-07-13",
+      "description": "본 공고는 「2026년 혁신연구장비핵심기술개발및상용화사업」 첨단연구장비상용화 본과제 진행을 위해 게시되었습니다. 협약체결 대상 주관기관은 신청해주시기 바랍니다.",
+      "budget": "0억원",
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-14T01:15:54.662699",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
       "id": 93,
       "title": "2026년도 1차 에너지인력양성사업 및 에너지차세대리더 육성사업 신규지원대상 연구개발과제 재공고(에너지기술공유대학)",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270267&flag=rndList",
@@ -2397,6 +2415,28 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
+      "id": 205,
+      "title": "2026년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 재공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273760&flag=rndList",
+      "source": "ntis",
+      "category": "해양수산부",
+      "deadline": "2026-07-22",
+      "posted_date": "2026-07-15",
+      "description": "해양수산부 공고 제2026-1164호 2026 년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 재공고 「 국가연구개발혁신법 」 제 9 조 ( 예고 및 공모 등 ) 및 「 해양수산과학기술육성법 」 제 8 조 ( 연구개발사업 등의 추진 ) 에 따라 , “ AI 완전자율운항선박 기술개발 ” 사업의 신규과제를 추진하고자 다음과 같이 공고하오니 많은 관심과 참여 바랍니다 . 2026 년 7 월 15 일 < 주무부처 > 해양수산부장관 < 전문기관 > 해양수산과학기술진흥원",
+      "budget": "58.44억원",
+      "attachments": "AI 완전자율운항선박 기술개발사업 신규과제 선정계획 재공_21542185657688894.pdf\n[공고문 붙임 4] 연구개발계획서 서식 및 별첨서류(1~9) 등 관련서_21542185687639768.zip\n[공고문 붙임 5] 참고자료(규정 및 iris 매뉴얼 등_21542185711957245.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-21T01:23:12.473655",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true,
       "extra_sources": [
         "ntis",
         "iris"
@@ -2487,22 +2527,26 @@
       "is_excluded": true
     },
     {
-      "id": 198,
+      "id": 209,
       "title": "2026년도 방사선이용 기술개발사업(방사선 기반 소재·장비 기술 혁신화) 신규과제 재공모",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022455",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 한국연구재단",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273752&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
       "deadline": "2026-07-27",
-      "posted_date": "2026-06-11",
+      "posted_date": "2026-07-15",
       "description": "과학기술정보통신부 공고 제2026 – 0797호 2026년도 방사선이용 기술개발사업(방사선 기반 소재·장비 기술 혁신화) 신규과제 재공모 과학기술정보통신부가 추진하는「방사선이용 기술개발사업(방사선 기반 소재·장비 기술 혁신화)의 신규과제를 아래와 같이 공모하오니 관심 있는 연구자들의 많은 참여 바랍니다. 2026년 7월 15일 <주무부처> 부총리 겸 과학기술정보통신부 장관  배  경  훈 <전문기관> 한국연구재단 이사장  홍  원  화",
-      "budget": null,
-      "attachments": "붙임1. 과제제안요구서(RFP).hwp (185.5KB)\n붙임2. 연구개발계획서 양식.zip (222.2KB)\n붙임3. 별첨자료 양식.hwp (538.5KB)\n붙임4. 신규과제 신청 FAQ.pdf (723.4KB)",
+      "budget": "165억원",
+      "attachments": "(재공모) 2026년도 방사선 기반 소재·장비 기술 혁신화 신규과_21287632463936278.hwpx\n붙임1. 과제제안요구서(RFP_21287632557015911.hwp\n붙임2. 연구개발계획서 양_21287632432162156.zip\n붙임3. 별첨자료 양_21287632486083975.hwp\n붙임4. 신규과제 신청 FA_21287632512542622.pdf",
       "detail_fetched": true,
       "is_notified": false,
-      "created_at": "2026-07-17T18:51:21.166330",
+      "created_at": "2026-07-21T01:23:12.483577",
       "notification_logs": [],
       "is_relevant": false,
-      "is_excluded": true
+      "is_excluded": true,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 148,
@@ -2543,6 +2587,68 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 208,
+      "title": "2026년「협업지능 피지컬AI 기반 SW플랫폼 연구개발생태계 조성」사업 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273756&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-07-28",
+      "posted_date": "2026-07-17",
+      "description": "과학기술정보통신부 공고 제2026-0732호 2026년「협업지능 피지컬AI 기반 SW플랫폼 연구개발 생태계 조성」사업 공고 2026년도 「협업지능 피지컬AI 기반 SW플랫폼 연구개발 생태계 조성」 사업 신규 연구 개발과제 공모 및 선정계획 을 다음과 같이 공고합 니다. 2026년 6월 26일 부총리 겸 과학기술정보통신부 장관 정보통신산업진흥원장 1 사업개요 《 사업개요 》 □ 사업명 : 협업지능 피지컬AI 기반 SW플랫폼 연구개발 생태계 조성(R&D) □ 사업내용 ○ (사업목적) 국내 강점분야 특화 협업지능 피지컬AI* 기반 SW플랫폼 (AI모델, 시뮬레이션, 제어·표준화 등) ․솔루션 개발로 피지컬AI 기술주권 확보 * 현실 데이터를 가상에서 학습하여 물리 시스템을 제어하는 피지컬 AI를 기반으로, 다양한 로봇․자동화 시스템들이 유기적으로 협력하여 복합적 임무를 완수하는 지능형 융합 기술 ○ (주요내용) 피지컬AI 기술주권 확보를 위한 ➊ 협업지능 피지컬 AI 핵심기술 개발 및 확산, ➋ 핵심 연구인프라 구축 및 연구 클러스터化 * 추진 * 전북혁신도시 인근에 미래형 AI 연구 및 검증을 위한 테스트베드 구축 및 클러스터화 추진 - (협업지능 피지컬AI 핵심기술개발 및 확산) K-피지컬AI 기술주권 확보 및 산업 경쟁력 강화를 위한 핵심기술 개발, 산업현장 신속 실증․확산 등 R&D 全주기 지원 - (핵심 연구인프라 구축 및 테트스베드 플랫폼化) 산․학․연 공동 협업지능 피지컬AI 핵심기술 연구․실증을 위한 테스트베드 (장비) 및 연구클러스터 기반 (시설) 조성 ※ 관련 법령 개정 등 주요한 변경 사항 발생 시 수정 공고문을 게시할 수 있습니다.",
+      "budget": "1,652.16억원",
+      "attachments": "1_2026년 「협업지능 피지컬AI 기반 SW플랫폼 연구개발 생태계 조성」 사업 공고_21304350926279571.hwp\n2_2026년 「협업지능 피지컬AI 기반 SW플랫폼 연구개발 생태계 조성」 사업 지원대상과제 RF_21304350967349088.zip\n3_(양식) 제출서_21304351430520119.zip\n4_(관련법령 및 규정)연구개발혁신법 및 주요 규_21304351484837098.zip\n5_(시스템 매뉴얼) IRIS 접수 매뉴_21304351615324024.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-21T01:23:12.480142",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
+      "id": 207,
+      "title": "2026년 「인간-AI 협업형 LAM 개발·글로벌 실증 」사업 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273757&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-07-28",
+      "posted_date": "2026-07-17",
+      "description": "과학기술정보통신부 공고 제2026-0731호 2026년「인간-AI협업형 LAM 개발·글로벌 실증」사업 공고 2026년도 「인간-AI협업형 LAM 개발·글로벌 실증」 사업 신규 연구 개발과제 공모 및 선정계획 을 다음과 같이 공고합 니다. 2026년 6월 26일 부총리 겸 과학기술정보통신부 장관 정보통신산업진흥원장 1 사업개요 《 사업개요 》 □ 사업명 : 인간-AI협업형 LAM 개발·글로벌 실증(R&D) □ 사업내용 ○ (사업목적) 제조 현장에서 수집된 융합데이터를 기반으로 정밀 제어가 필요한 분야에 활용되는 LAM * (Large Action Model) 핵심기술 개발‧실증 * Large Action Model : 거대언어모델(LLM)을 넘어 실제 행위(Action)를 수행하는 미래형 인공지능 ○ (주요내용) 피지컬AI 특화 물리융합데이터·기술확보, PINN * 기반 정밀 제어 LAM 핵심기술 개발, 솔루션화, 실증 지원 * Physics-Informed Neural Network : 제조 공정에서 발생하는 다양한 물리법칙 (열역학, 유체역학 등)이 내재화 된 AI 모델 - (융합데이터 수집 활용 체계 구축) 국내 제조 등 현장에 기반하여 정밀 제어가 가능한 고신뢰성 융합데이터 수집･활용체계 구축 및 실증 추진 - (LAM 핵심기술개발) 정밀제어 자율수행을 위해 물리법칙이 내재화된 PINN 기반 LAM 핵심기술 개발 및 인간-AI 협업형 모델 구현·실증 - (협력체계 구축) 피지컬AI 특화 데이터 표준화와 물리지능행동모델 핵심기술 개발을 위한 국내외 협력 플랫폼 운영 및 공동연구 추진 ※ 관련 법령 개정 등 주요한 변경 사항 발생 시 수정 공고문을 게시할 수 있음",
+      "budget": "1,652.16억원",
+      "attachments": "붙임1. [공고문] 2026년 「인간-AI협업형 LAM개발 글로벌 실증 사업」 공_21304556576652158.hwp\n붙임2. 2026년 인간-AI 협업형 LAM 개발 글로벌 실증 사업 지원대상과제 RF_21304556532782976.zip\n붙임3. (양식) 제출서_21304556617276541.zip\n붙임4. [관련법령 및 규정] 국가연구개발혁신법 및 주요 규_21304556505861309.zip\n붙임5. [시스템 매뉴얼] IRIS 접수 매뉴_21304556673849416.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-21T01:23:12.479738",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
+      "id": 202,
+      "title": "「출연(연) 전략연구사업 평가제도·관리체계 수립」 정책연구과제 재공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273957&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-07-29",
+      "posted_date": "2026-07-20",
+      "description": "공고내용 「출연(연) 전략연구사업 평가제도·관리체계 수립」 정책연구과제 재공고 게시합니다. 상세한 내용은 첨부된 파일을 참조하여 주시기 바라며, 관련 문의는 담당자 메일(wonseok@nst.re.kr)로 송부하여 주시기 바랍니다. 최종 수정일 : 2026-07-20",
+      "budget": "1.5억원",
+      "attachments": "재공고문 (출연연 전략연구사업 평가제도·관리체계 수립)_게시.hwp\n재공고문 (출연연 전략연구사업 평가제도·관리체계 수립)_게시.pdf",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-21T01:23:12.472375",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 160,
@@ -2700,6 +2806,24 @@
       "is_excluded": false
     },
     {
+      "id": 204,
+      "title": "사고유형학습기반AI제조안전기술개발사업 기술수요조사 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273842&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-08-07",
+      "posted_date": "2026-07-16",
+      "description": "공고내용 공고 사고유형학습기반AI제조안전기술개발사업 기술수요조사 공고 20260716 접 수 일 : 20260716 ~ 20260807 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-07-20",
+      "budget": "0억원",
+      "attachments": "[붙임1] 기술수요조사서 양식.hwp\n[붙임2] 기술준비도(TRL).hwpx\n[붙임3] 산업기술분류표(제16조 관련)(산업기술혁신사업 공통 운영요령).hwp\n사고유형학습기반AI제조안전기술개발사업 기술수요조사 공고문.hwp",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-21T01:23:12.473266",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
       "id": 153,
       "title": "2026년 핵심인재 글로벌 브릿지 연수 프로그램 수행기관 모집 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1272995&flag=rndList",
@@ -2814,6 +2938,42 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 203,
+      "title": "(공고-국-제29호) 2026년 국토교통연구기획 사업 제2차 시행 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273844&flag=rndList",
+      "source": "ntis",
+      "category": "국토교통부",
+      "deadline": "2026-08-18",
+      "posted_date": "2026-08-10",
+      "description": ".",
+      "budget": "11.3억원",
+      "attachments": "[붙임1] (공고-국-제29호) 2026년 국토교통연구기획 사업 제2차 시행 공고_21605306636357027.hwpx\n[붙임2 별첨] 서식 및 참고자_21605306431026951.zip\n[붙임2] (공고-국-제29호) 2026년 국토교통연구기획 사업 제2차 시행 공고 안내_21605306651602513.hwpx",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-21T01:23:12.472853",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 201,
+      "title": "2026년도 한-캐나다 양자과학기술 공동연구 프로그램 사전공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273961&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-08-19",
+      "posted_date": "2026-07-20",
+      "description": "공고내용 한국연구재단은 2026년 한-캐나다 양자과학기술 공동연구 프로그램 관련 국내 연구자들의 사업 이해도와 참여를 촉진하기 위하여 다음과 같이 사전공고를 실시하오니, 관심 있는 연구자분들의 많은 참여 바랍니다. 2026년 7월 20일 1. 사업목적 ㅇ 한-캐나다 공동연구 사업을 추진하여 양국 간 과학기술 협력발전 도모 ※ 한국측 연구지원전문기관은 한국연구재단이며, 캐나다측 연구지원전문기관은 캐나다 자연과학 및 공학연구위원회(NSERC, The Natural Sciences and Engineering Research Council of Canada)이 담당함. ㅇ 양국 협력을 통해 시너지 효과가 기대되는 분야 중심으로 공동연구 지원 2. 사업내용 ㅇ 사업형태: 한국연구재단과 NSERC이 공동으로 각국의 연구진을 지원하는 양자지원(Bilateral funding) 방식의 공동연구 ㅇ 지원분야 - Quantum algorithms/encryption, including post-quantum cryptography - Quantum communications - Quantum computing - Quantum materials - Quantum sensing ㅇ 지원기간 : 3년 (2026.12.01.~2029.11.30.) ㅇ 지원규모 : (한국측) 과제당 최대 연 300백만원 / 4개 과제 내외 ※ 상기 지원규모는 한국측 지원예산으로, 캐나다측 예산이 별도로 지원될 예정이며, 추진 상황에 따라 본 공고 시 달라질 수 있음. ㅇ 지원내용 : 연구개발비 및 협력네트워크 구축을 위한 활동 경비 등 ※ 세부사항은 [붙임] 참조 ※ 상기 사전공고 내용과 일정은 정부 예산 상황 및 캐나다와의 협의 등 추진상황에 따라 본 공고 시 달라질 수 있음. 최종 수정일 : 2026-07-20",
+      "budget": "12억원",
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-21T01:23:12.471753",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 124,
@@ -2942,60 +3102,6 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
-    },
-    {
-      "id": 196,
-      "title": "2026년「협업지능 피지컬AI 기반 SW플랫폼 연구개발생태계 조성」사업 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022694",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 정보통신산업진흥원",
-      "deadline": null,
-      "posted_date": "2026-06-26",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-17T18:51:21.163707",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
-      "id": 195,
-      "title": "2026년 「인간-AI 협업형 LAM 개발·글로벌 실증 」사업 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022696",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 정보통신산업진흥원",
-      "deadline": null,
-      "posted_date": "2026-06-26",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-17T18:51:21.163190",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
-      "id": 150,
-      "title": "2026년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 재공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023097",
-      "source": "iris",
-      "category": "해양수산부 > 해양수산과학기술진흥원",
-      "deadline": null,
-      "posted_date": "2026-07-15",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-15T13:05:52.868106",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": true
     },
     {
       "id": 138,
