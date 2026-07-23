@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-22 18:55 UTC",
-  "total": 145,
+  "updated_at": "2026-07-23 01:31 UTC",
+  "total": 150,
   "items": [
     {
       "id": 9,
@@ -2749,6 +2749,24 @@
       "is_excluded": false
     },
     {
+      "id": 212,
+      "title": "2026년 국방기술진흥연구소 고객만족도 조사",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274019&flag=rndList",
+      "source": "ntis",
+      "category": "방위사업청",
+      "deadline": "2026-08-04",
+      "posted_date": "2026-07-31",
+      "description": "공고내용 자세한 내용은 공고문 바로가기(URL)와 첨부파일을 통해 확인하시기 바랍니다. 최종 수정일 : 2026-07-23",
+      "budget": "0.29억원",
+      "attachments": "(변환본)1. 2026년 고객만족도조사 입찰공고문.pdf\n1. 2026년 고객만족도조사 입찰공고문.hwp\n2. 2026년 고객만족도 조사 제안요청서_v1.hwpx",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-23T01:29:13.913848",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
       "id": 116,
       "title": "2026년도 인공지능혁신인재양성 2차 사업 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1272702&flag=rndList",
@@ -3020,6 +3038,24 @@
       ]
     },
     {
+      "id": 211,
+      "title": "[공모] 위탁연구기관 선정을 위한 제안서 공모(과제명 : 네트워크 공격 대응을 위한 침입감내 기술)",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274074&flag=rndList",
+      "source": "ntis",
+      "category": "방위사업청",
+      "deadline": "2026-08-31",
+      "posted_date": "2026-07-20",
+      "description": "공고내용 위탁연구기관 선정을 위한 제안서 공모 (과제명 : 네트워크 공격 대응을 위한 침입감내기술) 2026년도 착수\"네트워크 공격 대응을 위한 침입감내 기술\"연구개발 과제의 위탁연구기관 선정을 위한 제안서를 다음과 같이 공모하오니, 관련 기관의 많은 참여를 바랍니다. ■ 개 요 ｢방위사업법｣, ｢방위력 개선사업 관리규정｣ 및 ｢국방과학기술혁신 촉진법｣에 의거 `26년핵심기술(시험개발)로 신규착수된 과제(과제명 :네트워크 공격 대응을 위한 침입감내기술)의 위탁연구 ‘위탁연구명: 다환경 네트워크 위협 상황 인식 및 지능형 침입감내 연계 방안’에 대한 위탁연구기관 선정을 위한 위탁연구 제안서 공모 계획임. ■ 위탁연구 수행기관 공모 대상 위탁연구명 단 계 기간 / 예산 ( 억 원 ) 위탁연구 제안요청서 (rfp) 다환경 네트워크 위협 상황 인지 및 지능형 침입감내 연계 방안 연구 시험개발 ‘26.10~’28.06/1.5 별첨 .1 ■ 추진일정 구 분 추진 일정 수행 부서 위탁연구 제안요청서 (rfp) 공고 `26. 7. 20. 국과연 (3 연구원2부 ) 위탁연구 제안서 작성 `26. 7. 20. ~ 26.8. 31. 응모기관 위탁연구 제안서 접수 ( 마감 ) `26.8. 31. 국과연 (3 연구원2부 ) 제안서 평가계획 수립 `26. 9. 국과연 ( 3 연구원2부 ) 제안서 평가 / 위탁연구기관 선정 `26. 9. 국과연(3연구원 2부) 위탁연구기관 선정결과 해당기관 통보 `26. 9. 국과연 ( 3 연구원2부 ) → 해당기관 위탁연구 계획서 작성 제출 `26. 10. 해당기관 → 국과연 ( 3 연구원2부 ) ※ 개략 추진일정이며 사정에 의해 변동될 수 있음 . ■ 제출 방법 가 . 제출서류 : ‘ 4. 작성제출사항 ‘ 참고 나 . 제출마감 : ‘ 26.8. 31. 16:00 까지 ( 방문 접수 ) ※ 방문접수시 아래 문의처로 사전 연락 다. 문의 및 제출처 : 국방과학연구소(3연구원 2부) 담당자이화성전화번호 : 02-3400-2646 ※자세한 사항은 첨부파일을",
+      "budget": null,
+      "attachments": "붙임2.제안서 공모문.hwp",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-23T01:29:13.913210",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
       "id": 152,
       "title": "2026년도 국제공동연구 신속지원사업(미국 제네시스 미션과의 협력을 위한 탐색연구) 신규과제 공모",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273125&flag=rndList",
@@ -3064,6 +3100,24 @@
       ]
     },
     {
+      "id": 210,
+      "title": "무인수상정 항해/항법 센서 데이터 학습 시스템",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274148&flag=rndList",
+      "source": "ntis",
+      "category": "방위사업청",
+      "deadline": "2026-09-01",
+      "posted_date": "2026-07-22",
+      "description": "공고내용 자세한 내용은 공고문 바로가기(URL)와 첨부파일을 통해 확인하시기 바랍니다. 최종 수정일 : 2026-07-23",
+      "budget": "6.568억원",
+      "attachments": "1. 입찰공고문(무인수상정 항해／항법 센서 데이터 학습 시스템).hwp\n1. 입찰공고문(무인수상정 항해／항법 센서 데이터 학습 시스템).pdf\n2. 제안요청서(무인수상정 항해／항법 센서 데이터 학습 시스템).hwp\n3. 계약특수조건(무인수상정 항해／항법 센서 데이터 학습 시스템).hwp",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-23T01:29:13.912389",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
       "id": 199,
       "title": "2027년도 한-일(JSPS) 협력사업 신규과제 공모(협력연구·공동세미나)",
       "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022534",
@@ -3084,6 +3138,42 @@
         "iris",
         "ntis"
       ]
+    },
+    {
+      "id": 214,
+      "title": "2026년 팁스(TIPS) 창업기업 지원계획 수정 공고(일반트랙)",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=020159",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": null,
+      "posted_date": "2026-03-19",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-23T01:29:13.945212",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 213,
+      "title": "2026년 팁스(TIPS) 창업기업 지원계획 수정 공고(딥테크트랙)",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=020160",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": null,
+      "posted_date": "2026-03-19",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-23T01:29:13.944541",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 200,
