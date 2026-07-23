@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-23 13:20 UTC",
-  "total": 151,
+  "updated_at": "2026-07-23 18:58 UTC",
+  "total": 152,
   "items": [
     {
       "id": 9,
@@ -3153,6 +3153,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 216,
+      "title": "2026년도 과학기술정보통신부 연구산업육성사업 시행 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=018400",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 과학기술사업화진흥원",
+      "deadline": null,
+      "posted_date": "2026-02-02",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-23T18:57:14.769622",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
