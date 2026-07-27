@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-27 09:24 UTC",
-  "total": 159,
+  "updated_at": "2026-07-27 14:07 UTC",
+  "total": 160,
   "items": [
     {
       "id": 9,
@@ -3036,6 +3036,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 226,
+      "title": "2027년 제18차 일본 HOPE Meeting 참가자 모집 공모",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274560&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-08-13",
+      "posted_date": "2026-07-28",
+      "description": "2027 년 제 18 차 일본 HOPE Meeting 참가자 모집 공모 한국연구재단은 일본학술진흥회 (Japan Society for the Promotion of Science, JSPS) 가 주최하는 “ 제 18 차 HOPE Meeting ” 의 한국 측 참가자를 다음과 같이 모집하오니 관심 있는 신진 연구자들의 많은 참여 바랍니다 . 2026 년 7 월 10 일 한국연구재단 이사장 홍 원 화",
+      "budget": "0억원",
+      "attachments": "1. 2027년 제18차 일본 HOPE Meeting 참가자 모집 공고_168426342471254.hwp\n2. 2027년 제18차 일본 HOPE Meeting 신청서 양_168426145535563.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-27T14:07:16.743475",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 203,
