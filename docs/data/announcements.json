@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-27 19:09 UTC",
+  "updated_at": "2026-07-28 01:21 UTC",
   "total": 160,
   "items": [
     {
@@ -3053,7 +3053,11 @@
       "created_at": "2026-07-27T14:07:16.743475",
       "notification_logs": [],
       "is_relevant": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 203,
