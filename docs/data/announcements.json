@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-29 18:52 UTC",
-  "total": 161,
+  "updated_at": "2026-07-30 01:17 UTC",
+  "total": 162,
   "items": [
     {
       "id": 9,
@@ -3313,6 +3313,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 230,
+      "title": "2026년도 투·융자 연계 기술개발사업 지원계획 수정 공고(스케일업 팁스)",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=019614",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": null,
+      "posted_date": "2026-07-10",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-30T01:16:05.286058",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
