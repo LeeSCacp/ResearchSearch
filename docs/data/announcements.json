@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-03 01:29 UTC",
-  "total": 165,
+  "updated_at": "2026-08-03 09:00 UTC",
+  "total": 169,
   "items": [
     {
       "id": 9,
@@ -3020,6 +3020,24 @@
       ]
     },
     {
+      "id": 237,
+      "title": "디스플레이첨단산업기술개발(가칭) 기술수요조사",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274973&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-08-12",
+      "posted_date": "2026-07-31",
+      "description": "공고내용 공고 디스플레이첨단산업기술개발(가칭) 기술수요조사 20260731 접 수 일 : 20260731 ~ 20260812 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
+      "budget": "0억원",
+      "attachments": "[별첨1] 기술수요조사서.hwp\n[별첨2] 테마별 설명 자료.hwp\n[별첨3] 산업기술분류표(공통 운영요령 제16조 관련).hwp\n디스플레이첨단산업기술개발(가칭) 기술수요조사 공고.hwp",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T08:58:09.943499",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
       "id": 226,
       "title": "2027년 제18차 일본 HOPE Meeting 참가자 모집 공모",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274560&flag=rndList",
@@ -3042,6 +3060,28 @@
       ]
     },
     {
+      "id": 236,
+      "title": "2026년 하반기 원자력정책연구사업 2차 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1275087&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-08-14",
+      "posted_date": "2026-08-03",
+      "description": "2026 년도 하반기 원자력정책연구사업 2 차 공고 과학기술정보통신 부는 국가원자력정책 개발과 제도개선 등에 활용하고자 원자력 정책연구사업을 추진하고 있습니다 . 이와 관련하여 2026 년도 하반기 원자력정책 연 구사업으로 다음 과제를 공모하오니 신청하여 주시기 바랍니다 . 2026 년 8 월 3 일 < 주무 부처 > 부총리 겸 과학기술정보통신부 장관 배 경 훈 < 전문 기관 > 한국연구재단 이사장 홍 원 화",
+      "budget": "0.7억원",
+      "attachments": "[공고문] 2026년도 하반기 원자력정책연구사업 2차 공_756714642656968.hwp\n붙임1. 2026년도 하반기 원자력정책연구사업 과제제안서(2차_756714625032422.hwpx\n붙임2. 연구개발계획서 양_756714590596869.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T08:58:09.943030",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
       "id": 115,
       "title": "2026년도 하반기 원자력정책연구사업 재공고",
       "url": "https://www.nrf.re.kr/biz/info/notice/list",
@@ -3055,6 +3095,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-04T08:19:46.643362",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 235,
+      "title": "2026년도 기관고유사업 신규 위탁연구과제 공고(~8.17.)",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1275141&flag=rndList",
+      "source": "ntis",
+      "category": "해양수산부",
+      "deadline": "2026-08-17",
+      "posted_date": "2026-08-03",
+      "description": "공고내용 극지연구소는 해양수산부 산하 정부출연연구기관으로서 남극 세종과학기지 및 장보고과학기지, 북극 다산과학기지와 쇄빙연구선 아라온호를 운영하며 극지역 해양, 대기, 빙하, 지구물리, 생물자원 등 다양한 분야의 극지연구를 수행하고 있습니다. 극지연구소는 이러한 연구 역량과 인프라를 바탕으로 기관고유사업을 추진하고 있으며, 이의 일환으로 위탁연구개발과제를 다음과 같이 공모하오니 관심있는 연구자들의 많은 참여 바랍니다. 1. 과제개요 ■ 주관연구개발기관 : 한국해양과학기술원 부설 극지연구소 ■ 공모과제 : '인공위성 자료 기반 북극항로 거점 연안 환경변화 분석' 외 2건(상세내용. 첨부파일 참고) ■ 유의사항 ㅇ 극지연구소 기관고유사업 위탁연구과제의 기간은 1년 5개월 이내이나, 연구개발비 및 연구기간 등은 선정 평가 및 단계 평가 결과에 따라 조정될 수 있음 ㅇ 본 과제 종료 시 위탁연구과제도 종료되며, 차년도 연구비와 연구기간은 본과제 책임자의 연구계획에 따라 일부 조정될 수 있음 2. 신청자격 및 제한 ■ 신청자격 : 「국가연구개발혁신법」제2조 제3호에 따른 기관·단체 소속 연구원 ■ 참여제한 ㅇ 국가연구개발사업 참여제한 제재 조치기간 종료일이 신청 마감일까지 유지되는 경우 신청 불가 3. 신청방법 및 접수처 ■ 신청방법 ㅇ 공모 및 접수 기간 : 2026.08.03.(월) ∼ 2026.08.17.(월) 18시까지 * 접수마감일 18시까지 도착분(공문)에 한하여 접수함 ㅇ 연구책임자는 위탁연구과제 연구계획서(붙임 2)를 작성하여 소속기관 공문 (전자공문)으로 제출. 단, 전자공문 제출 불가 기관의 경우 이메일로 제출 가능 * 공문에 해당기관장 날인이 없는 경우는 무효 ** 제출한 과제제안서는 수정 불가 (공문 또는 이메일 접수 후 수정본 접수 불가) ■ 접수처 ㅇ 접수처 : 한국해양과학기술원부설극지연구소장(연구사업관리실) * (담당자) 조혜원 행정원 / hw1201@kopri.re.kr / 032-770-86254. 선정평가 절차 ㅇ 제출서류 접수 → 선정",
+      "budget": "2.6억원",
+      "attachments": "(공고문) 2026년도 기관고유사업 신규위탁연구과제 공모 안내.hwp\n[별첨]위탁연구과제 과제 제안요구서(RFP).zip\n[작성양식]위탁연구과제 연구개발계획서 및 제출 서류.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T08:58:09.942135",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
@@ -3322,22 +3380,40 @@
       "is_excluded": false
     },
     {
-      "id": 234,
-      "title": "2026년 하반기 원자력정책연구사업 2차 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023337",
+      "id": 239,
+      "title": "test",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=021774",
       "source": "iris",
-      "category": "과학기술정보통신부 > 한국연구재단",
+      "category": "과학기술정보통신부 > 한국과학기술기획평가원",
       "deadline": null,
-      "posted_date": "2026-08-03",
+      "posted_date": "2026-05-19",
       "description": "",
       "budget": null,
       "attachments": null,
       "detail_fetched": true,
       "is_notified": false,
-      "created_at": "2026-08-03T01:28:04.511254",
+      "created_at": "2026-08-03T08:58:09.962867",
       "notification_logs": [],
       "is_relevant": false,
-      "is_excluded": true
+      "is_excluded": false
+    },
+    {
+      "id": 238,
+      "title": "범부처 현장수요 신속대응 연구개발(R&D) KEITI 전담 지정 과제",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023358",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국환경산업기술원",
+      "deadline": null,
+      "posted_date": "2026-07-14",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T08:58:09.960807",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 233,
