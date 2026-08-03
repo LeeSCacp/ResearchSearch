@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-03 09:00 UTC",
-  "total": 169,
+  "updated_at": "2026-08-03 14:11 UTC",
+  "total": 175,
   "items": [
     {
       "id": 9,
@@ -2824,24 +2824,6 @@
       ]
     },
     {
-      "id": 149,
-      "title": "2027년 산업기술 RD사업(디스플레이, 스마트전자, 배터리 분야) 추가 기술수요조사",
-      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273126&flag=rndList",
-      "source": "ntis",
-      "category": "산업통상부",
-      "deadline": "2026-08-05",
-      "posted_date": "2026-07-08",
-      "description": "공고내용 2027년 산업기술 R&D사업(디스플레이, 스마트전자, 배터리 분야) 추가 기술수요조사 20260708 접 수 일 : 20260708 ~ 20260805 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-07-13",
-      "budget": "0억원",
-      "attachments": "1. 2027년도 산업기술 R&D사업(디스플레이, 스마트전자, 배터리) 추가 통합기술수요조사 공고.hwp\n2. 공고문 별첨 서식 모음.zip",
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-14T01:15:54.667599",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
       "id": 219,
       "title": "2026년도 제3차 과학기술분야 연구기획과제 공모",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274452&flag=rndList",
@@ -2862,6 +2844,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 240,
+      "title": "범부처 신속대응 RD IITP 전담 지정 과제_(2026)신속대응 연구개발 과제 협약 체결",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274873&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-08-07",
+      "posted_date": "2026-07-30",
+      "description": "범부처 신속대응 R&D 심의를 통해 지정된 과제 협약 건으로, 공고문은 생략",
+      "budget": "0억원",
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T14:11:21.283074",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 222,
@@ -3038,6 +3038,24 @@
       "is_excluded": false
     },
     {
+      "id": 246,
+      "title": "2026년도 투·융자 연계 기술개발사업 지원계획 수정 공고(스케일업 팁스)_(2026)(일반형, 재평가 1차) 스케일업 팁스 RD 지원계획 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274759&flag=rndList",
+      "source": "ntis",
+      "category": "중소벤처기업부",
+      "deadline": "2026-08-13",
+      "posted_date": "2026-07-30",
+      "description": "중소벤처기업부 공고 제 2026 –446 호 2026 년도 투 · 융자 연계 기술개발사업 지원계획 수정 공고 < 스케일업 팁스 > 2026 년 스케일업 팁스 의 지원계획을 다음과 같이 수정 공고하오니 , 프로그램에 참여를 희망하는 중소벤처기업과 운영사는 참고하시기 바랍니다 . 2026 년 7 월 10 일 중소벤처기업부 장관 ㅇ (특화형 2차 ) IRIS 접수일정: 7.31. ~ 8.14. 18:00 까지 ㅇ (일반형 2차 ) IRIS 접수일정: 8.11. ~ 8.25. 18:00 까지 □ 수정내용 ① 글로벌 팁스 ( 특화형 ) 하반기 추가 운영 - ( 기존 ) 상반기 1 회 운영 → ( 변경 ) 상 · 하반기 각 1 회 운영 ② 졸업제 관련 안내 문구 정비 - 동 사업은 졸업제 적용 예외 사업에 해당 , 공고문 내 졸업제 적용 관련 문구 삭제",
+      "budget": "20억원",
+      "attachments": "(양식일체) 투융자 연계 기술개발 신청서식 ★_일반_329850748123014.zip\n(양식일체) 투융자 연계 기술개발 신청서식 ★_특화_329850822764774.zip\n(참고) 제3자 부당개입 주의 안내문(사업공고시 게시용_329850798334501.hwp\n2026년도_투·융자연계_기술개발사업(스케일업팁스,_글로벌팁스,_DCP)_지원계획_공_329850880088177.hwpx\n2026년도_투·융자연계_기술개발사업(스케일업팁스,글로벌팁스,DCP)_지원계획_수정공_329850584795579.hwpx\n붙임. 스케일업 팁스 일반 운영사별 문의_329850928743171.pdf",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T14:11:21.289336",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
       "id": 226,
       "title": "2027년 제18차 일본 HOPE Meeting 참가자 모집 공모",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274560&flag=rndList",
@@ -3058,6 +3076,78 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 149,
+      "title": "2027년 산업기술 RD사업(디스플레이, 스마트전자, 배터리 분야) 추가 기술수요조사",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273126&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-08-13",
+      "posted_date": "2026-07-08",
+      "description": "공고내용 2027년 산업기술 R&D사업(디스플레이, 스마트전자, 배터리 분야) 추가 기술수요조사 20260708 접 수 일 : 20260708 ~ 20260805 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-07-13",
+      "budget": "0억원",
+      "attachments": "1. 2027년도 산업기술 R&D사업(디스플레이, 스마트전자, 배터리) 추가 통합기술수요조사 공고.hwp\n2. 공고문 별첨 서식 모음.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-14T01:15:54.667599",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 245,
+      "title": "2026년도 투·융자 연계 기술개발사업 지원계획 수정 공고(글로벌 팁스)_(2026)(특화형, 26-2차) 글로벌 팁스 RD 지원계획 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274911&flag=rndList",
+      "source": "ntis",
+      "category": "중소벤처기업부",
+      "deadline": "2026-08-14",
+      "posted_date": "2026-07-31",
+      "description": "중소벤처기업부 공고 제 2026 –446 호 2026 년도 투 · 융자 연계 기술개발사업 지원계획 수정 공고 < 글로벌 팁스 > 2026 년 글로벌 팁스 의 지원계획을 다음과 같이 수정 공고하오니 , 프로그램에 참여를 희망하는 중소벤처기업과 운영사는 참고하시기 바랍니다 . 2026 년 7 월 10 일 중소벤처기업부 장관 ㅇ (특화형 2차 ) IRIS 접수일정: 7.31. ~ 8.14. 18:00 까지 ㅇ (일반형 2차 ) IRIS 접수일정: 8.11. ~ 8.25. 18:00 까지 □ 수정내용 ① 글로벌 팁스 ( 특화형 ) 하반기 추가 운영 - ( 기존 ) 상반기 1 회 운영 → ( 변경 ) 상 · 하반기 각 1 회 운영 ② 졸업제 관련 안내 문구 정비 - 동 사업은 졸업제 적용 예외 사업에 해당 , 공고문 내 졸업제 적용 관련 문구 삭제",
+      "budget": "60억원",
+      "attachments": "(양식일체) 투융자 연계 기술개발 신청서식 ★_일반_457107083671035.zip\n(양식일체) 투융자 연계 기술개발 신청서식 ★_특화_457107057374609.zip\n(참고) 제3자 부당개입 주의 안내문(사업공고시 게시용_457107015156413.hwp\n2026년도_투·융자연계_기술개발사업(스케일업팁스,_글로벌팁스,_DCP)_지원계획_공_457107032827269.hwpx\n2026년도_투·융자연계_기술개발사업(스케일업팁스,글로벌팁스,DCP)_지원계획_수정공_457107108251306.hwpx\n붙임. 스케일업 팁스 일반 운영사별 문의_457106995883750.pdf",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T14:11:21.288977",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 244,
+      "title": "2026년도 투·융자 연계 기술개발사업 지원계획 수정 공고(스케일업 팁스)_(2026)(특화형, 26-2차) 스케일업 팁스 RD 지원계획 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274913&flag=rndList",
+      "source": "ntis",
+      "category": "중소벤처기업부",
+      "deadline": "2026-08-14",
+      "posted_date": "2026-07-31",
+      "description": "중소벤처기업부 공고 제 2026 –446 호 2026 년도 투 · 융자 연계 기술개발사업 지원계획 수정 공고 < 스케일업 팁스 > 2026 년 스케일업 팁스 의 지원계획을 다음과 같이 수정 공고하오니 , 프로그램에 참여를 희망하는 중소벤처기업과 운영사는 참고하시기 바랍니다 . 2026 년 7 월 10 일 중소벤처기업부 장관 ㅇ (특화형 2차 ) IRIS 접수일정: 7.31. ~ 8.14. 18:00 까지 ㅇ (일반형 2차 ) IRIS 접수일정: 8.11. ~ 8.25. 18:00 까지 □ 수정내용 ① 글로벌 팁스 ( 특화형 ) 하반기 추가 운영 - ( 기존 ) 상반기 1 회 운영 → ( 변경 ) 상 · 하반기 각 1 회 운영 ② 졸업제 관련 안내 문구 정비 - 동 사업은 졸업제 적용 예외 사업에 해당 , 공고문 내 졸업제 적용 관련 문구 삭제",
+      "budget": "30억원",
+      "attachments": "(양식일체) 투융자 연계 기술개발 신청서식 ★_일반_457582937934429.zip\n(양식일체) 투융자 연계 기술개발 신청서식 ★_일반형(재평가 1차_457582600165249.zip\n(양식일체) 투융자 연계 기술개발 신청서식 ★_특화_457583213313614.zip\n(참고) 제3자 부당개입 주의 안내문(사업공고시 게시용_457583095502363.hwp\n2026년도_투·융자연계_기술개발사업(스케일업팁스,_글로벌팁스,_DCP)_지원계획_공_457583377782490.hwpx\n2026년도_투·융자연계_기술개발사업(스케일업팁스,글로벌팁스,DCP)_지원계획_수정공_457582753118454.hwpx\n붙임. 스케일업 팁스 일반 운영사별 문의_457583525199083.pdf",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T14:11:21.288589",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 243,
+      "title": "범부처 현장수요 신속대응 연구개발(RD) KEITI 전담 지정 과제_(2026)범부처 현장수요 신속대응 연구개발",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1275168&flag=rndList",
+      "source": "ntis",
+      "category": "과학기술정보통신부",
+      "deadline": "2026-08-14",
+      "posted_date": "2026-08-03",
+      "description": "범부처 현장수요 신속대응 연구개발사업 선정 과제 협약을 위한 공고(공고문 생략) - (과제명) AI 기반 산업단지 유해화학물질 사외배관 실시간 핀홀탐지 및 AX 기반 화학사고 신속대응 플랫폼 개발 - (전문기관) 한국환경산업기술원",
+      "budget": "0억원",
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T14:11:21.287645",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 236,
@@ -3220,6 +3310,28 @@
       ]
     },
     {
+      "id": 241,
+      "title": "2026년도 제3차 산업기술RD연구기획사업 신규지원 대상과제 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274798&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-08-27",
+      "posted_date": "2026-07-29",
+      "description": "산업통상부 공고 제 2026-521호 2026 년도 제3 차 산업기술 R&D 연구기획사업 신규지원 대상과제 공고 산업기술 R&D 연구기획사업의 2026 년도 제3 차 신규지원 대상과제를 다음과 같이 공고하오니 동 사업에 참여를 희망하는 기관 ( 기업 ) 에서는 신청하여 주시기 바랍 니다 . 2026 년 7 월 29 일 산업통상부장관 < 목 차 > 1. 사업개요 1-1. 사업목적 1-2. 지원대상분야 1-3. 연구개발비 지원 규모 및 기간 2. 추진체계 3. 연구개발비 지원기준 및 기술료 징수기준 3-1. 연구개발비 지원기준 3-2. 기술료 징수 여부 및 방법 3-3. 연구개발비 산정시 유의사항 4. 지원분야 및 신청자격 등 4-1. 지원분야 4-2. 신청자격 ( 주관연구개발기관 및 공동연구개발기관 ) 4-3. 지원제외 처리기준 4-4. 연구개발과제 중복성 제기 5. 평가절차 및 평가기준 5-1. 평가절차 5-2. 평가기준 ( 감점기준 포함 ) 6. 근거법령 및 규정 7. 신청방법 , 신청서 제출기한 및 접수처 8. 제출 서류 9. 기타 유의 사항 10. 문의처 등 1. 사업개요 1-1. 사업목적 ○ AI 3 대 강국 도약 , 혁신으로 도약하는 산업 르네상스 등 산업부 핵심정책 및 정부 R&D 투자방향에 적합한 신규 R&D 사업의 사전 기획연구 지원 1-2. 지원대상분야 ○ 산업기술분야 신규 R&D 사업기획 - 대형사업 기획 : 총사업비 1 천억 ( 국비 500 억 ) 이상인 대형규모 R&D 사업기획 - 중소형사업기획 : 총사업비 1 천억 ( 국비 500 억 미만인 중소규모 R&D 사업기 획 ※ 동 사업은 신규사업 기획 연구 로 , 기술개발이 아닌 국내외 산업 분석 , 과학기술적 /정 책적 / 경제적 타당성 분석 , 성과활용 계획 , 후속사업 연계전략 등을 수행하는 과제임 1-3. 연구개발비 지원 규모 및 기간 구분 내용 공고예산 0.5억원 대상과제 중소형사업기 획 1 개 지원규모 ( 정부지원연구개발비 ) 중소형사업 기획 0.5 억 내외 지원기간 4개월 이내 ※",
+      "budget": "0.5억원",
+      "attachments": "1.2026년 제3차 산업기술R&D연구기획사업 신규지원 대상과제 공고_338778763824659.hwpx\n2.산업기술R&D연구기획사업(26년 3차) 제안요청서(RFP_338778747326083.hwpx\n3_주요양식 및 유_338778629637248.zip",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T14:11:21.283838",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
+    },
+    {
       "id": 121,
       "title": "2026년 산업혁신인재성장지원(해외연계) - 최고급 해외인재유치 지원사업 시행계획 추가 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1272231&flag=rndList",
@@ -3320,6 +3432,24 @@
         "ntis",
         "iris"
       ]
+    },
+    {
+      "id": 242,
+      "title": "2026년도 반도체첨단산업기술개발 신규 지원대상 연구개발과제 추가 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1275167&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-09-01",
+      "posted_date": "2026-08-17",
+      "description": "산업통상부 공고 제 2026 -525 호 2026 년도 반도체첨단산업기술개발 ( 시스템반도체기술개발 ) 신규 지원대상 연구개발과제 추가 공고 반도체첨단산업기술개발 ( 시스템반도체기술개발 ) 품목 1 건에 대해 추가 공고함 . 접수 마감일 이후 최초 공고 (2026 년 1 월 13 일 공고 ) 와 동일한 평가 항목 및 평가 절차에 따라 평가 진행 2026 년도 반도체첨단산업기술개발 ( 시스템반도체기술개발 ) 사업의 신규 지원대상 연구개발과제 를 다음과 같이 추가 공고하오니 수행 하고자 하는 자는 신청하여 주시기 바랍니다 . 2026 년 8 월 3 일 산업통상부장관",
+      "budget": "9.25억원",
+      "attachments": "붙임 01_2026년 반도체 분야 신규 지원대상 연구개발과제 공고(추가공고_784418803513889.hwpx\n붙임 02_신규지원 대상 연구개발과제 안내문(RFP_784418766010050.hwpx\n붙임 03_평가결과 이의 신청_784418630331460.zip\n붙임 04_관련 법령 및 규_784418884801742.zip\n붙임 05_온라인 연구개발과제 접수매뉴_784418662564773.pdf\n붙임 06_R&D 자율성트랙 제도안내_SROM_784418823087095.hwp\n붙임 07_사전지원제외 기관 변경 요청_784418939420884.hwp\n붙임 08_2026년 국제공동 R&D 신규 접수 유의사_784418784909183.hwp\n붙임 09_2026년도 반도체분야 신규공고 사업설명회 안_784418866676261.pdf",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-03T14:11:21.284652",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 210,
@@ -3465,24 +3595,6 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-30T01:16:05.286058",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
-      "id": 229,
-      "title": "2026년도 제3차 산업기술R&D연구기획사업 신규지원 대상과제 공고",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023137",
-      "source": "iris",
-      "category": "산업통상부 > 한국산업기술기획평가원",
-      "deadline": null,
-      "posted_date": "2026-07-29",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-29T08:16:17.303317",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
