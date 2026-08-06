@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-06 01:20 UTC",
-  "total": 178,
+  "updated_at": "2026-08-06 08:13 UTC",
+  "total": 179,
   "items": [
     {
       "id": 9,
@@ -3523,6 +3523,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 250,
+      "title": "2026년도 범부처 현장수요 신속대응 연구개발(R&D) KISA 전담 지정 과제",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023477",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국인터넷진흥원",
+      "deadline": null,
+      "posted_date": "2026-04-16",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-06T08:12:22.918519",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
