@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-05 19:11 UTC",
-  "total": 177,
+  "updated_at": "2026-08-06 01:20 UTC",
+  "total": 178,
   "items": [
     {
       "id": 9,
@@ -3523,6 +3523,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 249,
+      "title": "2026년도 가속기핵심기술개발사업 신규과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023437",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-08-06",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-06T01:19:17.795238",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
