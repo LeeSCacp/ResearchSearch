@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-06 23:48 UTC",
-  "total": 179,
+  "updated_at": "2026-08-07 02:02 UTC",
+  "total": 181,
   "items": [
     {
       "id": 9,
@@ -3526,6 +3526,42 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
+    },
+    {
+      "id": 252,
+      "title": "2026년도 신규프로젝트 탐색연구 2차 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=018951",
+      "source": "iris",
+      "category": "우주항공청 > 우주항공청",
+      "deadline": null,
+      "posted_date": "2026-02-13",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-07T02:00:22.989149",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 251,
+      "title": "2026년도 신규프로젝트 탐색연구 재공고(다중 궤도 위성 기반 우주환경 상시 감시체계 구축 기획연구)",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023457",
+      "source": "iris",
+      "category": "우주항공청 > 우주항공청",
+      "deadline": null,
+      "posted_date": "2026-08-07",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-07T02:00:22.982604",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 250,
