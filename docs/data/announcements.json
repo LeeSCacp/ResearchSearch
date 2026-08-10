@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-09 18:22 UTC",
-  "total": 181,
+  "updated_at": "2026-08-10 00:50 UTC",
+  "total": 182,
   "items": [
     {
       "id": 9,
@@ -3244,7 +3244,11 @@
       "created_at": "2026-07-21T01:23:12.472853",
       "notification_logs": [],
       "is_relevant": false,
-      "is_excluded": false
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis",
+        "iris"
+      ]
     },
     {
       "id": 201,
@@ -3526,6 +3530,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 254,
+      "title": "표준공정 기반 공정최적화 기술개발사업(공정최적화R&D) 시행계획 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023077",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": null,
+      "posted_date": "2026-07-30",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-10T00:48:25.424431",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
