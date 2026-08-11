@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-10 18:40 UTC",
-  "total": 182,
+  "updated_at": "2026-08-11 00:48 UTC",
+  "total": 183,
   "items": [
     {
       "id": 9,
@@ -3530,6 +3530,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 256,
+      "title": "AI 응용제품 신속 상용화 지원사업 2차 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023398",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-08-04",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-11T00:47:49.394319",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
