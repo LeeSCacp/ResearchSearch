@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-12 00:55 UTC",
-  "total": 183,
+  "updated_at": "2026-08-12 07:05 UTC",
+  "total": 184,
   "items": [
     {
       "id": 9,
@@ -1925,27 +1925,6 @@
       "is_excluded": false
     },
     {
-      "id": 253,
-      "title": "2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고",
-      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do",
-      "source": "ntis",
-      "category": "산업통상부",
-      "deadline": "2026-07-10",
-      "posted_date": "2026-08-04",
-      "description": "공고내용 공고 2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고 20260804 접 수 일 : 20260804 ~ 20260818 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
-      "budget": "0억원",
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-08-07T06:58:34.965354",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false,
-      "extra_sources": [
-        "ntis"
-      ]
-    },
-    {
       "id": 168,
       "title": "2026년도 미래개척융합과학기술개발사업 신규과제 제3차 공모_(2026)미래유망융합기술파이오니어",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1270090&flag=rndList",
@@ -3229,6 +3208,27 @@
       "is_excluded": true
     },
     {
+      "id": 247,
+      "title": "2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274910&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-08-18",
+      "posted_date": "2026-08-04",
+      "description": "공고내용 공고 2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고 20260804 접 수 일 : 20260804 ~ 20260818 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
+      "budget": "0억원",
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-04T01:18:17.649753",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis"
+      ]
+    },
+    {
       "id": 203,
       "title": "(공고-국-제29호) 2026년 국토교통연구기획 사업 제2차 시행 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273844&flag=rndList",
@@ -3530,6 +3530,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 257,
+      "title": "2026년 범부처 현장수요 긴급대응 연구개발사업 정책지정과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023399",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-04-16",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-12T07:04:39.895414",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
