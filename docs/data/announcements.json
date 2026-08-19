@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-18 12:20 UTC",
-  "total": 184,
+  "updated_at": "2026-08-19 00:34 UTC",
+  "total": 186,
   "items": [
     {
       "id": 9,
@@ -3534,6 +3534,42 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 260,
+      "title": "2026년도 기계장비산업기술개발사업 신규지원 대상과제 2차 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023537",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-08-10",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-19T00:32:57.058530",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 259,
+      "title": "2026년도 NRF 인터내셔널 모빌리티 신규과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023557",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-08-11",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-19T00:32:57.057718",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
