@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-20 00:32 UTC",
-  "total": 186,
+  "updated_at": "2026-08-20 06:25 UTC",
+  "total": 187,
   "items": [
     {
       "id": 9,
@@ -3534,6 +3534,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 261,
+      "title": "(재공고-국-제29호) 2026년 국토교통연구기획 사업 제2차 시행 재공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023697",
+      "source": "iris",
+      "category": "국토교통부 > 국토교통과학기술진흥원",
+      "deadline": null,
+      "posted_date": "2026-07-17",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-20T06:24:37.218632",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
