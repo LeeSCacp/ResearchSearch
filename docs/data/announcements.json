@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-24 06:33 UTC",
-  "total": 189,
+  "updated_at": "2026-08-24 12:23 UTC",
+  "total": 190,
   "items": [
     {
       "id": 9,
@@ -2421,27 +2421,6 @@
       ]
     },
     {
-      "id": 253,
-      "title": "2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고",
-      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do",
-      "source": "ntis",
-      "category": "산업통상부",
-      "deadline": "2026-07-22",
-      "posted_date": "2026-08-04",
-      "description": "공고내용 공고 2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고 20260804 접 수 일 : 20260804 ~ 20260818 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
-      "budget": "0억원",
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-08-07T06:58:34.965354",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false,
-      "extra_sources": [
-        "ntis"
-      ]
-    },
-    {
       "id": 205,
       "title": "2026년도 AI 완전자율운항선박 기술개발사업 신규과제 선정계획 재공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273760&flag=rndList",
@@ -3211,6 +3190,27 @@
       "is_excluded": true
     },
     {
+      "id": 247,
+      "title": "2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274910&flag=rndList",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-08-18",
+      "posted_date": "2026-08-04",
+      "description": "공고내용 공고 2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고 20260804 접 수 일 : 20260804 ~ 20260818 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
+      "budget": "0억원",
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-04T01:18:17.649753",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis"
+      ]
+    },
+    {
       "id": 203,
       "title": "(공고-국-제29호) 2026년 국토교통연구기획 사업 제2차 시행 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273844&flag=rndList",
@@ -3537,6 +3537,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
+    },
+    {
+      "id": 264,
+      "title": "양자정보과학 인적기반조성사업 리더급연구역량강화(연구혁신형)2026년도 한-캐나다 양자과학기술 공동연구사업 신규과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023640",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-08-20",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-24T12:22:18.764280",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 263,
