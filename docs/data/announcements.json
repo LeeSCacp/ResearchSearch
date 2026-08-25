@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-24 18:22 UTC",
-  "total": 190,
+  "updated_at": "2026-08-25 00:34 UTC",
+  "total": 191,
   "items": [
     {
       "id": 9,
@@ -3534,6 +3534,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 265,
+      "title": "2026년도 2차 신재생에너지R&D(수소) 신규지원대상 연구개발과제 재공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023597",
+      "source": "iris",
+      "category": "기후에너지환경부 > 한국에너지기술평가원",
+      "deadline": null,
+      "posted_date": "2026-07-24",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-25T00:33:44.471823",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
