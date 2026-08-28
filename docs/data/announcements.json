@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28 01:51 UTC",
+  "updated_at": "2026-08-28 17:49 UTC",
   "total": 191,
   "items": [
     {
@@ -1400,27 +1400,6 @@
       ]
     },
     {
-      "id": 253,
-      "title": "2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고",
-      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do",
-      "source": "ntis",
-      "category": "산업통상부",
-      "deadline": "2026-06-30",
-      "posted_date": "2026-08-04",
-      "description": "공고내용 공고 2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고 20260804 접 수 일 : 20260804 ~ 20260818 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
-      "budget": "0억원",
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-08-07T06:58:34.965354",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false,
-      "extra_sources": [
-        "ntis"
-      ]
-    },
-    {
       "id": 182,
       "title": "2026년도 제2차 제품안전관리기술개발및실증사업 신규지원 대상과제 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1268565&flag=rndList",
@@ -2690,6 +2669,27 @@
       "is_excluded": false
     },
     {
+      "id": 253,
+      "title": "2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-07-30",
+      "posted_date": "2026-08-04",
+      "description": "공고내용 공고 2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고 20260804 접 수 일 : 20260804 ~ 20260818 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
+      "budget": "0억원",
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-07T06:58:34.965354",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis"
+      ]
+    },
+    {
       "id": 160,
       "title": "2026년도 한-체코 공동연구사업 신규과제 공모",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1271016&flag=rndList",
@@ -3361,24 +3361,6 @@
       ]
     },
     {
-      "id": 115,
-      "title": "2026년도 하반기 원자력정책연구사업 재공고",
-      "url": "https://www.nrf.re.kr/biz/info/notice/list",
-      "source": "nrf",
-      "category": "원자력연구개발사업, 원자력진흥",
-      "deadline": "2026-08-28",
-      "posted_date": "2026-07-02",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-04T08:19:46.643362",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": true
-    },
-    {
       "id": 223,
       "title": "2027년 자동차 분야 산업기술 RD 기술수요조사 공고",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1273956&flag=rndList",
@@ -3497,6 +3479,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
+    },
+    {
+      "id": 115,
+      "title": "2026년도 하반기 원자력정책연구사업 재공고",
+      "url": "https://www.nrf.re.kr/biz/info/notice/list",
+      "source": "nrf",
+      "category": "원자력연구개발사업, 원자력진흥",
+      "deadline": "2026-09-03",
+      "posted_date": "2026-07-02",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-04T08:19:46.643362",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 199,
