@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-30 10:51 UTC",
-  "total": 191,
+  "updated_at": "2026-08-30 15:38 UTC",
+  "total": 192,
   "items": [
     {
       "id": 9,
@@ -3534,6 +3534,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-23T08:08:07.598816",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 266,
+      "title": "2026년 한-EU 공동연구지원사업 신규과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023777",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-08-24",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-30T15:37:51.031616",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
