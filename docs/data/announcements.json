@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-01 10:39 UTC",
-  "total": 194,
+  "updated_at": "2026-09-01 15:41 UTC",
+  "total": 195,
   "items": [
     {
       "id": 9,
@@ -3537,6 +3537,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
+    },
+    {
+      "id": 269,
+      "title": "2026년도 연안하구 인간-자연시스템 관리기술 개발 사업 신규과제 선정계획 재공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023757",
+      "source": "iris",
+      "category": "해양수산부 > 해양수산과학기술진흥원",
+      "deadline": null,
+      "posted_date": "2026-08-26",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-01T15:40:44.061473",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 268,
