@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03 20:13 UTC",
+  "updated_at": "2026-09-04 01:41 UTC",
   "total": 195,
   "items": [
     {
@@ -3481,24 +3481,6 @@
       "is_excluded": false
     },
     {
-      "id": 115,
-      "title": "2026년도 하반기 원자력정책연구사업 재공고",
-      "url": "https://www.nrf.re.kr/biz/info/notice/list",
-      "source": "nrf",
-      "category": "원자력연구개발사업, 원자력진흥",
-      "deadline": "2026-09-03",
-      "posted_date": "2026-07-02",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-04T08:19:46.643362",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": true
-    },
-    {
       "id": 199,
       "title": "2027년도 한-일(JSPS) 협력사업 신규과제 공모(협력연구·공동세미나)",
       "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=022534",
@@ -3539,6 +3521,24 @@
       "is_excluded": false
     },
     {
+      "id": 115,
+      "title": "2026년도 하반기 원자력정책연구사업 재공고",
+      "url": "https://www.nrf.re.kr/biz/info/notice/list",
+      "source": "nrf",
+      "category": "원자력연구개발사업, 원자력진흥",
+      "deadline": "2026-09-10",
+      "posted_date": "2026-07-02",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-04T08:19:46.643362",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
       "id": 269,
       "title": "2026년도 연안하구 인간-자연시스템 관리기술 개발 사업 신규과제 선정계획 재공고",
       "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023757",
@@ -3551,7 +3551,7 @@
       "attachments": null,
       "detail_fetched": true,
       "is_notified": true,
-      "created_at": "2026-09-03T20:13:28.532615",
+      "created_at": "2026-09-04T01:41:26.136954",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
