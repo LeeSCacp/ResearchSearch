@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-06 19:42 UTC",
-  "total": 195,
+  "updated_at": "2026-09-07 01:35 UTC",
+  "total": 196,
   "items": [
     {
       "id": 9,
@@ -3537,6 +3537,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 270,
+      "title": "2026년도 산업기술R&D연구기획사업 신규지원대상 연구개발과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023977",
+      "source": "iris",
+      "category": "기후에너지환경부 > 한국에너지기술평가원",
+      "deadline": null,
+      "posted_date": "2026-09-07",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-07T01:34:58.840633",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 269,
