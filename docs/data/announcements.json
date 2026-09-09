@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-08 20:25 UTC",
-  "total": 198,
+  "updated_at": "2026-09-09 01:54 UTC",
+  "total": 200,
   "items": [
     {
       "id": 9,
@@ -3534,6 +3534,42 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-04T08:19:46.643362",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 274,
+      "title": "2026년도 가속기핵심기술개발사업 신규과제 재공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024117",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-09-08",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-09T01:52:14.061952",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 273,
+      "title": "2026년도 우주기술혁신인재양성(R&D)사업[우주항공 글로벌 인력양성 및 활용] 2차 추가공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024137",
+      "source": "iris",
+      "category": "우주항공청 > 우주항공청",
+      "deadline": null,
+      "posted_date": "2026-09-09",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-09T01:52:14.061172",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
