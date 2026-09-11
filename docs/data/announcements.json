@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-11 01:48 UTC",
-  "total": 204,
+  "updated_at": "2026-09-11 10:10 UTC",
+  "total": 206,
   "items": [
     {
       "id": 9,
@@ -3537,6 +3537,42 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 280,
+      "title": "2026년 4극3특 호남권 과학기술혁신지원사업 연구단 모집 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024160",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 연구개발특구진흥재단",
+      "deadline": null,
+      "posted_date": "2026-09-11",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-11T10:08:05.206389",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 279,
+      "title": "2026년 4극3특 동남권 과학기술혁신지원사업 연구단 모집 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024177",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 연구개발특구진흥재단",
+      "deadline": null,
+      "posted_date": "2026-09-11",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-11T10:08:05.205490",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 278,
