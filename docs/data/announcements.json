@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-10 20:11 UTC",
-  "total": 203,
+  "updated_at": "2026-09-11 01:48 UTC",
+  "total": 204,
   "items": [
     {
       "id": 9,
@@ -3537,6 +3537,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 278,
+      "title": "2026년 4극3특 중부권 과학기술혁신지원사업 연구단 모집 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024139",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 연구개발특구진흥재단",
+      "deadline": null,
+      "posted_date": "2026-09-11",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-11T01:47:12.376330",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 277,
