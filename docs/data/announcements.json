@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-13 10:44 UTC",
-  "total": 206,
+  "updated_at": "2026-09-13 15:13 UTC",
+  "total": 207,
   "items": [
     {
       "id": 9,
@@ -3537,6 +3537,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 281,
+      "title": "2026년도 제3차 디지털혁신기술국제공동연구 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023897",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 정보통신기획평가원",
+      "deadline": null,
+      "posted_date": "2026-09-09",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-13T15:12:43.104977",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 280,
