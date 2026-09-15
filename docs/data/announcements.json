@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-15 03:08 UTC",
-  "total": 208,
+  "updated_at": "2026-09-15 10:36 UTC",
+  "total": 209,
   "items": [
     {
       "id": 9,
@@ -3558,6 +3558,24 @@
       "extra_sources": [
         "iris"
       ]
+    },
+    {
+      "id": 284,
+      "title": "2026년도 제4차 첨단재생의료 임상연구 활성화 지원 사업 신규과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024077",
+      "source": "iris",
+      "category": "보건복지부 > 한국보건산업진흥원",
+      "deadline": null,
+      "posted_date": "2026-09-15",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-15T10:35:40.171889",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 283,
