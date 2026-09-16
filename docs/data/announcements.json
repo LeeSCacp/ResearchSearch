@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-15 20:33 UTC",
-  "total": 209,
+  "updated_at": "2026-09-16 02:02 UTC",
+  "total": 210,
   "items": [
     {
       "id": 9,
@@ -3558,6 +3558,24 @@
       "extra_sources": [
         "iris"
       ]
+    },
+    {
+      "id": 285,
+      "title": "2026년 「AX실증밸리조성(R&D)」 사업 신규지원대상 과제 통합 공고(수정)",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023937",
+      "source": "iris",
+      "category": "과학기술정보통신부,다부처 > 정보통신산업진흥원",
+      "deadline": null,
+      "posted_date": "2026-08-31",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-16T02:01:56.296965",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 284,
