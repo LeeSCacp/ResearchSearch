@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-20 10:13 UTC",
-  "total": 211,
+  "updated_at": "2026-09-20 15:01 UTC",
+  "total": 212,
   "items": [
     {
       "id": 9,
@@ -3558,6 +3558,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 287,
+      "title": "2026년도 국가과학자지원사업(리더급 국가과학기술자) 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024017",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-09-11",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-20T15:00:56.396327",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 286,
