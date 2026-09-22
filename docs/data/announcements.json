@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-22 02:08 UTC",
-  "total": 212,
+  "updated_at": "2026-09-22 10:29 UTC",
+  "total": 213,
   "items": [
     {
       "id": 9,
@@ -3555,6 +3555,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-04T08:19:46.643362",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 288,
+      "title": "2026년도 소재부품기술개발사업(4차) 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024237",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-09-22",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-22T10:28:51.160012",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
