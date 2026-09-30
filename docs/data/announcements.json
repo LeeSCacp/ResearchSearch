@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-30 11:30 UTC",
-  "total": 217,
+  "updated_at": "2026-09-30 17:07 UTC",
+  "total": 218,
   "items": [
     {
       "id": 9,
@@ -3558,6 +3558,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 293,
+      "title": "중소제조 특화 Multi AI Agent 개발(R&D) 점프업 Track 시행계획 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023857",
+      "source": "iris",
+      "category": "중소벤처기업부 > 중소기업기술정보진흥원",
+      "deadline": "2026-10-30",
+      "posted_date": "2026-08-31",
+      "description": "중소벤처기업부 공고 제2026-533호 중소제조 특화 Multi AI Agent 개발(R&D) 점프업 Track 시행계획 공고 중소제조 특화 Multi AI Agent 개발(R&D) 점프업 Track 과제 모집을 위한 시행계획을 다음과 같이 공고하오니 동 사업에 참여하고자 하는 중소기업은 사업안내에 따라 신청하시기 바랍니다. 2026년 8월 31일 중소벤처기업부장관 ㅇ (통합공고 ) 신청 ·접수 : 2026년 10월 1일(목) ~ 2026년 10월 30일(금), 18시까지 - '중소제조 특화 Multi AI Agent 개발(R&D)' 中 점프업 Track에 한하여 모집합니다. - 스마트제조혁신기술개발사업(첨단제조, 유연생산)을 수행한 과제에 한하여 신청 · 접수 가능합니다. 스마트제조혁신R&D를 수행한 주관 및 공동연구개발기관이 동 사업의 주관연구개발기관으로 지원 가능합니다. 자세한 내용은 첨부파일을 반드시 참고하여 주시기 바랍니다.",
+      "budget": null,
+      "attachments": "붙임1] 신청방법 및 신청 또는 지원 제외사항 등 유의사항.hwpx (114.2KB)\n붙임1-1] 중소기업기술개발 지원사업 보안대책(연구개발계획서 양식 관련 붙임3_첨부2).hwp (73KB)\n붙임2] 중소제조 특화 Multi AI Agent 개발(Multi AI Agent 개발) 세부 지원내용_점프업 Track.hwpx (725.9KB)\n붙임3] 중소제조 특화 Multi AI Agent 개발(Multi AI Agent 개발) 제출서류 서식.zip (399.9KB)",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-09-30T17:07:26.711931",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 292,
