@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-30 21:36 UTC",
-  "total": 218,
+  "updated_at": "2026-10-01 02:47 UTC",
+  "total": 219,
   "items": [
     {
       "id": 9,
@@ -2767,27 +2767,6 @@
       "is_excluded": false
     },
     {
-      "id": 253,
-      "title": "2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고",
-      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do",
-      "source": "ntis",
-      "category": "산업통상부",
-      "deadline": "2026-08-04",
-      "posted_date": "2026-08-04",
-      "description": "공고내용 공고 2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고 20260804 접 수 일 : 20260804 ~ 20260818 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
-      "budget": "0억원",
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-08-07T06:58:34.965354",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false,
-      "extra_sources": [
-        "ntis"
-      ]
-    },
-    {
       "id": 212,
       "title": "2026년 국방기술진흥연구소 고객만족도 조사",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274019&flag=rndList",
@@ -2864,6 +2843,27 @@
       "extra_sources": [
         "ntis",
         "iris"
+      ]
+    },
+    {
+      "id": 253,
+      "title": "2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-08-07",
+      "posted_date": "2026-08-04",
+      "description": "공고내용 공고 2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고 20260804 접 수 일 : 20260804 ~ 20260818 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
+      "budget": "0억원",
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-07T06:58:34.965354",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis"
       ]
     },
     {
@@ -3558,6 +3558,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 294,
+      "title": "2026년도 AI 기반 대학 과학기술 혁신사업(자율실험실) 신규과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024198",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": "2026-10-14",
+      "posted_date": "2026-09-14",
+      "description": "과학기술정보통신부 공고 제 2026-0956 호 2026 년도 AI 기반 대학 과학기술 혁신사업(자율실험실) 신규과제 공모 2026 년도 AI 기반 대학 과학기술 혁신사업(자율실험실) 신규과제 선정·지원 계획을 다음과 같이 공고합니다 . 2026 년 9 월 14일 < 주무부처 > 부총리 겸 과학기술정보통신부 장관   배경훈 < 전문기관 > 한국연구재단 이사장   홍원화",
+      "budget": null,
+      "attachments": "붙임1] 2026년도 AI 기반 대학 과학기술 혁신사업(자율실험실 연구센터) 신규과제 신청요강.pdf (1113.4KB)\n붙임2] 2026년도 AI 기반 대학 과학기술 혁신사업(자율실험실 연구센터) 신청 양식.zip (382.6KB)",
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-10-01T02:47:46.182049",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 293,
