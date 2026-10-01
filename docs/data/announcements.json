@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-01 02:47 UTC",
-  "total": 219,
+  "updated_at": "2026-10-01 11:58 UTC",
+  "total": 220,
   "items": [
     {
       "id": 9,
@@ -2846,27 +2846,6 @@
       ]
     },
     {
-      "id": 253,
-      "title": "2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고",
-      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do",
-      "source": "ntis",
-      "category": "산업통상부",
-      "deadline": "2026-08-07",
-      "posted_date": "2026-08-04",
-      "description": "공고내용 공고 2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고 20260804 접 수 일 : 20260804 ~ 20260818 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
-      "budget": "0억원",
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-08-07T06:58:34.965354",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false,
-      "extra_sources": [
-        "ntis"
-      ]
-    },
-    {
       "id": 240,
       "title": "범부처 신속대응 RD IITP 전담 지정 과제_(2026)신속대응 연구개발 과제 협약 체결",
       "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1274873&flag=rndList",
@@ -3115,6 +3094,27 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
+    },
+    {
+      "id": 253,
+      "title": "2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고",
+      "url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do",
+      "source": "ntis",
+      "category": "산업통상부",
+      "deadline": "2026-08-14",
+      "posted_date": "2026-08-04",
+      "description": "공고내용 공고 2027년도 글로벌탄소규제대응수요연계형기술개발사업 기술수요조사 공고 20260804 접 수 일 : 20260804 ~ 20260818 마감시간 : 1800 까지 연 락 처 : 1544-6633 상세 내용확인 : 클릭 최종 수정일 : 2026-08-03",
+      "budget": "0억원",
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-08-07T06:58:34.965354",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "ntis"
+      ]
     },
     {
       "id": 245,
@@ -3542,24 +3542,6 @@
       ]
     },
     {
-      "id": 115,
-      "title": "2026년도 하반기 원자력정책연구사업 재공고",
-      "url": "https://www.nrf.re.kr/biz/info/notice/list",
-      "source": "nrf",
-      "category": "원자력연구개발사업, 원자력진흥",
-      "deadline": "2026-10-08",
-      "posted_date": "2026-07-02",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-04T08:19:46.643362",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": true
-    },
-    {
       "id": 294,
       "title": "2026년도 AI 기반 대학 과학기술 혁신사업(자율실험실) 신규과제 공모",
       "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024198",
@@ -3571,11 +3553,29 @@
       "budget": null,
       "attachments": "붙임1] 2026년도 AI 기반 대학 과학기술 혁신사업(자율실험실 연구센터) 신규과제 신청요강.pdf (1113.4KB)\n붙임2] 2026년도 AI 기반 대학 과학기술 혁신사업(자율실험실 연구센터) 신청 양식.zip (382.6KB)",
       "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-10-01T02:47:46.182049",
+      "is_notified": true,
+      "created_at": "2026-10-01T11:57:21.533406",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
+    },
+    {
+      "id": 115,
+      "title": "2026년도 하반기 원자력정책연구사업 재공고",
+      "url": "https://www.nrf.re.kr/biz/info/notice/list",
+      "source": "nrf",
+      "category": "원자력연구개발사업, 원자력진흥",
+      "deadline": "2026-10-14",
+      "posted_date": "2026-07-02",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-04T08:19:46.643362",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
     },
     {
       "id": 293,
@@ -3591,6 +3591,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-09-30T17:07:26.711931",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 295,
+      "title": "2026년도 제4차 과학기술분야 연구기획과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024339",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-10-01",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-10-01T11:57:57.288327",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
