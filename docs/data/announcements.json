@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-12 02:58 UTC",
-  "total": 223,
+  "updated_at": "2026-10-12 13:45 UTC",
+  "total": 225,
   "items": [
     {
       "id": 9,
@@ -3591,6 +3591,42 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-09-30T17:07:26.711931",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 300,
+      "title": "해외센터 지정과제",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=018435",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국연구재단",
+      "deadline": null,
+      "posted_date": "2026-01-28",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-10-12T13:43:21.482289",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 299,
+      "title": "2026년 연구산업육성사업(투자연계형 연구산업 혁신기술 개발) 본과제 신청 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024419",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 과학기술사업화진흥원",
+      "deadline": null,
+      "posted_date": "2026-10-12",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-10-12T13:43:21.477171",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
