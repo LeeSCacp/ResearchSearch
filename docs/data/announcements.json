@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-25 10:18 UTC",
-  "total": 228,
+  "updated_at": "2026-10-25 15:11 UTC",
+  "total": 229,
   "items": [
     {
       "id": 9,
@@ -3591,6 +3591,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-09-30T17:07:26.711931",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 304,
+      "title": "2026년 지역거점 AX 혁신 기술개발 사업 신규지원 대상과제 공고(표준모델 AX R&D)",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024397",
+      "source": "iris",
+      "category": "다부처 > 정보통신산업진흥원",
+      "deadline": null,
+      "posted_date": "2026-10-08",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-10-25T15:10:35.223175",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
