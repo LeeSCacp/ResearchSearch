@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-28 11:45 UTC",
-  "total": 231,
+  "updated_at": "2026-10-28 17:33 UTC",
+  "total": 232,
   "items": [
     {
       "id": 9,
@@ -3591,6 +3591,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-09-30T17:07:26.711931",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 307,
+      "title": "2026년 지역거점 AX 혁신 기술개발 사업 신규지원 대상과제 공고(공정·응용 솔루션 AX R&D, 응용 제품 AX R&D)_NRF, KEIT",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024420",
+      "source": "iris",
+      "category": "다부처 > 정보통신산업진흥원",
+      "deadline": null,
+      "posted_date": "2026-10-13",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-10-28T17:32:32.923518",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
