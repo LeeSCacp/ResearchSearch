@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-29 11:55 UTC",
-  "total": 234,
+  "updated_at": "2026-10-29 17:43 UTC",
+  "total": 235,
   "items": [
     {
       "id": 9,
@@ -3560,24 +3560,6 @@
       "is_excluded": false
     },
     {
-      "id": 115,
-      "title": "2026년도 하반기 원자력정책연구사업 재공고",
-      "url": "https://www.nrf.re.kr/biz/info/notice/list",
-      "source": "nrf",
-      "category": "원자력연구개발사업, 원자력진흥",
-      "deadline": "2026-10-29",
-      "posted_date": "2026-07-02",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-04T08:19:46.643362",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": true
-    },
-    {
       "id": 293,
       "title": "중소제조 특화 Multi AI Agent 개발(R&D) 점프업 Track 시행계획 공고",
       "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023857",
@@ -3591,6 +3573,42 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-09-30T17:07:26.711931",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 115,
+      "title": "2026년도 하반기 원자력정책연구사업 재공고",
+      "url": "https://www.nrf.re.kr/biz/info/notice/list",
+      "source": "nrf",
+      "category": "원자력연구개발사업, 원자력진흥",
+      "deadline": "2026-11-05",
+      "posted_date": "2026-07-02",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-07-04T08:19:46.643362",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 310,
+      "title": "2026년 지역거점 AX 혁신 기술개발 사업 신규지원 대상과제 공고(공정·응용 솔루션 AX R&D, 응용 제품 AX R&D)_KHIDI",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024438",
+      "source": "iris",
+      "category": "다부처 > 정보통신산업진흥원",
+      "deadline": null,
+      "posted_date": "2026-10-14",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-10-29T17:42:49.471592",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
