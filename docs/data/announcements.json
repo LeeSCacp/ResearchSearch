@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-28 21:57 UTC",
-  "total": 232,
+  "updated_at": "2026-10-29 03:12 UTC",
+  "total": 233,
   "items": [
     {
       "id": 9,
@@ -3591,6 +3591,24 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-09-30T17:07:26.711931",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 308,
+      "title": "2026년도 제3차 기계장비산업기술개발사업 신규지원 대상과제 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024578",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술기획평가원",
+      "deadline": null,
+      "posted_date": "2026-10-22",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-10-29T03:11:40.934321",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
