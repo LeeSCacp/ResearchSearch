@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-04 03:39 UTC",
-  "total": 236,
+  "updated_at": "2026-11-04 13:26 UTC",
+  "total": 237,
   "items": [
     {
       "id": 9,
@@ -3596,6 +3596,45 @@
       "is_excluded": true
     },
     {
+      "id": 314,
+      "title": "범부처 신속대응 R&D IITP 전담 지정 과제",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024737",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 정보통신기획평가원",
+      "deadline": null,
+      "posted_date": "2026-08-25",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-11-04T13:24:45.697738",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false,
+      "extra_sources": [
+        "iris"
+      ]
+    },
+    {
+      "id": 313,
+      "title": "2027년도 전문기술인 활용 재난재해 대응기술 현장화 지원사업 신규과제 공모",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024677",
+      "source": "iris",
+      "category": "분야공모,지정공모",
+      "deadline": null,
+      "posted_date": "2026-10-26",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-11-04T13:24:45.694288",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
       "id": 312,
       "title": "2026년도 AI 기반 주파수 간섭분석 및 전파예측기술 개발사업 신규지원 대상과제 공고",
       "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024439",
@@ -4674,24 +4713,6 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-31T01:29:08.501944",
-      "notification_logs": [],
-      "is_relevant": false,
-      "is_excluded": false
-    },
-    {
-      "id": 231,
-      "title": "범부처 신속대응 R&D IITP 전담 지정 과제",
-      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023317",
-      "source": "iris",
-      "category": "과학기술정보통신부 > 정보통신기획평가원",
-      "deadline": null,
-      "posted_date": "2026-07-30",
-      "description": "",
-      "budget": null,
-      "attachments": null,
-      "detail_fetched": true,
-      "is_notified": false,
-      "created_at": "2026-07-30T08:04:53.494757",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": false
