@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-09 03:20 UTC",
-  "total": 237,
+  "updated_at": "2026-11-09 14:34 UTC",
+  "total": 239,
   "items": [
     {
       "id": 9,
@@ -3591,6 +3591,42 @@
       "detail_fetched": true,
       "is_notified": false,
       "created_at": "2026-07-04T08:19:46.643362",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": true
+    },
+    {
+      "id": 317,
+      "title": "범부처 신속대응 R&D KOFPI 전담 지정 과제",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024778",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 한국임업진흥원",
+      "deadline": null,
+      "posted_date": "2026-11-01",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-11-09T14:32:38.345154",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
+    },
+    {
+      "id": 316,
+      "title": "2027년도 소재부품장비 양산성능평가지원사업 총괄주관연구개발기관 모집 공고",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=024657",
+      "source": "iris",
+      "category": "산업통상부 > 한국산업기술진흥원",
+      "deadline": null,
+      "posted_date": "2026-11-09",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-11-09T14:32:38.344018",
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
