@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-14 21:45 UTC",
-  "total": 241,
+  "updated_at": "2026-11-15 03:32 UTC",
+  "total": 242,
   "items": [
     {
       "id": 9,
@@ -3594,6 +3594,24 @@
       "notification_logs": [],
       "is_relevant": false,
       "is_excluded": true
+    },
+    {
+      "id": 320,
+      "title": "공고 테스트",
+      "url": "https://www.iris.go.kr/contents/retrieveBsnsAncmBtinSituDetailView.do?bsnsSn=023737",
+      "source": "iris",
+      "category": "과학기술정보통신부 > 재단법인 국가신약개발재단",
+      "deadline": null,
+      "posted_date": "2026-11-01",
+      "description": "",
+      "budget": null,
+      "attachments": null,
+      "detail_fetched": true,
+      "is_notified": false,
+      "created_at": "2026-11-15T03:31:25.872952",
+      "notification_logs": [],
+      "is_relevant": false,
+      "is_excluded": false
     },
     {
       "id": 319,
